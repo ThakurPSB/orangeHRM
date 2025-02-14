@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-14T14:26:21 IST" name="Default suite" finished-at="2025-02-14T14:26:32 IST" duration-ms="11910">
+    <groups>
+    </groups>
+    <test started-at="2025-02-14T14:26:21 IST" name="Default test" finished-at="2025-02-14T14:26:32 IST" duration-ms="11910">
+      <class name="orangeHRM.testCases.testSprint1">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:orangeHRM.testCases.testSprint1@3857f613]" started-at="2025-02-14T14:26:21 IST" name="setUp" finished-at="2025-02-14T14:26:26 IST" duration-ms="5765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CheckIfLoginSuccessfullWithCorrectCredentials()[pri:0, instance:orangeHRM.testCases.testSprint1@3857f613]" started-at="2025-02-14T14:26:26 IST" name="CheckIfLoginSuccessfullWithCorrectCredentials" finished-at="2025-02-14T14:26:32 IST" duration-ms="5669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckIfLoginSuccessfullWithCorrectCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:orangeHRM.testCases.testSprint1@3857f613]" started-at="2025-02-14T14:26:32 IST" name="closeBrowser" finished-at="2025-02-14T14:26:32 IST" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- orangeHRM.testCases.testSprint1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
