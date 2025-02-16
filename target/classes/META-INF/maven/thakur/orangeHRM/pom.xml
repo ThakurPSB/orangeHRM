@@ -28,8 +28,6 @@
 	</build>
 
 
-	<dependencyManagement>
-
 		<dependencies>
 			<dependency>
 				<groupId>org.seleniumhq.selenium</groupId>
@@ -91,6 +89,6 @@
 
 		</dependencies>
 
-	</dependencyManagement>
+
   
 </project>
