@@ -40,14 +40,12 @@
 				<artifactId>allure-bom</artifactId>
 				<version>${allure.version}</version>
 				<type>pom</type>
-				<scope>import</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.testng</groupId>
 				<artifactId>testng</artifactId>
 				<version>7.10.2</version>
-				<scope>test</scope>
 			</dependency>
 
 			<dependency>
