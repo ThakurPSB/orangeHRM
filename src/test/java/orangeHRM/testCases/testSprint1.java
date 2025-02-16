@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.*;
 import orangeHRM.base.testBase;
 import orangeHRM.pages.loginPage;
 
@@ -14,6 +15,11 @@ public class testSprint1 extends testBase{
 	private static final Logger LOG = Logger.getLogger(testSprint1.class);
 	
 	@Test
+    //@Severity(SeverityLevel.CRITICAL)
+    //@Description("Verify valid login with correct username and password")
+    //@Step("Login with username: {0} and password: {1}")
+    //@Feature("Login Feature")
+    //@Story("Valid login credentials should grant access")
 	public void CheckIfLoginSuccessfullWithCorrectCredentials() {
 		loginPage login = new loginPage();
 		

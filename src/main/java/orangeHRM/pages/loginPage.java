@@ -36,9 +36,6 @@ public class loginPage {
     
     @FindBy(css="body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > header:nth-child(2) > div:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)")
 	WebElement logoutButton ;
-    
-    
-    
 
     /**
      * Enter the user name and password
@@ -78,7 +75,6 @@ public class loginPage {
     	return errorInvalidCredentials.getText();
 	}
     
-    
     /**
      * wait logout button to be visible and click on logout
      */
@@ -88,6 +84,5 @@ public class loginPage {
     	kw.waitForElementToBeClickable(logoutButton);
     	logoutButton.click();
 	}
-    
-
+   
 }
