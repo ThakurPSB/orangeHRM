@@ -10,16 +10,17 @@ import org.testng.annotations.Test;
 import io.qameta.allure.*;
 import orangeHRM.base.testBase;
 import orangeHRM.pages.loginPage;
+import orangeHRM.pages.userDropdownMenu;
 
 public class testSprint1 extends testBase{
 	private static final Logger LOG = Logger.getLogger(testSprint1.class);
 	
 	@Test
-    //@Severity(SeverityLevel.CRITICAL)
-    //@Description("Verify valid login with correct username and password")
-    //@Step("Login with username: {0} and password: {1}")
-    //@Feature("Login Feature")
-    //@Story("Valid login credentials should grant access")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify valid login with correct username and password")
+    @Step("Login with username: {0} and password: {1}")
+    @Feature("Login Feature")
+    @Story("Valid login credentials should grant access")
 	public void CheckIfLoginSuccessfullWithCorrectCredentials() {
 		loginPage login = new loginPage();
 		
@@ -44,6 +45,31 @@ public class testSprint1 extends testBase{
 				LOG.info("Test Passed - Login unsuccesfull with incorrect credentials");
 			}
 		}
+	}
+	
+	@Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Verify if all the links in the profile menu working or not")
+    @Step("Login , click on userprofile menu and check each option one by one")
+    @Feature("User Dropdown")
+    @Story("Respected links / dialog box should be visible")
+	public void checkIfAllTheLinksInProfileMenuAreWorking() {
+		
+		loginPage login = new loginPage();
+		login.logMeIn();
+		
+		userDropdownMenu profile = new userDropdownMenu();
+		
+		profile.clickOnUserProfile();
+		profile.clickOnAbout();
+		Assert.assertTrue(profile.aboutInformation());
+		profile.closeAboutInformatio();
+		profile.clickOnUserProfile();
+		profile.clickOnSupport();
+		Assert.assertTrue(profile.supportInformation());
+		profile.clickOnUserProfile();
+		profile.clickOnChangePassword();
+		Assert.assertTrue(profile.checkIfChangePasswordPage());
 	}
 
 	

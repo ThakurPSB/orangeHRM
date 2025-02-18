@@ -84,5 +84,13 @@ public class loginPage {
     	kw.waitForElementToBeClickable(logoutButton);
     	logoutButton.click();
 	}
+    
+    public void logMeIn() {
+    	kw.waitForElementToBeVisible(username);
+    	username.sendKeys("admin");
+    	kw.waitForElementToBeVisible(password);
+    	password.sendKeys("admin123");
+    	login.click();
+	}
    
 }
