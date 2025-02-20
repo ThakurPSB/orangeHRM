@@ -17,13 +17,13 @@ public class loginPage {
 	keywords kw = new keywords();
 	
 	@FindBy(css = "button.oxd-button.oxd-button--medium.oxd-button--main.orangehrm-login-button")
-    private WebElement login;
+    WebElement login;
 
     @FindBy(css="input[placeholder='Password']")
-    private WebElement password;
+    WebElement password;
 
     @FindBy(css="input[placeholder='Username']")
-    private WebElement username;
+    WebElement username;
     
     @FindBy(css=".oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module")
 	WebElement dashboardLink ;

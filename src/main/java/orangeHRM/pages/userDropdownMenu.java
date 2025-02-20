@@ -105,6 +105,9 @@ public class userDropdownMenu {
 		return supportInfo.isDisplayed();
 	}
 	
+	/**
+	 * @return True if directed to the password change page.
+	 */
 	public boolean checkIfChangePasswordPage() {
 		kw.waitForElementToBeVisible(passwordChangePage);
 		return passwordChangePage.isDisplayed();

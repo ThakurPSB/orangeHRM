@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import io.qameta.allure.*;
 import orangeHRM.base.testBase;
+import orangeHRM.pages.PIMMenu;
 import orangeHRM.pages.loginPage;
 import orangeHRM.pages.userDropdownMenu;
 
@@ -71,7 +72,34 @@ public class testSprint1 extends testBase{
 		profile.clickOnChangePassword();
 		Assert.assertTrue(profile.checkIfChangePasswordPage());
 	}
-
 	
+	
+	@Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Check if PIM Menu > Configuration > Optional field page is working properly.")
+    @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save")
+    @Feature("Configuration/Optional Fields")
+    @Story("Create a page object for PIM menu")
+	public void checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff() {
+		
+		loginPage login = new loginPage();
+		PIMMenu pim = new PIMMenu();
+		
+		login.logMeIn();
+		
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		pim.clickOnOptionalFields();
+		pim.turnOnShowDrprecatedField();
+		pim.turnOnSSNfield();
+		pim.turnOnSINfield();
+		pim.turnOnUStaxExemptionMenu();
+		pim.clickOnSaveButtonOptionalFidls();
+		Assert.assertTrue(pim.SaveToastMessageText());
+		
+		
+	}
+	
+
 
 }
