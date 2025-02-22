@@ -5,8 +5,8 @@
     <classes>
       <class name="orangeHRM.testCases.testSprint1">
         <methods>
-          <include name="checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff"/>
           <include name="setUp"/>
+          <include name="temptest"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- orangeHRM.testCases.testSprint1 -->

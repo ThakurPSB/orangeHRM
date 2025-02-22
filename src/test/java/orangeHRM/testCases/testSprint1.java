@@ -90,16 +90,17 @@ public class testSprint1 extends testBase{
 		pim.clickOnPIM();
 		pim.clickOnConfiguration();
 		pim.clickOnOptionalFields();
-		pim.turnOnShowDrprecatedField();
-		pim.turnOnSSNfield();
-		pim.turnOnSINfield();
-		pim.turnOnUStaxExemptionMenu();
+		pim.turnONshowDeprecatedField();
+		pim.turnONSSNfield();
+		pim.turnONSINfield();
+		pim.turnONUStaxExemptionMenufield();
 		pim.clickOnSaveButtonOptionalFidls();
 		Assert.assertTrue(pim.SaveToastMessageText());
 		
 		
 	}
 	
+
 
 
 }

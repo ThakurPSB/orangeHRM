@@ -1,0 +1,1 @@
+{"uuid":"58884c8e-12b2-4983-9422-ab82f88ce27f","name":"orangeHRM.base.testBase.setUp","children":["f4bfde7a-1ac4-47f1-9ae2-4a5d2ec11220"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1740207282537,"stop":1740207293188}],"afters":[],"start":1740207282535,"stop":1740207293190}
