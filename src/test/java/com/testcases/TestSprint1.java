@@ -11,6 +11,7 @@ import com.base.TestBase;
 import com.pages.PimMenu;
 import com.pages.LoginPage;
 import com.pages.UserDropdownMenu;
+import com.pages.UserProfile;
 
 import io.qameta.allure.*;
 
@@ -100,6 +101,41 @@ public class TestSprint1 extends TestBase{
 		
 	}
 	
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Check if PIM Menu > Configuration > Optional field toggle reflecting in user profile.")
+    @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save > go to user profile > check if fields are visible")
+    @Feature("OptionalFieldToggle")
+    @Story("Create a page object for user profile")
+	public void CheckIfOptionalFieldsVisibilityToggleWorking() {
+		
+		LoginPage login = new LoginPage();
+		login.logMeIn();
+		
+		UserProfile user = new UserProfile();
+		PimMenu pim = new PimMenu();
+		
+		//When options are turned off
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		pim.clickOnOptionalFields();
+		pim.turnOFFshowDeprecatedField();
+		pim.turnOFFSINfield();
+		pim.turnOFFSSNfield();
+		pim.turnOFFUStaxExemptionMenufield();
+		pim.clickOnSaveButtonOptionalFidls();
+		pim.clickOnPIM();
+		user.clickOnEmployeeList();
+		user.clickOnUser1();
+		Assert.assertTrue(user.checknicknameVisibility());
+		Assert.assertTrue(user.checkSSNvisibility());
+		Assert.assertTrue(user.checkSINvisibility());
+		Assert.assertTrue(user.checkTaxExemptionvisibility());
+		
+		
+		
+	}
 
 
 

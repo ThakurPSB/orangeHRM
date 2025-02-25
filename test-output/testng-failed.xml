@@ -6,10 +6,8 @@
       <class name="com.testcases.TestSprint1">
         <methods>
           <include name="setUp"/>
-          <include name="checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff"/>
           <include name="closeBrowser"/>
-          <include name="checkIfAllTheLinksInProfileMenuAreWorking"/>
-          <include name="CheckIfLoginSuccessfullWithCorrectCredentials"/>
+          <include name="CheckIfOptionalFieldsVisibilityToggleWorking"/>
         </methods>
       </class> <!-- com.testcases.TestSprint1 -->
     </classes>

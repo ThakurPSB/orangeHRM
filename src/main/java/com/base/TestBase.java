@@ -5,7 +5,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.main.Keywords;
-import com.util.PropertiesUtil;
 
 public class TestBase {
 	

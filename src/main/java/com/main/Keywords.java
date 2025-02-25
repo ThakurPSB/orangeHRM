@@ -77,6 +77,14 @@ public class Keywords {
 	}
 	
 	
+	/**
+	 * @param element
+	 * @return true if webelement is invisible
+	 */
+	public boolean waitInvisibilityOfElement(WebElement element) {
+		return wait.until(ExpectedConditions.invisibilityOf(element));
+	}
+	
 	
 	
 	/**
