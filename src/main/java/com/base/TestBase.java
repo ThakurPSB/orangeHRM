@@ -1,6 +1,7 @@
 package com.base;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import com.main.Keywords;
 import com.util.PropertiesUtil;
@@ -13,10 +14,11 @@ public class TestBase {
 	 * @throws Exception
 	 */
 	@BeforeMethod
-	public void setUp() throws Exception {
+	@Parameters({"browserName", "url"})
+	public void setUp(String browserName, String url) throws Exception {
 		Keywords kw = new Keywords();
-		kw.launchBrowser("Chrome");
-		kw.launchURL(PropertiesUtil.getURL("local.url"));
+		kw.launchBrowser(browserName);
+		kw.launchURL(url);
 	}
 	
 	/**
