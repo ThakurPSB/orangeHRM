@@ -54,6 +54,14 @@ public class UserProfile {
 		return kw.waitInvisibilityOfElement(SSN);
 	}
 	
+	/**
+	 * @return true if SSN field is displayed
+	 */
+	public boolean checkSSNdisplayed() {
+		kw.waitForElementToBeVisible(SSN);
+		return SSN.isDisplayed();
+	}
+	
 	@FindBy(css="form > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > div > div.oxd-input-group__label-wrapper > label")
 	WebElement  SIN;
 	
@@ -63,6 +71,16 @@ public class UserProfile {
 	public boolean checkSINvisibility() {
 		return kw.waitInvisibilityOfElement(SIN);
 	}
+	
+	/**
+	 * @return true if SIN field is displayed
+	 */
+	public boolean checkSINdisplayed() {
+		kw.waitForElementToBeVisible(SIN);
+		return SIN.isDisplayed();
+	}
+	
+	
 
 	@FindBy(css="form > div:nth-child(7) > div > div:nth-child(1) > div > div.oxd-input-group__label-wrapper > label")
 	WebElement nickname;
@@ -74,6 +92,15 @@ public class UserProfile {
 		return kw.waitInvisibilityOfElement(nickname);
 	}
 	
+	/**
+	 * @return true if nickname and other fields are displayed
+	 */
+	public boolean checkNicknameDisplayed() {
+		kw.waitForElementToBeVisible(nickname);
+		return nickname.isDisplayed();
+	}
+
+	
 	@FindBy(css="div.orangehrm-edit-employee-navigation > div.orangehrm-tabs > div:nth-child(8) > a")
 	WebElement TaxExemptionMenu;
 	
@@ -82,6 +109,11 @@ public class UserProfile {
 	 */
 	public boolean checkTaxExemptionvisibility() {
 		return kw.waitInvisibilityOfElement(TaxExemptionMenu);
+	}
+	
+	public boolean checkTaxExemptionDisplayed() {
+		kw.waitForElementToBeVisible(TaxExemptionMenu);
+		return TaxExemptionMenu.isDisplayed();
 	}
 	
 	

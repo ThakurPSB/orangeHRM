@@ -133,6 +133,22 @@ public class TestSprint1 extends TestBase{
 		Assert.assertTrue(user.checkSINvisibility());
 		Assert.assertTrue(user.checkTaxExemptionvisibility());
 		
+		//when options are turned on
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		pim.clickOnOptionalFields();
+		pim.turnONshowDeprecatedField();
+		pim.turnONSINfield();
+		pim.turnONSSNfield();
+		pim.turnONUStaxExemptionMenufield();
+		pim.clickOnSaveButtonOptionalFidls();
+		pim.clickOnPIM();
+		user.clickOnEmployeeList();
+		user.clickOnUser1();
+		Assert.assertTrue(user.checkNicknameDisplayed());
+		Assert.assertTrue(user.checkSINdisplayed());
+		Assert.assertTrue(user.checkSSNdisplayed());
+		Assert.assertTrue(user.checkTaxExemptionDisplayed());
 		
 		
 	}
