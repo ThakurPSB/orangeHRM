@@ -50,6 +50,8 @@ public class Keywords {
 			LOG.error("Invalid browser name");
 		}
 		
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		
 		//setting fluent wait parameters
 		wait = new FluentWait<WebDriver>(driver);
 		wait.withTimeout(Duration.ofSeconds(15));

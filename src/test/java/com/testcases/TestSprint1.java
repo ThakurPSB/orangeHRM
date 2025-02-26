@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
+import com.main.Keywords;
 import com.pages.PimMenu;
 import com.pages.LoginPage;
 import com.pages.UserDropdownMenu;
@@ -108,7 +109,7 @@ public class TestSprint1 extends TestBase{
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save > go to user profile > check if fields are visible")
     @Feature("OptionalFieldToggle")
     @Story("Create a page object for user profile")
-	public void CheckIfOptionalFieldsVisibilityToggleWorking() {
+	public void CheckIfOptionalFieldsVisibilityToggleWorking() throws InterruptedException {
 		
 		LoginPage login = new LoginPage();
 		login.logMeIn();

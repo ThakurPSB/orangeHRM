@@ -87,11 +87,9 @@ public class PimMenu {
 	}
 	
 	@FindBy(css="div:nth-child(3) > div > div:nth-child(1) > div > label")
-	@CacheLookup
 	WebElement SSNfieldLabel ;
 	
 	@FindBy(css="form > div:nth-child(3) > div > div:nth-child(1) > div > label > input[type=checkbox]")
-	@CacheLookup
 	WebElement SSNfieldInput ;
 	
 	/**
@@ -199,6 +197,7 @@ public class PimMenu {
 	 * Click on save optional field preferences
 	 */
 	public void clickOnSaveButtonOptionalFidls() {
+		kw.waitForElementToBeClickable(OptionalFieldsSaveButton);
 		OptionalFieldsSaveButton.click();
 	}
 

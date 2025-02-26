@@ -2,12 +2,12 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-25T15:43:33 IST" name="Default suite" finished-at="2025-02-25T15:43:52 IST" duration-ms="18660">
+  <suite started-at="2025-02-26T15:09:11 IST" name="Default suite" finished-at="2025-02-26T15:10:03 IST" duration-ms="51104">
     <groups>
     </groups>
-    <test started-at="2025-02-25T15:43:33 IST" name="Default test" finished-at="2025-02-25T15:43:52 IST" duration-ms="18660">
+    <test started-at="2025-02-26T15:09:11 IST" name="Default test" finished-at="2025-02-26T15:10:03 IST" duration-ms="51104">
       <class name="com.testcases.TestSprint1">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@5c8e67b9]" started-at="2025-02-25T15:43:33 IST" name="setUp" finished-at="2025-02-25T15:43:36 IST" duration-ms="3274" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@28737371]" started-at="2025-02-26T15:09:12 IST" name="setUp" finished-at="2025-02-26T15:09:15 IST" duration-ms="3789" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="CheckIfOptionalFieldsVisibilityToggleWorking()[pri:0, instance:com.testcases.TestSprint1@5c8e67b9]" started-at="2025-02-25T15:43:36 IST" name="CheckIfOptionalFieldsVisibilityToggleWorking" finished-at="2025-02-25T15:43:51 IST" duration-ms="14750" status="PASS">
+        <test-method signature="CheckIfOptionalFieldsVisibilityToggleWorking()[pri:0, instance:com.testcases.TestSprint1@28737371]" started-at="2025-02-26T15:09:16 IST" name="CheckIfOptionalFieldsVisibilityToggleWorking" finished-at="2025-02-26T15:10:02 IST" duration-ms="46590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckIfOptionalFieldsVisibilityToggleWorking -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@5c8e67b9]" started-at="2025-02-25T15:43:51 IST" name="closeBrowser" finished-at="2025-02-25T15:43:52 IST" duration-ms="294" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@28737371]" started-at="2025-02-26T15:10:02 IST" name="closeBrowser" finished-at="2025-02-26T15:10:03 IST" duration-ms="280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
