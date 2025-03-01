@@ -52,6 +52,7 @@ public class Keywords {
 		}
 		
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		driver.manage().window().maximize();
 		
 		//setting fluent wait parameters
 		wait = new FluentWait<WebDriver>(driver);

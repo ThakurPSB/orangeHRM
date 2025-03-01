@@ -24,6 +24,7 @@ public class PimCustomFields {
 	Actions action = new Actions(Keywords.driver);
 	
 	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(2) > a")
+	//           nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(5) > a
 	WebElement customFields ;
 
 	/**
@@ -38,7 +39,7 @@ public class PimCustomFields {
 	WebElement addCustomFields ;
 	
 	/**
-	 * Click on add custom filds button.
+	 * Click on add custom fields button.
 	 */
 	public void clickOnAddCustomFieldsButton() {
 		kw.waitForElementToBeClickable(addCustomFields);
@@ -138,9 +139,8 @@ public class PimCustomFields {
 		kw.waitForAllElementAreVisible(rows);
 		for (WebElement row : rows) {
 			
-            if (row.getText().contains(fieldname)) {  // Check if row contains "InsuranceID"
+            if (row.getText().contains(fieldname)) {  
                 WebElement delButton = row.findElement(By.cssSelector("button.oxd-icon-button.oxd-table-cell-action-space i.oxd-icon.bi-trash"));
-            	System.out.println("found");
             	delButton.click();
             }
         }

@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 
 import com.base.TestBase;
 import com.pages.PimMenu;
+import com.pages.ReportingMethod;
+import com.pages.TerminationReasons;
 import com.pages.LoginPage;
 import com.pages.PimCustomFields;
 import com.pages.UserDropdownMenu;
@@ -169,32 +171,27 @@ public class TestSprint1 extends TestBase{
 		PimMenu pim = new PimMenu();
 		UserProfile user = new UserProfile();
 		
-		//custom field with text input
+		//deleting already created custom fields
+		
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		customField.clickOnCustomFields();
+		customField.SelectFieldToDelete("InsuranceID");
+		customField.SelectFieldToDelete("OfficeTransport");
+		
+		//Creating custom fields
 	
 		pim.clickOnPIM();
 		pim.clickOnConfiguration();
 		customField.clickOnCustomFields();
+		
 		customField.clickOnAddCustomFieldsButton();
 		customField.enterFieldName("InsuranceID");
 		customField.clickOnScreenOption();
 		customField.selectTypeOfInputText();
 		customField.clickOnSaveCustomFieldButton();
 		Assert.assertTrue(customField.SaveToastMessageText());
-		pim.clickOnPIM();
-		user.clickOnEmployeeList();
-		user.clickOnUser1();
-		user.ClickOnMemebership();
-		Assert.assertTrue(user.checkInsuranceIDDisplayed());
-		pim.clickOnPIM();
-		pim.clickOnConfiguration();
-		customField.clickOnCustomFields();
-		customField.SelectFieldToDelete("InsuranceID");
 		
-		//custom field with drop down input
-		
-		pim.clickOnPIM();
-		pim.clickOnConfiguration();
-		customField.clickOnCustomFields();
 		customField.clickOnAddCustomFieldsButton();
 		customField.enterFieldName("OfficeTransport");
 		customField.clickOnScreenOption();
@@ -202,33 +199,66 @@ public class TestSprint1 extends TestBase{
 		customField.enterOptions("YES,NO");
 		customField.clickOnSaveCustomFieldButton();
 		Assert.assertTrue(customField.SaveToastMessageText());
+		
+		// checking custom fields are displayed
+		
 		pim.clickOnPIM();
 		user.clickOnEmployeeList();
 		user.clickOnUser1();
 		user.ClickOnMemebership();
+		Assert.assertTrue(user.checkInsuranceIDDisplayed());
 		Assert.assertTrue(user.checkOfficeTransportDisplayed());
-		pim.clickOnPIM();
-		pim.clickOnConfiguration();
-		customField.clickOnCustomFields();
-		customField.SelectFieldToDelete("OfficeTransport");
+		
 		
 	}
+	
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Check if PIM Menu > Configuration > Reporting method and termination options working.")
+    @Step("Login, navigate to PIM > configuration > custom fields > add the reporting method and termaintion reason and then delete")
+    @Feature("Add Termination reason and reporting method")
+    @Story("PIM Configuration Menus")
+	public void AddReportingMethodAndTerminationReason() throws InterruptedException {
+		
+		LoginPage login = new LoginPage();
+		login.logMeIn();
+		
+		PimMenu pim = new PimMenu();
+		ReportingMethod rm = new ReportingMethod();	
+		TerminationReasons tr = new TerminationReasons();
+		
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		rm.clickOnReportingMethod();
+		rm.deleteSelectedReportingMethod("Online");
+		rm.AddReportingMethodButton();
+		rm.addrReportingMethod("Online");
+		Assert.assertTrue(rm.SaveToastMessageText());
+		
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		tr.clickOnTerminationReasonsMenu();
+		tr.deleteSelectedTerminationReason("Other");
+		tr.ClickOnAddTerminationReasonButton();
+		tr.AddTerminationReason("Other");
+		Assert.assertTrue(tr.SaveToastMessageText());
+		
+	}
+	
+	
 	
 	@Test
 	public void tryAndError() throws InterruptedException {
 		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
-		
-		PimCustomFields customField = new PimCustomFields();
+		ReportingMethod rm = new ReportingMethod();	
 		PimMenu pim = new PimMenu();
-		//UserProfile user = new UserProfile();
-		
-		//custom field with text input
 		pim.clickOnPIM();
 		pim.clickOnConfiguration();
-		customField.clickOnCustomFields();
-		customField.SelectFieldToDelete("InsuranceID");
+		rm.clickOnReportingMethod();
+		rm.deleteSelectedReportingMethod("Online");
 	}
 	
 
