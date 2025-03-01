@@ -1,6 +1,7 @@
 package com.main;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
@@ -50,11 +51,11 @@ public class Keywords {
 			LOG.error("Invalid browser name");
 		}
 		
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		
 		//setting fluent wait parameters
 		wait = new FluentWait<WebDriver>(driver);
-		wait.withTimeout(Duration.ofSeconds(15));
+		wait.withTimeout(Duration.ofSeconds(20));
 		wait.pollingEvery(Duration.ofMillis(500));
 		wait.ignoring(NoSuchElementException.class);
 		
@@ -87,6 +88,9 @@ public class Keywords {
 		return wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 	
+	public void waitForAllElementAreVisible(List<WebElement> li) {
+		wait.until(ExpectedConditions.visibilityOfAllElements(li));
+	}
 	
 	
 	/**
@@ -105,5 +109,7 @@ public class Keywords {
 	public void enterText(WebElement element, String text) {
 		element.sendKeys(text);
 	}
+	
+	
 	
 }

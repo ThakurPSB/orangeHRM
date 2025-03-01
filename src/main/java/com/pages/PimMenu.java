@@ -1,7 +1,9 @@
 package com.pages;
 
+
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.log4testng.Logger;
@@ -38,6 +40,18 @@ public class PimMenu {
 	public void clickOnConfiguration() {
 		kw.waitForElementToBeVisible(configuration);
 		configuration.click();
+	}
+
+	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent.--visited > ul")
+	List<WebElement> ConfigOptList ;
+	
+	
+	/**
+	 * Clicks on PIM>Configuration>Customfields
+	 */
+	public void clickOnCustomFields() {
+		kw.waitForElementToBeVisible(ConfigOptList.get(1));
+		ConfigOptList.get(1).click();
 	}
 	
 	@FindBy(css="li[class='--active oxd-topbar-body-nav-tab --parent'] li:nth-child(1) a:nth-child(1)")

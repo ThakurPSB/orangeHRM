@@ -8,9 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
-import com.main.Keywords;
 import com.pages.PimMenu;
 import com.pages.LoginPage;
+import com.pages.PimCustomFields;
 import com.pages.UserDropdownMenu;
 import com.pages.UserProfile;
 
@@ -154,6 +154,83 @@ public class TestSprint1 extends TestBase{
 		
 	}
 
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Check if PIM Menu > Configuration > custom field add option working.")
+    @Step("Login, navigate to PIM > configuration > custom fields > add the custom fields and check if visible on user profile page")
+    @Feature("Add Custom Field")
+    @Story("CustoField in PIM Menu")
+	public void AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage() throws InterruptedException {
+		
+		LoginPage login = new LoginPage();
+		login.logMeIn();
+		
+		PimCustomFields customField = new PimCustomFields();
+		PimMenu pim = new PimMenu();
+		UserProfile user = new UserProfile();
+		
+		//custom field with text input
+	
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		customField.clickOnCustomFields();
+		customField.clickOnAddCustomFieldsButton();
+		customField.enterFieldName("InsuranceID");
+		customField.clickOnScreenOption();
+		customField.selectTypeOfInputText();
+		customField.clickOnSaveCustomFieldButton();
+		Assert.assertTrue(customField.SaveToastMessageText());
+		pim.clickOnPIM();
+		user.clickOnEmployeeList();
+		user.clickOnUser1();
+		user.ClickOnMemebership();
+		Assert.assertTrue(user.checkInsuranceIDDisplayed());
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		customField.clickOnCustomFields();
+		customField.SelectFieldToDelete("InsuranceID");
+		
+		//custom field with drop down input
+		
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		customField.clickOnCustomFields();
+		customField.clickOnAddCustomFieldsButton();
+		customField.enterFieldName("OfficeTransport");
+		customField.clickOnScreenOption();
+		customField.SelectTypeOfInputDropdown();
+		customField.enterOptions("YES,NO");
+		customField.clickOnSaveCustomFieldButton();
+		Assert.assertTrue(customField.SaveToastMessageText());
+		pim.clickOnPIM();
+		user.clickOnEmployeeList();
+		user.clickOnUser1();
+		user.ClickOnMemebership();
+		Assert.assertTrue(user.checkOfficeTransportDisplayed());
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		customField.clickOnCustomFields();
+		customField.SelectFieldToDelete("OfficeTransport");
+		
+	}
+	
+	@Test
+	public void tryAndError() throws InterruptedException {
+		
+		LoginPage login = new LoginPage();
+		login.logMeIn();
+		
+		PimCustomFields customField = new PimCustomFields();
+		PimMenu pim = new PimMenu();
+		//UserProfile user = new UserProfile();
+		
+		//custom field with text input
+		pim.clickOnPIM();
+		pim.clickOnConfiguration();
+		customField.clickOnCustomFields();
+		customField.SelectFieldToDelete("InsuranceID");
+	}
+	
 
 
 }
