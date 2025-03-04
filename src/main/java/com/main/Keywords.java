@@ -111,6 +111,12 @@ public class Keywords {
 		element.sendKeys(text);
 	}
 	
-	
+	/**
+	 * @param miliseconds
+	 * @throws InterruptedException
+	 */
+	public void normalWait(long milisec) throws InterruptedException {
+		Thread.sleep(milisec);
+	}
 	
 }

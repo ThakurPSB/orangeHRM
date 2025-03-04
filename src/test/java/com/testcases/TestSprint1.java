@@ -11,6 +11,7 @@ import com.base.TestBase;
 import com.pages.PimMenu;
 import com.pages.ReportingMethod;
 import com.pages.TerminationReasons;
+import com.pages.EmployeeListMenu;
 import com.pages.LoginPage;
 import com.pages.PimCustomFields;
 import com.pages.UserDropdownMenu;
@@ -246,19 +247,27 @@ public class TestSprint1 extends TestBase{
 		
 	}
 	
-	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Check if PIM Menu > employee list > employee search.")
+    @Step("Login, navigate to PIM > employee list > select search criteri > check if employee matching are displayed")
+    @Feature("employee list search feature")
+    @Story("PIM employee list Menus")
+	public void checkSearchOptionsInPIMMenuEmployeeListPage() {
+		// TODO Auto-generated method stub
+
+	}
 	
 	@Test
 	public void tryAndError() throws InterruptedException {
 		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
-		ReportingMethod rm = new ReportingMethod();	
+		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
 		pim.clickOnPIM();
-		pim.clickOnConfiguration();
-		rm.clickOnReportingMethod();
-		rm.deleteSelectedReportingMethod("Online");
+		emplist.readtablerow();
+		Thread.sleep(3000);
 	}
 	
 
