@@ -27,13 +27,16 @@ public class EmployeeListMenu {
 	
 	/**
 	 * click on employee list menu in PIM Menu
+	 * @throws InterruptedException 
 	 */
-	public void clickOnEmployeeListMenu() {
+	public void clickOnEmployeeListMenu() throws InterruptedException {
 		kw.waitForElementToBeClickable(employeeListMenu);
+		kw.normalWait(1000);
 		employeeListMenu.click();
+		LOG.info("Successfully clicked the button.");
 	}
 	
-	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div")
+	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
 	WebElement employeeNameTextBox ;
 	
 	/**
@@ -42,6 +45,9 @@ public class EmployeeListMenu {
 	public void enterEmployeeName(String name) {
 		kw.waitForElementToBeVisible(employeeNameTextBox);
 		employeeNameTextBox.sendKeys(name);
+		supervisor.sendKeys(Keys.TAB);
+		LOG.info("Successfully entered the name in search name field.");
+
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(2) > div > div:nth-child(2) > input")
@@ -53,6 +59,8 @@ public class EmployeeListMenu {
 	public void enterEmployeeID(int id){
 		kw.waitForElementToBeVisible(employeeIDTextBox);
 		employeeIDTextBox.click();
+		supervisor.sendKeys(Keys.TAB);
+		LOG.info("Successfully entered the employee ID in search field.");
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(3) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -84,6 +92,7 @@ public class EmployeeListMenu {
 			LOG.info("invalid employment status");
 		}
 		action.sendKeys(Keys.TAB).perform();
+		LOG.info("Successfully selected employement status ."+ status );
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(4) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -114,6 +123,7 @@ public class EmployeeListMenu {
 			include.sendKeys(Keys.TAB);
 		}
 		include.sendKeys(Keys.TAB);
+		LOG.info("Successfully selected the option to include "+oldnew+ " type of employees");
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(5) > div > div:nth-child(2) > div > div > input")
@@ -125,6 +135,8 @@ public class EmployeeListMenu {
 	public void enterSupervisorName(String name) {
 		kw.waitForElementToBeClickable(supervisor);
 		supervisor.sendKeys(name);
+		supervisor.sendKeys(Keys.TAB);
+		LOG.info("Successfully entered the supervisor name in search field.");
 	}
 	
 	
@@ -143,6 +155,7 @@ public class EmployeeListMenu {
 			jobTitleDropdown.sendKeys(Keys.ARROW_DOWN);
 		}
 		jobTitleDropdown.sendKeys(Keys.TAB);
+		LOG.info("Successfully selected job title");
 		
 	}
 	
@@ -159,6 +172,7 @@ public class EmployeeListMenu {
 			subUnit.sendKeys(Keys.ARROW_DOWN);
 		}
 		subUnit.sendKeys(Keys.TAB);
+		LOG.info("Successfully selected sub unit");
 	}
 	
 	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
@@ -166,10 +180,13 @@ public class EmployeeListMenu {
 	
 	/**
 	 * click on the search button 
+	 * @throws InterruptedException 
 	 */
-	public void clickOnSearchButton() {
+	public void clickOnSearchButton() throws InterruptedException {
 		kw.waitForElementToBeVisible(SearchButton);
+		kw.normalWait(500);
 		SearchButton.click();
+		LOG.info("Successfully clicked the Search button.");
 	}
 	
 	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--ghost")
@@ -177,23 +194,82 @@ public class EmployeeListMenu {
 	
 	/**
 	 * click on reset search option button
+	 * @throws InterruptedException 
 	 */
-	public void clickOnResetButton() {
+	public void clickOnResetButton() throws InterruptedException {
 		kw.waitForElementToBeVisible(resetButton);
+		kw.normalWait(500);
 		resetButton.click();
+		LOG.info("Successfully clicked the reset button.");
 	}
 	
-	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div")
+	
+	@FindBy(css="div.oxd-table-body > div:nth-child(1) div.oxd-table-cell")
 	List<WebElement> tablerow ;
 	
 	/**
 	 * row sequence - id, first name, last name, job title, Employment status, sub unit, supervisor
 	 */
-	public void readtablerow() {
+	public String searchResultID() {
+		kw.waitForAllElementAreVisible(tablerow);
+		String text =  tablerow.get(1).getText();
+		LOG.info("Successfully searched employee with Employee ID");
+		return text;
+	}
+	
+	public String searchResultfirstName() throws InterruptedException {
+		kw.waitForAllElementAreVisible(tablerow);
+		kw.normalWait(500);
+		String text = tablerow.get(2).getText();
+		LOG.info("Successfully searched employee with first name");
+		return text;
+	}
+	
+	public String searchResultLastName() throws InterruptedException {
+		kw.waitForAllElementAreVisible(tablerow);
+		kw.normalWait(500);
+		String text = tablerow.get(3).getText();
+		LOG.info("Successfully searched employee with last name");
+		return text;
+	}
+	
+	public String searchResultJobTitle() {
+		kw.waitForAllElementAreVisible(tablerow);
+		String text = tablerow.get(4).getText();
+		LOG.info("Successfully searched employee with job title");
+		return text;
+	}
+	
+	public String searchResultEmploymentStatus() {
+		kw.waitForAllElementAreVisible(tablerow);
+		String text = tablerow.get(5).getText();
+		LOG.info("Successfully searched employee with employement status");
+		return text;
+	}
+
+	public String searchResultSubUnit() {
+		kw.waitForAllElementAreVisible(tablerow);
+		String text = tablerow.get(6).getText();
+		LOG.info("Successfully searched employee with sub unit");
+		return text;
+	}
+	
+	public String searchResultSupervisor() {
+		kw.waitForAllElementAreVisible(tablerow);
+		String text = tablerow.get(7).getText();
+		LOG.info("Successfully searched employee with supervisor name");
+		return text;
+	}
+	
+	public void readTable() {
 		kw.waitForAllElementAreVisible(tablerow);
 		for(WebElement row: tablerow) {
 			System.out.println(row.getText());
 		}
+		
 	}
+	
+		
+	
 	
 }

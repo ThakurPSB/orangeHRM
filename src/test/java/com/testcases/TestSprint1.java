@@ -253,12 +253,60 @@ public class TestSprint1 extends TestBase{
     @Step("Login, navigate to PIM > employee list > select search criteri > check if employee matching are displayed")
     @Feature("employee list search feature")
     @Story("PIM employee list Menus")
-	public void checkSearchOptionsInPIMMenuEmployeeListPage() {
-		// TODO Auto-generated method stub
+	public void checkSearchOptionsInPIMMenuEmployeeListPage() throws InterruptedException {
+		
+		LoginPage login = new LoginPage();
+		login.logMeIn();
+		EmployeeListMenu emplist = new EmployeeListMenu();
+		PimMenu pim = new PimMenu();
+		pim.clickOnPIM();
+		emplist.clickOnEmployeeListMenu();
 
+		emplist.enterEmployeeID(97016);
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultID(), "97016");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
+		
+		emplist.enterEmployeeName("Piyush");
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultfirstName(),"Piyush");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
+		
+		emplist.enterEmployeeName("Piyush");
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultLastName(),"Thakur");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
+		
+		emplist.selectEmploymentStatus("Active");
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultEmploymentStatus(), "Active");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
+		
+		emplist.enterSupervisorName("Piyush");
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultSupervisor(), "Piyush Thakur");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
+		
+		emplist.selectJobTitle(2);
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultJobTitle(), "Executive");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
+		
+		emplist.selectSubUnit(2);
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultSubUnit(), "Mumbai");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
+		
 	}
 	
-	@Test
+	@Test(enabled = false)
 	public void tryAndError() throws InterruptedException {
 		
 		LoginPage login = new LoginPage();
@@ -266,8 +314,16 @@ public class TestSprint1 extends TestBase{
 		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
 		pim.clickOnPIM();
-		emplist.readtablerow();
-		Thread.sleep(3000);
+		//emplist.readTable();
+		System.out.println(emplist.searchResultEmploymentStatus());
+		System.out.println(emplist.searchResultID());
+		System.out.println(emplist.searchResultJobTitle());
+		System.out.println(emplist.searchResultLastName());
+		System.out.println(emplist.searchResultSubUnit());
+		System.out.println(emplist.searchResultSupervisor());
+	
+		
+		//Thread.sleep(3000);
 	}
 	
 

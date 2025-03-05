@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="closeBrowser"/>
-          <include name="tryAndError"/>
+          <include name="checkSearchOptionsInPIMMenuEmployeeListPage"/>
         </methods>
       </class> <!-- com.testcases.TestSprint1 -->
     </classes>

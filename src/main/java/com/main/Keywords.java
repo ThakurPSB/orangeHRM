@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -119,4 +120,11 @@ public class Keywords {
 		Thread.sleep(milisec);
 	}
 	
+	/**
+	 * @param css selector . 
+	 * @return list of webelement
+	 */
+	public List<WebElement> presenceOfAllElement(String s) {
+		return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(s)));
+	}
 }

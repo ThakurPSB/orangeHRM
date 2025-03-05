@@ -24,7 +24,6 @@ public class PimCustomFields {
 	Actions action = new Actions(Keywords.driver);
 	
 	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(2) > a")
-	//           nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(5) > a
 	WebElement customFields ;
 
 	/**

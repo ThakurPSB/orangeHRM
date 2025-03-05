@@ -3,6 +3,7 @@ package com.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 
@@ -14,12 +15,15 @@ public class UserProfile {
 	
 	Keywords kw = new Keywords();
 	
+	private static final Logger LOG = Logger.getLogger(UserProfile.class);
+	
 	@FindBy(css="div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.oxd-topbar-body-nav-tab.--visited > a")
 	WebElement EmployeeList ;
 	
 	public void clickOnEmployeeList() {
 		kw.waitForElementToBeVisible(EmployeeList);
 		EmployeeList.click();
+		LOG.info("Successfully clicked empoyee list menu.");
 	}
 	
 	@FindBy(css="div[role='rowgroup'] div:nth-child(1) div:nth-child(1) div:nth-child(3) div:nth-child(1)")
@@ -31,6 +35,7 @@ public class UserProfile {
 	public void clickOnUser1() {
 		kw.waitForElementToBeClickable(user1);
 		user1.click();
+		LOG.info("Successfully selected the 1st user.");
 	}
 	
 	@FindBy(css="div.orangehrm-edit-employee-navigation > div.orangehrm-tabs > div:nth-child(1) > a")
@@ -42,6 +47,7 @@ public class UserProfile {
 	public void clickOnPersonalDetails() {
 		kw.waitForElementToBeClickable(PersonalDetails);
 		PersonalDetails.click();
+		LOG.info("Successfully clicked on personal details section .");
 	}
 	
 	@FindBy(css="form > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > div.oxd-input-group__label-wrapper > label")
@@ -51,7 +57,9 @@ public class UserProfile {
 	 * @return name of SSN field to check with assert
 	 */
 	public boolean checkSSNvisibility() {
-		return kw.waitInvisibilityOfElement(SSN);
+		boolean isInvisible = kw.waitInvisibilityOfElement(SSN);
+		LOG.info("SSN field visibility status: " + (isInvisible ? "Hidden" : "Visible"));
+		return isInvisible;
 	}
 	
 	/**
@@ -59,7 +67,9 @@ public class UserProfile {
 	 */
 	public boolean checkSSNdisplayed() {
 		kw.waitForElementToBeVisible(SSN);
-		return SSN.isDisplayed();
+        boolean isDisplayed = SSN.isDisplayed();
+        LOG.info("SSN field display status: " + isDisplayed);
+        return isDisplayed;
 	}
 	
 	@FindBy(css="form > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > div > div.oxd-input-group__label-wrapper > label")
@@ -69,7 +79,9 @@ public class UserProfile {
 	 * @return name of SIN field to check with assert
 	 */
 	public boolean checkSINvisibility() {
-		return kw.waitInvisibilityOfElement(SIN);
+        boolean isInvisible = kw.waitInvisibilityOfElement(SIN);
+        LOG.info("SIN field visibility status: " + (isInvisible ? "Hidden" : "Visible"));
+        return isInvisible;
 	}
 	
 	/**
@@ -77,7 +89,9 @@ public class UserProfile {
 	 */
 	public boolean checkSINdisplayed() {
 		kw.waitForElementToBeVisible(SIN);
-		return SIN.isDisplayed();
+		boolean isDisplayed = SIN.isDisplayed();
+        LOG.info("SIN field display status: " + isDisplayed);
+        return isDisplayed;
 	}
 	
 	
@@ -89,7 +103,9 @@ public class UserProfile {
 	 * @return name of nickname field to check with assert
 	 */
 	public boolean checknicknameVisibility() {
-		return kw.waitInvisibilityOfElement(nickname);
+		boolean isInvisible =  kw.waitInvisibilityOfElement(nickname);
+		LOG.info("Nickname field visibility status: "+ (isInvisible ? "Hidden":"Visible"));
+		return isInvisible;
 	}
 	
 	/**
@@ -97,7 +113,9 @@ public class UserProfile {
 	 */
 	public boolean checkNicknameDisplayed() {
 		kw.waitForElementToBeVisible(nickname);
-		return nickname.isDisplayed();
+		boolean isDisplayed = nickname.isDisplayed();
+        LOG.info("Nickname field display status: " + isDisplayed);
+        return isDisplayed;
 	}
 
 	
@@ -108,7 +126,9 @@ public class UserProfile {
 	 * @return name of tax exemption field to check with assert
 	 */
 	public boolean checkTaxExemptionvisibility() {
-		return kw.waitInvisibilityOfElement(TaxExemptionMenu);
+		boolean isInvisible = kw.waitInvisibilityOfElement(TaxExemptionMenu);
+        LOG.info("Tax exemption field visibility status: " + (isInvisible ? "Hidden" : "Visible"));
+        return isInvisible;
 	}
 	
 	/**
@@ -116,7 +136,9 @@ public class UserProfile {
 	 */
 	public boolean checkTaxExemptionDisplayed() {
 		kw.waitForElementToBeVisible(TaxExemptionMenu);
-		return TaxExemptionMenu.isDisplayed();
+		boolean isDisplayed = TaxExemptionMenu.isDisplayed();
+        LOG.info("Tax exemption field display status: " + isDisplayed);
+        return isDisplayed;
 	}
 	
 	@FindBy(css=" div.orangehrm-edit-employee-navigation > div.orangehrm-tabs > div:nth-child(11) > a")
@@ -128,6 +150,8 @@ public class UserProfile {
 	public void ClickOnMemebership() {
 		kw.waitForElementToBeVisible(memberships);
 		memberships.click();
+		LOG.info("Successfully clicked membership menu.");
+		
 	}
 	
 	@FindBy(css="div.oxd-layout-context > div > div > div > div.orangehrm-edit-employee-content > div.orangehrm-custom-fields > div > form > div.oxd-form-row > div > div:nth-child(1) > div > div.oxd-input-group__label-wrapper > label")
@@ -137,7 +161,9 @@ public class UserProfile {
 	 * @return name of insuranceID field to check with assert
 	 */
 	public boolean checkInsurandIDvisibility() {
-		return kw.waitInvisibilityOfElement(insuranceID);
+		boolean isInvisible = kw.waitInvisibilityOfElement(insuranceID);
+        LOG.info("Insurance ID field visibility status: " + (isInvisible ? "Hidden" : "Visible"));
+        return isInvisible;
 	}
 	
 	/**
@@ -145,7 +171,9 @@ public class UserProfile {
 	 */
 	public boolean checkInsuranceIDDisplayed() {
 		kw.waitForElementToBeVisible(insuranceID);
-		return insuranceID.isDisplayed();
+		boolean isDisplayed = insuranceID.isDisplayed();
+        LOG.info("Insurance ID field display status: " + isDisplayed);
+        return isDisplayed;
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(2) > div > div.oxd-input-group__label-wrapper > label")
@@ -155,7 +183,9 @@ public class UserProfile {
 	 * @return name of insuranceID field to check with assert
 	 */
 	public boolean checkOfficeTransportvisibility() {
-		return kw.waitInvisibilityOfElement(officeTransport);
+		boolean isInvisible = kw.waitInvisibilityOfElement(officeTransport);
+        LOG.info("Office transport field visibility status: " + (isInvisible ? "Hidden" : "Visible"));
+        return isInvisible;
 	}
 	
 	/**
@@ -163,7 +193,9 @@ public class UserProfile {
 	 */
 	public boolean checkOfficeTransportDisplayed() {
 		kw.waitForElementToBeVisible(officeTransport);
-		return officeTransport.isDisplayed();
+		boolean isDisplayed = officeTransport.isDisplayed();
+        LOG.info("Office transport field display status: " + isDisplayed);
+        return isDisplayed;
 	}
 	
 	

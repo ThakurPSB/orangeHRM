@@ -29,6 +29,7 @@ public class PimMenu {
 	public void clickOnPIM() {
 		kw.waitForElementToBeVisible(PIMmenu);
 		PIMmenu.click();
+		LOG.info("Successfully clicked the PIM Menu button.");
 	}
 	
 	@FindBy(css="span[class='oxd-topbar-body-nav-tab-item']")
@@ -40,6 +41,7 @@ public class PimMenu {
 	public void clickOnConfiguration() {
 		kw.waitForElementToBeVisible(configuration);
 		configuration.click();
+		LOG.info("Successfully clicked the configuration menu button.");
 	}
 
 	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent.--visited > ul")
@@ -52,6 +54,7 @@ public class PimMenu {
 	public void clickOnCustomFields() {
 		kw.waitForElementToBeVisible(ConfigOptList.get(1));
 		ConfigOptList.get(1).click();
+		LOG.info("Successfully clicked the custome field button.");
 	}
 	
 	@FindBy(css="li[class='--active oxd-topbar-body-nav-tab --parent'] li:nth-child(1) a:nth-child(1)")
@@ -63,6 +66,7 @@ public class PimMenu {
 	public void clickOnOptionalFields() {
 		kw.waitForElementToBeClickable(optionalFields);
 		optionalFields.click();
+		LOG.info("Successfully selected the optional filed option.");
 	}
 	
 	
@@ -213,6 +217,7 @@ public class PimMenu {
 	public void clickOnSaveButtonOptionalFidls() {
 		kw.waitForElementToBeClickable(OptionalFieldsSaveButton);
 		OptionalFieldsSaveButton.click();
+		LOG.info("Successfully clicked optional field preferences.");
 	}
 
 	@FindBy(css=".oxd-toast.oxd-toast--success.oxd-toast-container--toast")

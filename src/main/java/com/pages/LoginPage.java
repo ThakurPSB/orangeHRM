@@ -3,6 +3,7 @@ package com.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 
@@ -16,6 +17,8 @@ public class LoginPage {
 	}
 	
 	Keywords kw = new Keywords();
+	
+	private static final Logger LOG = Logger.getLogger(LoginPage.class);
 	
 	@FindBy(css = "button.oxd-button.oxd-button--medium.oxd-button--main.orangehrm-login-button")
     WebElement login;
@@ -47,6 +50,7 @@ public class LoginPage {
     	username.sendKeys(user);
     	kw.waitForElementToBeVisible(password);
     	password.sendKeys(pass);
+    	LOG.info("Successfully entered login credentials");
 	}
     
     /**
@@ -55,6 +59,7 @@ public class LoginPage {
     public void ClickOnLoginButton() {
     	kw.waitForElementToBeClickable(login);
     	login.click();
+    	LOG.info("Successfully clicked on login button");
 	}
     
     
@@ -64,7 +69,9 @@ public class LoginPage {
      */
     public String dashboardText() {
     	kw.waitForElementToBeVisible(dashboardLink);
-    	return dashboardLink.getText();
+    	String text =  dashboardLink.getText();
+    	LOG.info("Successfully logged in to the Dashboard page");
+    	return text;
 	}
     
     /**
@@ -73,7 +80,9 @@ public class LoginPage {
      */
     public String errorText() {
     	kw.waitForElementToBeVisible(errorInvalidCredentials);
-    	return errorInvalidCredentials.getText();
+    	String text = errorInvalidCredentials.getText();
+    	LOG.info("Successfully displayed error for invalid credentials ");
+    	return text;
 	}
     
     /**
@@ -84,6 +93,7 @@ public class LoginPage {
     	userDropdown.click();
     	kw.waitForElementToBeClickable(logoutButton);
     	logoutButton.click();
+    	LOG.info("Successfully clicked on Logout button");
 	}
     
     public void logMeIn() {
@@ -92,6 +102,7 @@ public class LoginPage {
     	kw.waitForElementToBeVisible(password);
     	password.sendKeys("Piyush@2050");
     	login.click();
+    	LOG.info("Successfully Loogged in");
 	}
    
 }
