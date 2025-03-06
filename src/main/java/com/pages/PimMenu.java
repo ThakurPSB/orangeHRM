@@ -228,7 +228,9 @@ public class PimMenu {
 	 */
 	public boolean SaveToastMessageText() {
 		kw.waitForElementToBeVisible(saveSuccessfullToast);
-		return saveSuccessfullToast.isDisplayed();
+		boolean isDisplayed = saveSuccessfullToast.isDisplayed();
+		LOG.info("Successfully added the Optional field - confirmation message");
+		return isDisplayed;
 	}
 	
 	@FindBy(css="oxd-topbar-body-nav-tab-link")
@@ -242,6 +244,7 @@ public class PimMenu {
 				break;
 			}
 		}
+		LOG.info("Successfully clicked on Configuration menu in PIM");
 	}
 	
 }

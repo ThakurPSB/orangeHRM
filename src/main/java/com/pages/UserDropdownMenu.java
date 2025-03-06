@@ -3,6 +3,7 @@ package com.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 
@@ -13,6 +14,7 @@ public class UserDropdownMenu {
 	}
 	
 	Keywords kw = new Keywords();
+	private static final Logger LOG = Logger.getLogger(UserDropdownMenu.class);
 	
 	@FindBy(css=".oxd-userdropdown-name")
 	WebElement userDropdown ;
@@ -46,7 +48,8 @@ public class UserDropdownMenu {
 	 */
 	public void clickOnUserProfile() {
 		kw.waitForElementToBeVisible(userDropdown);
-		userDropdown.click();		
+		userDropdown.click();	
+		LOG.info("Successfully ");
 	}
 	
 	/**
@@ -55,6 +58,7 @@ public class UserDropdownMenu {
 	public void clickOnAbout() {
 		kw.waitForElementToBeClickable(about);
 		about.click();
+		LOG.info("Successfully clicked on About option ");
 	}
 	
 	/**
@@ -63,6 +67,7 @@ public class UserDropdownMenu {
 	public void clickOnSupport() {
 		kw.waitForElementToBeVisible(support);
 		support.click();
+		LOG.info("Successfully clicked on support option ");
 	}
 	
 	/**
@@ -71,6 +76,7 @@ public class UserDropdownMenu {
 	public void clickOnChangePassword() {
 		kw.waitForElementToBeClickable(changePassword);
 		changePassword.click();
+		LOG.info("Successfully clicked on Change Password option");
 	}
 	
 	/**
@@ -79,6 +85,7 @@ public class UserDropdownMenu {
 	public void logout() {
 		kw.waitForElementToBeClickable(logoutButton);
 		logoutButton.click();
+		LOG.info("Successfully clicked on the logout button");
 	}
 	
 	/**
@@ -86,7 +93,9 @@ public class UserDropdownMenu {
 	 */
 	public boolean aboutInformation() {
 		kw.waitForElementToBeVisible(aboutInfo);
-		return aboutInfo.isDisplayed();
+		boolean isDisplayed = aboutInfo.isDisplayed();
+		LOG.info("Successfully displayed the about information page ");
+		return isDisplayed;
 	}
 	
 	/**
@@ -95,6 +104,7 @@ public class UserDropdownMenu {
 	public void closeAboutInformatio() {
 		kw.waitForElementToBeClickable(closeAboutInfo);
 		closeAboutInfo.click();
+		LOG.info("Successfully clicked on Closed About info page");
 	}
 	
 	/**
@@ -102,7 +112,9 @@ public class UserDropdownMenu {
 	 */
 	public boolean supportInformation() {
 		kw.waitForElementToBeVisible(supportInfo);
-		return supportInfo.isDisplayed();
+		boolean isDisplayed = supportInfo.isDisplayed();
+		LOG.info("Successfully displayed the support information page");
+		return isDisplayed;
 	}
 	
 	/**
@@ -110,7 +122,9 @@ public class UserDropdownMenu {
 	 */
 	public boolean checkIfChangePasswordPage() {
 		kw.waitForElementToBeVisible(passwordChangePage);
-		return passwordChangePage.isDisplayed();
+		boolean isDisplayed = passwordChangePage.isDisplayed();
+		LOG.info("Successfully Displayed the change password page");
+		return isDisplayed;
 	}
 	
 	

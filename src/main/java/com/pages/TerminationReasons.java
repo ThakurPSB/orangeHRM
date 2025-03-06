@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 
@@ -16,6 +17,7 @@ public class TerminationReasons {
 	}
 	
 	Keywords kw = new Keywords();
+	private static final Logger LOG = Logger.getLogger(TerminationReasons.class);
 	
 	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(5) > a")
 	WebElement TerminationReasons ;
@@ -26,6 +28,7 @@ public class TerminationReasons {
 	public void clickOnTerminationReasonsMenu() {
 		kw.waitForElementToBeVisible(TerminationReasons);
 		TerminationReasons.click();
+		LOG.info("Successfully click on the Termination Reason Menu");
 	}
 	
 	@FindBy(css="div.oxd-layout-context > div > div > div.orangehrm-header-container > div > button")
@@ -37,6 +40,7 @@ public class TerminationReasons {
 	public void ClickOnAddTerminationReasonButton() {
 		kw.waitForElementToBeVisible(AddTerminationReasonButton);
 		AddTerminationReasonButton.click();
+		LOG.info("Successfully clicked on the Add Termindation reason button");
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(2) > input")
@@ -54,6 +58,7 @@ public class TerminationReasons {
 		kw.waitForElementToBeVisible(EnterTerminationReason);
 		EnterTerminationReason.sendKeys(name);
 		AddTerminationReasonSaveButton.click();
+		LOG.info("Successfully added the termination reason");
 	}
 	
 	@FindBy(css="div.oxd-table-row.oxd-table-row")
@@ -70,19 +75,24 @@ public class TerminationReasons {
 	
 	public void deleteSelectedTerminationReason(String name) {
 		kw.waitForAllElementAreVisible(TerminationReasonList);
+		
 		for(WebElement row: TerminationReasonList) {
 			if(row.getText().contains(name)) {
 				WebElement checkboxTick = row.findElement(By.cssSelector("span.oxd-checkbox-input"));
 				kw.waitForElementToBeClickable(checkboxTick);
 				checkboxTick.click();
+				kw.waitForElementToBeClickable(deleteButton);
+		        deleteButton.click();	
+		        kw.waitForElementToBeClickable(confirmDelete);
+		        confirmDelete.click();
+		        LOG.info(name + " Termination reason deleted");
 				break;
+			}else {
+				LOG.info("No such Termination reason found.");
 			}
 			
 		}
-		kw.waitForElementToBeClickable(deleteButton);
-        deleteButton.click();	
-        kw.waitForElementToBeClickable(confirmDelete);
-        confirmDelete.click();
+		
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--success.oxd-toast-container--toast")
@@ -93,7 +103,9 @@ public class TerminationReasons {
 	 */
 	public boolean SaveToastMessageText() {
 		kw.waitForElementToBeVisible(saveSuccessfullToast);
-		return saveSuccessfullToast.isDisplayed();
+		boolean isDisplayed =  saveSuccessfullToast.isDisplayed();
+		LOG.info("Successfully saved the Termination reason to list ");
+		return isDisplayed;
 	}
 	
 	

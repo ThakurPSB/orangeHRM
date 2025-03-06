@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 
@@ -20,6 +21,7 @@ public class PimCustomFields {
 	}
 	
 	Keywords kw = new Keywords();
+	private static final Logger LOG = Logger.getLogger(PimCustomFields.class);
 	
 	Actions action = new Actions(Keywords.driver);
 	
@@ -32,6 +34,7 @@ public class PimCustomFields {
 	public void clickOnCustomFields() {
 		kw.waitForElementToBeVisible(customFields);
 		customFields.click();
+		LOG.info("Successfully clicked on Custom Field Option ");
 	}
 	
 	@FindBy(css="div.oxd-layout-context > div > div > div.orangehrm-header-container > button")
@@ -43,6 +46,7 @@ public class PimCustomFields {
 	public void clickOnAddCustomFieldsButton() {
 		kw.waitForElementToBeClickable(addCustomFields);
 		addCustomFields.click();
+		LOG.info("Successfully clicked on the Add custom Field Button");
 	}
 	
 	@FindBy(css="form > div:nth-child(1) > div > div.oxd-grid-item.oxd-grid-item--gutters.organization-name-container > div > div:nth-child(2) > input")
@@ -52,6 +56,7 @@ public class PimCustomFields {
 		kw.waitForElementToBeClickable(fieldName);
 		fieldName.click();
 		fieldName.sendKeys(field);
+		LOG.info("Successfully entered the field name in text box");
 	}
 	
 	
@@ -68,6 +73,7 @@ public class PimCustomFields {
 			screen.sendKeys(Keys.ARROW_DOWN);
 		}
 		screen.sendKeys(Keys.ENTER);
+		LOG.info("Successfully selected the screen option");
 	}
 	
 	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -81,6 +87,7 @@ public class PimCustomFields {
 		typeOfInput.sendKeys(Keys.ARROW_DOWN);
 		typeOfInput.sendKeys(Keys.ARROW_DOWN);
 		typeOfInput.sendKeys(Keys.ENTER);		
+		LOG.info("Successfully selected the input style as dropdown");
 	}
 	
 	/**
@@ -90,6 +97,7 @@ public class PimCustomFields {
 		kw.waitForElementToBeClickable(typeOfInput);
 		typeOfInput.sendKeys(Keys.ARROW_DOWN);
 		typeOfInput.sendKeys(Keys.ENTER);
+		LOG.info("Successfully selected the input style as Text");
 	}
 	
 	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > input")
@@ -101,6 +109,7 @@ public class PimCustomFields {
 	public void enterOptions(String opt) {
 		kw.waitForElementToBeVisible(selectOptionstextbox);
 		selectOptionstextbox.sendKeys(opt);
+		LOG.info("Successfully entered the options for dropdown");
 	}
 	
 	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
@@ -112,6 +121,7 @@ public class PimCustomFields {
 	public void clickOnSaveCustomFieldButton() {
 		kw.waitForElementToBeClickable(saveCustomField);
 		saveCustomField.click();
+		LOG.info("Successfully clicked on the Save Custom Field button ");
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--success.oxd-toast-container--toast")
@@ -122,7 +132,9 @@ public class PimCustomFields {
 	 */
 	public boolean SaveToastMessageText() {
 		kw.waitForElementToBeVisible(saveSuccessfullToast);
-		return saveSuccessfullToast.isDisplayed();
+		boolean isDisplayed = saveSuccessfullToast.isDisplayed();
+		LOG.info("Successfully saved the custom field");
+		return isDisplayed;
 	}
 	
 	
@@ -134,17 +146,22 @@ public class PimCustomFields {
 	@FindBy(css="div > div > div > div.orangehrm-modal-footer > button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
 	WebElement confirmDeleteYes ;
 	
-	public void SelectFieldToDelete(String fieldname) {
+	public void SelectFieldToDelete(String fieldname) throws InterruptedException {
 		kw.waitForAllElementAreVisible(rows);
 		for (WebElement row : rows) {
 			
-            if (row.getText().contains(fieldname)) {  
+            if (row.getText().contains(fieldname)) { 
+            	LOG.info("Found custome field to be deleted ");
                 WebElement delButton = row.findElement(By.cssSelector("button.oxd-icon-button.oxd-table-cell-action-space i.oxd-icon.bi-trash"));
             	delButton.click();
+            	kw.normalWait(200);
+            	kw.waitForElementToBeClickable(confirmDeleteYes);
+                confirmDeleteYes.click();
+            }else {
+            	LOG.info(fieldname+ " not found in the custom fields list");
             }
         }
-		 kw.waitForElementToBeClickable(confirmDeleteYes);
-         confirmDeleteYes.click();
+		
 	}
 	
 }

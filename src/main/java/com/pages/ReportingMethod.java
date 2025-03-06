@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 
@@ -16,6 +17,7 @@ public class ReportingMethod {
 	}
 	
 	Keywords kw = new Keywords();
+	private static final Logger LOG = Logger.getLogger(ReportingMethod.class);
 	
 	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(4) > a")
 	WebElement reportingMethodMenu ;
@@ -26,6 +28,7 @@ public class ReportingMethod {
 	public void clickOnReportingMethod() {
 		kw.waitForElementToBeClickable(reportingMethodMenu);
 		reportingMethodMenu.click();
+		LOG.info("Successfully clicked on Reporting Method");
 	}
 	
 	@FindBy(css="div.oxd-layout-context > div > div > div.orangehrm-header-container > div > button")
@@ -37,6 +40,7 @@ public class ReportingMethod {
 	public void AddReportingMethodButton() {
 		kw.waitForElementToBeVisible(AddReportingMethod);
 		AddReportingMethod.click();
+		LOG.info("Successfully clicked on Add Reporting Method Button ");
 	}
 	
 	@FindBy(css="div.oxd-layout-context > div > div > form > div.oxd-form-row > div > div:nth-child(2) > input")
@@ -49,6 +53,7 @@ public class ReportingMethod {
 		kw.waitForElementToBeVisible(reportingMethodName);
 		reportingMethodName.sendKeys(nm);
 		reportingMethodSaveButton.click();
+		LOG.info("Successfully entered the reporting method in text box");
 	}
 	
 	@FindBy(css="div.oxd-table-row")
@@ -57,17 +62,23 @@ public class ReportingMethod {
 	@FindBy(css="i.oxd-icon.bi-trash.oxd-button-icon")
 	WebElement confirmDeleteYes ;
 	
-	public void deleteSelectedReportingMethod(String name) {
+	public void deleteSelectedReportingMethod(String name) throws InterruptedException {
 		kw.waitForAllElementAreVisible(reportingMethodList);
+		
 		for(WebElement row: reportingMethodList) {
 			if(row.getText().contains(name)) {
-				System.out.println("found");
+				LOG.info("Found the reporting Method");
 				WebElement deleteButton = row.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
 				deleteButton.click();
+				kw.normalWait(200);
+				kw.waitForElementToBeClickable(confirmDeleteYes);
+		        confirmDeleteYes.click();
+		        LOG.info(name+" Reporing option deleted");
+			}else {
+				LOG.info("No such method found");
 			}
 		}
-		 kw.waitForElementToBeClickable(confirmDeleteYes);
-         confirmDeleteYes.click();		
+		 	
 	}
 	
 	
@@ -80,7 +91,10 @@ public class ReportingMethod {
 	 */
 	public boolean SaveToastMessageText() {
 		kw.waitForElementToBeVisible(saveSuccessfullToast);
-		return saveSuccessfullToast.isDisplayed();
+		boolean isDisplayed = saveSuccessfullToast.isDisplayed();
+		LOG.info("Successfully saved the repoting Method");
+		return isDisplayed;
+		
 	}
 	
 	
