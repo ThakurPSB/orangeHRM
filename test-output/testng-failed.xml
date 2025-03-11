@@ -5,8 +5,8 @@
     <classes>
       <class name="com.testcases.TestSprint1">
         <methods>
-          <include name="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage"/>
           <include name="setUp"/>
+          <include name="addUserandCheckIfAllOptionsAreWorkingWhileCreating"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.testcases.TestSprint1 -->

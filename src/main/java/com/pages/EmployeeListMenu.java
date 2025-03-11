@@ -269,7 +269,40 @@ public class EmployeeListMenu {
 		
 	}
 	
-		
+	@FindBy(css="div > div.orangehrm-paper-container > div.orangehrm-header-container > button")
+	WebElement addNewEmployeeButton ;
+	
+	public void clickOnAddNewEmployeeButton() {
+		kw.waitForElementToBeClickable(addNewEmployeeButton);
+		addNewEmployeeButton.click();
+		LOG.info("Successfully clicked on add new employee button");
+	}
+	
+	@FindBy(css="div.orangehrm-container > div > div.oxd-table-header > div > div:nth-child(1) > div > label")
+	WebElement selectAll ;
+	
+	public void clickOnSelectAll() {
+		kw.waitForElementToBeClickable(selectAll);
+		kw.scrollToElement(selectAll);
+		selectAll.click();
+		System.out.println("Selected all the search results");
+	}
+	
+	@FindBy(css="div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div > div > button")
+	WebElement deleteSelectedButton ;
+	
+	@FindBy(css="button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
+	WebElement  confirmDelete;
+	
+	public void DeleteSelectedUsers() throws InterruptedException {
+		kw.waitForElementToBeClickable(deleteSelectedButton);
+		deleteSelectedButton.click();
+		System.out.println("Successfully Clicked on delete button");
+		kw.normalWait(500);
+		kw.waitForElementToBeClickable(confirmDelete);
+		confirmDelete.click();
+		System.out.println("Successfully clicked on confirm delete button");
+	}
 	
 	
 }

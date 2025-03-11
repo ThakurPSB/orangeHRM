@@ -1,7 +1,9 @@
 package com.testcases;
 
+import java.awt.AWTException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeoutException;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -11,6 +13,7 @@ import com.base.TestBase;
 import com.pages.PimMenu;
 import com.pages.ReportingMethod;
 import com.pages.TerminationReasons;
+import com.pages.AddEmployeePage;
 import com.pages.EmployeeListMenu;
 import com.pages.LoginPage;
 import com.pages.PimCustomFields;
@@ -306,24 +309,52 @@ public class TestSprint1 extends TestBase{
 		
 	}
 	
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Check if PIM Menu >  Add Employee > adding user.")
+    @Step("Login, navigate to PIM > Add employee > enter the details and add employee")
+    @Feature("Add Employee")
+    @Story("Add Employee")
+    public void addUserandCheckIfAllOptionsAreWorkingWhileCreating() throws InterruptedException, AWTException, TimeoutException {
+		LoginPage login = new LoginPage();
+		login.logMeIn();
+		PimMenu pim = new PimMenu();
+		EmployeeListMenu emplist = new EmployeeListMenu();
+		AddEmployeePage addemp = new AddEmployeePage();
+		pim.clickOnPIM();
+		addemp.clickOnAddNewEmployeeButton();
+		addemp.selectProfilePic();
+		addemp.EnterUserDetails("George", "L", "Wisley");
+		//addemp.enterEmployeeID();
+		addemp.clickOnCreateLoginDetails();
+		addemp.enterLoginDetails("George", "User@2025", false);
+		addemp.clickOnSaveButton();
+		Assert.assertTrue(addemp.SaveToastMessageText());
+		pim.clickOnPIM();
+		emplist.clickOnEmployeeListMenu();
+		emplist.enterEmployeeName("Wisley");
+		emplist.clickOnSearchButton();
+		emplist.clickOnSelectAll();
+		emplist.DeleteSelectedUsers();
+	}
+
+	
 	@Test(enabled = false)
-	public void tryAndError() throws InterruptedException {
+	public void tryAndError() throws InterruptedException, AWTException, TimeoutException {
 		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
-		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
+		AddEmployeePage addemp = new AddEmployeePage();
 		pim.clickOnPIM();
-		//emplist.readTable();
-		System.out.println(emplist.searchResultEmploymentStatus());
-		System.out.println(emplist.searchResultID());
-		System.out.println(emplist.searchResultJobTitle());
-		System.out.println(emplist.searchResultLastName());
-		System.out.println(emplist.searchResultSubUnit());
-		System.out.println(emplist.searchResultSupervisor());
-	
+		addemp.clickOnAddNewEmployeeButton();
+		//addemp.selectProfilePic();
+		addemp.EnterUserDetails("Hermoinee", "R", "Wisley");
+		addemp.enterEmployeeID();
+	//	addemp.clickOnSaveButton();
 		
-		//Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 	
 

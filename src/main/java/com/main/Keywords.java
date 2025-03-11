@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 
 public class Keywords {
@@ -24,6 +27,7 @@ public class Keywords {
 	
 	//logger instance for the keyword class
 	private static final Logger LOG = Logger.getLogger(Keywords.class);
+	
 	
 	/**
 	 * launch the given URK
@@ -57,7 +61,7 @@ public class Keywords {
 		
 		//setting fluent wait parameters
 		wait = new FluentWait<WebDriver>(driver);
-		wait.withTimeout(Duration.ofSeconds(20));
+		wait.withTimeout(Duration.ofSeconds(15));
 		wait.pollingEvery(Duration.ofMillis(500));
 		wait.ignoring(NoSuchElementException.class);
 		
@@ -68,7 +72,7 @@ public class Keywords {
 	 * @param web element
 	 * @return web element when visible
 	 */
-	public WebElement waitForElementToBeVisible(WebElement element) {
+	public WebElement waitForElementToBeVisible(WebElement element)  {
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
@@ -90,9 +94,15 @@ public class Keywords {
 		return wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 	
+	/**
+	 * @param li list of webelement 
+	 * waits till all the elements of the list are visiboe
+	 */
 	public void waitForAllElementAreVisible(List<WebElement> li) {
 		wait.until(ExpectedConditions.visibilityOfAllElements(li));
 	}
+	
+	
 	
 	
 	/**
@@ -127,4 +137,39 @@ public class Keywords {
 	public List<WebElement> presenceOfAllElement(String s) {
 		return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(s)));
 	}
+	
+	
+	/**
+	 * @param webelement
+	 * @return webelement when its present
+	 */
+	public WebElement visibilityOfElementLocated (WebElement e) {
+		return wait.until(ExpectedConditions.visibilityOf(e));
+	}
+	
+	/**
+     * Waits for an element to be visible with a short timeout.
+     * @param element WebElement to check visibility
+     * @param timeoutSeconds Timeout duration in seconds
+     * @return true if element is visible, false if not found within timeout
+     */
+    public boolean waitForElementToBeVisibleShort(WebElement element, int timeoutSeconds) throws TimeoutException{
+        try {
+        	WebDriverWait shortWait = new WebDriverWait (driver, Duration.ofSeconds(timeoutSeconds));
+            shortWait.until(ExpectedConditions.visibilityOf(element));
+            return true; // Element is visible
+        } catch (TimeoutException e) {
+            return false; // Element is not found within timeout
+        }
+    }
+	
+    /**
+     * Scrolls the page to a specific WebElement
+     * @param element The WebElement to scroll to
+     */
+    public void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
+    }
+
 }
