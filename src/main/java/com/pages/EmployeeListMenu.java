@@ -59,6 +59,7 @@ public class EmployeeListMenu {
 	public void enterEmployeeID(int id){
 		kw.waitForElementToBeVisible(employeeIDTextBox);
 		employeeIDTextBox.click();
+		employeeIDTextBox.sendKeys(String.valueOf(id));
 		supervisor.sendKeys(Keys.TAB);
 		LOG.info("Successfully entered the employee ID in search field.");
 	}

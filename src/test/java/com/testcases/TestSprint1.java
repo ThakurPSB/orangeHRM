@@ -265,9 +265,9 @@ public class TestSprint1 extends TestBase{
 		pim.clickOnPIM();
 		emplist.clickOnEmployeeListMenu();
 
-		emplist.enterEmployeeID(97016);
+		emplist.enterEmployeeID(68166);
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultID(), "97016");
+		Assert.assertEquals(emplist.searchResultID(), "68166");
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
@@ -340,19 +340,20 @@ public class TestSprint1 extends TestBase{
 	}
 
 	
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void tryAndError() throws InterruptedException, AWTException, TimeoutException {
-		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
+		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
-		AddEmployeePage addemp = new AddEmployeePage();
 		pim.clickOnPIM();
-		addemp.clickOnAddNewEmployeeButton();
-		//addemp.selectProfilePic();
-		addemp.EnterUserDetails("Hermoinee", "R", "Wisley");
-		addemp.enterEmployeeID();
-	//	addemp.clickOnSaveButton();
+		emplist.clickOnEmployeeListMenu();
+
+		emplist.enterEmployeeID(68166);
+		emplist.clickOnSearchButton();
+		Assert.assertEquals(emplist.searchResultID(), "68166");
+		emplist.clickOnResetButton();
+		emplist.clickOnEmployeeListMenu();
 		
 		Thread.sleep(5000);
 	}
