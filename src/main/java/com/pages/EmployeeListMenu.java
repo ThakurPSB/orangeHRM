@@ -273,8 +273,9 @@ public class EmployeeListMenu {
 	@FindBy(css="div > div.orangehrm-paper-container > div.orangehrm-header-container > button")
 	WebElement addNewEmployeeButton ;
 	
-	public void clickOnAddNewEmployeeButton() {
+	public void clickOnAddNewEmployeeButton() throws InterruptedException {
 		kw.waitForElementToBeClickable(addNewEmployeeButton);
+		kw.normalWait(200);
 		addNewEmployeeButton.click();
 		LOG.info("Successfully clicked on add new employee button");
 	}
@@ -297,6 +298,7 @@ public class EmployeeListMenu {
 	
 	public void DeleteSelectedUsers() throws InterruptedException {
 		kw.waitForElementToBeClickable(deleteSelectedButton);
+		kw.normalWait(200);
 		deleteSelectedButton.click();
 		LOG.info("Successfully Clicked on delete button");
 		kw.normalWait(500);
