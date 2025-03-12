@@ -182,7 +182,7 @@ public class EmployeeListMenu {
 	 * click on the search button 
 	 * @throws InterruptedException 
 	 */
-	public void clickOnSearchButton() throws InterruptedException {
+	public void clickOnSearchButton() throws InterruptedException  {
 		kw.waitForElementToBeVisible(SearchButton);
 		kw.normalWait(500);
 		SearchButton.click();
@@ -264,7 +264,7 @@ public class EmployeeListMenu {
 	public void readTable() {
 		kw.waitForAllElementAreVisible(tablerow);
 		for(WebElement row: tablerow) {
-			System.out.println(row.getText());
+			LOG.info(row.getText());
 		}
 		
 	}
@@ -285,7 +285,7 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeClickable(selectAll);
 		kw.scrollToElement(selectAll);
 		selectAll.click();
-		System.out.println("Selected all the search results");
+		LOG.info("Selected all the search results");
 	}
 	
 	@FindBy(css="div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div > div > button")
@@ -297,11 +297,11 @@ public class EmployeeListMenu {
 	public void DeleteSelectedUsers() throws InterruptedException {
 		kw.waitForElementToBeClickable(deleteSelectedButton);
 		deleteSelectedButton.click();
-		System.out.println("Successfully Clicked on delete button");
+		LOG.info("Successfully Clicked on delete button");
 		kw.normalWait(500);
 		kw.waitForElementToBeClickable(confirmDelete);
 		confirmDelete.click();
-		System.out.println("Successfully clicked on confirm delete button");
+		LOG.info("Successfully clicked on confirm delete button");
 	}
 	
 	
