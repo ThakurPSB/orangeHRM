@@ -2,16 +2,16 @@
 <testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-13T10:37:26 IST" name="Default suite" finished-at="2025-03-13T10:37:45 IST" duration-ms="19096">
+  <suite started-at="2025-03-13T11:17:09 IST" name="Default suite" finished-at="2025-03-13T11:17:54 IST" duration-ms="45003">
     <groups>
     </groups>
-    <test started-at="2025-03-13T10:37:26 IST" name="Default test" finished-at="2025-03-13T10:37:45 IST" duration-ms="19096">
+    <test started-at="2025-03-13T11:17:09 IST" name="Default test" finished-at="2025-03-13T11:17:54 IST" duration-ms="45003">
       <class name="com.testcases.TestSprint1">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@1fb2d5e]" started-at="2025-03-13T10:37:26 IST" name="cleanAllureResults" finished-at="2025-03-13T10:37:26 IST" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@3a082ff4]" started-at="2025-03-13T11:17:09 IST" name="cleanAllureResults" finished-at="2025-03-13T11:17:09 IST" duration-ms="77" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@1fb2d5e]" started-at="2025-03-13T10:37:26 IST" name="setUp" finished-at="2025-03-13T10:37:30 IST" duration-ms="3963" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@3a082ff4]" started-at="2025-03-13T11:17:09 IST" name="setUp" finished-at="2025-03-13T11:17:13 IST" duration-ms="3705" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="AddReportingMethodAndTerminationReason()[pri:0, instance:com.testcases.TestSprint1@1fb2d5e]" started-at="2025-03-13T10:37:30 IST" name="AddReportingMethodAndTerminationReason" finished-at="2025-03-13T10:37:43 IST" duration-ms="13168" status="PASS">
+        <test-method signature="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage()[pri:0, instance:com.testcases.TestSprint1@3a082ff4]" started-at="2025-03-13T11:17:13 IST" name="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage" finished-at="2025-03-13T11:17:54 IST" duration-ms="40747" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddReportingMethodAndTerminationReason -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@1fb2d5e]" started-at="2025-03-13T10:37:43 IST" name="closeBrowser" finished-at="2025-03-13T10:37:45 IST" duration-ms="1726" status="PASS">
+        </test-method> <!-- AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@3a082ff4]" started-at="2025-03-13T11:17:54 IST" name="closeBrowser" finished-at="2025-03-13T11:17:54 IST" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
