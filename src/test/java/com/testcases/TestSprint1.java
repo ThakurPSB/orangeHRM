@@ -31,7 +31,7 @@ public class TestSprint1 extends TestBase{
     @Step("Login with username: {0} and password: {1}")
     @Feature("Login Feature")
     @Story("Valid login credentials should grant access")
-	public void CheckIfLoginSuccessfullWithCorrectCredentials() {
+	public void CheckIfLoginSuccessfullWithCorrectCredentials() throws InterruptedException {
 		LoginPage login = new LoginPage();
 		
 		HashMap <String ,String> credentials = new HashMap<>();
@@ -55,6 +55,7 @@ public class TestSprint1 extends TestBase{
 				LOG.info("Test Passed - Login unsuccesfull with incorrect credentials");
 			}
 		}
+		Thread.sleep(3000);
 	}
 	
 	@Test
@@ -63,7 +64,7 @@ public class TestSprint1 extends TestBase{
     @Step("Login , click on userprofile menu and check each option one by one")
     @Feature("User Dropdown")
     @Story("Respected links / dialog box should be visible")
-	public void checkIfAllTheLinksInProfileMenuAreWorking() {
+	public void checkIfAllTheLinksInProfileMenuAreWorking() throws InterruptedException {
 		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
@@ -80,6 +81,7 @@ public class TestSprint1 extends TestBase{
 		profile.clickOnUserProfile();
 		profile.clickOnChangePassword();
 		Assert.assertTrue(profile.checkIfChangePasswordPage());
+		Thread.sleep(3000);
 	}
 	
 	
@@ -106,6 +108,7 @@ public class TestSprint1 extends TestBase{
 		pim.clickOnSaveButtonOptionalFidls();
 		Assert.assertTrue(pim.SaveToastMessageText());
 		
+		Thread.sleep(3000);
 	}
 	
 	
@@ -157,7 +160,7 @@ public class TestSprint1 extends TestBase{
 		Assert.assertTrue(user.checkSSNdisplayed());
 		Assert.assertTrue(user.checkTaxExemptionDisplayed());
 		
-		
+		Thread.sleep(3000);
 	}
 
 	@Test
@@ -213,7 +216,7 @@ public class TestSprint1 extends TestBase{
 		Assert.assertTrue(user.checkInsuranceIDDisplayed());
 		Assert.assertTrue(user.checkOfficeTransportDisplayed());
 		
-		
+		Thread.sleep(3000);
 	}
 	
 	
@@ -247,6 +250,7 @@ public class TestSprint1 extends TestBase{
 		tr.ClickOnAddTerminationReasonButton();
 		tr.AddTerminationReason("Other");
 		Assert.assertTrue(tr.SaveToastMessageText());
+		Thread.sleep(3000);
 		
 	}
 	
@@ -306,6 +310,7 @@ public class TestSprint1 extends TestBase{
 		Assert.assertEquals(emplist.searchResultSubUnit(), "Mumbai");
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
+		Thread.sleep(3000);
 		
 	}
 	
@@ -337,6 +342,7 @@ public class TestSprint1 extends TestBase{
 		emplist.clickOnSearchButton();
 		emplist.clickOnSelectAll();
 		emplist.DeleteSelectedUsers();
+		Thread.sleep(3000);
 	}
 
 	
