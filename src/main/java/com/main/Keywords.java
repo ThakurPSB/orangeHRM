@@ -53,7 +53,6 @@ public class Keywords {
 	public void launchBrowser(String browserName) {
 		
 		if(browserName.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
 		
 			System.setProperty("webdriver.chrome.verboseLogging", "true");
 
