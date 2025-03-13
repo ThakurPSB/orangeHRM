@@ -91,7 +91,7 @@ public class TestSprint1 extends TestBase{
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save")
     @Feature("Configuration/Optional Fields")
     @Story("Create a page object for PIM menu")
-	public void checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff() {
+	public void checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff() throws InterruptedException {
 		
 		LoginPage login = new LoginPage();
 		PimMenu pim = new PimMenu();
