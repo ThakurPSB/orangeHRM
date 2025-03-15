@@ -3,11 +3,11 @@ import java.io.File;
 import java.io.IOException;
 import org.testng.annotations.BeforeSuite;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 

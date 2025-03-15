@@ -13,15 +13,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
-import java.util.logging.Level;
 
 
 public class Keywords {
@@ -41,8 +37,6 @@ public class Keywords {
 	public void launchURL(String url) {
 		driver.get(url);
 		LOG.info("Navigated to URL: " + url);
-		logBrowserConsoleLogs();  // Capture browser logs
-
 	}
 	
 	/**
@@ -54,17 +48,8 @@ public class Keywords {
 		
 		if(browserName.equalsIgnoreCase("Chrome")) {
 		
-			System.setProperty("webdriver.chrome.verboseLogging", "true");
-
 	        ChromeOptions options = new ChromeOptions();
 
-	        LoggingPreferences logPrefs = new LoggingPreferences();
-	        logPrefs.enable(LogType.BROWSER, Level.ALL);
-	        logPrefs.enable(LogType.DRIVER, Level.ALL);
-
-	        // Use correct method to set logging preferences
-	        options.setCapability("goog:loggingPrefs", logPrefs);
-	        
 	        driver = new ChromeDriver(options);
 
 			LOG.info("Launched Chrome Browser");
@@ -81,8 +66,6 @@ public class Keywords {
 		
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
-		
-		logDriverLogs();  // Capture WebDriver logs
 		
 		//setting fluent wait parameters
 		wait = new FluentWait<WebDriver>(driver);
@@ -197,28 +180,5 @@ public class Keywords {
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
     }
     
-    /**
-     * Log browser console logs
-     */
-    public void logBrowserConsoleLogs() {
-        if (driver != null) {
-            LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
-            for (org.openqa.selenium.logging.LogEntry entry : logs) {
-                LOG.info("[Browser Console] " + entry.getLevel() + ": " + entry.getMessage());
-            }
-        }
-    }
-    
-    /**
-     * Log WebDriver logs
-     */
-    public void logDriverLogs() {
-        if (driver != null) {
-            LogEntries logs = driver.manage().logs().get(LogType.DRIVER);
-            for (org.openqa.selenium.logging.LogEntry entry : logs) {
-                LOG.info("[WebDriver Log] " + entry.getLevel() + ": " + entry.getMessage());
-            }
-        }
-    }
 
 }

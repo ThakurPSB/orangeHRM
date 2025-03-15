@@ -301,7 +301,7 @@ public class TestSprint1 extends TestBase{
 		
 		emplist.selectJobTitle(2);
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultJobTitle(), "Executive");
+		Assert.assertTrue(emplist.searchResultJobTitle("Executive"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
@@ -354,14 +354,9 @@ public class TestSprint1 extends TestBase{
 		PimMenu pim = new PimMenu();
 		pim.clickOnPIM();
 		emplist.clickOnEmployeeListMenu();
-
-		emplist.enterEmployeeID(68166);
+		emplist.selectJobTitle(6);
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultID(), "68166");
-		emplist.clickOnResetButton();
-		emplist.clickOnEmployeeListMenu();
-		
-		Thread.sleep(5000);
+		Assert.assertTrue(emplist.searchResultJobTitle("Manager"));
 	}
 	
 

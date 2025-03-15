@@ -6,8 +6,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.log4testng.Logger;
-
+import org.apache.log4j.Logger;
 import com.main.Keywords;
 
 public class PimMenu {

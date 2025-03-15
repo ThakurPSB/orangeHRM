@@ -3,12 +3,12 @@ package com.pages;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.log4testng.Logger;
 
 import com.main.Keywords;
 
@@ -33,7 +33,7 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeClickable(employeeListMenu);
 		kw.normalWait(1000);
 		employeeListMenu.click();
-		LOG.info("Successfully clicked the button.");
+		LOG.info("Successfully clicked the Employee list Menu.");
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
@@ -152,12 +152,40 @@ public class EmployeeListMenu {
 
 		kw.waitForElementToBeVisible(jobTitleDropdown);
 		jobTitleDropdown.click();
-		for(int i=0; i<=jobTitleSeq-1; i++) {
+		for(int i=1; i<=jobTitleSeq; i++) {
 			jobTitleDropdown.sendKeys(Keys.ARROW_DOWN);
+			kw.normalWait(300);
 		}
-		jobTitleDropdown.sendKeys(Keys.TAB);
-		LOG.info("Successfully selected job title");
 		
+		jobTitleDropdown.sendKeys(Keys.ENTER);
+		
+		//for log message
+		switch (jobTitleSeq) {
+			case 1:
+				LOG.info("Successfully selected job title Assistant Manager");
+				break;
+			case 2:
+				LOG.info("Successfully selected job title Executive");
+				break;
+			case 3:
+				LOG.info("Successfully selected job title HR Executive");
+				break;
+			case 4:
+				LOG.info("Successfully selected job title HR Manager");
+				break;
+			case 5:
+				LOG.info("Successfully selected job title HR Recruiter");
+				break;
+			case 6:
+				LOG.info("Successfully selected job title Manager");
+				break;
+			case 7:
+				LOG.info("Successfully selected job title TC");
+				break;
+			case 8:
+				LOG.info("Successfully selected job title TL");
+				break;
+		}
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(7) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -234,29 +262,40 @@ public class EmployeeListMenu {
 		return text;
 	}
 	
-	public String searchResultJobTitle() {
-		kw.waitForAllElementAreVisible(tablerow);
-		String text = tablerow.get(4).getText();
-		LOG.info("Successfully searched employee with job title");
-		return text;
+	public boolean searchResultJobTitle(String jtitle) throws InterruptedException {
+		
+		if (infoToastMessage()) { // Assuming 'tablerowContainer' is the table wrapper
+                          		        return true;
+		}else {
+			kw.waitForAllElementAreVisible(tablerow);
+			String text = tablerow.get(4).getText();
+			System.out.println("returned "+ text);
+			System.out.println("expected "+ jtitle);
+			LOG.info("Successfully searched employee with job title");
+			return text.contains(jtitle);
+		}
+		
 	}
 	
-	public String searchResultEmploymentStatus() {
+	public String searchResultEmploymentStatus() throws InterruptedException {
 		kw.waitForAllElementAreVisible(tablerow);
+		kw.normalWait(500);
 		String text = tablerow.get(5).getText();
 		LOG.info("Successfully searched employee with employement status");
 		return text;
 	}
 
-	public String searchResultSubUnit() {
+	public String searchResultSubUnit() throws InterruptedException {
 		kw.waitForAllElementAreVisible(tablerow);
+		kw.normalWait(500);
 		String text = tablerow.get(6).getText();
 		LOG.info("Successfully searched employee with sub unit");
 		return text;
 	}
 	
-	public String searchResultSupervisor() {
+	public String searchResultSupervisor() throws InterruptedException {
 		kw.waitForAllElementAreVisible(tablerow);
+		kw.normalWait(500);
 		String text = tablerow.get(7).getText();
 		LOG.info("Successfully searched employee with supervisor name");
 		return text;
@@ -307,5 +346,17 @@ public class EmployeeListMenu {
 		LOG.info("Successfully clicked on confirm delete button");
 	}
 	
+	@FindBy(css=".oxd-toast.oxd-toast--info.oxd-toast-container--toast")
+	WebElement infoToast ;
 	
+	/**
+	 * @return save successful toast message
+	 */
+	public boolean infoToastMessage() {
+		kw.waitForElementToBeVisible(infoToast);
+		boolean isDisplayed = infoToast.isDisplayed();
+		LOG.info("No records found for the search criteria");
+		return isDisplayed;
+		
+	}
 }
