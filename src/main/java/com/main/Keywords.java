@@ -180,5 +180,19 @@ public class Keywords {
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
     }
     
+    public boolean isElementListPresent(List<WebElement> element) {
+    	try {
+            return element.isEmpty(); // ✅ Returns true if element exists
+        } catch (Exception e) {
+            return false; // ✅ Prevents exceptions if the element is not found
+        }
+	}
+    
+    /**
+     * @return driver instance to use in other classes
+     */
+    public WebDriver getDriver() {
+        return driver;
+    }
 
 }

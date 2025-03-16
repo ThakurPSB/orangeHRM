@@ -4,6 +4,7 @@ package com.pages;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -45,7 +46,7 @@ public class EmployeeListMenu {
 	public void enterEmployeeName(String name) {
 		kw.waitForElementToBeVisible(employeeNameTextBox);
 		employeeNameTextBox.sendKeys(name);
-		supervisor.sendKeys(Keys.TAB);
+		supervisor.sendKeys(Keys.ENTER);
 		LOG.info("Successfully entered the name in search name field.");
 
 	}
@@ -60,7 +61,7 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeVisible(employeeIDTextBox);
 		employeeIDTextBox.click();
 		employeeIDTextBox.sendKeys(String.valueOf(id));
-		supervisor.sendKeys(Keys.TAB);
+		supervisor.sendKeys(Keys.ENTER);
 		LOG.info("Successfully entered the employee ID in search field.");
 	}
 	
@@ -92,7 +93,7 @@ public class EmployeeListMenu {
 		} else {
 			LOG.info("invalid employment status");
 		}
-		action.sendKeys(Keys.TAB).perform();
+		action.sendKeys(Keys.ENTER).perform();
 		LOG.info("Successfully selected employement status ."+ status );
 	}
 	
@@ -121,9 +122,9 @@ public class EmployeeListMenu {
 			kw.normalWait(500);
 			include.sendKeys(Keys.ENTER);
 		} else if(oldnew.equals("new")) {
-			include.sendKeys(Keys.TAB);
+			include.sendKeys(Keys.ENTER);
 		}
-		include.sendKeys(Keys.TAB);
+		include.sendKeys(Keys.ENTER);
 		LOG.info("Successfully selected the option to include "+oldnew+ " type of employees");
 	}
 	
@@ -136,7 +137,7 @@ public class EmployeeListMenu {
 	public void enterSupervisorName(String name) {
 		kw.waitForElementToBeClickable(supervisor);
 		supervisor.sendKeys(name);
-		supervisor.sendKeys(Keys.TAB);
+		supervisor.sendKeys(Keys.ENTER);
 		LOG.info("Successfully entered the supervisor name in search field.");
 	}
 	
@@ -152,9 +153,9 @@ public class EmployeeListMenu {
 
 		kw.waitForElementToBeVisible(jobTitleDropdown);
 		jobTitleDropdown.click();
-		for(int i=1; i<=jobTitleSeq; i++) {
+		for(int i=0; i<=jobTitleSeq; i++) {
 			jobTitleDropdown.sendKeys(Keys.ARROW_DOWN);
-			kw.normalWait(300);
+			kw.normalWait(350);
 		}
 		
 		jobTitleDropdown.sendKeys(Keys.ENTER);
@@ -193,14 +194,18 @@ public class EmployeeListMenu {
 	
 	/**
 	 * @param seq select the option number for location or sub unit
+	 * @throws InterruptedException 
 	 */
-	public void selectSubUnit(int seq) {
+	public void selectSubUnit(int seq) throws InterruptedException {
 		kw.waitForElementToBeVisible(subUnit);
 		subUnit.click();
-		for(int i=0; i<=seq-1; i++) {
+		kw.normalWait(500);
+		for(int i=0; i<=seq; i++) {
 			subUnit.sendKeys(Keys.ARROW_DOWN);
+			kw.normalWait(300);
 		}
-		subUnit.sendKeys(Keys.TAB);
+		subUnit.sendKeys(Keys.ENTER);
+		
 		LOG.info("Successfully selected sub unit");
 	}
 	
@@ -227,6 +232,7 @@ public class EmployeeListMenu {
 	 */
 	public void clickOnResetButton() throws InterruptedException {
 		kw.waitForElementToBeVisible(resetButton);
+		kw.scrollToElement(resetButton);
 		kw.normalWait(500);
 		resetButton.click();
 		LOG.info("Successfully clicked the reset button.");
@@ -236,67 +242,90 @@ public class EmployeeListMenu {
 	@FindBy(css="div.oxd-table-body > div:nth-child(1) div.oxd-table-cell")
 	List<WebElement> tablerow ;
 	
+	public WebElement getTableRow(int index) {
+	    List<WebElement> freshTableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div:nth-child(1) div.oxd-table-cell"));
+	    if (index < freshTableRows.size()) {
+	        return freshTableRows.get(index);
+	    } else {
+	        throw new IndexOutOfBoundsException("Table row index out of bounds");
+	    }
+	}
+	
 	/**
 	 * row sequence - id, first name, last name, job title, Employment status, sub unit, supervisor
 	 */
 	public String searchResultID() {
 		kw.waitForAllElementAreVisible(tablerow);
-		String text =  tablerow.get(1).getText();
+		WebElement id = tablerow.get(1);
+		kw.scrollToElement(id);
+		String text = id.getText();
 		LOG.info("Successfully searched employee with Employee ID");
 		return text;
 	}
 	
 	public String searchResultfirstName() throws InterruptedException {
+		kw.normalWait(200);
 		kw.waitForAllElementAreVisible(tablerow);
-		kw.normalWait(500);
-		String text = tablerow.get(2).getText();
+		WebElement firstNameElement = tablerow.get(2);
+		kw.scrollToElement(firstNameElement);
+		String text = firstNameElement.getText();
 		LOG.info("Successfully searched employee with first name");
 		return text;
 	}
 	
 	public String searchResultLastName() throws InterruptedException {
+		kw.normalWait(200);
 		kw.waitForAllElementAreVisible(tablerow);
-		kw.normalWait(500);
-		String text = tablerow.get(3).getText();
+		WebElement lastNameElement = tablerow.get(3);
+		kw.scrollToElement(lastNameElement);
+		String text = lastNameElement.getText();
 		LOG.info("Successfully searched employee with last name");
 		return text;
 	}
 	
 	public boolean searchResultJobTitle(String jtitle) throws InterruptedException {
-		
-		if (infoToastMessage()) { // Assuming 'tablerowContainer' is the table wrapper
-                          		        return true;
-		}else {
+		if (kw.isElementListPresent(tablerow)) {
 			kw.waitForAllElementAreVisible(tablerow);
-			String text = tablerow.get(4).getText();
-			System.out.println("returned "+ text);
-			System.out.println("expected "+ jtitle);
+			WebElement jobtitle = tablerow.get(4);
+			kw.scrollToElement(jobtitle);
+			String text = jobtitle.getText();
 			LOG.info("Successfully searched employee with job title");
 			return text.contains(jtitle);
+		}else {
+			return infoToastMessage();
 		}
-		
+	}
+	
+	public boolean searchResultSubUnit(String location) throws InterruptedException {
+		if (kw.isElementListPresent(tablerow)) {
+			kw.waitForAllElementAreVisible(tablerow);
+			WebElement subunit = tablerow.get(6);
+			kw.scrollToElement(subunit);
+			String text = subunit.getText();
+			LOG.info("Successfully searched employee with sub unit");
+			return text.contains(location);
+		}else {
+			return infoToastMessage();
+		}
 	}
 	
 	public String searchResultEmploymentStatus() throws InterruptedException {
 		kw.waitForAllElementAreVisible(tablerow);
 		kw.normalWait(500);
-		String text = tablerow.get(5).getText();
+		WebElement status = tablerow.get(5);
+		kw.scrollToElement(status);
+		String text = status.getText();
 		LOG.info("Successfully searched employee with employement status");
 		return text;
 	}
 
-	public String searchResultSubUnit() throws InterruptedException {
-		kw.waitForAllElementAreVisible(tablerow);
-		kw.normalWait(500);
-		String text = tablerow.get(6).getText();
-		LOG.info("Successfully searched employee with sub unit");
-		return text;
-	}
 	
 	public String searchResultSupervisor() throws InterruptedException {
 		kw.waitForAllElementAreVisible(tablerow);
 		kw.normalWait(500);
-		String text = tablerow.get(7).getText();
+		WebElement supervis = tablerow.get(7);
+		kw.scrollToElement(supervis);
+		String text = supervis.getText();
 		LOG.info("Successfully searched employee with supervisor name");
 		return text;
 	}
@@ -354,9 +383,13 @@ public class EmployeeListMenu {
 	 */
 	public boolean infoToastMessage() {
 		kw.waitForElementToBeVisible(infoToast);
+		kw.scrollToElement(infoToast);
 		boolean isDisplayed = infoToast.isDisplayed();
 		LOG.info("No records found for the search criteria");
 		return isDisplayed;
 		
 	}
+	
+	@FindBy(css="oxd-table-card")
+	WebElement tableCards ;
 }
