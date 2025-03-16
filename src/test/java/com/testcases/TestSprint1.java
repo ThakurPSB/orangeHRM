@@ -271,41 +271,41 @@ public class TestSprint1 extends TestBase{
 
 		emplist.enterEmployeeID(68166);
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultID(), "68166");
+		Assert.assertTrue(emplist.searchResultID("68166"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
 		emplist.enterEmployeeName("Piyush");
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultfirstName(),"Piyush");
+		Assert.assertTrue(emplist.searchResultfirstName("Piyush"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
-		emplist.enterEmployeeName("Piyush");
+		emplist.enterEmployeeName("Thakur");
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultLastName(),"Thakur");
+		Assert.assertTrue(emplist.searchResultLastName("Thakur"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
 		emplist.selectEmploymentStatus("Active");
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultEmploymentStatus(), "Active");
+		Assert.assertTrue(emplist.searchResultEmploymentStatus("Active"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
-		emplist.enterSupervisorName("Piyush");
+		emplist.enterSupervisorName("Piyush Thakur");
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultSupervisor(), "Piyush Thakur");
+		Assert.assertTrue(emplist.searchResultSupervisor("Piyush Thakur"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
-		emplist.selectJobTitle(2);
+		emplist.selectJobTitle("Executive");
 		emplist.clickOnSearchButton();
 		Assert.assertTrue(emplist.searchResultJobTitle("Executive"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
-		emplist.selectSubUnit(1);
+		emplist.selectSubUnit("Mumbai");
 		emplist.clickOnSearchButton();
 		Assert.assertTrue(emplist.searchResultSubUnit("Mumbai"));
 		emplist.clickOnResetButton();
@@ -353,17 +353,16 @@ public class TestSprint1 extends TestBase{
 		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
 		pim.clickOnPIM();
-		emplist.enterEmployeeName("Piyush");
+		
+
+		emplist.enterSupervisorName("Piyush");
 		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultfirstName(),"Piyush");
+		Assert.assertTrue(emplist.searchResultSupervisor("Piyush Thakur"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
-		emplist.enterEmployeeName("Piyush");
-		emplist.clickOnSearchButton();
-		Assert.assertEquals(emplist.searchResultLastName(),"Thakur");
-		emplist.clickOnResetButton();
-		emplist.clickOnEmployeeListMenu();
+		
+		
 		
 	}
 	

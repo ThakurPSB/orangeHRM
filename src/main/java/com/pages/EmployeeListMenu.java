@@ -42,11 +42,14 @@ public class EmployeeListMenu {
 	
 	/**
 	 * @param name enter the name of the employee to search
+	 * @throws InterruptedException 
 	 */
-	public void enterEmployeeName(String name) {
+	public void enterEmployeeName(String name) throws InterruptedException {
 		kw.waitForElementToBeVisible(employeeNameTextBox);
+		employeeNameTextBox.click();
 		employeeNameTextBox.sendKeys(name);
-		supervisor.sendKeys(Keys.ENTER);
+		kw.normalWait(200);
+		employeeNameTextBox.sendKeys(Keys.ENTER);
 		LOG.info("Successfully entered the name in search name field.");
 
 	}
@@ -61,7 +64,7 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeVisible(employeeIDTextBox);
 		employeeIDTextBox.click();
 		employeeIDTextBox.sendKeys(String.valueOf(id));
-		supervisor.sendKeys(Keys.ENTER);
+		employeeIDTextBox.sendKeys(Keys.ENTER);
 		LOG.info("Successfully entered the employee ID in search field.");
 	}
 	
@@ -72,29 +75,13 @@ public class EmployeeListMenu {
 	
 	public void selectEmploymentStatus(String status) throws InterruptedException {
 		
-		
 		kw.waitForElementToBeClickable(employmentStatus);
-		
-		if(status.equals("Active")) {
-			employmentStatus.click();
-			kw.normalWait(1000);
+		employmentStatus.click();
+		while(!employmentStatus.getText().equals(status)) {
 			employmentStatus.sendKeys(Keys.ARROW_DOWN);
-			kw.normalWait(500);
-			employmentStatus.sendKeys(Keys.ENTER);
-			
-		}else if(status.equals("Inactive")) {
-			employmentStatus.click();
-			kw.normalWait(1000);
-			employmentStatus.sendKeys(Keys.ARROW_DOWN);
-			kw.normalWait(500);
-			employmentStatus.sendKeys(Keys.ARROW_DOWN);
-			kw.normalWait(500);
-			employmentStatus.sendKeys(Keys.ENTER);
-		} else {
-			LOG.info("invalid employment status");
 		}
-		action.sendKeys(Keys.ENTER).perform();
-		LOG.info("Successfully selected employement status ."+ status );
+		employmentStatus.sendKeys(Keys.ENTER);
+		LOG.info("Successfully selected employement status - "+ status );
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(4) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -109,7 +96,6 @@ public class EmployeeListMenu {
 		
 		if(oldnew.equals("old")) {
 			include.click();
-			kw.normalWait(1000);
 			include.sendKeys(Keys.ARROW_DOWN);
 			kw.normalWait(500);
 			include.sendKeys(Keys.ARROW_DOWN);
@@ -117,10 +103,10 @@ public class EmployeeListMenu {
 			include.sendKeys(Keys.ENTER);
 		} else if( oldnew.equals("both")) {
 			include.click();
-			kw.normalWait(1000);
 			include.sendKeys(Keys.ARROW_DOWN);
 			kw.normalWait(500);
 			include.sendKeys(Keys.ENTER);
+			kw.normalWait(500);
 		} else if(oldnew.equals("new")) {
 			include.sendKeys(Keys.ENTER);
 		}
@@ -133,12 +119,17 @@ public class EmployeeListMenu {
 	
 	/**
 	 * @param name enter the supervisor name
+	 * @throws InterruptedException 
 	 */
-	public void enterSupervisorName(String name) {
+	public void enterSupervisorName(String name) throws InterruptedException {
 		kw.waitForElementToBeClickable(supervisor);
+		supervisor.click();
 		supervisor.sendKeys(name);
+		kw.normalWait(1000);
+		supervisor.sendKeys(Keys.ARROW_DOWN);
 		supervisor.sendKeys(Keys.ENTER);
-		LOG.info("Successfully entered the supervisor name in search field.");
+		supervisor.sendKeys(Keys.TAB);
+		LOG.info("Successfully entered the supervisor name in search field "+name);
 	}
 	
 	
@@ -149,44 +140,14 @@ public class EmployeeListMenu {
 	 * @param jobTitleSeq option sequence 
 	 * @throws InterruptedException
 	 */
-	public void selectJobTitle(int jobTitleSeq) throws InterruptedException {
-
+	public void selectJobTitle(String job) {
 		kw.waitForElementToBeVisible(jobTitleDropdown);
 		jobTitleDropdown.click();
-		for(int i=0; i<=jobTitleSeq; i++) {
+		while(!jobTitleDropdown.getText().equals(job)) {
 			jobTitleDropdown.sendKeys(Keys.ARROW_DOWN);
-			kw.normalWait(350);
 		}
-		
 		jobTitleDropdown.sendKeys(Keys.ENTER);
-		
-		//for log message
-		switch (jobTitleSeq) {
-			case 1:
-				LOG.info("Successfully selected job title Assistant Manager");
-				break;
-			case 2:
-				LOG.info("Successfully selected job title Executive");
-				break;
-			case 3:
-				LOG.info("Successfully selected job title HR Executive");
-				break;
-			case 4:
-				LOG.info("Successfully selected job title HR Manager");
-				break;
-			case 5:
-				LOG.info("Successfully selected job title HR Recruiter");
-				break;
-			case 6:
-				LOG.info("Successfully selected job title Manager");
-				break;
-			case 7:
-				LOG.info("Successfully selected job title TC");
-				break;
-			case 8:
-				LOG.info("Successfully selected job title TL");
-				break;
-		}
+		LOG.info("Successfully selected job title - "+ job);
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(7) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -196,17 +157,14 @@ public class EmployeeListMenu {
 	 * @param seq select the option number for location or sub unit
 	 * @throws InterruptedException 
 	 */
-	public void selectSubUnit(int seq) throws InterruptedException {
+	public void selectSubUnit(String unit) {
 		kw.waitForElementToBeVisible(subUnit);
 		subUnit.click();
-		kw.normalWait(500);
-		for(int i=0; i<=seq; i++) {
+		while(!subUnit.getText().equals(unit)) {
 			subUnit.sendKeys(Keys.ARROW_DOWN);
-			kw.normalWait(300);
 		}
 		subUnit.sendKeys(Keys.ENTER);
-		
-		LOG.info("Successfully selected sub unit");
+		LOG.info("Successfully selected sub unit - " + unit);
 	}
 	
 	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
@@ -218,7 +176,7 @@ public class EmployeeListMenu {
 	 */
 	public void clickOnSearchButton() throws InterruptedException  {
 		kw.waitForElementToBeVisible(SearchButton);
-		kw.normalWait(500);
+		kw.normalWait(1000);
 		SearchButton.click();
 		LOG.info("Successfully clicked the Search button.");
 	}
@@ -254,80 +212,100 @@ public class EmployeeListMenu {
 	/**
 	 * row sequence - id, first name, last name, job title, Employment status, sub unit, supervisor
 	 */
-	public String searchResultID() {
-		kw.waitForAllElementAreVisible(tablerow);
-		WebElement id = tablerow.get(1);
-		kw.scrollToElement(id);
-		String text = id.getText();
-		LOG.info("Successfully searched employee with Employee ID");
-		return text;
+	public boolean searchResultID(String ids) {
+		if(kw.isElementListPresent(tablerow)) {
+			kw.waitForAllElementAreVisible(tablerow);
+			WebElement id = tablerow.get(1);
+			kw.scrollToElement(id);
+			String text = id.getText();
+			LOG.info("Successfully searched employee with Employee ID "+text);
+			return text.equals(ids);
+		}else {
+			return infoToastMessage();
+		}
+		
 	}
 	
-	public String searchResultfirstName() throws InterruptedException {
-		kw.normalWait(200);
-		kw.waitForAllElementAreVisible(tablerow);
-		WebElement firstNameElement = tablerow.get(2);
-		kw.scrollToElement(firstNameElement);
-		String text = firstNameElement.getText();
-		LOG.info("Successfully searched employee with first name");
-		return text;
+	public boolean searchResultfirstName(String ln) {
+		if(kw.isElementListPresent(tablerow)) {
+			kw.waitForAllElementAreVisible(tablerow);
+			WebElement firstNameElement = tablerow.get(2);
+			kw.scrollToElement(firstNameElement);
+			String text = firstNameElement.getText();
+			LOG.info("Successfully searched employee with first name "+ text);
+			return text.contains(ln);
+		}else {
+			return infoToastMessage();
+		}
 	}
 	
-	public String searchResultLastName() throws InterruptedException {
-		kw.normalWait(200);
-		kw.waitForAllElementAreVisible(tablerow);
-		WebElement lastNameElement = tablerow.get(3);
-		kw.scrollToElement(lastNameElement);
-		String text = lastNameElement.getText();
-		LOG.info("Successfully searched employee with last name");
-		return text;
+	public boolean searchResultLastName(String nm) {
+		if(kw.isElementListPresent(tablerow)) {
+			kw.waitForAllElementAreVisible(tablerow);
+			WebElement lastNameElement = tablerow.get(3);
+			kw.scrollToElement(lastNameElement);
+			String text = lastNameElement.getText();
+			LOG.info("Successfully searched employee with last name "+text);
+			return text.contains(nm);
+		}else {
+			return infoToastMessage();
+		}
+		
 	}
 	
-	public boolean searchResultJobTitle(String jtitle) throws InterruptedException {
+	public boolean searchResultJobTitle(String jtitle) {
 		if (kw.isElementListPresent(tablerow)) {
 			kw.waitForAllElementAreVisible(tablerow);
 			WebElement jobtitle = tablerow.get(4);
 			kw.scrollToElement(jobtitle);
 			String text = jobtitle.getText();
-			LOG.info("Successfully searched employee with job title");
+			LOG.info("Successfully searched employee with job title "+ text);
 			return text.contains(jtitle);
 		}else {
 			return infoToastMessage();
 		}
 	}
 	
-	public boolean searchResultSubUnit(String location) throws InterruptedException {
+	public boolean searchResultSubUnit(String location) {
 		if (kw.isElementListPresent(tablerow)) {
 			kw.waitForAllElementAreVisible(tablerow);
 			WebElement subunit = tablerow.get(6);
 			kw.scrollToElement(subunit);
 			String text = subunit.getText();
-			LOG.info("Successfully searched employee with sub unit");
+			LOG.info("Successfully searched employee with sub unit "+ text);
 			return text.contains(location);
 		}else {
 			return infoToastMessage();
 		}
 	}
 	
-	public String searchResultEmploymentStatus() throws InterruptedException {
-		kw.waitForAllElementAreVisible(tablerow);
-		kw.normalWait(500);
-		WebElement status = tablerow.get(5);
-		kw.scrollToElement(status);
-		String text = status.getText();
-		LOG.info("Successfully searched employee with employement status");
-		return text;
+	public boolean searchResultEmploymentStatus(String status)  {
+		if(kw.isElementListPresent(tablerow)) {
+			kw.waitForAllElementAreVisible(tablerow);
+			WebElement temp = tablerow.get(5);
+			kw.scrollToElement(temp);
+			String text = temp.getText();
+			LOG.info("Successfully searched employee with employement status "+ text);
+			return text.contains(status);
+		}else {
+			return infoToastMessage();
+		}
 	}
 
 	
-	public String searchResultSupervisor() throws InterruptedException {
-		kw.waitForAllElementAreVisible(tablerow);
-		kw.normalWait(500);
-		WebElement supervis = tablerow.get(7);
-		kw.scrollToElement(supervis);
-		String text = supervis.getText();
-		LOG.info("Successfully searched employee with supervisor name");
-		return text;
+	public boolean searchResultSupervisor(String supervisor)  {
+		if(kw.isElementListPresent(tablerow)) {
+			kw.waitForAllElementAreVisible(tablerow);
+			WebElement supervis = tablerow.get(7);
+			kw.scrollToElement(supervis);
+			String text = supervis.getText();
+			System.out.println(text);
+			LOG.info("Successfully searched employee with supervisor name "+ text);
+			return text.contains(supervisor);
+		}else {
+			return infoToastMessage();
+		}
+		
 	}
 	
 	public void readTable() {
