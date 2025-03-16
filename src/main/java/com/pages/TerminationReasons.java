@@ -60,7 +60,7 @@ public class TerminationReasons {
 		LOG.info("Successfully added the termination reason");
 	}
 	
-	@FindBy(css="div.oxd-table-row.oxd-table-row")
+	@FindBy(css="div.oxd-table-row")
 	List<WebElement> TerminationReasonList ;
 	
 	@FindBy(css="i.oxd-icon.bi-trash.oxd-button-icon")
@@ -72,24 +72,30 @@ public class TerminationReasons {
 	@FindBy(css="button[class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']")
 	WebElement confirmDelete ;
 	
-	public void deleteSelectedTerminationReason(String name) {
+	public void deleteSelectedTerminationReason(String name) throws InterruptedException {
 		kw.waitForAllElementAreVisible(TerminationReasonList);
+		boolean isReasonFound = false;
+		WebElement found = null;
 		
 		for(WebElement row: TerminationReasonList) {
 			if(row.getText().contains(name)) {
-				WebElement checkboxTick = row.findElement(By.cssSelector("span.oxd-checkbox-input"));
-				kw.waitForElementToBeClickable(checkboxTick);
-				checkboxTick.click();
-				kw.waitForElementToBeClickable(deleteButton);
-		        deleteButton.click();	
-		        kw.waitForElementToBeClickable(confirmDelete);
-		        confirmDelete.click();
-		        LOG.info(name + " Termination reason deleted");
+				isReasonFound = true;
+				found = row;
 				break;
 			}else {
-				LOG.info("No such Termination reason found.");
+				isReasonFound = false;
 			}
-			
+		}
+		if(isReasonFound) {
+			LOG.info("Found the Termination Reason");
+			WebElement deleteButton = found.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
+			deleteButton.click();
+			kw.normalWait(200);
+			kw.waitForElementToBeClickable(confirmDeleteYes);
+	        confirmDeleteYes.click();
+	        LOG.info(name+" - Termination option deleted");
+		}else {
+			LOG.info("No such Termination reason found.");
 		}
 		
 	}

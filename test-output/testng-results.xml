@@ -2,16 +2,16 @@
 <testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-16T12:31:18 IST" name="Default suite" finished-at="2025-03-16T12:32:14 IST" duration-ms="55823">
+  <suite started-at="2025-03-16T14:13:07 IST" name="Default suite" finished-at="2025-03-16T14:13:38 IST" duration-ms="30692">
     <groups>
     </groups>
-    <test started-at="2025-03-16T12:31:18 IST" name="Default test" finished-at="2025-03-16T12:32:14 IST" duration-ms="55823">
+    <test started-at="2025-03-16T14:13:07 IST" name="Default test" finished-at="2025-03-16T14:13:38 IST" duration-ms="30692">
       <class name="com.testcases.TestSprint1">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-16T12:31:18 IST" name="cleanAllureResults" finished-at="2025-03-16T12:31:18 IST" duration-ms="77" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-16T14:13:07 IST" name="cleanAllureResults" finished-at="2025-03-16T14:13:07 IST" duration-ms="66" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-16T12:31:18 IST" name="setUp" finished-at="2025-03-16T12:31:22 IST" duration-ms="3361" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-16T14:13:07 IST" name="setUp" finished-at="2025-03-16T14:13:10 IST" duration-ms="2493" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkSearchOptionsInPIMMenuEmployeeListPage()[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-16T12:31:22 IST" name="checkSearchOptionsInPIMMenuEmployeeListPage" finished-at="2025-03-16T12:32:14 IST" duration-ms="51910" status="PASS">
+        <test-method signature="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage()[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-16T14:13:10 IST" name="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage" finished-at="2025-03-16T14:13:36 IST" duration-ms="26275" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkSearchOptionsInPIMMenuEmployeeListPage -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-16T12:32:14 IST" name="closeBrowser" finished-at="2025-03-16T12:32:14 IST" duration-ms="265" status="PASS">
+        </test-method> <!-- AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-16T14:13:36 IST" name="closeBrowser" finished-at="2025-03-16T14:13:38 IST" duration-ms="1726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

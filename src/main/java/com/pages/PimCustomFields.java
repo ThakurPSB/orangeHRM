@@ -148,20 +148,27 @@ public class PimCustomFields {
 	
 	public void SelectFieldToDelete(String fieldname) throws InterruptedException {
 		kw.waitForAllElementAreVisible(rows);
+		boolean isFieldFound = false;
+		WebElement found = null;
 		for (WebElement row : rows) {
-			
-            if (row.getText().contains(fieldname)) { 
-            	LOG.info("Found custome field to be deleted ");
-                WebElement delButton = row.findElement(By.cssSelector("button.oxd-icon-button.oxd-table-cell-action-space i.oxd-icon.bi-trash"));
-            	delButton.click();
-            	kw.normalWait(200);
-            	kw.waitForElementToBeClickable(confirmDeleteYes);
-                confirmDeleteYes.click();
-            }else {
-            	LOG.info(fieldname+ " not found in the custom fields list");
-            }
-        }
-		
+			if(row.getText().contains(fieldname)) {
+				isFieldFound = true;
+				found = row;
+				break;
+			}else {
+				isFieldFound = false;
+			}
+		}
+	    if (isFieldFound) { 
+	    	LOG.info("Found custome field to be deleted ");
+	        WebElement delButton = found.findElement(By.cssSelector("button.oxd-icon-button.oxd-table-cell-action-space i.oxd-icon.bi-trash"));
+	    	delButton.click();
+	    	kw.normalWait(200);
+	    	kw.waitForElementToBeClickable(confirmDeleteYes);
+	        confirmDeleteYes.click();
+	    }else {
+	    	LOG.info(fieldname+ " not found in the custom fields list");
+	    }
 	}
 	
 }

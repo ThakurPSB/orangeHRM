@@ -63,21 +63,29 @@ public class ReportingMethod {
 	
 	public void deleteSelectedReportingMethod(String name) throws InterruptedException {
 		kw.waitForAllElementAreVisible(reportingMethodList);
-		
+		boolean isMethodFound = false;
+		WebElement found = null;
 		for(WebElement row: reportingMethodList) {
 			if(row.getText().contains(name)) {
-				LOG.info("Found the reporting Method");
-				WebElement deleteButton = row.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
-				deleteButton.click();
-				kw.normalWait(200);
-				kw.waitForElementToBeClickable(confirmDeleteYes);
-		        confirmDeleteYes.click();
-		        LOG.info(name+" Reporing option deleted");
+				isMethodFound = true;
+				found = row;
+				break;
 			}else {
-				LOG.info("No such method found");
+				isMethodFound = false;
 			}
 		}
 		 	
+		if(isMethodFound) {
+			LOG.info("Found the reporting Method");
+			WebElement deleteButton = found.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
+			deleteButton.click();
+			kw.normalWait(200);
+			kw.waitForElementToBeClickable(confirmDeleteYes);
+	        confirmDeleteYes.click();
+	        LOG.info(name+" Reporing option deleted");
+		}else {
+			LOG.info("No such method found");
+		}
 	}
 	
 	
