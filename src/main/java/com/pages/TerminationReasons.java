@@ -38,6 +38,7 @@ public class TerminationReasons {
 	 */
 	public void ClickOnAddTerminationReasonButton() {
 		kw.waitForElementToBeVisible(AddTerminationReasonButton);
+		kw.scrollToElement(AddTerminationReasonButton);
 		AddTerminationReasonButton.click();
 		LOG.info("Successfully clicked on the Add Termindation reason button");
 	}

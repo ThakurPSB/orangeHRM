@@ -22,7 +22,7 @@ public class UserProfile {
 	public void clickOnEmployeeList() {
 		kw.waitForElementToBeVisible(EmployeeList);
 		EmployeeList.click();
-		LOG.info("Successfully clicked empoyee list menu.");
+		LOG.info("Clicked employee list menu.");
 	}
 	
 	@FindBy(css="div[role='rowgroup'] div:nth-child(1) div:nth-child(1) div:nth-child(3) div:nth-child(1)")
@@ -34,7 +34,7 @@ public class UserProfile {
 	public void clickOnUser1() {
 		kw.waitForElementToBeClickable(user1);
 		user1.click();
-		LOG.info("Successfully selected the 1st user.");
+		LOG.info("Selected the 1st user.");
 	}
 	
 	@FindBy(css="div.orangehrm-edit-employee-navigation > div.orangehrm-tabs > div:nth-child(1) > a")
@@ -46,7 +46,7 @@ public class UserProfile {
 	public void clickOnPersonalDetails() {
 		kw.waitForElementToBeClickable(PersonalDetails);
 		PersonalDetails.click();
-		LOG.info("Successfully clicked on personal details section .");
+		LOG.info("Clicked on personal details section .");
 	}
 	
 	@FindBy(css="form > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > div.oxd-input-group__label-wrapper > label")
@@ -57,7 +57,7 @@ public class UserProfile {
 	 */
 	public boolean checkSSNvisibility() {
 		boolean isInvisible = kw.waitInvisibilityOfElement(SSN);
-		LOG.info("SSN field visibility status: " + (isInvisible ? "Hidden" : "Visible"));
+		LOG.info("Check SSN is visible or hidden : " + (isInvisible ? "Hidden" : "Visible"));
 		return isInvisible;
 	}
 	
@@ -67,7 +67,7 @@ public class UserProfile {
 	public boolean checkSSNdisplayed() {
 		kw.waitForElementToBeVisible(SSN);
         boolean isDisplayed = SSN.isDisplayed();
-        LOG.info("SSN field display status: " + isDisplayed);
+        LOG.info("check SSN is diplayed : " + isDisplayed);
         return isDisplayed;
 	}
 	
@@ -79,7 +79,7 @@ public class UserProfile {
 	 */
 	public boolean checkSINvisibility() {
         boolean isInvisible = kw.waitInvisibilityOfElement(SIN);
-        LOG.info("SIN field visibility status: " + (isInvisible ? "Hidden" : "Visible"));
+        LOG.info("Check SIN is visible or hidden : " + (isInvisible ? "Hidden" : "Visible"));
         return isInvisible;
 	}
 	
@@ -89,7 +89,7 @@ public class UserProfile {
 	public boolean checkSINdisplayed() {
 		kw.waitForElementToBeVisible(SIN);
 		boolean isDisplayed = SIN.isDisplayed();
-        LOG.info("SIN field display status: " + isDisplayed);
+        LOG.info("Check SIN is displayed : " + isDisplayed);
         return isDisplayed;
 	}
 	
@@ -103,7 +103,7 @@ public class UserProfile {
 	 */
 	public boolean checknicknameVisibility() {
 		boolean isInvisible =  kw.waitInvisibilityOfElement(nickname);
-		LOG.info("Nickname field visibility status: "+ (isInvisible ? "Hidden":"Visible"));
+		LOG.info("Check Nickname is visible or hidden "+ (isInvisible ? "Hidden":"Visible"));
 		return isInvisible;
 	}
 	
@@ -113,7 +113,7 @@ public class UserProfile {
 	public boolean checkNicknameDisplayed() {
 		kw.waitForElementToBeVisible(nickname);
 		boolean isDisplayed = nickname.isDisplayed();
-        LOG.info("Nickname field display status: " + isDisplayed);
+        LOG.info("check nickname is displayed: " + isDisplayed);
         return isDisplayed;
 	}
 
@@ -149,7 +149,7 @@ public class UserProfile {
 	public void ClickOnMemebership() {
 		kw.waitForElementToBeVisible(memberships);
 		memberships.click();
-		LOG.info("Successfully clicked membership menu.");
+		LOG.info("Clicked on membership menu.");
 		
 	}
 	

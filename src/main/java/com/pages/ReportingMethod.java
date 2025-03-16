@@ -38,6 +38,7 @@ public class ReportingMethod {
 	 */
 	public void AddReportingMethodButton() {
 		kw.waitForElementToBeVisible(AddReportingMethod);
+		kw.scrollToElement(AddReportingMethod);
 		AddReportingMethod.click();
 		LOG.info("Successfully clicked on Add Reporting Method Button ");
 	}

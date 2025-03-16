@@ -48,7 +48,7 @@ public class UserDropdownMenu {
 	public void clickOnUserProfile() {
 		kw.waitForElementToBeVisible(userDropdown);
 		userDropdown.click();	
-		LOG.info("Successfully ");
+		LOG.info("Clicked on User Profile");
 	}
 	
 	/**
@@ -57,7 +57,7 @@ public class UserDropdownMenu {
 	public void clickOnAbout() {
 		kw.waitForElementToBeClickable(about);
 		about.click();
-		LOG.info("Successfully clicked on About option ");
+		LOG.info("Clicked on About option");
 	}
 	
 	/**
@@ -66,7 +66,7 @@ public class UserDropdownMenu {
 	public void clickOnSupport() {
 		kw.waitForElementToBeVisible(support);
 		support.click();
-		LOG.info("Successfully clicked on support option ");
+		LOG.info("Clicked on support option ");
 	}
 	
 	/**
@@ -75,7 +75,7 @@ public class UserDropdownMenu {
 	public void clickOnChangePassword() {
 		kw.waitForElementToBeClickable(changePassword);
 		changePassword.click();
-		LOG.info("Successfully clicked on Change Password option");
+		LOG.info("Clicked on Change Password option");
 	}
 	
 	/**
@@ -84,7 +84,7 @@ public class UserDropdownMenu {
 	public void logout() {
 		kw.waitForElementToBeClickable(logoutButton);
 		logoutButton.click();
-		LOG.info("Successfully clicked on the logout button");
+		LOG.info("Clicked on the logout button");
 	}
 	
 	/**
@@ -93,7 +93,7 @@ public class UserDropdownMenu {
 	public boolean aboutInformation() {
 		kw.waitForElementToBeVisible(aboutInfo);
 		boolean isDisplayed = aboutInfo.isDisplayed();
-		LOG.info("Successfully displayed the about information page ");
+		LOG.info("Displayed the about information page ");
 		return isDisplayed;
 	}
 	
@@ -103,7 +103,7 @@ public class UserDropdownMenu {
 	public void closeAboutInformatio() {
 		kw.waitForElementToBeClickable(closeAboutInfo);
 		closeAboutInfo.click();
-		LOG.info("Successfully clicked on Closed About info page");
+		LOG.info("Clicked on Closed About info page");
 	}
 	
 	/**
@@ -112,7 +112,7 @@ public class UserDropdownMenu {
 	public boolean supportInformation() {
 		kw.waitForElementToBeVisible(supportInfo);
 		boolean isDisplayed = supportInfo.isDisplayed();
-		LOG.info("Successfully displayed the support information page");
+		LOG.info("Displayed the support information page");
 		return isDisplayed;
 	}
 	
@@ -122,7 +122,7 @@ public class UserDropdownMenu {
 	public boolean checkIfChangePasswordPage() {
 		kw.waitForElementToBeVisible(passwordChangePage);
 		boolean isDisplayed = passwordChangePage.isDisplayed();
-		LOG.info("Successfully Displayed the change password page");
+		LOG.info("Displayed the change password page");
 		return isDisplayed;
 	}
 	
