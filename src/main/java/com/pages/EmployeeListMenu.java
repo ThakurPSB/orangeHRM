@@ -6,6 +6,8 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -34,7 +36,7 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeClickable(employeeListMenu);
 		kw.normalWait(1000);
 		employeeListMenu.click();
-		LOG.info("Successfully clicked the Employee list Menu.");
+		LOG.info("Clicked the Employee list Menu.");
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
@@ -50,7 +52,7 @@ public class EmployeeListMenu {
 		employeeNameTextBox.sendKeys(name);
 		kw.normalWait(200);
 		employeeNameTextBox.sendKeys(Keys.ENTER);
-		LOG.info("Successfully entered the name in search name field.");
+		LOG.info("Entered the name in search name field.");
 
 	}
 	
@@ -65,7 +67,7 @@ public class EmployeeListMenu {
 		employeeIDTextBox.click();
 		employeeIDTextBox.sendKeys(String.valueOf(id));
 		employeeIDTextBox.sendKeys(Keys.ENTER);
-		LOG.info("Successfully entered the employee ID in search field.");
+		LOG.info("Entered the employee ID in search field.");
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(3) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -81,7 +83,7 @@ public class EmployeeListMenu {
 			employmentStatus.sendKeys(Keys.ARROW_DOWN);
 		}
 		employmentStatus.sendKeys(Keys.ENTER);
-		LOG.info("Successfully selected employement status - "+ status );
+		LOG.info("Selected employement status - "+ status );
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(4) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -111,7 +113,7 @@ public class EmployeeListMenu {
 			include.sendKeys(Keys.ENTER);
 		}
 		include.sendKeys(Keys.ENTER);
-		LOG.info("Successfully selected the option to include "+oldnew+ " type of employees");
+		LOG.info("Selected the option to include "+oldnew+ " type of employees");
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(5) > div > div:nth-child(2) > div > div > input")
@@ -129,7 +131,7 @@ public class EmployeeListMenu {
 		supervisor.sendKeys(Keys.ARROW_DOWN);
 		supervisor.sendKeys(Keys.ENTER);
 		supervisor.sendKeys(Keys.TAB);
-		LOG.info("Successfully entered the supervisor name in search field "+name);
+		LOG.info("Entered the supervisor name in search field "+name);
 	}
 	
 	
@@ -147,7 +149,7 @@ public class EmployeeListMenu {
 			jobTitleDropdown.sendKeys(Keys.ARROW_DOWN);
 		}
 		jobTitleDropdown.sendKeys(Keys.ENTER);
-		LOG.info("Successfully selected job title - "+ job);
+		LOG.info("Selected job title - "+ job);
 	}
 	
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(7) > div > div:nth-child(2) > div > div > div.oxd-select-text-input")
@@ -164,7 +166,7 @@ public class EmployeeListMenu {
 			subUnit.sendKeys(Keys.ARROW_DOWN);
 		}
 		subUnit.sendKeys(Keys.ENTER);
-		LOG.info("Successfully selected sub unit - " + unit);
+		LOG.info("Selected sub unit - " + unit);
 	}
 	
 	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
@@ -178,7 +180,7 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeVisible(SearchButton);
 		kw.normalWait(1000);
 		SearchButton.click();
-		LOG.info("Successfully clicked the Search button.");
+		LOG.info("Clicked the Search button.");
 	}
 	
 	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--ghost")
@@ -193,13 +195,18 @@ public class EmployeeListMenu {
 		kw.scrollToElement(resetButton);
 		kw.normalWait(500);
 		resetButton.click();
-		LOG.info("Successfully clicked the reset button.");
+		LOG.info("Clicked the reset button.");
 	}
 	
 	
 	@FindBy(css="div.oxd-table-body > div:nth-child(1) div.oxd-table-cell")
 	List<WebElement> tablerow ;
 	
+	/**
+	 * Gets the fresh element css selector reference to avoid stale element error
+	 * @param index
+	 * @return
+	 */
 	public WebElement getTableRow(int index) {
 	    List<WebElement> freshTableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div:nth-child(1) div.oxd-table-cell"));
 	    if (index < freshTableRows.size()) {
@@ -213,105 +220,160 @@ public class EmployeeListMenu {
 	 * row sequence - id, first name, last name, job title, Employment status, sub unit, supervisor
 	 */
 	public boolean searchResultID(String ids) {
-		if(kw.isElementListPresent(tablerow)) {
-			kw.waitForAllElementAreVisible(tablerow);
-			WebElement id = tablerow.get(1);
-			kw.scrollToElement(id);
-			String text = id.getText();
-			LOG.info("Successfully searched employee with Employee ID "+text);
-			return text.equals(ids);
-		}else {
-			return infoToastMessage();
-		}
+	    // Check for toast message first
+	    if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return true;
+	    }
+	    // Refresh table rows to avoid stale element issue
+	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+
+	    if (tableRows != null && !tableRows.isEmpty()) {
+	        kw.waitForAllElementAreVisible(tableRows);
+	        WebElement idElement = getTableRow(1); 
+	        kw.scrollToElement(idElement);
+	        String text = idElement.getText();
+	        LOG.info("Successfully Searched employee with Employee ID: " + text);
+	        return text.equals(ids);
+	    } else {
+	        return false;
+	    }
 		
 	}
 	
 	public boolean searchResultfirstName(String ln) {
-		if(kw.isElementListPresent(tablerow)) {
-			kw.waitForAllElementAreVisible(tablerow);
-			WebElement firstNameElement = tablerow.get(2);
-			kw.scrollToElement(firstNameElement);
-			String text = firstNameElement.getText();
-			LOG.info("Successfully searched employee with first name "+ text);
-			return text.contains(ln);
-		}else {
-			return infoToastMessage();
-		}
+		// Check for toast message first
+	    if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return true;
+	    }
+	    // Refresh table rows to avoid stale element issue
+	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+
+	    if (tableRows != null && !tableRows.isEmpty()) {
+	        kw.waitForAllElementAreVisible(tableRows);
+	        WebElement temp = getTableRow(2); 
+	        kw.scrollToElement(temp);
+	        String text = temp.getText();
+	        LOG.info("Successfully Searched employee with first name: " + text);
+	        return text.equals(ln);
+	    } else {
+	        return false;
+	    }
+		
 	}
 	
 	public boolean searchResultLastName(String nm) {
-		if(kw.isElementListPresent(tablerow)) {
-			kw.waitForAllElementAreVisible(tablerow);
-			WebElement lastNameElement = tablerow.get(3);
-			kw.scrollToElement(lastNameElement);
-			String text = lastNameElement.getText();
-			LOG.info("Successfully searched employee with last name "+text);
-			return text.contains(nm);
-		}else {
-			return infoToastMessage();
-		}
+		// Check for toast message first
+	    if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return true;
+	    }
+	    // Refresh table rows to avoid stale element issue
+	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+
+	    if (tableRows != null && !tableRows.isEmpty()) {
+	        kw.waitForAllElementAreVisible(tableRows);
+	        WebElement temp = getTableRow(3); 
+	        kw.scrollToElement(temp);
+	        String text = temp.getText();
+	        LOG.info("Successfully Searched employee with last name: " + text);
+	        return text.equals(nm);
+	    } else {
+	        return false;
+	    }
 		
 	}
 	
 	public boolean searchResultJobTitle(String jtitle) {
-		if (kw.isElementListPresent(tablerow)) {
-			kw.waitForAllElementAreVisible(tablerow);
-			WebElement jobtitle = tablerow.get(4);
-			kw.scrollToElement(jobtitle);
-			String text = jobtitle.getText();
-			LOG.info("Successfully searched employee with job title "+ text);
-			return text.contains(jtitle);
-		}else {
-			return infoToastMessage();
-		}
+		// Check for toast message first
+	    if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return true;
+	    }
+	    // Refresh table rows to avoid stale element issue
+	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+
+	    if (tableRows != null && !tableRows.isEmpty()) {
+	        kw.waitForAllElementAreVisible(tableRows);
+	        WebElement temp = getTableRow(4); 
+	        kw.scrollToElement(temp);
+	        String text = temp.getText();
+	        LOG.info("Successfully Searched employee with job title: " + text);
+	        return text.equals(jtitle);
+	    } else {
+	        return false;
+	    }
 	}
 	
 	public boolean searchResultSubUnit(String location) {
-		if (kw.isElementListPresent(tablerow)) {
-			kw.waitForAllElementAreVisible(tablerow);
-			WebElement subunit = tablerow.get(6);
-			kw.scrollToElement(subunit);
-			String text = subunit.getText();
-			LOG.info("Successfully searched employee with sub unit "+ text);
-			return text.contains(location);
-		}else {
-			return infoToastMessage();
-		}
+		// Check for toast message first
+	    if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return true;
+	    }
+	    // Refresh table rows to avoid stale element issue
+	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+
+	    if (tableRows != null && !tableRows.isEmpty()) {
+	        kw.waitForAllElementAreVisible(tableRows);
+	        WebElement temp = getTableRow(6); 
+	        kw.scrollToElement(temp);
+	        String text = temp.getText();
+	        LOG.info("Successfully Searched employee with location: " + text);
+	        return text.equals(location);
+	    } else {
+	        return false;
+	    }
 	}
 	
 	public boolean searchResultEmploymentStatus(String status)  {
-		if(kw.isElementListPresent(tablerow)) {
-			kw.waitForAllElementAreVisible(tablerow);
-			WebElement temp = tablerow.get(5);
-			kw.scrollToElement(temp);
-			String text = temp.getText();
-			LOG.info("Successfully searched employee with employement status "+ text);
-			return text.contains(status);
-		}else {
-			return infoToastMessage();
-		}
+		// Check for toast message first
+	    if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return true;
+	    }
+	    // Refresh table rows to avoid stale element issue
+	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+
+	    if (tableRows != null && !tableRows.isEmpty()) {
+	        kw.waitForAllElementAreVisible(tableRows);
+	        WebElement temp = getTableRow(5); 
+	        kw.scrollToElement(temp);
+	        String text = temp.getText();
+	        LOG.info("Successfully Searched employee with status: " + text);
+	        return text.equals(status);
+	    } else {
+	        return false;
+	    }
 	}
 
 	
 	public boolean searchResultSupervisor(String supervisor)  {
-		if(kw.isElementListPresent(tablerow)) {
-			kw.waitForAllElementAreVisible(tablerow);
-			WebElement supervis = tablerow.get(7);
-			kw.scrollToElement(supervis);
-			String text = supervis.getText();
-			System.out.println(text);
-			LOG.info("Successfully searched employee with supervisor name "+ text);
-			return text.contains(supervisor);
-		}else {
-			return infoToastMessage();
-		}
-		
+		// Check for toast message first
+	    if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return true;
+	    }
+	    // Refresh table rows to avoid stale element issue
+	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+
+	    if (tableRows != null && !tableRows.isEmpty()) {
+	        kw.waitForAllElementAreVisible(tableRows);
+	        WebElement temp = getTableRow(7); 
+	        kw.scrollToElement(temp);
+	        String text = temp.getText();
+	        LOG.info("Successfully Searched employee with supervisor name: " + text);
+	        return text.equals(supervisor);
+	    } else {
+	        return false;
+	    }
 	}
 	
 	public void readTable() {
 		kw.waitForAllElementAreVisible(tablerow);
 		for(WebElement row: tablerow) {
-			LOG.info(row.getText());
+			LOG.info("Reading empoloyee list table " +row.getText());
 		}
 		
 	}
@@ -323,7 +385,7 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeClickable(addNewEmployeeButton);
 		kw.normalWait(200);
 		addNewEmployeeButton.click();
-		LOG.info("Successfully clicked on add new employee button");
+		LOG.info("Clicked on add new employee button");
 	}
 	
 	@FindBy(css="div.orangehrm-container > div > div.oxd-table-header > div > div:nth-child(1) > div > label")
@@ -350,7 +412,7 @@ public class EmployeeListMenu {
 		kw.normalWait(500);
 		kw.waitForElementToBeClickable(confirmDelete);
 		confirmDelete.click();
-		LOG.info("Successfully clicked on confirm delete button");
+		LOG.info("Clicked on confirm delete button");
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--info.oxd-toast-container--toast")
@@ -360,11 +422,19 @@ public class EmployeeListMenu {
 	 * @return save successful toast message
 	 */
 	public boolean infoToastMessage() {
-		kw.waitForElementToBeVisible(infoToast);
-		kw.scrollToElement(infoToast);
-		boolean isDisplayed = infoToast.isDisplayed();
-		LOG.info("No records found for the search criteria");
-		return isDisplayed;
+		try {
+			kw.waitForElementToBeVisibleShort(infoToast,5);
+			kw.scrollToElement(infoToast);
+			boolean isDisplayed = infoToast.isDisplayed();
+			LOG.info("No records found for the search criteria");
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+	        
+		}catch (NoSuchElementException e) {
+	        LOG.warn("Toast element not found in DOM.");
+	    }
+		return false;
 		
 	}
 	

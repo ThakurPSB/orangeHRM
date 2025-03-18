@@ -1,11 +1,1 @@
-2025-03-16 23:35:18 [main] INFO  Keywords - Launched Chrome Browser
-2025-03-16 23:35:19 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-03-16 23:35:19 [main] INFO  TestBase - Successfully launched the web Application
-2025-03-16 23:35:20 [main] INFO  LoginPage - Successfully Loogged in
-2025-03-16 23:35:23 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-03-16 23:35:24 [main] INFO  EmployeeListMenu - Successfully entered the supervisor name in search field Piyush
-2025-03-16 23:35:25 [main] INFO  EmployeeListMenu - Successfully clicked the Search button.
-2025-03-16 23:35:26 [main] INFO  EmployeeListMenu - Successfully searched employee with supervisor name Piyush Thakur
-2025-03-16 23:35:27 [main] INFO  EmployeeListMenu - Successfully clicked the reset button.
-2025-03-16 23:35:28 [main] INFO  EmployeeListMenu - Successfully clicked the Employee list Menu.
-2025-03-16 23:35:28 [main] INFO  TestBase - Successfully quite the browser
+2025-03-18 14:33:00 [main] INFO  TestBase - Successfully quite the browser

@@ -345,27 +345,22 @@ public class TestSprint1 extends TestBase{
 		Thread.sleep(3000);
 	}
 
-	
-	@Test(enabled = true)
-	public void tryAndError() throws InterruptedException, AWTException, TimeoutException {
+	@Test
+	public void TryAndError() throws InterruptedException {
+		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
 		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
 		pim.clickOnPIM();
+		emplist.clickOnEmployeeListMenu();
 		
-
-		emplist.enterSupervisorName("Piyush");
+		emplist.enterEmployeeID(12111);
 		emplist.clickOnSearchButton();
-		Assert.assertTrue(emplist.searchResultSupervisor("Piyush Thakur"));
+		Assert.assertTrue(emplist.searchResultID("68166"));
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
-		
-		
-		
 	}
-	
-
 
 }

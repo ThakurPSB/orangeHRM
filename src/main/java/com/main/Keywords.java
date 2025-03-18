@@ -180,11 +180,22 @@ public class Keywords {
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
     }
     
-    public boolean isElementListPresent(List<WebElement> element) {
+    public void scrollToElement(List<WebElement> elist) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", elist);
+    }
+    
+    
+    /**
+     * This method check if the list is displayed or not, its empty or not
+     * @param elements
+     * @return
+     */
+    public boolean isElementListPresent(List<WebElement> elements) {
     	try {
-            return element.isEmpty(); // ✅ Returns true if element exists
+            return elements.isEmpty() && elements.get(0).isDisplayed();
         } catch (Exception e) {
-            return false; // ✅ Prevents exceptions if the element is not found
+            return false; 
         }
 	}
     
@@ -197,4 +208,5 @@ public class Keywords {
         return driver;
     }
 
+    
 }
