@@ -5,8 +5,8 @@
     <classes>
       <class name="com.testcases.TestSprint1">
         <methods>
+          <include name="AddReportingMethodAndTerminationReason"/>
           <include name="setUp"/>
-          <include name="addUserandCheckIfAllOptionsAreWorkingWhileCreating"/>
           <include name="closeBrowser"/>
           <include name="cleanAllureResults"/>
         </methods>

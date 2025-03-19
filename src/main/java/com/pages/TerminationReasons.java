@@ -3,6 +3,8 @@ package com.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -49,6 +51,9 @@ public class TerminationReasons {
 	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
 	WebElement AddTerminationReasonSaveButton ;
 	
+	@FindBy(css="div.oxd-layout-context > div > div > form > div.oxd-form-row > div > span")
+	WebElement alreadyExistError ;
+	
 	/**
 	 * @param description of reason. 
 	 * Add the reason in list of termination list.
@@ -57,8 +62,21 @@ public class TerminationReasons {
 		kw.waitForElementToBeVisible(AddTerminationReasonSaveButton);
 		kw.waitForElementToBeVisible(EnterTerminationReason);
 		EnterTerminationReason.sendKeys(name);
-		AddTerminationReasonSaveButton.click();
-		LOG.info("Successfully added the termination reason");
+		if(alreadyExistError.isDisplayed()) {
+			LOG.error("Termination reason already Exists");
+		}else {
+			AddTerminationReasonSaveButton.click();
+			LOG.info("Successfully added the termination reason");
+		}
+	}
+	
+	public boolean checkAssertTerminationReason() {
+		if(alreadyExistError.isDisplayed()) {
+			LOG.error("Termination reason already Exists");
+			return true;
+		}else {
+			return SaveToastMessageText();
+		}
 	}
 	
 	@FindBy(css="div.oxd-table-row")
@@ -91,15 +109,38 @@ public class TerminationReasons {
 			LOG.info("Found the Termination Reason");
 			WebElement deleteButton = found.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
 			deleteButton.click();
-			kw.normalWait(200);
-			kw.waitForElementToBeClickable(confirmDeleteYes);
-	        confirmDeleteYes.click();
-	        LOG.info(name+" - Termination option deleted");
+			if(!errorToastMessageText()) {
+				kw.waitForElementToBeClickable(confirmDeleteYes);
+		        confirmDeleteYes.click();
+		        LOG.info(name+" - Termination option deleted");
+			}else {
+				LOG.error("The Termination reason already in use");
+			}
 		}else {
 			LOG.info("No such Termination reason found.");
 		}
 		
 	}
+	
+	@FindBy(css=".oxd-toast.oxd-toast--error.oxd-toast-container--toast")
+	WebElement errorToast ;
+	
+	public boolean errorToastMessageText() throws TimeoutException {
+		try {
+			kw.waitForElementToBeVisibleShort(errorToast,5);
+			kw.scrollToElement(errorToast);
+			boolean isDisplayed = errorToast.isDisplayed();
+			LOG.info("Error toast found "+errorToast.getText());
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+	        
+		}catch (NoSuchElementException e) {
+	        LOG.warn("Toast element not found in DOM.");
+	    }
+		return false;
+	}
+	
 	
 	@FindBy(css=".oxd-toast.oxd-toast--success.oxd-toast-container--toast")
 	WebElement saveSuccessfullToast ;
@@ -108,10 +149,19 @@ public class TerminationReasons {
 	 * @return save successful toast message
 	 */
 	public boolean SaveToastMessageText() {
-		kw.waitForElementToBeVisible(saveSuccessfullToast);
-		boolean isDisplayed =  saveSuccessfullToast.isDisplayed();
-		LOG.info("Successfully saved the Termination reason to list ");
-		return isDisplayed;
+		try {
+			kw.waitForElementToBeVisibleShort(saveSuccessfullToast,5);
+			kw.scrollToElement(saveSuccessfullToast);
+			boolean isDisplayed = saveSuccessfullToast.isDisplayed();
+			LOG.info("Successfully added the employee");
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+	        
+		}catch (NoSuchElementException e) {
+	        LOG.warn("Toast element not found in DOM.");
+	    }
+		return false;
 	}
 	
 	
