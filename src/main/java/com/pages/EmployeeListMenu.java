@@ -392,10 +392,15 @@ public class EmployeeListMenu {
 	WebElement selectAll ;
 	
 	public void clickOnSelectAll() {
-		kw.waitForElementToBeClickable(selectAll);
-		kw.scrollToElement(selectAll);
-		selectAll.click();
-		LOG.info("Selected all the search results");
+		if (infoToastMessage()) {
+	        LOG.info("Toast message found. No records available.");
+	        return;
+	    }else {
+			kw.waitForElementToBeClickable(selectAll);
+			kw.scrollToElement(selectAll);
+			selectAll.click();
+			LOG.info("Selected all the search results");
+	    }
 	}
 	
 	@FindBy(css="div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div > div > button")

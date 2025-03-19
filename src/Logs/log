@@ -1,1 +1,19 @@
-2025-03-18 14:33:00 [main] INFO  TestBase - Successfully quite the browser
+2025-03-19 11:27:00 [main] INFO  Keywords - Launched Chrome Browser
+2025-03-19 11:27:01 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-03-19 11:27:01 [main] INFO  TestBase - Successfully launched the web Application
+2025-03-19 11:27:01 [main] INFO  LoginPage - Successfully Loogged in
+2025-03-19 11:27:04 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
+2025-03-19 11:27:06 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
+2025-03-19 11:27:07 [main] INFO  EmployeeListMenu - Entered the name in search name field.
+2025-03-19 11:27:08 [main] INFO  EmployeeListMenu - Clicked the Search button.
+2025-03-19 11:27:09 [main] INFO  EmployeeListMenu - Selected all the search results
+2025-03-19 11:27:09 [main] INFO  EmployeeListMenu - Successfully Clicked on delete button
+2025-03-19 11:27:10 [main] INFO  EmployeeListMenu - Clicked on confirm delete button
+2025-03-19 11:27:10 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
+2025-03-19 11:27:12 [main] INFO  AddEmployeePage - Successfully clicked on add new employee button
+2025-03-19 11:27:13 [main] INFO  AddEmployeePage - Profile pic selected
+2025-03-19 11:27:13 [main] INFO  AddEmployeePage - Successfully entered the user with details George L Wisley
+2025-03-19 11:27:14 [main] INFO  AddEmployeePage - The Create login details button already turned on
+2025-03-19 11:27:14 [main] INFO  AddEmployeePage - Successfully clicked on the Save button
+2025-03-19 11:27:16 [main] INFO  AddEmployeePage - Successfully added the employee
+2025-03-19 11:27:16 [main] INFO  TestBase - Successfully quite the browser

@@ -6,10 +6,11 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.List;
-import java.util.concurrent.TimeoutException;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,22 +47,18 @@ public class AddEmployeePage {
 	public void uploadFileUsingRobot(String filePath) throws AWTException, InterruptedException {
 	    Robot robot = new Robot();
 	    
-	    // Copy file path to clipboard
 	    StringSelection selection = new StringSelection(filePath);
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
 
-	    // Simulate CTRL + V to paste file path
-	    kw.normalWait(300);
+	    kw.waitForClipBoardText(filePath);
+	    
 	    robot.keyPress(KeyEvent.VK_CONTROL);
 	    robot.keyPress(KeyEvent.VK_V);
-	    
-	    kw.normalWait(300);
 	    robot.keyRelease(KeyEvent.VK_V);
 	    robot.keyRelease(KeyEvent.VK_CONTROL);
 	    
-	    kw.normalWait(300);
+	    kw.waitForClipBoardText("");
 
-	    // Press Enter to confirm file selection
 	    robot.keyPress(KeyEvent.VK_ENTER);
 	    robot.keyRelease(KeyEvent.VK_ENTER);
 	    kw.normalWait(300);
@@ -174,10 +171,20 @@ public class AddEmployeePage {
 	 * @throws TimeoutException 
 	 */
 	public boolean SaveToastMessageText() throws TimeoutException {
-		kw.waitForElementToBeVisible(saveSuccessfullToast);
-		boolean isDisplayed = saveSuccessfullToast.isDisplayed();
-		LOG.info("Successfully added the employee");
-		return isDisplayed;
+		try {
+			kw.waitForElementToBeVisibleShort(saveSuccessfullToast,5);
+			kw.scrollToElement(saveSuccessfullToast);
+			boolean isDisplayed = saveSuccessfullToast.isDisplayed();
+			LOG.info("Successfully added the employee");
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+	        
+		}catch (NoSuchElementException e) {
+	        LOG.warn("Toast element not found in DOM.");
+	    }
+		return false;
+		
 		
 	}
 	

@@ -1,5 +1,7 @@
 package com.main;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
 import java.time.Duration;
 import java.util.List;
 
@@ -208,5 +210,20 @@ public class Keywords {
         return driver;
     }
 
+    public void waitForClipBoardText(String text) {
+    	int attempts = 0;
+        while (attempts < 10) {
+            try {
+                String clipboardText = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+                if (clipboardText.equals(text)) {
+                    return;
+                }
+            } catch (Exception ignored) {}
+            attempts++;
+            try {
+                Thread.onSpinWait(); // More efficient than sleep, avoids blocking
+            } catch (Exception ignored) {}
+        }
+	}
     
 }

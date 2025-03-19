@@ -328,6 +328,12 @@ public class TestSprint1 extends TestBase{
 		EmployeeListMenu emplist = new EmployeeListMenu();
 		AddEmployeePage addemp = new AddEmployeePage();
 		pim.clickOnPIM();
+		emplist.clickOnEmployeeListMenu();
+		emplist.enterEmployeeName("Wisley");
+		emplist.clickOnSearchButton();
+		emplist.clickOnSelectAll();
+		emplist.DeleteSelectedUsers();
+		pim.clickOnPIM();
 		addemp.clickOnAddNewEmployeeButton();
 		addemp.selectProfilePic();
 		addemp.EnterUserDetails("George", "L", "Wisley");
@@ -336,13 +342,7 @@ public class TestSprint1 extends TestBase{
 		addemp.enterLoginDetails("George", "User@2025", false);
 		addemp.clickOnSaveButton();
 		Assert.assertTrue(addemp.SaveToastMessageText());
-		pim.clickOnPIM();
-		emplist.clickOnEmployeeListMenu();
-		emplist.enterEmployeeName("Wisley");
-		emplist.clickOnSearchButton();
-		emplist.clickOnSelectAll();
-		emplist.DeleteSelectedUsers();
-		Thread.sleep(3000);
+		
 	}
 
 	@Test
