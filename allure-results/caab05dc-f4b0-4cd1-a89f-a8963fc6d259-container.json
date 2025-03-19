@@ -1,0 +1,1 @@
+{"uuid":"caab05dc-f4b0-4cd1-a89f-a8963fc6d259","name":"Default suite","children":["1d2b7dfd-583d-40fe-b532-3bf369f841e2"],"befores":[{"name":"cleanAllureResults","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1742372918244,"stop":1742372918286}],"afters":[],"start":1742372918185,"stop":1742372942898}

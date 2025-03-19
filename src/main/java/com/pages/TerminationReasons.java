@@ -3,6 +3,7 @@ package com.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
@@ -62,7 +63,8 @@ public class TerminationReasons {
 		kw.waitForElementToBeClickable(AddTerminationReasonSaveButton);
 		kw.waitForElementToBeClickable(EnterTerminationReason);
 		EnterTerminationReason.sendKeys(name);
-		if(alreadyExistError.isDisplayed()) {
+		EnterTerminationReason.sendKeys(Keys.TAB);
+		if(isAlreadyExistErrorPresent()) {
 			LOG.error("Termination reason already Exists");
 		}else {
 			AddTerminationReasonSaveButton.click();
@@ -70,8 +72,14 @@ public class TerminationReasons {
 		}
 	}
 	
+	public boolean isAlreadyExistErrorPresent() {
+		List<WebElement> errorElements = kw.getDriver().findElements(By.cssSelector("div.oxd-layout-context > div > div > form > div.oxd-form-row > div > span"));
+	    return !errorElements.isEmpty();
+	}
+	
+	
 	public boolean checkAssertTerminationReason() {
-		if(alreadyExistError.isDisplayed()) {
+		if(isAlreadyExistErrorPresent()) {
 			LOG.error("Termination reason already Exists");
 			return true;
 		}else {

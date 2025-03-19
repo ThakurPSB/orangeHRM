@@ -57,7 +57,7 @@ public class ReportingMethod {
 	public void addrReportingMethod(String nm) {
 		kw.waitForElementToBeClickable(reportingMethodName);
 		reportingMethodName.sendKeys(nm);
-		if(alreadyExistError.isDisplayed()) {
+		if(isAlreadyExistErrorPresent()) {
 			LOG.error("Reporing Method already Exists");
 		}else {
 			reportingMethodSaveButton.click();
@@ -65,8 +65,16 @@ public class ReportingMethod {
 		}
 	}
 	
+	public boolean isAlreadyExistErrorPresent() {
+		List<WebElement> errorElements = kw.getDriver().findElements(By.cssSelector("div.oxd-layout-context > div > div > form > div.oxd-form-row > div > span"));
+	    return !errorElements.isEmpty();
+	}
+	
+	
+	
+	
 	public boolean checkAssertReportingMethod() {
-		if(alreadyExistError.isDisplayed()) {
+		if(isAlreadyExistErrorPresent()) {
 			LOG.error("Reporing Method already Exists");
 			return true;
 		}else {
