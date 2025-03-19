@@ -39,7 +39,7 @@ public class ReportingMethod {
 	 * click on ADD button in reporting method menu
 	 */
 	public void AddReportingMethodButton() {
-		kw.waitForElementToBeVisible(AddReportingMethod);
+		kw.waitForElementToBeClickable(AddReportingMethod);
 		kw.scrollToElement(AddReportingMethod);
 		AddReportingMethod.click();
 		LOG.info("Successfully clicked on Add Reporting Method Button ");
@@ -55,7 +55,7 @@ public class ReportingMethod {
 	WebElement alreadyExistError ;
 	
 	public void addrReportingMethod(String nm) {
-		kw.waitForElementToBeVisible(reportingMethodName);
+		kw.waitForElementToBeClickable(reportingMethodName);
 		reportingMethodName.sendKeys(nm);
 		if(alreadyExistError.isDisplayed()) {
 			LOG.error("Reporing Method already Exists");

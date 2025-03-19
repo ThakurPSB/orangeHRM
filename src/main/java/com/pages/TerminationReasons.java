@@ -27,7 +27,7 @@ public class TerminationReasons {
 	 * click on the Termination Reasons field in configuration menu
 	 */
 	public void clickOnTerminationReasonsMenu() {
-		kw.waitForElementToBeVisible(TerminationReasons);
+		kw.waitForElementToBeClickable(TerminationReasons);
 		TerminationReasons.click();
 		LOG.info("Successfully click on the Termination Reason Menu");
 	}
@@ -39,7 +39,7 @@ public class TerminationReasons {
 	 * click on the add button in termination reason menu
 	 */
 	public void ClickOnAddTerminationReasonButton() {
-		kw.waitForElementToBeVisible(AddTerminationReasonButton);
+		kw.waitForElementToBeClickable(AddTerminationReasonButton);
 		kw.scrollToElement(AddTerminationReasonButton);
 		AddTerminationReasonButton.click();
 		LOG.info("Successfully clicked on the Add Termindation reason button");
@@ -59,8 +59,8 @@ public class TerminationReasons {
 	 * Add the reason in list of termination list.
 	 */
 	public void AddTerminationReason(String name) {
-		kw.waitForElementToBeVisible(AddTerminationReasonSaveButton);
-		kw.waitForElementToBeVisible(EnterTerminationReason);
+		kw.waitForElementToBeClickable(AddTerminationReasonSaveButton);
+		kw.waitForElementToBeClickable(EnterTerminationReason);
 		EnterTerminationReason.sendKeys(name);
 		if(alreadyExistError.isDisplayed()) {
 			LOG.error("Termination reason already Exists");
