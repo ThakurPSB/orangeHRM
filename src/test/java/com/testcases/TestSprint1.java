@@ -249,7 +249,7 @@ public class TestSprint1 extends TestBase{
 		tr.deleteSelectedTerminationReason("Other");
 		tr.ClickOnAddTerminationReasonButton();
 		tr.AddTerminationReason("Other");
-		Assert.assertTrue(tr.SaveToastMessageText());
+		Assert.assertTrue(tr.checkAssertTerminationReason());
 		Thread.sleep(3000);
 		
 	}
@@ -331,13 +331,12 @@ public class TestSprint1 extends TestBase{
 		emplist.clickOnEmployeeListMenu();
 		emplist.enterEmployeeName("Wisley");
 		emplist.clickOnSearchButton();
-		emplist.clickOnSelectAll();
 		emplist.DeleteSelectedUsers();
 		pim.clickOnPIM();
 		addemp.clickOnAddNewEmployeeButton();
 		addemp.selectProfilePic();
 		addemp.EnterUserDetails("George", "L", "Wisley");
-		//addemp.enterEmployeeID();
+		addemp.enterEmployeeID();
 		addemp.clickOnCreateLoginDetails();
 		addemp.enterLoginDetails("George", "User@2025", false);
 		addemp.clickOnSaveButton();
@@ -346,20 +345,20 @@ public class TestSprint1 extends TestBase{
 	}
 
 	@Test
-	public void TryAndError() throws InterruptedException {
+	public void TryAndError() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
 		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
+		AddEmployeePage addemp = new AddEmployeePage();
 		pim.clickOnPIM();
-		emplist.clickOnEmployeeListMenu();
 		
-		emplist.enterEmployeeID(12111);
-		emplist.clickOnSearchButton();
-		Assert.assertTrue(emplist.searchResultID("68166"));
-		emplist.clickOnResetButton();
-		emplist.clickOnEmployeeListMenu();
+		addemp.clickOnAddNewEmployeeButton();
+		addemp.EnterUserDetails("George", "L", "Wisley");
+		addemp.enterEmployeeID();
+		
+		Thread.sleep(5000);
 		
 	}
 

@@ -124,14 +124,12 @@ public class EmployeeListMenu {
 	 * @throws InterruptedException 
 	 */
 	public void enterSupervisorName(String name) throws InterruptedException {
-		kw.waitForElementToBeClickable(supervisor);
+		kw.waitForElementToBeVisible(supervisor);
 		supervisor.click();
 		supervisor.sendKeys(name);
-		kw.normalWait(1000);
-		supervisor.sendKeys(Keys.ARROW_DOWN);
+		kw.normalWait(200);
 		supervisor.sendKeys(Keys.ENTER);
-		supervisor.sendKeys(Keys.TAB);
-		LOG.info("Entered the supervisor name in search field "+name);
+		LOG.info("Entered the supervisor name in search name field.");
 	}
 	
 	
@@ -231,7 +229,7 @@ public class EmployeeListMenu {
 	    if (tableRows != null && !tableRows.isEmpty()) {
 	        kw.waitForAllElementAreVisible(tableRows);
 	        WebElement idElement = getTableRow(1); 
-	        kw.scrollToElement(idElement);
+	        action.moveToElement(idElement).perform();
 	        String text = idElement.getText();
 	        LOG.info("Successfully Searched employee with Employee ID: " + text);
 	        return text.equals(ids);
@@ -361,7 +359,7 @@ public class EmployeeListMenu {
 	    if (tableRows != null && !tableRows.isEmpty()) {
 	        kw.waitForAllElementAreVisible(tableRows);
 	        WebElement temp = getTableRow(7); 
-	        kw.scrollToElement(temp);
+	        action.scrollToElement(temp);
 	        String text = temp.getText();
 	        LOG.info("Successfully Searched employee with supervisor name: " + text);
 	        return text.equals(supervisor);
@@ -391,15 +389,16 @@ public class EmployeeListMenu {
 	@FindBy(css="div.orangehrm-container > div > div.oxd-table-header > div > div:nth-child(1) > div > label")
 	WebElement selectAll ;
 	
-	public void clickOnSelectAll() {
+	public boolean clickOnSelectAll() {
 		if (infoToastMessage()) {
 	        LOG.info("Toast message found. No records available.");
-	        return;
+	        return false;
 	    }else {
 			kw.waitForElementToBeClickable(selectAll);
 			kw.scrollToElement(selectAll);
 			selectAll.click();
 			LOG.info("Selected all the search results");
+			return true;
 	    }
 	}
 	
@@ -410,14 +409,17 @@ public class EmployeeListMenu {
 	WebElement  confirmDelete;
 	
 	public void DeleteSelectedUsers() throws InterruptedException {
-		kw.waitForElementToBeClickable(deleteSelectedButton);
-		kw.normalWait(200);
-		deleteSelectedButton.click();
-		LOG.info("Successfully Clicked on delete button");
-		kw.normalWait(500);
-		kw.waitForElementToBeClickable(confirmDelete);
-		confirmDelete.click();
-		LOG.info("Clicked on confirm delete button");
+		
+		if(clickOnSelectAll()) {
+			kw.waitForElementToBeClickable(deleteSelectedButton);
+			kw.normalWait(200);
+			deleteSelectedButton.click();
+			LOG.info("Successfully Clicked on delete button");
+			kw.normalWait(500);
+			kw.waitForElementToBeClickable(confirmDelete);
+			confirmDelete.click();
+			LOG.info("Clicked on confirm delete button");
+		}
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--info.oxd-toast-container--toast")

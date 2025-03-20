@@ -6,6 +6,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
@@ -51,6 +52,8 @@ public class Keywords {
 		if(browserName.equalsIgnoreCase("Chrome")) {
 		
 	        ChromeOptions options = new ChromeOptions();
+	        //options.addArguments("--headless=new"); // Use newer headless mode
+	        //options.addArguments("--window-size=1920,1080"); // Set proper resolution
 
 	        driver = new ChromeDriver(options);
 
@@ -182,9 +185,23 @@ public class Keywords {
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
     }
     
+    
     public void scrollToElement(List<WebElement> elist) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", elist);
+    }
+    
+    /**
+     * Executes the script on given web element
+     * @param script
+     * @param element
+     * @return 
+     */
+    public Object JSExecutor(String script , WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        @Nullable Object s = js.executeScript(script, element);
+		return s;
+        
     }
     
     

@@ -92,6 +92,10 @@ public class AddEmployeePage {
 	@FindBy(css="div:nth-child(1) > div.oxd-grid-2.orangehrm-full-width-grid > div > div > div:nth-child(2) > input")
 	WebElement empID ;
 	
+	@FindBy(css="input.oxd-input.oxd-input--active")
+	List<WebElement> inputList  ;
+	
+	
 	public void EnterUserDetails(String fname,String mname, String lname) throws InterruptedException, TimeoutException {
 		kw.waitForElementToBeVisible(firstName);
 		firstName.sendKeys(fname);
@@ -117,43 +121,44 @@ public class AddEmployeePage {
 	public void enterEmployeeID() throws InterruptedException, TimeoutException {
 		
 		kw.waitForElementToBeVisible(empID);
-		String empid = empID.getText();
-		int id = Integer.parseInt(empid);
+		Object empid = kw.JSExecutor("return arguments[0].value;",empID);
+		int id = Integer.parseInt((String)empid);
 		empID.sendKeys(Keys.CONTROL+ "a");
 		empID.sendKeys(Keys.DELETE);
-		kw.normalWait(500);
+		//kw.normalWait(500);
 		LOG.info("loop start "+ String.format("%04d", id));
 		empID.sendKeys(String.format("%04d", id));
-		
+		String empidstring = null;
 		
 		for(int attempt = 1; attempt <=10; attempt++) {
+			kw.normalWait(1000);
+			kw.waitForElementToBeVisibleShort(empID, 2);
+		    boolean isErrorDisplayed = false;
+		    
+		    try {
+		        if (kw.waitForElementToBeVisibleShort(empIdAlreadyExist, 2)) {  // ✅ Waits for visibility
+		            LOG.info("Error message displayed: " + empIdAlreadyExist.getText());
+		            isErrorDisplayed = true;
+		        }
+		    } catch (org.openqa.selenium.TimeoutException e) {
+		        LOG.info("Error message not found, ID is unique.");
+		        isErrorDisplayed = false;  // ✅ Ensure variable is set properly
+		    }
 			
-			try {
-			    kw.waitForElementToBeVisible(empIdAlreadyExist);
-			    LOG.info("Error message displayed: " + empIdAlreadyExist.getText());
-			} catch (org.openqa.selenium.TimeoutException e) {
-				LOG.info("Error message not found, ID is unique.");
+			if(!isErrorDisplayed) {
+			    LOG.info("Error message not found, stopping loop.");
+			    break;  // **Exit the loop immediately when ID is available**
 			}
 			
-			if (!empIdAlreadyExistmultiple.isEmpty()) {  // Check if error message is visible
-	            id++;
-	            empid = String.format("%04d", id); // Format as 4-digit number
-	            
-	            empID.sendKeys(Keys.CONTROL + "a");
-	            empID.sendKeys(Keys.DELETE);
-	            empID.sendKeys(empid);
-	            
-	            LOG.info("Trying new ID: " + empid);
-	            Thread.sleep(1000); // OR kw.normalWait(1000);
-	        } else {
-	            break; // Found a unique ID
-	        }
+            id++;
+            empidstring = String.format("%04d", id); // Format as 4-digit number
+            empID.sendKeys(Keys.CONTROL + "a");
+            empID.sendKeys(Keys.DELETE);
+            empID.sendKeys(empidstring);
+            LOG.info("Trying new ID: " + empidstring);
+	        
         }
-
-		LOG.info("Final Unique Employee ID: " + empid);
- 
-		//LOG.info("Updated the empID value to "+String.format("%04d", id));
-		
+		LOG.info("Final Unique Employee ID: " + empidstring);
 	}
 	
 	public void clickOnSaveButton() {

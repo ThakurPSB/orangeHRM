@@ -1,1 +1,23 @@
-2025-03-19 13:59:02 [main] INFO  TestBase - Successfully quite the browser
+2025-03-20 12:27:17 [main] INFO  Keywords - Launched Chrome Browser
+2025-03-20 12:27:18 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-03-20 12:27:18 [main] INFO  TestBase - Successfully launched the web Application
+2025-03-20 12:27:19 [main] INFO  LoginPage - Successfully Loogged in
+2025-03-20 12:27:23 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
+2025-03-20 12:27:24 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
+2025-03-20 12:27:25 [main] INFO  EmployeeListMenu - Entered the name in search name field.
+2025-03-20 12:27:27 [main] INFO  EmployeeListMenu - Clicked the Search button.
+2025-03-20 12:27:27 [main] INFO  EmployeeListMenu - No records found for the search criteria
+2025-03-20 12:27:27 [main] INFO  EmployeeListMenu - Toast message found. No records available.
+2025-03-20 12:27:28 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
+2025-03-20 12:27:29 [main] INFO  AddEmployeePage - Successfully clicked on add new employee button
+2025-03-20 12:27:31 [main] INFO  AddEmployeePage - Profile pic selected
+2025-03-20 12:27:31 [main] INFO  AddEmployeePage - Successfully entered the user with details George L Wisley
+2025-03-20 12:27:31 [main] INFO  AddEmployeePage - loop start 0032
+2025-03-20 12:27:32 [main] INFO  AddEmployeePage - Error message displayed: Employee Id already exists
+2025-03-20 12:27:33 [main] INFO  AddEmployeePage - Trying new ID: 0033
+2025-03-20 12:27:36 [main] INFO  AddEmployeePage - Error message not found, stopping loop.
+2025-03-20 12:27:36 [main] INFO  AddEmployeePage - Final Unique Employee ID: 0033
+2025-03-20 12:27:36 [main] INFO  AddEmployeePage - The Create login details button already turned on
+2025-03-20 12:27:36 [main] INFO  AddEmployeePage - Successfully clicked on the Save button
+2025-03-20 12:27:38 [main] INFO  AddEmployeePage - Successfully added the employee
+2025-03-20 12:27:39 [main] INFO  TestBase - Successfully quite the browser
