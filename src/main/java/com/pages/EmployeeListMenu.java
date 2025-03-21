@@ -119,6 +119,10 @@ public class EmployeeListMenu {
 	@FindBy(css="form > div.oxd-form-row > div > div:nth-child(5) > div > div:nth-child(2) > div > div > input")
 	WebElement supervisor ;
 	
+	
+	@FindBy(css = ".oxd-autocomplete-option")  
+	private List<WebElement> suggestionsList;
+	
 	/**
 	 * @param name enter the supervisor name
 	 * @throws InterruptedException 
@@ -127,9 +131,21 @@ public class EmployeeListMenu {
 		kw.waitForElementToBeVisible(supervisor);
 		supervisor.click();
 		supervisor.sendKeys(name);
-		kw.normalWait(200);
-		supervisor.sendKeys(Keys.ENTER);
-		LOG.info("Entered the supervisor name in search name field.");
+		kw.normalWait(3000);
+		kw.waitForAllElementAreVisible(suggestionsList);
+		supervisor.sendKeys(Keys.ARROW_DOWN);
+
+		if (!suggestionsList.isEmpty()) {
+	        suggestionsList.get(0).click();
+	        LOG.info("Selected Supervisor: " + name);
+	    } else {
+	        LOG.info("No suggestions found for: " + name);
+	    }
+
+	    // Ensure the selection is registered
+	    supervisor.sendKeys(Keys.ENTER);
+		
+	    LOG.info("Entered the supervisor name in search name field.");
 	}
 	
 	
@@ -439,7 +455,7 @@ public class EmployeeListMenu {
 			LOG.warn("Toast message not found within timeout.");
 	        
 		}catch (NoSuchElementException e) {
-	        LOG.warn("Toast element not found in DOM.");
+	        LOG.warn("No match found - Toast not found in DOM.");
 	    }
 		return false;
 		

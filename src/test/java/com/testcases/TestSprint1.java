@@ -351,12 +351,14 @@ public class TestSprint1 extends TestBase{
 		login.logMeIn();
 		EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
-		AddEmployeePage addemp = new AddEmployeePage();
+		//AddEmployeePage addemp = new AddEmployeePage();
 		pim.clickOnPIM();
 		
-		addemp.clickOnAddNewEmployeeButton();
-		addemp.EnterUserDetails("George", "L", "Wisley");
-		addemp.enterEmployeeID();
+		emplist.enterSupervisorName("piy");
+		emplist.clickOnSearchButton();
+		Assert.assertTrue(emplist.searchResultSupervisor("Piyush Thakur"));
+		//emplist.clickOnResetButton();
+		//emplist.clickOnEmployeeListMenu();
 		
 		Thread.sleep(5000);
 		

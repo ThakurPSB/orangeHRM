@@ -2,16 +2,16 @@
 <testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-20T12:27:15 IST" name="Default suite" finished-at="2025-03-20T12:27:39 IST" duration-ms="23219">
+  <suite started-at="2025-03-21T10:43:31 IST" name="Default suite" finished-at="2025-03-21T10:44:00 IST" duration-ms="29802">
     <groups>
     </groups>
-    <test started-at="2025-03-20T12:27:15 IST" name="Default test" finished-at="2025-03-20T12:27:39 IST" duration-ms="23219">
+    <test started-at="2025-03-21T10:43:31 IST" name="Default test" finished-at="2025-03-21T10:44:00 IST" duration-ms="29802">
       <class name="com.testcases.TestSprint1">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-20T12:27:15 IST" name="cleanAllureResults" finished-at="2025-03-20T12:27:15 IST" duration-ms="56" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:43:30 IST" name="cleanAllureResults" finished-at="2025-03-21T10:43:30 IST" duration-ms="66" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-20T12:27:16 IST" name="setUp" finished-at="2025-03-20T12:27:18 IST" duration-ms="2493" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:43:31 IST" name="setUp" finished-at="2025-03-21T10:43:34 IST" duration-ms="3918" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addUserandCheckIfAllOptionsAreWorkingWhileCreating()[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-20T12:27:18 IST" name="addUserandCheckIfAllOptionsAreWorkingWhileCreating" finished-at="2025-03-20T12:27:38 IST" duration-ms="20265" status="PASS">
+        <test-method signature="TryAndError()[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:43:35 IST" name="TryAndError" finished-at="2025-03-21T10:44:00 IST" duration-ms="25234" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addUserandCheckIfAllOptionsAreWorkingWhileCreating -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@333c8791]" started-at="2025-03-20T12:27:38 IST" name="closeBrowser" finished-at="2025-03-20T12:27:39 IST" duration-ms="257" status="PASS">
+        </test-method> <!-- TryAndError -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:44:00 IST" name="closeBrowser" finished-at="2025-03-21T10:44:00 IST" duration-ms="260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
