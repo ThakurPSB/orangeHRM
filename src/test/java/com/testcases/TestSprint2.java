@@ -32,9 +32,11 @@ public class TestSprint2 extends TestBase {
 		
 		AdminMenu admin = new AdminMenu();
 		admin.clickOnAdminMenu();
-		admin.enterUsername("rakhi.fukat");
+		
+		
+		admin.enterUsername("admin");
 		admin.clickOnSearchButton();
-		Assert.assertTrue(admin.searchResultUsername("rakhi.fukat"));
+		Assert.assertTrue(admin.searchResultUsername("admin"));
 		
 		admin.clickOnResetButton();
 		admin.selectUserRole("ESS");
@@ -42,6 +44,16 @@ public class TestSprint2 extends TestBase {
 		Assert.assertTrue(admin.searchResultRole("ESS"));
 		
 		
+		admin.clickOnResetButton();
+		admin.enterEmployeeName("Piyush");
+		admin.clickOnSearchButton();
+		Assert.assertTrue(admin.searchResultsEmployeeName("Piyush Thakur"));
+		
+		
+		admin.clickOnResetButton();
+		admin.selectLoginStatus("Enabled");
+		admin.clickOnSearchButton();
+		Assert.assertTrue(admin.searchResultStatus("Enabled"));
 		
 	}
 	

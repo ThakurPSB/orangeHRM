@@ -159,6 +159,7 @@ public class AddEmployeePage {
 	        
         }
 		LOG.info("Final Unique Employee ID: " + empidstring);
+		
 	}
 	
 	public void clickOnSaveButton() {
