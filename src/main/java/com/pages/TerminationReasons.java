@@ -40,6 +40,7 @@ public class TerminationReasons {
 	 * click on the add button in termination reason menu
 	 */
 	public void ClickOnAddTerminationReasonButton() {
+		kw.waitInvisibilityOfElement(confirmDeleteYes);
 		kw.waitForElementToBeClickable(AddTerminationReasonButton);
 		kw.scrollToElement(AddTerminationReasonButton);
 		AddTerminationReasonButton.click();
@@ -127,7 +128,6 @@ public class TerminationReasons {
 		}else {
 			LOG.info("No such Termination reason found.");
 		}
-		kw.normalWait(500);
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--error.oxd-toast-container--toast")

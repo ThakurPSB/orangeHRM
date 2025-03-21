@@ -39,6 +39,7 @@ public class ReportingMethod {
 	 * click on ADD button in reporting method menu
 	 */
 	public void AddReportingMethodButton() {
+		kw.waitInvisibilityOfElement(confirmDeleteYes);
 		kw.waitForElementToBeClickable(AddReportingMethod);
 		kw.scrollToElement(AddReportingMethod);
 		AddReportingMethod.click();
@@ -116,7 +117,6 @@ public class ReportingMethod {
 		}else {
 			LOG.info("No such method found");
 		}
-		kw.normalWait(500);
 	}
 	
 	
