@@ -127,7 +127,7 @@ public class TerminationReasons {
 		}else {
 			LOG.info("No such Termination reason found.");
 		}
-		
+		kw.normalWait(500);
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--error.oxd-toast-container--toast")
@@ -138,7 +138,7 @@ public class TerminationReasons {
 			kw.waitForElementToBeVisibleShort(errorToast,5);
 			kw.scrollToElement(errorToast);
 			boolean isDisplayed = errorToast.isDisplayed();
-			LOG.info("Error toast found "+errorToast.getText());
+			LOG.info("Error toast found ");
 			return isDisplayed;
 		} catch (TimeoutException e) {
 			LOG.warn("Toast message not found within timeout.");

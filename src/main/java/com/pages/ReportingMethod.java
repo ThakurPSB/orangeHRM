@@ -116,6 +116,7 @@ public class ReportingMethod {
 		}else {
 			LOG.info("No such method found");
 		}
+		kw.normalWait(500);
 	}
 	
 	
@@ -127,7 +128,7 @@ public class ReportingMethod {
 			kw.waitForElementToBeVisibleShort(errorToast,5);
 			kw.scrollToElement(errorToast);
 			boolean isDisplayed = errorToast.isDisplayed();
-			LOG.info("Error toast found "+errorToast.getText());
+			LOG.info("Error toast found ");
 			return isDisplayed;
 		} catch (TimeoutException e) {
 			LOG.warn("Toast message not found within timeout.");

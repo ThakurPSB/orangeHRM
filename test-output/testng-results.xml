@@ -2,16 +2,16 @@
 <testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-21T10:43:31 IST" name="Default suite" finished-at="2025-03-21T10:44:00 IST" duration-ms="29802">
+  <suite started-at="2025-03-21T11:08:01 IST" name="Default suite" finished-at="2025-03-21T11:08:26 IST" duration-ms="24505">
     <groups>
     </groups>
-    <test started-at="2025-03-21T10:43:31 IST" name="Default test" finished-at="2025-03-21T10:44:00 IST" duration-ms="29802">
+    <test started-at="2025-03-21T11:08:01 IST" name="Default test" finished-at="2025-03-21T11:08:26 IST" duration-ms="24505">
       <class name="com.testcases.TestSprint1">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:43:30 IST" name="cleanAllureResults" finished-at="2025-03-21T10:43:30 IST" duration-ms="66" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-21T11:08:01 IST" name="cleanAllureResults" finished-at="2025-03-21T11:08:01 IST" duration-ms="53" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:43:31 IST" name="setUp" finished-at="2025-03-21T10:43:34 IST" duration-ms="3918" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-21T11:08:01 IST" name="setUp" finished-at="2025-03-21T11:08:04 IST" duration-ms="2585" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TryAndError()[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:43:35 IST" name="TryAndError" finished-at="2025-03-21T10:44:00 IST" duration-ms="25234" status="PASS">
+        <test-method signature="AddReportingMethodAndTerminationReason()[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-21T11:08:04 IST" name="AddReportingMethodAndTerminationReason" finished-at="2025-03-21T11:08:25 IST" duration-ms="21378" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TryAndError -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@1cc680e]" started-at="2025-03-21T10:44:00 IST" name="closeBrowser" finished-at="2025-03-21T10:44:00 IST" duration-ms="260" status="PASS">
+        </test-method> <!-- AddReportingMethodAndTerminationReason -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@7b948f3e]" started-at="2025-03-21T11:08:25 IST" name="closeBrowser" finished-at="2025-03-21T11:08:26 IST" duration-ms="291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

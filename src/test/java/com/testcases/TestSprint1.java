@@ -293,7 +293,7 @@ public class TestSprint1 extends TestBase{
 		emplist.clickOnResetButton();
 		emplist.clickOnEmployeeListMenu();
 		
-		emplist.enterSupervisorName("Piyush Thakur");
+		emplist.enterSupervisorName("Piyush");
 		emplist.clickOnSearchButton();
 		Assert.assertTrue(emplist.searchResultSupervisor("Piyush Thakur"));
 		emplist.clickOnResetButton();
