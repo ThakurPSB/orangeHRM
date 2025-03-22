@@ -117,6 +117,7 @@ public class ReportingMethod {
 		}else {
 			LOG.info("No such method found");
 		}
+		kw.waitInvisibilityOfElement(confirmDeleteYes);
 	}
 	
 	

@@ -1,47 +1,28 @@
-2025-03-21 12:45:19 [main] INFO  Keywords - Launched Chrome Browser
-2025-03-21 12:45:21 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-03-21 12:45:21 [main] INFO  TestBase - Successfully launched the web Application
-2025-03-21 12:45:22 [main] INFO  LoginPage - Successfully Loogged in
-2025-03-21 12:45:30 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-03-21 12:45:31 [main] INFO  AdminMenu - entered the username in system user search  menu
-2025-03-21 12:45:32 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-21 12:45:37 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-21 12:45:38 [main] INFO  AdminMenu - Successfully Searched employee with  username: admin
-2025-03-21 12:45:38 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-21 12:45:39 [main] INFO  AdminMenu - Selected the user role as ESS
-2025-03-21 12:45:39 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-21 12:45:45 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-21 12:45:45 [main] INFO  AdminMenu - Successfully Searched employee with role: ESS
-2025-03-21 12:45:45 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-21 12:45:49 [main] INFO  AdminMenu - Selected employee: Piyush
-2025-03-21 12:45:50 [main] INFO  AdminMenu - Entered the employee name in search name field.
-2025-03-21 12:45:50 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-21 12:45:56 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-21 12:45:56 [main] INFO  AdminMenu - Successfully Searched employee with employee name: Piyush Thakur
-2025-03-21 12:45:56 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-21 12:47:08 [main] INFO  Keywords - Launched Chrome Browser
-2025-03-21 12:47:09 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-03-21 12:47:09 [main] INFO  TestBase - Successfully launched the web Application
-2025-03-21 12:47:11 [main] INFO  LoginPage - Successfully Loogged in
-2025-03-21 12:47:19 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-03-21 12:47:20 [main] INFO  AdminMenu - entered the username in system user search  menu
-2025-03-21 12:47:20 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-21 12:47:26 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-21 12:47:26 [main] INFO  AdminMenu - Successfully Searched employee with  username: admin
-2025-03-21 12:47:26 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-21 12:47:27 [main] INFO  AdminMenu - Selected the user role as ESS
-2025-03-21 12:47:27 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-21 12:47:33 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-21 12:47:33 [main] INFO  AdminMenu - Successfully Searched employee with role: ESS
-2025-03-21 12:47:34 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-21 12:47:37 [main] INFO  AdminMenu - Selected employee: Piyush
-2025-03-21 12:47:37 [main] INFO  AdminMenu - Entered the employee name in search name field.
-2025-03-21 12:47:38 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-21 12:47:44 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-21 12:47:44 [main] INFO  AdminMenu - Successfully Searched employee with employee name: Piyush Thakur
-2025-03-21 12:47:44 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-21 12:47:45 [main] INFO  AdminMenu - Selected the user role as Enabled
-2025-03-21 12:47:45 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-21 12:47:51 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-21 12:47:51 [main] INFO  AdminMenu - Successfully Searched employee with status: Enabled
-2025-03-21 12:47:52 [main] INFO  TestBase - Successfully quite the browser
+2025-03-21 13:43:00 [main] INFO  EmployeeListMenu - Clicked the reset button.
+2025-03-21 13:43:02 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
+2025-03-21 13:43:03 [main] INFO  EmployeeListMenu - Selected employement status - Active
+2025-03-21 13:43:05 [main] INFO  EmployeeListMenu - Clicked the Search button.
+2025-03-21 13:43:10 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
+2025-03-21 13:43:10 [main] INFO  EmployeeListMenu - Successfully Searched employee with status: Active
+2025-03-21 13:43:11 [main] INFO  EmployeeListMenu - Clicked the reset button.
+2025-03-21 13:43:13 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
+2025-03-21 13:43:17 [main] INFO  EmployeeListMenu - Selected Supervisor: Piyush
+2025-03-21 13:43:17 [main] INFO  EmployeeListMenu - Entered the supervisor name in search name field.
+2025-03-21 13:43:19 [main] INFO  EmployeeListMenu - Clicked the Search button.
+2025-03-21 13:43:24 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
+2025-03-21 13:43:24 [main] INFO  EmployeeListMenu - Successfully Searched employee with supervisor name: Piyush Thakur
+2025-03-21 13:43:25 [main] INFO  EmployeeListMenu - Clicked the reset button.
+2025-03-21 13:43:27 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
+2025-03-21 13:43:29 [main] INFO  EmployeeListMenu - Selected job title - Executive
+2025-03-21 13:43:30 [main] INFO  EmployeeListMenu - Clicked the Search button.
+2025-03-21 13:43:35 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
+2025-03-21 13:43:35 [main] INFO  EmployeeListMenu - Successfully Searched employee with job title: Executive
+2025-03-21 13:43:36 [main] INFO  EmployeeListMenu - Clicked the reset button.
+2025-03-21 13:43:38 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
+2025-03-21 13:43:40 [main] INFO  EmployeeListMenu - Selected sub unit - Mumbai
+2025-03-21 13:43:41 [main] INFO  EmployeeListMenu - Clicked the Search button.
+2025-03-21 13:43:47 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
+2025-03-21 13:43:47 [main] INFO  EmployeeListMenu - Successfully Searched employee with location: Mumbai
+2025-03-21 13:43:48 [main] INFO  EmployeeListMenu - Clicked the reset button.
+2025-03-21 13:43:50 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
+2025-03-21 13:43:53 [main] INFO  TestBase - Successfully quite the browser

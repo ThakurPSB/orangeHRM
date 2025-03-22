@@ -436,6 +436,7 @@ public class EmployeeListMenu {
 			confirmDelete.click();
 			LOG.info("Clicked on confirm delete button");
 		}
+		kw.waitInvisibilityOfElement(confirmDelete);
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--info.oxd-toast-container--toast")

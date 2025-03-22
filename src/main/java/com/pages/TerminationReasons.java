@@ -128,6 +128,7 @@ public class TerminationReasons {
 		}else {
 			LOG.info("No such Termination reason found.");
 		}
+		kw.waitInvisibilityOfElement(confirmDeleteYes);
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--error.oxd-toast-container--toast")

@@ -344,23 +344,27 @@ public class TestSprint1 extends TestBase{
 		
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void TryAndError() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage();
 		login.logMeIn();
-		EmployeeListMenu emplist = new EmployeeListMenu();
+		//EmployeeListMenu emplist = new EmployeeListMenu();
 		PimMenu pim = new PimMenu();
 		//AddEmployeePage addemp = new AddEmployeePage();
 		pim.clickOnPIM();
+		UserProfile user = new UserProfile();
+	// checking custom fields are displayed
 		
-		emplist.enterSupervisorName("piy");
-		emplist.clickOnSearchButton();
-		Assert.assertTrue(emplist.searchResultSupervisor("Piyush Thakur"));
-		//emplist.clickOnResetButton();
-		//emplist.clickOnEmployeeListMenu();
+		pim.clickOnPIM();
+		user.clickOnEmployeeList();
+		user.clickOnUser1();
+		user.ClickOnMemebership();
+		Assert.assertTrue(user.checkInsuranceIDDisplayed());
+		Assert.assertTrue(user.checkOfficeTransportDisplayed());
 		
-		Thread.sleep(5000);
+		Thread.sleep(3000);
+	
 		
 	}
 

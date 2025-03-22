@@ -21,6 +21,8 @@ public class UserProfile {
 	
 	public void clickOnEmployeeList() {
 		kw.waitForElementToBeVisible(EmployeeList);
+		kw.scrollToElement(EmployeeList);
+		kw.waitForElementToBeClickable(EmployeeList);
 		EmployeeList.click();
 		LOG.info("Clicked employee list menu.");
 	}
