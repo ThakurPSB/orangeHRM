@@ -39,7 +39,7 @@ public class TestBase {
 	@BeforeMethod
 	@Parameters({"browserName", "url"})
 	public void setUp(@Optional("Chrome") String browserName, @Optional("http://localhost/orangehrm") String url) throws Exception {
-		kw = new Keywords();
+		Keywords kw = new Keywords();
 		kw.launchBrowser(browserName);
 		kw.launchURL(url);
 		LOG.info("Successfully launched the web Application");
