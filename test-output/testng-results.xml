@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-21T13:37:22 IST" name="Default suite" finished-at="2025-03-21T13:43:53 IST" duration-ms="390550">
+  <suite started-at="2025-03-25T14:43:55 IST" name="Default suite" finished-at="2025-03-25T14:44:30 IST" duration-ms="34866">
     <groups>
     </groups>
-    <test started-at="2025-03-21T13:37:22 IST" name="Default test" finished-at="2025-03-21T13:43:53 IST" duration-ms="390550">
-      <class name="com.testcases.TestSprint1">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:37:22 IST" name="cleanAllureResults" finished-at="2025-03-21T13:37:22 IST" duration-ms="91" status="PASS">
+    <test started-at="2025-03-25T14:43:55 IST" name="Default test" finished-at="2025-03-25T14:44:30 IST" duration-ms="34866">
+      <class name="com.testcases.TestSprint2">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint2@3eabe84a]" started-at="2025-03-25T14:43:55 IST" name="cleanAllureResults" finished-at="2025-03-25T14:43:55 IST" duration-ms="75" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:37:22 IST" name="setUp" finished-at="2025-03-21T13:37:26 IST" duration-ms="3191" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint2@3eabe84a]" started-at="2025-03-25T14:43:55 IST" name="setUp" finished-at="2025-03-25T14:43:59 IST" duration-ms="3933" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,207 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:37:26 IST" name="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage" finished-at="2025-03-21T13:38:32 IST" duration-ms="66535" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:38:32 IST" name="closeBrowser" finished-at="2025-03-21T13:38:33 IST" duration-ms="362" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:38:33 IST" name="setUp" finished-at="2025-03-21T13:38:36 IST" duration-ms="3044" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="AddReportingMethodAndTerminationReason()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:38:36 IST" name="AddReportingMethodAndTerminationReason" finished-at="2025-03-21T13:39:13 IST" duration-ms="36959" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddReportingMethodAndTerminationReason -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:39:13 IST" name="closeBrowser" finished-at="2025-03-21T13:39:13 IST" duration-ms="282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:39:13 IST" name="setUp" finished-at="2025-03-21T13:39:16 IST" duration-ms="2932" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="CheckIfLoginSuccessfullWithCorrectCredentials()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:39:16 IST" name="CheckIfLoginSuccessfullWithCorrectCredentials" finished-at="2025-03-21T13:39:25 IST" duration-ms="9108" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckIfLoginSuccessfullWithCorrectCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:39:25 IST" name="closeBrowser" finished-at="2025-03-21T13:39:25 IST" duration-ms="278" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:39:25 IST" name="setUp" finished-at="2025-03-21T13:39:28 IST" duration-ms="3122" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="CheckIfOptionalFieldsVisibilityToggleWorking()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:39:28 IST" name="CheckIfOptionalFieldsVisibilityToggleWorking" finished-at="2025-03-21T13:40:18 IST" duration-ms="49960" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckIfOptionalFieldsVisibilityToggleWorking -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:40:18 IST" name="closeBrowser" finished-at="2025-03-21T13:40:19 IST" duration-ms="311" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:40:19 IST" name="setUp" finished-at="2025-03-21T13:40:22 IST" duration-ms="3080" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TryAndError()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:40:22 IST" name="TryAndError" finished-at="2025-03-21T13:40:50 IST" duration-ms="28117" status="PASS">
+        <test-method signature="TryAndError()[pri:0, instance:com.testcases.TestSprint2@3eabe84a]" started-at="2025-03-25T14:44:00 IST" name="TryAndError" finished-at="2025-03-25T14:44:30 IST" duration-ms="30075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TryAndError -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:40:50 IST" name="closeBrowser" finished-at="2025-03-21T13:40:52 IST" duration-ms="1761" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@3eabe84a]" started-at="2025-03-25T14:44:30 IST" name="closeBrowser" finished-at="2025-03-25T14:44:30 IST" duration-ms="413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:40:52 IST" name="setUp" finished-at="2025-03-21T13:40:55 IST" duration-ms="3251" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="addUserandCheckIfAllOptionsAreWorkingWhileCreating()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:40:55 IST" name="addUserandCheckIfAllOptionsAreWorkingWhileCreating" finished-at="2025-03-21T13:41:33 IST" duration-ms="37986" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addUserandCheckIfAllOptionsAreWorkingWhileCreating -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:41:33 IST" name="closeBrowser" finished-at="2025-03-21T13:41:33 IST" duration-ms="326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:41:33 IST" name="setUp" finished-at="2025-03-21T13:41:37 IST" duration-ms="3184" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="checkIfAllTheLinksInProfileMenuAreWorking()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:41:37 IST" name="checkIfAllTheLinksInProfileMenuAreWorking" finished-at="2025-03-21T13:41:51 IST" duration-ms="14258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkIfAllTheLinksInProfileMenuAreWorking -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:41:51 IST" name="closeBrowser" finished-at="2025-03-21T13:41:51 IST" duration-ms="371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:41:51 IST" name="setUp" finished-at="2025-03-21T13:41:54 IST" duration-ms="2837" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:41:54 IST" name="checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff" finished-at="2025-03-21T13:42:14 IST" duration-ms="20024" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:42:14 IST" name="closeBrowser" finished-at="2025-03-21T13:42:14 IST" duration-ms="372" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:42:14 IST" name="setUp" finished-at="2025-03-21T13:42:18 IST" duration-ms="3113" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="checkSearchOptionsInPIMMenuEmployeeListPage()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:42:18 IST" name="checkSearchOptionsInPIMMenuEmployeeListPage" finished-at="2025-03-21T13:43:53 IST" duration-ms="95138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkSearchOptionsInPIMMenuEmployeeListPage -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint1@39a87e72]" started-at="2025-03-21T13:43:53 IST" name="closeBrowser" finished-at="2025-03-21T13:43:53 IST" duration-ms="234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.testcases.TestSprint1 -->
+      </class> <!-- com.testcases.TestSprint2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

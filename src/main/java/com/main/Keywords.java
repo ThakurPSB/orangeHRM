@@ -2,8 +2,18 @@ package com.main;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.DataFlavor;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+
+import javax.imageio.ImageIO;
 
 import org.apache.log4j.Logger;
 import org.jspecify.annotations.Nullable;
@@ -20,6 +30,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
 import org.openqa.selenium.JavascriptExecutor;
 
 
@@ -52,8 +67,8 @@ public class Keywords {
 		if(browserName.equalsIgnoreCase("Chrome")) {
 		
 	        ChromeOptions options = new ChromeOptions();
-	        options.addArguments("--headless=new"); // Use newer headless mode
-	        options.addArguments("--window-size=1920,1080"); // Set proper resolution
+	        //options.addArguments("--headless=new"); // Use newer headless mode
+	        //options.addArguments("--window-size=1920,1080"); // Set proper resolution
 
 	        driver = new ChromeDriver(options);
 
@@ -242,5 +257,52 @@ public class Keywords {
             } catch (Exception ignored) {}
         }
 	}
+    
+    //method to take screenshot when test case fail or broke
+    public void captureScreenShot(String testname) throws IOException {
+    	
+    	try{
+    	
+	    	LocalDateTime time = LocalDateTime.now();
+	    	DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy"); 
+	    	DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HHmmss");
+	    	
+	    	String dateFolder = time.format(dateFormatter);
+	    	String timeStamp = time.format(timeFormatter);
+	    	
+	    	Path path = Paths.get("screenshots/", dateFolder);
+	    	Files.createDirectories(path);
+	    	
+	    	AShot ashot = new AShot();
+	    	Screenshot sc = ashot.shootingStrategy(ShootingStrategies.viewportPasting(2000)).takeScreenshot(driver);
+	
+	        BufferedImage image = sc.getImage();
+	        File outputFile = new File("screenshots/" + dateFolder + "/Screenshot_" + testname + "_" + timeStamp + ".png");
+	        ImageIO.write(image, "png", outputFile);
+	
+	        LOG.info("Screenshot saved at: " + outputFile.getAbsolutePath());
+	    }
+    	catch(IOException e) {
+    		
+    		LOG.error("Error while taking screenshot: " + e.getMessage());
+    		
+    	}
+    	
+	}
+    
+    //return the running instance of the driver 
+    private static Keywords instance;
+    public static Keywords getInstance() {
+        return instance;
+    }
+    
+    /**
+     * This method wait for element text to be displayed using get text 
+     * @param element
+     * @param expectedText
+     */
+    public void waitForTextToBe(WebElement element, String expectedText) {
+        wait.until(ExpectedConditions.textToBePresentInElement(element, expectedText));
+    }
     
 }

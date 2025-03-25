@@ -5,9 +5,9 @@
     <classes>
       <class name="com.testcases.TestSprint2">
         <methods>
-          <include name="SearchSystemUserWithDifferentSearchOptions"/>
           <include name="setUp"/>
           <include name="closeBrowser"/>
+          <include name="TryAndError"/>
           <include name="cleanAllureResults"/>
         </methods>
       </class> <!-- com.testcases.TestSprint2 -->
