@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
+import com.main.Keywords;
 import com.pages.PimMenu;
 import com.pages.ReportingMethod;
 import com.pages.TerminationReasons;
@@ -23,6 +24,8 @@ import com.pages.UserProfile;
 import io.qameta.allure.*;
 
 public class TestSprint1 extends TestBase{
+	
+	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(TestSprint1.class);
 	
 	@Test
