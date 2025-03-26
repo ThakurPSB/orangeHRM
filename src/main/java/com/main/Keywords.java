@@ -47,6 +47,9 @@ public class Keywords {
 	//logger instance for the keyword class
 	private static final Logger LOG = Logger.getLogger(Keywords.class);
 	
+	//private constructor to prevent external instantiation
+	private Keywords() {}
+	
 	
 	/**
 	 * launch the given URK
@@ -293,6 +296,9 @@ public class Keywords {
     //return the running instance of the driver 
     private static Keywords instance;
     public static Keywords getInstance() {
+    	if (instance == null) {
+            instance = new Keywords();
+        }
         return instance;
     }
     
