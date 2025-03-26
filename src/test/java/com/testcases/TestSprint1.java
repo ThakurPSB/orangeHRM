@@ -51,7 +51,7 @@ public class TestSprint1 extends TestBase{
     }
 	
 	
-	protected Keywords kw;
+	protected static Keywords kw;
 	private static final Logger LOG = Logger.getLogger(TestSprint1.class);
 	
 	@Test

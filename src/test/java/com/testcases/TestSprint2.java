@@ -20,6 +20,7 @@ import io.qameta.allure.Story;
 
 public class TestSprint2 extends TestBase {
 	
+	protected static Keywords kw;
 	public LoginPage login;
 	public AdminMenu admin;
 	public AdminJobTitles jobs;
@@ -32,7 +33,6 @@ public class TestSprint2 extends TestBase {
         
     }
 	
-	protected Keywords kw;
 	
 	//private static final Logger LOG = Logger.getLogger(TestSprint2.class);
 	
