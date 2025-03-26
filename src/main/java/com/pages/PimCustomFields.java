@@ -16,11 +16,12 @@ import com.main.Keywords;
 
 public class PimCustomFields {
 	
-	public PimCustomFields() {
+	private Keywords kw;
+	public PimCustomFields(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(PimCustomFields.class);
 	
 	Actions action = new Actions(Keywords.driver);

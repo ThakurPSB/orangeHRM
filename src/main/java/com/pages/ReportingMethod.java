@@ -12,12 +12,14 @@ import org.apache.log4j.Logger;
 import com.main.Keywords;
 
 public class ReportingMethod {
+	
+	private Keywords kw;
 
-	public ReportingMethod() {
+	public ReportingMethod(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(ReportingMethod.class);
 	
 	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(4) > a")

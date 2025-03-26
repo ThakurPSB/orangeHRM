@@ -2,6 +2,7 @@ package com.testcases;
 
 //import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
@@ -19,7 +20,19 @@ import io.qameta.allure.Story;
 
 public class TestSprint2 extends TestBase {
 	
-	Keywords kw = new Keywords();
+	public LoginPage login;
+	public AdminMenu admin;
+	public AdminJobTitles jobs;
+
+	@BeforeMethod
+	public void pageSetup() {
+        login = new LoginPage(kw); 
+        admin = new AdminMenu(kw);
+        jobs = new AdminJobTitles(kw);
+        
+    }
+	
+	protected Keywords kw;
 	
 	//private static final Logger LOG = Logger.getLogger(TestSprint2.class);
 	
@@ -31,10 +44,8 @@ public class TestSprint2 extends TestBase {
     @Story("Admin page options")
 	public void SearchSystemUserWithDifferentSearchOptions() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
 		
-		AdminMenu admin = new AdminMenu();
 		admin.clickOnAdminMenu();
 		
 		
@@ -69,10 +80,9 @@ public class TestSprint2 extends TestBase {
     @Story("Admin page options jobs submenu checking")
 	public void checkForJobMenuAreShowingCorrectOptions() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
 		
-		AdminJobTitles jobs = new AdminJobTitles();
+		
 		jobs.clickOnAdminMenu();
 		jobs.clickOnJobSubMenu("Job Titles");
 		Assert.assertTrue(jobs.checkElementinTable("Assistant Manager"));
@@ -92,7 +102,6 @@ public class TestSprint2 extends TestBase {
 	@Test(enabled = false)
 	public void TryAndError() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
 		
 		//AdminJobTitles jobs = new AdminJobTitles();

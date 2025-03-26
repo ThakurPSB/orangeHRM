@@ -11,11 +11,12 @@ import com.main.Keywords;
 
 public class PimMenu {
 	
-	public PimMenu() {
+	private Keywords kw;
+	public PimMenu(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	
 	private static final Logger LOG = Logger.getLogger(PimMenu.class);
 	

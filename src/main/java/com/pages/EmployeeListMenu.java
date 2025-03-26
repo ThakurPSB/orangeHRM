@@ -17,11 +17,12 @@ import com.main.Keywords;
 
 public class EmployeeListMenu {
 	
-	public EmployeeListMenu() {
+	private Keywords kw;
+	public EmployeeListMenu(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 
-	Keywords kw = new Keywords();
 	Actions action = new Actions(Keywords.driver);
 	private static final Logger LOG = Logger.getLogger(EmployeeListMenu.class);
 	

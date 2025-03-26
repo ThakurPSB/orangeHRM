@@ -13,11 +13,12 @@ import com.main.Keywords;
 
 public class AdminJobTitles {
 	
-	public AdminJobTitles() {
+	private Keywords kw;
+	public AdminJobTitles(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(AdminJobTitles.class);
 	
 	@FindBy(css="div.oxd-sidepanel-body > ul > li:nth-child(1) > a > span")

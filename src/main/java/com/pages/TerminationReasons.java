@@ -14,11 +14,12 @@ import com.main.Keywords;
 
 public class TerminationReasons {
 	
-	public TerminationReasons() {
+	private Keywords kw;
+	public TerminationReasons(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(TerminationReasons.class);
 	
 	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(5) > a")

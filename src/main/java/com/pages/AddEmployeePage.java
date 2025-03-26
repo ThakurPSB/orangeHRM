@@ -19,11 +19,14 @@ import com.main.Keywords;
 
 public class AddEmployeePage {
 	
-	public AddEmployeePage() {
+	private Keywords kw;
+	
+	//Constructor to instanciate POM and receive kw from testbase
+	public AddEmployeePage(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 
-	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(AddEmployeePage.class);
 	
 	@FindBy(css="header > div.oxd-topbar-body > nav > ul > li:nth-child(3) > a")

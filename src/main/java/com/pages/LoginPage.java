@@ -10,12 +10,12 @@ import com.main.Keywords;
  * 
  */
 public class LoginPage {
-
-	public LoginPage() {
+	private Keywords kw;
+	public LoginPage(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	
 	private static final Logger LOG = Logger.getLogger(LoginPage.class);
 	

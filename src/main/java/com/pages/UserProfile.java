@@ -8,11 +8,11 @@ import com.main.Keywords;
 
 public class UserProfile {
 	
-	public UserProfile() {
+	private Keywords kw;
+	public UserProfile(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
-	
-	Keywords kw = new Keywords();
 	
 	private static final Logger LOG = Logger.getLogger(UserProfile.class);
 	

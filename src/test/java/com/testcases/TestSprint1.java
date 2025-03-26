@@ -7,6 +7,7 @@ import java.util.concurrent.TimeoutException;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
@@ -25,7 +26,32 @@ import io.qameta.allure.*;
 
 public class TestSprint1 extends TestBase{
 	
-	Keywords kw = new Keywords();
+	public LoginPage login;
+	public UserDropdownMenu profile;
+	public PimMenu pim;
+	public UserProfile user;
+	public PimCustomFields customField;
+	public ReportingMethod rm;
+	public TerminationReasons tr;
+	public EmployeeListMenu emplist ;
+	public AddEmployeePage addemp;
+	
+	@BeforeMethod
+	public void pageSetup() {
+        login = new LoginPage(kw); 
+        profile = new UserDropdownMenu(kw);
+        pim = new PimMenu(kw);
+        user = new UserProfile(kw);
+        customField = new PimCustomFields(kw);
+        rm = new ReportingMethod(kw);	
+		tr = new TerminationReasons(kw);
+		emplist = new EmployeeListMenu(kw);
+		addemp = new AddEmployeePage(kw);
+        
+    }
+	
+	
+	protected Keywords kw;
 	private static final Logger LOG = Logger.getLogger(TestSprint1.class);
 	
 	@Test
@@ -35,7 +61,6 @@ public class TestSprint1 extends TestBase{
     @Feature("Login Feature")
     @Story("Valid login credentials should grant access")
 	public void CheckIfLoginSuccessfullWithCorrectCredentials() throws InterruptedException {
-		LoginPage login = new LoginPage();
 		
 		HashMap <String ,String> credentials = new HashMap<>();
 		
@@ -69,10 +94,7 @@ public class TestSprint1 extends TestBase{
     @Story("Respected links / dialog box should be visible")
 	public void checkIfAllTheLinksInProfileMenuAreWorking() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
-		
-		UserDropdownMenu profile = new UserDropdownMenu();
 		
 		profile.clickOnUserProfile();
 		profile.clickOnAbout();
@@ -96,8 +118,7 @@ public class TestSprint1 extends TestBase{
     @Story("Create a page object for PIM menu")
 	public void checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
-		PimMenu pim = new PimMenu();
+		
 		
 		login.logMeIn();
 		
@@ -123,11 +144,9 @@ public class TestSprint1 extends TestBase{
     @Story("Create a page object for user profile")
 	public void CheckIfOptionalFieldsVisibilityToggleWorking() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
 		
-		UserProfile user = new UserProfile();
-		PimMenu pim = new PimMenu();
+		
 		
 		//When options are turned off
 		pim.clickOnPIM();
@@ -174,12 +193,8 @@ public class TestSprint1 extends TestBase{
     @Story("CustoField in PIM Menu")
 	public void AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
 		
-		PimCustomFields customField = new PimCustomFields();
-		PimMenu pim = new PimMenu();
-		UserProfile user = new UserProfile();
 		
 		//deleting already created custom fields
 		
@@ -231,12 +246,9 @@ public class TestSprint1 extends TestBase{
     @Story("PIM Configuration Menus")
 	public void AddReportingMethodAndTerminationReason() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
 		
-		PimMenu pim = new PimMenu();
-		ReportingMethod rm = new ReportingMethod();	
-		TerminationReasons tr = new TerminationReasons();
+		
 		
 		pim.clickOnPIM();
 		pim.clickOnConfiguration();
@@ -265,10 +277,8 @@ public class TestSprint1 extends TestBase{
     @Story("PIM employee list Menus")
 	public void checkSearchOptionsInPIMMenuEmployeeListPage() throws InterruptedException {
 		
-		LoginPage login = new LoginPage();
 		login.logMeIn();
-		EmployeeListMenu emplist = new EmployeeListMenu();
-		PimMenu pim = new PimMenu();
+		
 		pim.clickOnPIM();
 		emplist.clickOnEmployeeListMenu();
 
@@ -325,11 +335,8 @@ public class TestSprint1 extends TestBase{
     @Feature("Add Employee")
     @Story("Add Employee")
     public void addUserandCheckIfAllOptionsAreWorkingWhileCreating() throws InterruptedException, AWTException, TimeoutException {
-		LoginPage login = new LoginPage();
 		login.logMeIn();
-		PimMenu pim = new PimMenu();
-		EmployeeListMenu emplist = new EmployeeListMenu();
-		AddEmployeePage addemp = new AddEmployeePage();
+		
 		pim.clickOnPIM();
 		emplist.clickOnEmployeeListMenu();
 		emplist.enterEmployeeName("Wisley");
@@ -347,28 +354,6 @@ public class TestSprint1 extends TestBase{
 		
 	}
 
-	@Test(enabled = false)
-	public void TryAndError() throws InterruptedException, AWTException {
-		
-		LoginPage login = new LoginPage();
-		login.logMeIn();
-		//EmployeeListMenu emplist = new EmployeeListMenu();
-		PimMenu pim = new PimMenu();
-		//AddEmployeePage addemp = new AddEmployeePage();
-		pim.clickOnPIM();
-		UserProfile user = new UserProfile();
-	// checking custom fields are displayed
-		
-		pim.clickOnPIM();
-		user.clickOnEmployeeList();
-		user.clickOnUser1();
-		user.ClickOnMemebership();
-		Assert.assertTrue(user.checkInsuranceIDDisplayed());
-		Assert.assertTrue(user.checkOfficeTransportDisplayed());
-		
-		Thread.sleep(3000);
-	
-		
-	}
+
 
 }

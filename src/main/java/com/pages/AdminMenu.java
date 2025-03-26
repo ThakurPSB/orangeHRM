@@ -15,11 +15,13 @@ import com.main.Keywords;
 
 public class AdminMenu {
 	
-	public AdminMenu() {
+	private Keywords kw;
+	
+	public AdminMenu(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(AdminMenu.class);
 	
 	@FindBy(css="div.oxd-sidepanel-body > ul > li:nth-child(1) > a > span")

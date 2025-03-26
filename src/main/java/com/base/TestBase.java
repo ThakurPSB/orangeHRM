@@ -13,6 +13,8 @@ import com.main.Keywords;
 
 public class TestBase {
 	
+	protected Keywords kw;
+	
 	private static final Logger LOG = Logger.getLogger(TestBase.class);
 	
 	/**
@@ -39,7 +41,7 @@ public class TestBase {
 	@BeforeMethod
 	@Parameters({"browserName", "url"})
 	public void setUp(@Optional("Chrome") String browserName, @Optional("http://localhost/orangehrm") String url) throws Exception {
-		Keywords kw = new Keywords();
+		kw = new Keywords();
 		kw.launchBrowser(browserName);
 		kw.launchURL(url);
 		LOG.info("Successfully launched the web Application");

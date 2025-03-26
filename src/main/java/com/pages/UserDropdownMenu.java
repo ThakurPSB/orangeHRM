@@ -8,11 +8,12 @@ import com.main.Keywords;
 
 public class UserDropdownMenu {
 	
-	public UserDropdownMenu() {
+	private Keywords kw;
+	public UserDropdownMenu(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
+		this.kw = kw;
 	}
 	
-	Keywords kw = new Keywords();
 	private static final Logger LOG = Logger.getLogger(UserDropdownMenu.class);
 	
 	@FindBy(css=".oxd-userdropdown-name")
