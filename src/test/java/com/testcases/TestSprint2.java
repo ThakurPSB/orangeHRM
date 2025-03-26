@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
-import com.main.Keywords;
 import com.pages.AdminJobTitles;
 import com.pages.AdminMenu;
 import com.pages.LoginPage;
@@ -20,7 +19,6 @@ import io.qameta.allure.Story;
 
 public class TestSprint2 extends TestBase {
 	
-	protected static Keywords kw;
 	public LoginPage login;
 	public AdminMenu admin;
 	public AdminJobTitles jobs;

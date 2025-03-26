@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
-import com.main.Keywords;
 import com.pages.PimMenu;
 import com.pages.ReportingMethod;
 import com.pages.TerminationReasons;
@@ -51,7 +50,6 @@ public class TestSprint1 extends TestBase{
     }
 	
 	
-	protected static Keywords kw;
 	private static final Logger LOG = Logger.getLogger(TestSprint1.class);
 	
 	@Test
