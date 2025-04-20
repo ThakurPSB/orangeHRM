@@ -1,43 +1,17 @@
-2025-03-31 11:05:01 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-03-31 11:05:01 [main] INFO  AdminMenu - entered the username in system user search  menu
-2025-03-31 11:05:02 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-31 11:05:07 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-31 11:05:07 [main] INFO  AdminMenu - Successfully Searched employee with  username: admin
-2025-03-31 11:05:07 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-31 11:05:08 [main] INFO  AdminMenu - Selected the user role as ESS
-2025-03-31 11:05:08 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-31 11:05:14 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-31 11:05:14 [main] INFO  AdminMenu - Successfully Searched employee with role: ESS
-2025-03-31 11:05:14 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-31 11:05:17 [main] INFO  AdminMenu - Selected employee: Piyush
-2025-03-31 11:05:17 [main] INFO  AdminMenu - Entered the employee name in search name field.
-2025-03-31 11:05:17 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-31 11:05:23 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-31 11:05:23 [main] INFO  AdminMenu - Successfully Searched employee with employee name: Piyush Thakur
-2025-03-31 11:05:23 [main] INFO  AdminMenu - Clicked the reset button.
-2025-03-31 11:05:23 [main] INFO  AdminMenu - Selected the user role as Enabled
-2025-03-31 11:05:23 [main] INFO  AdminMenu - Clicked the Search button.
-2025-03-31 11:05:29 [main] WARN  AdminMenu - No match found - Toast not found in DOM.
-2025-03-31 11:05:29 [main] INFO  AdminMenu - Successfully Searched employee with status: Enabled
-2025-03-31 11:05:29 [main] INFO  TestBase - Successfully quite the browser
-2025-03-31 11:05:30 [main] INFO  Keywords - Launched Chrome Browser
-2025-03-31 11:05:31 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-03-31 11:05:31 [main] INFO  TestBase - Successfully launched the web Application
-2025-03-31 11:05:31 [main] INFO  LoginPage - Successfully Loogged in
-2025-03-31 11:05:34 [main] INFO  AdminJobTitles - Cliked on Admin Menu
-2025-03-31 11:05:35 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-03-31 11:05:35 [main] INFO  AdminJobTitles - Clicked on : Job Titles
-2025-03-31 11:05:37 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Assistant Manager
-2025-03-31 11:05:37 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-03-31 11:05:37 [main] INFO  AdminJobTitles - Clicked on : Pay Grades
-2025-03-31 11:05:39 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Grade A
-2025-03-31 11:05:39 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-03-31 11:05:40 [main] INFO  AdminJobTitles - Clicked on : Employment Status
-2025-03-31 11:05:41 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Active
-2025-03-31 11:05:41 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-03-31 11:05:42 [main] INFO  AdminJobTitles - Clicked on : Job Categories
-2025-03-31 11:05:43 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Craft Workers
-2025-03-31 11:05:43 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-03-31 11:05:44 [main] INFO  AdminJobTitles - Clicked on : Work Shifts
-2025-03-31 11:05:45 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Day Shift
-2025-03-31 11:05:46 [main] INFO  TestBase - Successfully quite the browser
+2025-04-20 11:41:28 [main] INFO  Keywords - Launched Chrome Browser
+2025-04-20 11:41:28 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-04-20 11:41:28 [main] INFO  TestBase - Successfully launched the web Application
+2025-04-20 11:41:30 [main] INFO  LoginPage - Successfully Loogged in
+2025-04-20 11:41:34 [main] INFO  AdminMenu - Cliked on Admin Menu
+2025-04-20 11:41:35 [main] INFO  AdminOrganizationMenu - Cliked on Organization Menu
+2025-04-20 11:41:35 [main] INFO  AdminOrganizationMenu - Clicked on the organization Menu in Admin
+2025-04-20 11:41:36 [main] INFO  AdminOrganizationMenu - Clicked on : General Information
+2025-04-20 11:41:37 [main] INFO  AdminOrganizationMenu - Cliked on edit button in organization Menu
+2025-04-20 11:41:37 [main] INFO  AdminOrganizationMenu - updated the registration number to 123456
+2025-04-20 11:41:38 [main] INFO  AdminOrganizationMenu - Updated organization name to PsychoCorps
+2025-04-20 11:41:38 [main] INFO  AdminOrganizationMenu - Updated the Tax ID to PVT1419S8809
+2025-04-20 11:41:39 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
+2025-04-20 11:41:39 [main] INFO  AdminOrganizationMenu - Organization name matched
+2025-04-20 11:41:42 [main] INFO  AdminOrganizationMenu - TaxID number matched
+2025-04-20 11:41:42 [main] INFO  AdminOrganizationMenu - registration number matched
+2025-04-20 11:41:44 [main] INFO  TestBase - Successfully quite the browser

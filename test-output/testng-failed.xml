@@ -9,6 +9,7 @@
           <include name="closeBrowser"/>
           <include name="TryAndError"/>
           <include name="cleanAllureResults"/>
+          <include name="pageSetup"/>
         </methods>
       </class> <!-- com.testcases.TestSprint2 -->
     </classes>
