@@ -1,5 +1,6 @@
 package com.testcases;
 
+
 //import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -124,17 +125,36 @@ public class TestSprint2 extends TestBase {
 		Assert.assertTrue(orgMenu.regNumberCheck("123456"));
 	}
 	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to add location with all the details provided")
+    @Step("login and navigate to admin page, check organization option location menus")
+    @Feature("admin Features Organization menu locations")
+    @Story("Admin page options oragnization submenu checking location field")
+	public void CheckIfAddLocationOptionIsWorkingOrNot() throws InterruptedException {
+		login.logMeIn();
+		admin.clickOnAdminMenu();
+		orgMenu.clickOnOrgMenu();
+		orgMenu.clickOnOrgSubMenu("Locations");
+		orgMenu.searchLocation("MumbaiCBO");
+		orgMenu.deleteSelected("MumbaiCBO");
+		orgMenu.clickOnAddLocationButton();
+		orgMenu.enterLocation("MumbaiCBO");
+		orgMenu.enterCity("Mumbai");
+		orgMenu.enterState("MH");
+		orgMenu.enterZip("400521");
+		orgMenu.selectCountry("India");
+		orgMenu.clickOnSaveLocationButton();
+		Assert.assertTrue(orgMenu.SaveToastMessageText());
+	}
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void TryAndError() throws InterruptedException {
 		
 		login.logMeIn();
 		admin.clickOnAdminMenu();
 		orgMenu.clickOnOrgMenu();
 		orgMenu.clickOnOrgSubMenu("Locations");
-		orgMenu.searchLocation("MumbaiCBO");
-		//orgMenu.deleteSearchedLocation("MumbaiCBO");
-		orgMenu.deleteSelected("MumbaiCBO");
 		
 		
 	}

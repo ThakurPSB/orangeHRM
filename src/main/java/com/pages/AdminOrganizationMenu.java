@@ -272,4 +272,85 @@ public class AdminOrganizationMenu {
 			kw.waitInvisibilityOfElement(confirmDeleteYes);
 	}
 	
+	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > div > button")
+	WebElement addLocationButton ;
+	
+	/**
+	 * click on ths add location button in admin > organization > location menu.
+	 */
+	public void clickOnAddLocationButton() {
+		kw.waitForElementToBeVisible(addLocationButton);
+		kw.scrollToElement(addLocationButton);
+		addLocationButton.click();
+	}
+	
+	@FindBy(css="form > div:nth-child(1) > div > div > div > div:nth-child(2) > input")
+	WebElement enterLocationName ;
+	
+	public void enterLocation(String name) {
+		kw.waitForElementToBeClickable(enterLocationName);
+		enterLocationName.sendKeys(name);
+	}
+	
+	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > input")
+	WebElement enterCityName ;
+	
+	public void enterCity(String name) {
+		kw.waitForElementToBeClickable(enterCityName);
+		enterCityName.sendKeys(name);
+	}
+	
+	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > input")
+	WebElement enterStateName ;
+	
+	public void enterState(String name) {
+		kw.waitForElementToBeClickable(enterStateName);
+		enterStateName.sendKeys(name);
+	}
+	
+	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(2) > input")
+	WebElement enterZipCode ;
+	
+	public void enterZip(String name) {
+		kw.waitForElementToBeClickable(enterZipCode);
+		enterZipCode.sendKeys(name);
+	}
+	
+	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(4) > div > div:nth-child(2) > div > div")
+	WebElement selectCountryName ;
+	
+	
+	public void selectCountry(String country) throws InterruptedException {
+		kw.waitForElementToBeClickable(selectCountryName);
+		
+		selectCountryName.click();
+		List<WebElement> countries = kw.getDriver().findElements(By.cssSelector("div.oxd-select-option > span"));
+		boolean found = false;
+		
+		for (WebElement option : countries) {
+		    if (option.getText().equalsIgnoreCase(country)) {
+		        kw.waitForElementToBeClickable(option);
+		        option.click();
+		        found = true;
+		        break;
+		    }
+		}
+		if (!found) {
+		    throw new RuntimeException("Country '" + country + "' not found in the dropdown.");
+		}
+		
+	}
+	
+	@FindBy(css="button[type=\"submit\"]")
+	WebElement locationSaveButton ;
+	
+	public void clickOnSaveLocationButton() {
+		kw.waitForElementToBeClickable(locationSaveButton);
+		locationSaveButton.click();
+	}
+	
+	
+	
+	
+	
 }
