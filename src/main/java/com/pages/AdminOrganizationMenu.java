@@ -167,6 +167,7 @@ public class AdminOrganizationMenu {
 		kw.waitForElementToBeVisible(saveButton);
 		kw.scrollToElement(saveButton);
 		saveButton.click();
+		LOG.info("Cliked on Save button");
 	}
 	
 	@FindBy(css=".oxd-toast.oxd-toast--success.oxd-toast-container--toast")
@@ -282,6 +283,7 @@ public class AdminOrganizationMenu {
 		kw.waitForElementToBeVisible(addLocationButton);
 		kw.scrollToElement(addLocationButton);
 		addLocationButton.click();
+		LOG.info("Clicked on Add Location button ");
 	}
 	
 	@FindBy(css="form > div:nth-child(1) > div > div > div > div:nth-child(2) > input")
@@ -290,6 +292,7 @@ public class AdminOrganizationMenu {
 	public void enterLocation(String name) {
 		kw.waitForElementToBeClickable(enterLocationName);
 		enterLocationName.sendKeys(name);
+		LOG.info("Entered the location name ");
 	}
 	
 	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > input")
@@ -298,6 +301,7 @@ public class AdminOrganizationMenu {
 	public void enterCity(String name) {
 		kw.waitForElementToBeClickable(enterCityName);
 		enterCityName.sendKeys(name);
+		LOG.info("Entered the City Name ");
 	}
 	
 	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > input")
@@ -306,6 +310,7 @@ public class AdminOrganizationMenu {
 	public void enterState(String name) {
 		kw.waitForElementToBeClickable(enterStateName);
 		enterStateName.sendKeys(name);
+		LOG.info("Entered the State name ");
 	}
 	
 	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(2) > input")
@@ -314,6 +319,7 @@ public class AdminOrganizationMenu {
 	public void enterZip(String name) {
 		kw.waitForElementToBeClickable(enterZipCode);
 		enterZipCode.sendKeys(name);
+		LOG.info("Entered the Zip code ");
 	}
 	
 	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(4) > div > div:nth-child(2) > div > div")
@@ -332,6 +338,7 @@ public class AdminOrganizationMenu {
 		        kw.waitForElementToBeClickable(option);
 		        option.click();
 		        found = true;
+		        LOG.info("Selected the Country ");
 		        break;
 		    }
 		}
@@ -347,6 +354,7 @@ public class AdminOrganizationMenu {
 	public void clickOnSaveLocationButton() {
 		kw.waitForElementToBeClickable(locationSaveButton);
 		locationSaveButton.click();
+		LOG.info("Clicked on Save button and Saved the location ");
 	}
 	
 	

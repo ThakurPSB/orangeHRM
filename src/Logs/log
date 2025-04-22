@@ -1,12 +1,21 @@
-2025-04-21 12:16:21 [main] INFO  Keywords - Launched Chrome Browser
-2025-04-21 12:16:22 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-04-21 12:16:22 [main] INFO  TestBase - Successfully launched the web Application
-2025-04-21 12:16:23 [main] INFO  LoginPage - Successfully Loogged in
-2025-04-21 12:16:28 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-04-21 12:16:28 [main] INFO  AdminOrganizationMenu - Cliked on Organization Menu
-2025-04-21 12:16:29 [main] INFO  AdminOrganizationMenu - Clicked on the organization Menu in Admin
-2025-04-21 12:16:30 [main] INFO  AdminOrganizationMenu - Clicked on : Locations
-2025-04-21 12:16:31 [main] INFO  AdminOrganizationMenu - Successfully searched the location with name MumbaiCBO
-2025-04-21 12:16:32 [main] INFO  AdminOrganizationMenu - No such location found
-2025-04-21 12:16:37 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
-2025-04-21 12:16:37 [main] INFO  TestBase - Successfully quite the browser
+2025-04-22 12:01:17 [main] INFO  Keywords - Launched Chrome Browser
+2025-04-22 12:01:18 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-04-22 12:01:18 [main] INFO  TestBase - Successfully launched the web Application
+2025-04-22 12:01:19 [main] INFO  LoginPage - Successfully Loogged in
+2025-04-22 12:01:22 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
+2025-04-22 12:01:23 [main] INFO  PimMenu - Successfully clicked the configuration menu button.
+2025-04-22 12:01:24 [main] INFO  ReportingMethod - Successfully clicked on Reporting Method
+2025-04-22 12:01:25 [main] INFO  ReportingMethod - Found the reporting Method
+2025-04-22 12:01:25 [main] INFO  ReportingMethod - Error toast found 
+2025-04-22 12:01:25 [main] ERROR ReportingMethod - The reporting method already in use
+2025-04-22 12:01:26 [main] INFO  ReportingMethod - Successfully clicked on Add Reporting Method Button 
+2025-04-22 12:01:26 [main] INFO  ReportingMethod - Successfully entered the reporting method in text box
+2025-04-22 12:01:26 [main] ERROR ReportingMethod - Reporing Method already Exists
+2025-04-22 12:01:27 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
+2025-04-22 12:01:28 [main] INFO  PimMenu - Successfully clicked the configuration menu button.
+2025-04-22 12:01:29 [main] INFO  TerminationReasons - Successfully click on the Termination Reason Menu
+2025-04-22 12:01:30 [main] INFO  TerminationReasons - No such Termination reason found.
+2025-04-22 12:01:30 [main] INFO  TerminationReasons - Successfully clicked on the Add Termindation reason button
+2025-04-22 12:01:31 [main] INFO  TerminationReasons - Successfully added the termination reason
+2025-04-22 12:01:32 [main] INFO  TerminationReasons - Successfully added the employee
+2025-04-22 12:01:35 [main] INFO  TestBase - Successfully quite the browser
