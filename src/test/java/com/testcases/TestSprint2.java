@@ -10,6 +10,7 @@ import com.base.TestBase;
 import com.pages.AdminJobTitles;
 import com.pages.AdminMenu;
 import com.pages.AdminOrganizationMenu;
+import com.pages.AdminQualificationMenu;
 import com.pages.LoginPage;
 
 import io.qameta.allure.Description;
@@ -25,6 +26,7 @@ public class TestSprint2 extends TestBase {
 	private AdminMenu admin;
 	private AdminJobTitles jobs;
 	private AdminOrganizationMenu orgMenu;
+	private AdminQualificationMenu qualification;
 
 	@BeforeMethod
 	public void pageSetup() {
@@ -32,7 +34,7 @@ public class TestSprint2 extends TestBase {
         admin = new AdminMenu(kw);
         jobs = new AdminJobTitles(kw);
         orgMenu = new AdminOrganizationMenu(kw);
-        
+        qualification = new AdminQualificationMenu(kw);
     }
 	
 	
@@ -148,15 +150,34 @@ public class TestSprint2 extends TestBase {
 		Assert.assertTrue(orgMenu.SaveToastMessageText());
 	}
 	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to Add skills")
+    @Step("login and navigate to admin page, check organization option skills menus")
+    @Feature("admin Features Organization menu skills")
+    @Story("Admin page options oragnization submenu checking skills")
+	public void CheckIfAddSkillOptionIsWorkingOrNot() throws InterruptedException {
+		login.logMeIn();
+		admin.clickOnAdminMenu();
+		qualification.clickOnQualificationMenu();
+		qualification.clickOnSkills();
+		qualification.clickOnAddSkillsButton();
+		qualification.enterSkillName("java");
+		qualification.clickOnSaveSkillButton();
+		Assert.assertTrue(orgMenu.SaveToastMessageText());
+		qualification.deleteEnteredSkill("java");
+	}
+	
+	
 	@Test(enabled = false)
 	public void TryAndError() throws InterruptedException {
 		
 		login.logMeIn();
 		admin.clickOnAdminMenu();
-		orgMenu.clickOnOrgMenu();
-		orgMenu.clickOnOrgSubMenu("Locations");
-		
-		
+		qualification.clickOnQualificationMenu();
+		qualification.clickOnSkills();
+		qualification.deleteEnteredSkill("java");
+		Thread.sleep(5000);
 	}
 	
 }

@@ -1,21 +1,13 @@
-2025-04-22 12:01:17 [main] INFO  Keywords - Launched Chrome Browser
-2025-04-22 12:01:18 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-04-22 12:01:18 [main] INFO  TestBase - Successfully launched the web Application
-2025-04-22 12:01:19 [main] INFO  LoginPage - Successfully Loogged in
-2025-04-22 12:01:22 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-04-22 12:01:23 [main] INFO  PimMenu - Successfully clicked the configuration menu button.
-2025-04-22 12:01:24 [main] INFO  ReportingMethod - Successfully clicked on Reporting Method
-2025-04-22 12:01:25 [main] INFO  ReportingMethod - Found the reporting Method
-2025-04-22 12:01:25 [main] INFO  ReportingMethod - Error toast found 
-2025-04-22 12:01:25 [main] ERROR ReportingMethod - The reporting method already in use
-2025-04-22 12:01:26 [main] INFO  ReportingMethod - Successfully clicked on Add Reporting Method Button 
-2025-04-22 12:01:26 [main] INFO  ReportingMethod - Successfully entered the reporting method in text box
-2025-04-22 12:01:26 [main] ERROR ReportingMethod - Reporing Method already Exists
-2025-04-22 12:01:27 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-04-22 12:01:28 [main] INFO  PimMenu - Successfully clicked the configuration menu button.
-2025-04-22 12:01:29 [main] INFO  TerminationReasons - Successfully click on the Termination Reason Menu
-2025-04-22 12:01:30 [main] INFO  TerminationReasons - No such Termination reason found.
-2025-04-22 12:01:30 [main] INFO  TerminationReasons - Successfully clicked on the Add Termindation reason button
-2025-04-22 12:01:31 [main] INFO  TerminationReasons - Successfully added the termination reason
-2025-04-22 12:01:32 [main] INFO  TerminationReasons - Successfully added the employee
-2025-04-22 12:01:35 [main] INFO  TestBase - Successfully quite the browser
+2025-04-26 00:41:25 [main] INFO  Keywords - Launched Chrome Browser
+2025-04-26 00:41:26 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-04-26 00:41:26 [main] INFO  TestBase - Successfully launched the web Application
+2025-04-26 00:41:27 [main] INFO  LoginPage - Successfully Loogged in
+2025-04-26 00:41:32 [main] INFO  AdminMenu - Cliked on Admin Menu
+2025-04-26 00:41:33 [main] INFO  AdminQualificationMenu - Clicked on Admin > Qualification Menu
+2025-04-26 00:41:34 [main] INFO  AdminQualificationMenu - Clicked on Qualification> Skill menu
+2025-04-26 00:41:35 [main] INFO  AdminQualificationMenu - clicked on Add skills button
+2025-04-26 00:41:36 [main] INFO  AdminQualificationMenu - entered the skill name to add
+2025-04-26 00:41:36 [main] INFO  AdminQualificationMenu - clicked on Save skill button
+2025-04-26 00:41:38 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
+2025-04-26 00:41:42 [main] INFO  AdminQualificationMenu - Successfully deleted the skill java
+2025-04-26 00:41:42 [main] INFO  TestBase - Successfully quite the browser
