@@ -70,7 +70,7 @@ public class Keywords {
 		if(browserName.equalsIgnoreCase("Chrome")) {
 		
 	        ChromeOptions options = new ChromeOptions();
-	        //options.addArguments("--headless=new"); // Use newer headless mode
+	        options.addArguments("--headless=new"); // Use newer headless mode
 	        options.addArguments("--window-size=1920,1080"); // Set proper resolution
 
 	        driver = new ChromeDriver(options);

@@ -7,8 +7,8 @@
         <methods>
           <include name="setUp"/>
           <include name="closeBrowser"/>
-          <include name="CheckIfAddSkillOptionIsWorkingOrNot"/>
           <include name="cleanAllureResults"/>
+          <include name="CheckIfAddLocationOptionIsWorkingOrNot"/>
           <include name="pageSetup"/>
         </methods>
       </class> <!-- com.testcases.TestSprint2 -->
