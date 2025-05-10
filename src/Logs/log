@@ -1,25 +1,11 @@
-2025-05-03 10:20:00 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Grade A
-2025-05-03 10:20:00 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-05-03 10:20:01 [main] INFO  AdminJobTitles - Clicked on : Employment Status
-2025-05-03 10:20:02 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Active
-2025-05-03 10:20:02 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-05-03 10:20:03 [main] INFO  AdminJobTitles - Clicked on : Job Categories
-2025-05-03 10:20:04 [main] INFO  TestBase - Successfully quite the browser
-2025-05-03 10:20:04 [main] INFO  Keywords - Launched Chrome Browser
-2025-05-03 10:20:05 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-05-03 10:20:05 [main] INFO  TestBase - Successfully launched the web Application
-2025-05-03 10:20:06 [main] INFO  LoginPage - Successfully Loogged in
-2025-05-03 10:20:08 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-05-03 10:20:09 [main] INFO  AdminOrganizationMenu - Cliked on Organization Menu
-2025-05-03 10:20:09 [main] INFO  AdminOrganizationMenu - Clicked on the organization Menu in Admin
-2025-05-03 10:20:10 [main] INFO  AdminOrganizationMenu - Clicked on : General Information
-2025-05-03 10:20:10 [main] INFO  AdminOrganizationMenu - Cliked on edit button in organization Menu
-2025-05-03 10:20:10 [main] INFO  AdminOrganizationMenu - updated the registration number to 123456
-2025-05-03 10:20:11 [main] INFO  AdminOrganizationMenu - Updated organization name to PsychoCorps
-2025-05-03 10:20:11 [main] INFO  AdminOrganizationMenu - Updated the Tax ID to PVT1419S8809
-2025-05-03 10:20:11 [main] INFO  AdminOrganizationMenu - Cliked on Save button
-2025-05-03 10:20:11 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
-2025-05-03 10:20:11 [main] INFO  AdminOrganizationMenu - Organization name matched
-2025-05-03 10:20:14 [main] INFO  AdminOrganizationMenu - TaxID number matched
-2025-05-03 10:20:14 [main] INFO  AdminOrganizationMenu - registration number matched
-2025-05-03 10:20:14 [main] INFO  TestBase - Successfully quite the browser
+2025-05-11 00:18:00 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-05-11 00:18:00 [main] INFO  TestBase - Successfully launched the web Application
+2025-05-11 00:18:00 [main] INFO  LoginPage - Successfully Loogged in
+2025-05-11 00:18:05 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-05-11 00:18:07 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-05-11 00:18:08 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-05-11 00:18:09 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-05-11 00:18:09 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-05-11 00:18:09 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-05-11 00:18:10 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-05-11 00:18:11 [main] INFO  TestBase - Successfully quite the browser

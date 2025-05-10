@@ -8,8 +8,8 @@
           <include name="setUp"/>
           <include name="closeBrowser"/>
           <include name="cleanAllureResults"/>
-          <include name="CheckIfAddLocationOptionIsWorkingOrNot"/>
           <include name="pageSetup"/>
+          <include name="ApplyLeaveWithPastDates"/>
         </methods>
       </class> <!-- com.testcases.TestSprint2 -->
     </classes>

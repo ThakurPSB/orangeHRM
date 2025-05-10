@@ -135,10 +135,10 @@ public class AdminMenu {
 			LOG.info("No records found for the search criteria");
 			return isDisplayed;
 		} catch (TimeoutException e) {
-			LOG.warn("Toast message not found within timeout.");
+			LOG.error("Toast message not found within timeout.");
 	        
 		}catch (NoSuchElementException e) {
-	        LOG.warn("No match found - Toast not found in DOM.");
+	        LOG.error("\"no toast found \" not found. Searching element in table");
 	    }
 		return false;
 		

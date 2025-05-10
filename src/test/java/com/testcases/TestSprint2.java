@@ -11,6 +11,7 @@ import com.pages.AdminJobTitles;
 import com.pages.AdminMenu;
 import com.pages.AdminOrganizationMenu;
 import com.pages.AdminQualificationMenu;
+import com.pages.LeaveApplyMenu;
 import com.pages.LoginPage;
 
 import io.qameta.allure.Description;
@@ -27,6 +28,7 @@ public class TestSprint2 extends TestBase {
 	private AdminJobTitles jobs;
 	private AdminOrganizationMenu orgMenu;
 	private AdminQualificationMenu qualification;
+	private LeaveApplyMenu leaveApply;
 
 	@BeforeMethod
 	public void pageSetup() {
@@ -35,6 +37,8 @@ public class TestSprint2 extends TestBase {
         jobs = new AdminJobTitles(kw);
         orgMenu = new AdminOrganizationMenu(kw);
         qualification = new AdminQualificationMenu(kw);
+        leaveApply= new LeaveApplyMenu(kw);
+        
     }
 	
 	
@@ -168,17 +172,98 @@ public class TestSprint2 extends TestBase {
 		qualification.deleteEnteredSkill("java");
 	}
 	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to apply leaves")
+    @Step("login and navigate to leave page, check apply leave menu ")
+    @Feature("Leave Module > apply leave")
+    @Story("Apply leave successfully with valid inputs")
+	public void ApplyLeaveWithValidInputs() {
+		
+		login.logMeIn();
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectLeaveType();
+		leaveApply.selectFromDate();
+		leaveApply.selectToDate();
+		leaveApply.clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		
+	}
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to apply leaves with invalid dates")
+    @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
+    @Feature("Leave Module")
+    @Story("Apply leave with overlapping dates")
+	public void ApplyLeaveWithOverlappingDates() {
+		
+		login.logMeIn();
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectLeaveType();
+		leaveApply.selectFromDate();
+		leaveApply.selectToDate();
+		leaveApply.clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply.failedToApplyLeaveToastText());
+		
+	}
 	
 	
-	@Test(enabled = false)
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to apply leaves without selecting leave type")
+    @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
+    @Feature("Leave Module")
+    @Story("Apply leave without leave type")
+	public void ApplyLeaveWithoutSelectingLeaveType() {
+		
+		login.logMeIn();
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectFromDate();
+		leaveApply.selectToDate();
+		leaveApply.clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply.checkWarningForLeaveType());
+		
+	}
+	
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to apply leaves with past dates")
+    @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
+    @Feature("Leave Module > past leaves")
+    @Story("Apply leave with past dates")
+	public void ApplyLeaveWithPastDates() {
+		
+		login.logMeIn();
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectLeaveType();
+		leaveApply.selectPastFromDate();
+		leaveApply.selectPastToDate();
+		leaveApply.clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		
+	}
+	
+	
+	
+	@Test(enabled = true)
 	public void TryAndError() throws InterruptedException {
 		
 		login.logMeIn();
-		admin.clickOnAdminMenu();
-		qualification.clickOnQualificationMenu();
-		qualification.clickOnSkills();
-		qualification.deleteEnteredSkill("java");
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectPastFromDate();
+		leaveApply.selectPastToDate();
+		leaveApply.clickOnApplyLeaveButton();
 		Thread.sleep(5000);
 	}
+	
+	
 	
 }
