@@ -131,13 +131,12 @@ public class LeaveApplyMenu {
 		return false;
 	}
 	
-	@FindBy(css="div.oxd-toast.oxd-toast--warn.oxd-toast-container--toast")
+	@FindBy(css="div.oxd-toast--warn")
 	WebElement warningFailedToSubmitToast ;
 	
 	public boolean failedToApplyLeaveToastText() throws TimeoutException {
 		try {
-			kw.waitForElementToBeVisibleShort(warningFailedToSubmitToast,5);
-			kw.scrollToElement(warningFailedToSubmitToast);
+			kw.waitForElementToBeVisibleShort(warningFailedToSubmitToast,10);
 			boolean isDisplayed = warningFailedToSubmitToast.isDisplayed();
 			LOG.info("Failed to submit toast Displayed");
 			return isDisplayed;
@@ -180,7 +179,7 @@ public class LeaveApplyMenu {
 		
 		fromCalButton.sendKeys(s);
 		fromCalButton.sendKeys(Keys.ENTER);
-		LOG.info("Successfully from date selected");
+		LOG.info("Successfully from date selected for past Date");
 	}
 
 	
@@ -199,7 +198,9 @@ public class LeaveApplyMenu {
 		}
 		toCalButton.sendKeys(s);
 		toCalButton.sendKeys(Keys.TAB);
-		LOG.info("Successfully to date selected");
+		LOG.info("Successfully to date selected for past date");
 	}
+	
+	
 	
 }

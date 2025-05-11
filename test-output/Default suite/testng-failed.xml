@@ -6,8 +6,10 @@
       <class name="com.testcases.TestSprint2">
         <methods>
           <include name="setUp"/>
+          <include name="ApplyLeaveWithValidInputs"/>
           <include name="closeBrowser"/>
           <include name="cleanAllureResults"/>
+          <include name="ApplyLeaveWithOverlappingDates"/>
           <include name="pageSetup"/>
           <include name="ApplyLeaveWithPastDates"/>
         </methods>

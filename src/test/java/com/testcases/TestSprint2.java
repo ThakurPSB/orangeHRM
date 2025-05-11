@@ -12,6 +12,7 @@ import com.pages.AdminMenu;
 import com.pages.AdminOrganizationMenu;
 import com.pages.AdminQualificationMenu;
 import com.pages.LeaveApplyMenu;
+import com.pages.LeaveMyLeaveMenu;
 import com.pages.LoginPage;
 
 import io.qameta.allure.Description;
@@ -29,6 +30,7 @@ public class TestSprint2 extends TestBase {
 	private AdminOrganizationMenu orgMenu;
 	private AdminQualificationMenu qualification;
 	private LeaveApplyMenu leaveApply;
+	private LeaveMyLeaveMenu myLeave;
 
 	@BeforeMethod
 	public void pageSetup() {
@@ -38,6 +40,7 @@ public class TestSprint2 extends TestBase {
         orgMenu = new AdminOrganizationMenu(kw);
         qualification = new AdminQualificationMenu(kw);
         leaveApply= new LeaveApplyMenu(kw);
+        myLeave = new LeaveMyLeaveMenu(kw);
         
     }
 	
@@ -178,7 +181,8 @@ public class TestSprint2 extends TestBase {
     @Step("login and navigate to leave page, check apply leave menu ")
     @Feature("Leave Module > apply leave")
     @Story("Apply leave successfully with valid inputs")
-	public void ApplyLeaveWithValidInputs() {
+	public void ApplyLeaveWithValidInputs() throws InterruptedException {
+	
 		
 		login.logMeIn();
 		leaveApply.clickOnLeaveMenu();
@@ -188,6 +192,9 @@ public class TestSprint2 extends TestBase {
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
 		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		myLeave.clickOnLeaveMenu();
+		myLeave.clickOnMyLeaveMenu();
+		myLeave.cancelAllLeaves();
 		
 	}
 	
@@ -197,7 +204,7 @@ public class TestSprint2 extends TestBase {
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
     @Feature("Leave Module")
     @Story("Apply leave with overlapping dates")
-	public void ApplyLeaveWithOverlappingDates() {
+	public void ApplyLeaveWithOverlappingDates() throws InterruptedException {
 		
 		login.logMeIn();
 		leaveApply.clickOnLeaveMenu();
@@ -206,8 +213,15 @@ public class TestSprint2 extends TestBase {
 		leaveApply.selectFromDate();
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectLeaveType();
+		leaveApply.selectFromDate();
+		leaveApply.selectToDate();
+		leaveApply.clickOnApplyLeaveButton();
 		Assert.assertTrue(leaveApply.failedToApplyLeaveToastText());
-		
+		myLeave.clickOnLeaveMenu();
+		myLeave.clickOnMyLeaveMenu();
+		myLeave.cancelAllLeaves();
 	}
 	
 	
@@ -237,7 +251,7 @@ public class TestSprint2 extends TestBase {
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
     @Feature("Leave Module > past leaves")
     @Story("Apply leave with past dates")
-	public void ApplyLeaveWithPastDates() {
+	public void ApplyLeaveWithPastDates() throws InterruptedException {
 		
 		login.logMeIn();
 		leaveApply.clickOnLeaveMenu();
@@ -247,6 +261,9 @@ public class TestSprint2 extends TestBase {
 		leaveApply.selectPastToDate();
 		leaveApply.clickOnApplyLeaveButton();
 		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		myLeave.clickOnLeaveMenu();
+		myLeave.clickOnMyLeaveMenu();
+		myLeave.cancelAllLeaves();
 		
 	}
 	
@@ -256,11 +273,9 @@ public class TestSprint2 extends TestBase {
 	public void TryAndError() throws InterruptedException {
 		
 		login.logMeIn();
-		leaveApply.clickOnLeaveMenu();
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectPastFromDate();
-		leaveApply.selectPastToDate();
-		leaveApply.clickOnApplyLeaveButton();
+		myLeave.clickOnLeaveMenu();
+		myLeave.clickOnMyLeaveMenu();
+		myLeave.cancelAllLeaves();
 		Thread.sleep(5000);
 	}
 	
