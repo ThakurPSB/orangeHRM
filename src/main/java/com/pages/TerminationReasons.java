@@ -41,7 +41,7 @@ public class TerminationReasons {
 	 * click on the add button in termination reason menu
 	 */
 	public void ClickOnAddTerminationReasonButton() {
-		
+		kw.waitInvisibilityOfElement(confirmDeleteYes);
 		kw.waitForElementToBeClickable(AddTerminationReasonButton);
 		kw.scrollToElement(AddTerminationReasonButton);
 		AddTerminationReasonButton.click();

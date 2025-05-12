@@ -263,7 +263,6 @@ public class TestSprint1 extends TestBase{
 		tr.ClickOnAddTerminationReasonButton();
 		tr.AddTerminationReason("Other");
 		Assert.assertTrue(tr.checkAssertTerminationReason());
-		Thread.sleep(3000);
 		
 	}
 	
