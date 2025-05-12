@@ -240,7 +240,8 @@ public class AdminOrganizationMenu {
 	WebElement confirmDeleteYes ;
 	
 	
-	public void deleteSelected(String loc) {
+	public void deleteSelected(String loc) throws InterruptedException {
+		kw.normalWait(1000);
 		List<WebElement> searchResultList = kw.getDriver().findElements(By.cssSelector("div.oxd-table-row"));
 		kw.waitForAllElementAreVisible(searchResultList);
 		boolean isLocationFound = false;

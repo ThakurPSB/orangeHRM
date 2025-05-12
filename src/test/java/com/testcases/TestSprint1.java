@@ -251,9 +251,9 @@ public class TestSprint1 extends TestBase{
 		pim.clickOnPIM();
 		pim.clickOnConfiguration();
 		rm.clickOnReportingMethod();
-		rm.deleteSelectedReportingMethod("Online");
+		rm.deleteSelectedReportingMethod("Offline");
 		rm.AddReportingMethodButton();
-		rm.addrReportingMethod("Online");
+		rm.addrReportingMethod("Offline");
 		Assert.assertTrue(rm.checkAssertReportingMethod());
 		
 		pim.clickOnPIM();
