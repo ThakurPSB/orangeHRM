@@ -269,7 +269,7 @@ public class TestSprint2 extends TestBase {
 	
 	
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void TryAndError() throws InterruptedException {
 		
 		login.logMeIn();

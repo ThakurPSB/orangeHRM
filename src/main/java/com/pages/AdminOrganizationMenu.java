@@ -239,11 +239,9 @@ public class AdminOrganizationMenu {
 	@FindBy(css="i.oxd-icon.bi-trash.oxd-button-icon")
 	WebElement confirmDeleteYes ;
 	
-	@FindBy(css="div.oxd-table-row")
-	List<WebElement> searchResultList;
 	
 	public void deleteSelected(String loc) {
-
+		List<WebElement> searchResultList = kw.getDriver().findElements(By.cssSelector("div.oxd-table-row"));
 		kw.waitForAllElementAreVisible(searchResultList);
 		boolean isLocationFound = false;
 		WebElement found = null;
