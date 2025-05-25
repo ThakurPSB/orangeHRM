@@ -47,10 +47,10 @@ public class LeaveApplyMenu {
 	@FindBy(css="div[role='option']")
 	WebElement LeaveOptionsTemp ;
 	
-	public void selectLeaveType() {
+	public void selectLeaveType(String s) {
 		kw.waitForElementToBeClickable(leaveType);
 		leaveType.click();
-		leaveType.sendKeys("e");
+		leaveType.sendKeys(s);
 		kw.waitForElementToBeVisible(LeaveOptionsTemp);
 		leaveType.sendKeys(Keys.ENTER);
 		LOG.info("successfully selected leave type");
@@ -199,6 +199,24 @@ public class LeaveApplyMenu {
 		toCalButton.sendKeys(s);
 		toCalButton.sendKeys(Keys.TAB);
 		LOG.info("Successfully to date selected for past date");
+	}
+	
+	@FindBy(css="div.oxd-toast-content.oxd-toast-content--error > p.oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text")
+	WebElement errorToastLeaveBalance ;
+	
+	public boolean errorLeaveBalance() throws TimeoutException {
+		try {
+			kw.waitForElementToBeVisibleShort(errorToastLeaveBalance,10);
+			boolean isDisplayed = errorToastLeaveBalance.isDisplayed();
+			LOG.info("\"Error - Leave balance\" toast Displayed");
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+	        
+		}catch (NoSuchElementException e) {
+	        LOG.warn("Toast element not found in DOM.");
+	    }
+		return false;
 	}
 	
 	

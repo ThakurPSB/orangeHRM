@@ -1,1 +1,28 @@
-2025-05-12 14:31:02 [main] INFO  TestBase - Successfully quite the browser
+2025-05-25 16:10:00 [main] INFO  Keywords - Launched Chrome Browser
+2025-05-25 16:10:01 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-05-25 16:10:01 [main] INFO  TestBase - Successfully launched the web Application
+2025-05-25 16:10:02 [main] INFO  LoginPage - Successfully Loogged in
+2025-05-25 16:10:07 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-05-25 16:10:08 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Leave Entitlement
+2025-05-25 16:10:10 [main] INFO  LeaveEntitlementMenu - Successfully clicked on employee Entitlements button
+2025-05-25 16:10:14 [main] INFO  LeaveEntitlementMenu - Successfully entered employee name as Adriana Jones
+2025-05-25 16:10:15 [main] INFO  LeaveEntitlementMenu - successfully selected leave type
+2025-05-25 16:10:15 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Search Button
+2025-05-25 16:10:16 [main] INFO  LeaveEntitlementMenu - LeaveBalance Checked: 12.5
+2025-05-25 16:10:17 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-05-25 16:10:18 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Leave Entitlement
+2025-05-25 16:10:19 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Add Entitlement button
+2025-05-25 16:10:20 [main] INFO  LeaveEntitlementMenu - Successfully selected the individual
+2025-05-25 16:10:24 [main] INFO  LeaveEntitlementMenu - Successfully entered employee name as Adriana Jones
+2025-05-25 16:10:25 [main] INFO  LeaveEntitlementMenu - successfully selected leave type
+2025-05-25 16:10:25 [main] INFO  LeaveEntitlementMenu - Successfully updated the entitlement leave - 1
+2025-05-25 16:10:25 [main] INFO  LeaveEntitlementMenu - Successfully clicked on save button
+2025-05-25 16:10:26 [main] INFO  LeaveEntitlementMenu - Clicked on Confirm add entitlement
+2025-05-25 16:10:27 [main] INFO  LeaveEntitlementMenu - Successfully added the leave for employee
+2025-05-25 16:10:27 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Leave Entitlement
+2025-05-25 16:10:28 [main] INFO  LeaveEntitlementMenu - Successfully clicked on employee Entitlements button
+2025-05-25 16:10:32 [main] INFO  LeaveEntitlementMenu - Successfully entered employee name as Adriana Jones
+2025-05-25 16:10:33 [main] INFO  LeaveEntitlementMenu - successfully selected leave type
+2025-05-25 16:10:33 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Search Button
+2025-05-25 16:10:34 [main] INFO  LeaveEntitlementMenu - LeaveBalance Checked: 13.5
+2025-05-25 16:10:34 [main] INFO  TestBase - Successfully quite the browser

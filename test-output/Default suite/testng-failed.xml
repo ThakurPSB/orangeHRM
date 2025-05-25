@@ -6,9 +6,9 @@
       <class name="com.testcases.TestSprint2">
         <methods>
           <include name="setUp"/>
+          <include name="addLeaveEntitlement"/>
           <include name="closeBrowser"/>
           <include name="cleanAllureResults"/>
-          <include name="CheckIfAddLocationOptionIsWorkingOrNot"/>
           <include name="pageSetup"/>
         </methods>
       </class> <!-- com.testcases.TestSprint2 -->

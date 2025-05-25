@@ -12,6 +12,7 @@ import com.pages.AdminMenu;
 import com.pages.AdminOrganizationMenu;
 import com.pages.AdminQualificationMenu;
 import com.pages.LeaveApplyMenu;
+import com.pages.LeaveEntitlementMenu;
 import com.pages.LeaveMyLeaveMenu;
 import com.pages.LoginPage;
 
@@ -31,6 +32,7 @@ public class TestSprint2 extends TestBase {
 	private AdminQualificationMenu qualification;
 	private LeaveApplyMenu leaveApply;
 	private LeaveMyLeaveMenu myLeave;
+	private LeaveEntitlementMenu entitlement;
 
 	@BeforeMethod
 	public void pageSetup() {
@@ -41,7 +43,7 @@ public class TestSprint2 extends TestBase {
         qualification = new AdminQualificationMenu(kw);
         leaveApply= new LeaveApplyMenu(kw);
         myLeave = new LeaveMyLeaveMenu(kw);
-        
+        entitlement = new LeaveEntitlementMenu(kw);
     }
 	
 	
@@ -187,7 +189,7 @@ public class TestSprint2 extends TestBase {
 		login.logMeIn();
 		leaveApply.clickOnLeaveMenu();
 		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType();
+		leaveApply.selectLeaveType("e");
 		leaveApply.selectFromDate();
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
@@ -209,12 +211,12 @@ public class TestSprint2 extends TestBase {
 		login.logMeIn();
 		leaveApply.clickOnLeaveMenu();
 		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType();
+		leaveApply.selectLeaveType("e");
 		leaveApply.selectFromDate();
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
 		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType();
+		leaveApply.selectLeaveType("e");
 		leaveApply.selectFromDate();
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
@@ -256,7 +258,7 @@ public class TestSprint2 extends TestBase {
 		login.logMeIn();
 		leaveApply.clickOnLeaveMenu();
 		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType();
+		leaveApply.selectLeaveType("e");
 		leaveApply.selectPastFromDate();
 		leaveApply.selectPastToDate();
 		leaveApply.clickOnApplyLeaveButton();
@@ -268,17 +270,66 @@ public class TestSprint2 extends TestBase {
 	}
 	
 	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to apply leaves without sufficient balance")
+    @Step("login and navigate to leave page, check apply leave with floating leave ")
+    @Feature("Leave Module > apply leave > leave type floating")
+    @Story("Apply leave with insufficient balance and check for error")
+	public void ApplyLeaveWithInsufficientBalance() throws InterruptedException {
 	
-	@Test(enabled = false)
-	public void TryAndError() throws InterruptedException {
 		
 		login.logMeIn();
-		myLeave.clickOnLeaveMenu();
-		myLeave.clickOnMyLeaveMenu();
-		myLeave.cancelAllLeaves();
-		Thread.sleep(5000);
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectLeaveType("f"); // f for floating leave
+		leaveApply.selectFromDate();
+		leaveApply.selectToDate();
+		leaveApply.clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply.errorLeaveBalance());
+		
 	}
 	
-	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Add leave entitlement to an employee")
+    @Step("login and navigate to leaveentitlement,add leaves ")
+    @Feature("Leave > Entitlements")
+    @Story("Add Leave entitlement to single employee")
+	public void addLeaveEntitlement() throws InterruptedException  {
+		login.logMeIn();
+		leaveApply.clickOnLeaveMenu();
+		entitlement.clickOnLeaveEntitlementMenu();
+		entitlement.clickEmployeeEntitlement();
+		entitlement.enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
+		entitlement.selectLeaveTypeInEntitlement("Earned");
+		entitlement.clickOnSearchButton();
+		double leaveBalance = entitlement.CheckLeaveBalance();
+		leaveApply.clickOnLeaveMenu();
+		entitlement.clickOnLeaveEntitlementMenu();
+		entitlement.clickOnAddEntitlement();
+		entitlement.selectIndividualOrMultipleEmployee("individual");
+		entitlement.enterEmployeeName("Adriana Jones");
+		entitlement.selectLeaveType("Earned");
+		entitlement.enterEntitlement("1");
+		entitlement.clickOnSaveButton();
+		entitlement.clickOnConfirmButton();
+		Assert.assertTrue(entitlement.SaveToastMessageText());
+		entitlement.clickOnLeaveEntitlementMenu();
+		entitlement.clickEmployeeEntitlement();
+		entitlement.enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
+		entitlement.selectLeaveTypeInEntitlement("Earned");
+		entitlement.clickOnSearchButton();
+		Assert.assertTrue(entitlement.CheckLeaveBalance()>leaveBalance);
+	}
+
+	@Test(enabled = false)
+	public void TryAndError() throws InterruptedException {
+		login.logMeIn();
+		leaveApply.clickOnLeaveMenu();
+		entitlement.clickOnLeaveEntitlementMenu();
+		
+		Thread.sleep(10000);
+	}
 	
 }
