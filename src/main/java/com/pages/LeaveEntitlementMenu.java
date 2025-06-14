@@ -8,7 +8,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,12 +16,10 @@ import com.main.Keywords;
 public class LeaveEntitlementMenu {
 	
 	private Keywords kw ;
-	private Actions action;
 	
 	public LeaveEntitlementMenu(Keywords kw) {
 		PageFactory.initElements(Keywords.driver, this);
 		this.kw = kw;
-		this.action = new Actions(kw.getDriver());
 	}
 	
 	private static final Logger LOG = Logger.getLogger(LeaveEntitlementMenu.class);
