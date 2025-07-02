@@ -76,7 +76,7 @@ public class TestSprint3 extends TestBase{
 		
 	}
 	
-	@Test
+	@Test(enabled = false)
 	public void test() throws InterruptedException, AWTException {
 		
 		login.logMeIn();

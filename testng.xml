@@ -12,6 +12,7 @@
 	<classes>
 		<class name="com.testcases.TestSprint1"></class>
 		<class name="com.testcases.TestSprint2"></class>
+		<class name="com.testcases.TestSprint3"></class>
 	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
