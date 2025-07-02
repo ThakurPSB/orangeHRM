@@ -1,15 +1,20 @@
 package com.pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.main.Keywords;
 
@@ -207,10 +212,144 @@ private Keywords kw ;
 		LOG.info("Successfully Clicked on Candidate Menu");
 	}
 	
+	@FindBy(css=".oxd-button.oxd-button--medium.oxd-button--secondary[type=\"button\"]")
+	WebElement addCandidateButton ;
+	
+	public void clickOnAddCandidateButton() {
+		kw.waitForElementToBeClickable(addCandidateButton);
+		addCandidateButton.click();
+		LOG.info("Successfully clicked on Add Candidate button");
+	}
+	
+	@FindBy(css="input.oxd-input.oxd-input--active.orangehrm-firstname")
+	WebElement candidateFirstName ;
+	
+	@FindBy(css="input.oxd-input.oxd-input--active.orangehrm-middlename")
+	WebElement candidateMiddleName ;
+	
+	@FindBy(css="input.oxd-input.oxd-input--active.orangehrm-lastname")
+	WebElement candidateLastName ;
+	
+	public void enterCandidateFullName(String first, String  middle, String last) {
+		kw.waitForElementToBeClickable(candidateFirstName);
+		candidateFirstName.sendKeys(first);
+		candidateMiddleName.sendKeys(middle);
+		candidateLastName.sendKeys(last);
+		LOG.info("Successfuly updated first middle and last name of candidate");
+	}
+	
+	@FindBy(css="div.oxd-select-text-input")
+	WebElement openVacanciesList ;
+	
+	public void clickOnOpenVacanciesList() throws InterruptedException {
+		kw.waitForElementToBeClickable(openVacanciesList);
+		openVacanciesList.click();
+		openVacanciesList.sendKeys(Keys.DOWN);
+		openVacanciesList.sendKeys(Keys.ENTER);
+		LOG.info("Successfully clicked on open vacancy");
+	}
+	
+	@FindBy(css="form > div:nth-child(3) > div > div:nth-child(1) > div > div:nth-child(2) > input")
+	WebElement candidateEmailID;
+	
+	public void enterCandidateEmailID(String s) throws InterruptedException {
+		kw.waitForElementToBeClickable(candidateEmailID);
+		kw.scrollToElement(candidateEmailID);
+		//candidateEmailID.click();
+		candidateEmailID.sendKeys(s);
+		LOG.info("Successfully entered candidate email id");
+	}
+	
+	@FindBy(css="form > div:nth-child(3) > div > div:nth-child(2) > div > div:nth-child(2) > input")
+	WebElement candidateContactNumber ;
+	
+	public void enterCandidateContactNumber(String s) {
+		kw.waitForElementToBeClickable(candidateContactNumber);
+		candidateContactNumber.click();
+		candidateContactNumber.sendKeys(s);
+		LOG.info("Successfully entered candidate contact number");
+	}
+	
+	@FindBy(css="form > div:nth-child(4) > div > div > div > div > div:nth-child(2) > div > i")
+	WebElement uploadResume ;
+	
+	public void uploadFileUsingRobot(String filePath) throws AWTException, InterruptedException {
+	    Robot robot = new Robot();
+	    
+	    //copy the path to the system clip board
+	    StringSelection selection = new StringSelection(filePath);
+	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+
+	    kw.waitForClipBoardText(filePath);
+	    
+	    robot.keyPress(KeyEvent.VK_CONTROL);
+	    robot.keyPress(KeyEvent.VK_V);
+	    robot.keyRelease(KeyEvent.VK_V);
+	    robot.keyRelease(KeyEvent.VK_CONTROL);
+	    
+	    kw.waitForClipBoardText("");
+
+	    robot.keyPress(KeyEvent.VK_ENTER);
+	    robot.keyRelease(KeyEvent.VK_ENTER);
+	    kw.normalWait(300);
+	}
 	
 	
+	/**
+	 * select the resume file from system.
+	 * @throws AWTException 
+	 * @throws InterruptedException 
+	 */
+	public void selectCandidateResume() throws AWTException, InterruptedException {
+		kw.waitForElementToBeClickable(uploadResume);
+		kw.scrollToElement(uploadResume);
+		uploadResume.click();
+		kw.normalWait(500);
+		uploadFileUsingRobot("C:\\Users\\piyus\\OneDrive\\Desktop\\piyush selenium\\Resume Sam Sample.txt");
+	    LOG.info("Resume uploaded / selected");
+	}
 	
+	@FindBy(css="form > div:nth-child(7) > div > div > div > div:nth-child(2) > div > label > span")
+	WebElement consentTickBox;
 	
+	public void clickOnConcentClickBox() {
+		kw.waitForElementToBeVisible(consentTickBox);
+		kw.scrollToElement(consentTickBox);
+		consentTickBox.click();
+		LOG.info("Successfully clicked on the consent box");
+	}
 	
+	@FindBy(css="form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space")
+	WebElement SaveCandidateButton ;
+	
+	public void clickOnSaveCandidateButton() {
+		kw.waitForElementToBeClickable(SaveCandidateButton);
+		SaveCandidateButton.click();
+		LOG.info("Successfully clicked on Save Candidate button");
+	}
+	
+	@FindBy(css=".oxd-toast.oxd-toast--success.oxd-toast-container--toast")
+	WebElement saveSuccessfullToast ;
+	
+	/**
+	 * @return save successful toast message
+	 * @throws TimeoutException 
+	 */
+	public boolean SaveToastMessageText() throws TimeoutException {
+		try {
+			kw.waitForElementToBeVisibleShort(saveSuccessfullToast,5);
+			kw.scrollToElement(saveSuccessfullToast);
+			boolean isDisplayed = saveSuccessfullToast.isDisplayed();
+			LOG.info("Successfully added the candidate");
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+	        
+		}catch (NoSuchElementException e) {
+	        LOG.warn("Toast element not found in DOM.");
+	    }
+		return false;
+		
+	}
 	
 }

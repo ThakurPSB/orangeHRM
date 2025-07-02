@@ -1,5 +1,7 @@
 package com.testcases;
 
+import java.awt.AWTException;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -50,18 +52,36 @@ public class TestSprint3 extends TestBase{
 		
 	}
 	
+	
 	@Test
-	public void test() throws InterruptedException {
+	@Severity(SeverityLevel.NORMAL)
+    @Description("recruitment page options Candidate")
+    @Step("login and navigate to recruitment page, add candidate for QA Engineer")
+    @Feature("Recruitment > Candidates")
+    @Story("Candidate options")
+	public void AdminAddsNewCandidateForAnExistingVacancy() throws InterruptedException, AWTException {
 		
 		login.logMeIn();
 		recruitment.clickOnRecruitmentMenu();
-		recruitment.clickOnVacanciesMenu();
-		recruitment.clickOnVacancySearchButton();
-		recruitment.checkVacancyAddedOrNot("Marketing Asst Manager");
+		recruitment.clickOnCandidateMenu();
+		recruitment.clickOnAddCandidateButton();
+		recruitment.enterCandidateFullName("Sam", "Ron", "Miles");
+		recruitment.clickOnOpenVacanciesList();
+		recruitment.enterCandidateEmailID("samRMiles@gmail.com");
+		recruitment.enterCandidateContactNumber("9558754562");
+		recruitment.selectCandidateResume();
+		recruitment.clickOnConcentClickBox();
+		recruitment.clickOnSaveCandidateButton();
+		Assert.assertTrue(recruitment.SaveToastMessageText());
 		
-		Thread.sleep(10000);
 	}
 	
+	@Test
+	public void test() throws InterruptedException, AWTException {
+		
+		login.logMeIn();
+		
+	}
 	
 	
 }

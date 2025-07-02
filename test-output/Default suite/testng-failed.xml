@@ -6,8 +6,8 @@
       <class name="com.testcases.TestSprint3">
         <methods>
           <include name="setUp"/>
-          <include name="addVacancywithallDetailsAndCheckIfReflectsInCandidateField"/>
           <include name="closeBrowser"/>
+          <include name="test"/>
           <include name="cleanAllureResults"/>
           <include name="pageSetup"/>
         </methods>

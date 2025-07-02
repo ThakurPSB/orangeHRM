@@ -1,17 +1,16 @@
-2025-06-14 22:37:15 [main] INFO  Keywords - Launched Chrome Browser
-2025-06-14 22:37:16 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-06-14 22:37:16 [main] INFO  TestBase - Successfully launched the web Application
-2025-06-14 22:37:17 [main] INFO  LoginPage - Successfully Loogged in
-2025-06-14 22:37:22 [main] INFO  LeaveEntitlementMenu - Successfully clicked on recruitment Menu
-2025-06-14 22:37:23 [main] INFO  LeaveEntitlementMenu - Successfully clicked on vacancies Menu
-2025-06-14 22:37:26 [main] INFO  LeaveEntitlementMenu - Successfully clicked on add vacancy button
-2025-06-14 22:37:26 [main] INFO  LeaveEntitlementMenu - successfully entered the vacancy name Marketing Asst Manager
-2025-06-14 22:37:28 [main] INFO  LeaveEntitlementMenu - successfully clicked on Assistant Manager
-2025-06-14 22:37:31 [main] INFO  LeaveEntitlementMenu - successfully selected the hiring mananger
-2025-06-14 22:37:31 [main] INFO  LeaveEntitlementMenu - Successfully entered required vacancies
-2025-06-14 22:37:31 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Save Vacancy
-2025-06-14 22:37:33 [main] INFO  LeaveEntitlementMenu - Successfully clicked on vacancies Menu
-2025-06-14 22:37:34 [main] INFO  LeaveEntitlementMenu - Successfully Clicked on Vacancy Search Button
-2025-06-14 22:37:34 [main] INFO  LeaveEntitlementMenu - Successfully found vacancy we added
-2025-06-14 22:37:35 [main] INFO  LeaveEntitlementMenu - Successfully deleted the skill Marketing Asst Manager
-2025-06-14 22:37:45 [main] INFO  TestBase - Successfully quite the browser
+2025-07-03 00:03:24 [main] INFO  Keywords - Launched Chrome Browser
+2025-07-03 00:03:25 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-07-03 00:03:25 [main] INFO  TestBase - Successfully launched the web Application
+2025-07-03 00:03:26 [main] INFO  LoginPage - Successfully Loogged in
+2025-07-03 00:03:29 [main] INFO  LeaveEntitlementMenu - Successfully clicked on recruitment Menu
+2025-07-03 00:03:30 [main] INFO  LeaveEntitlementMenu - Successfully Clicked on Candidate Menu
+2025-07-03 00:03:32 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Add Candidate button
+2025-07-03 00:03:32 [main] INFO  LeaveEntitlementMenu - Successfuly updated first middle and last name of candidate
+2025-07-03 00:03:32 [main] INFO  LeaveEntitlementMenu - Successfully clicked on open vacancy
+2025-07-03 00:03:33 [main] INFO  LeaveEntitlementMenu - Successfully entered candidate email id
+2025-07-03 00:03:33 [main] INFO  LeaveEntitlementMenu - Successfully entered candidate contact number
+2025-07-03 00:03:34 [main] INFO  LeaveEntitlementMenu - Resume uploaded / selected
+2025-07-03 00:03:34 [main] INFO  LeaveEntitlementMenu - Successfully clicked on the consent box
+2025-07-03 00:03:34 [main] INFO  LeaveEntitlementMenu - Successfully clicked on Save Candidate button
+2025-07-03 00:03:34 [main] INFO  LeaveEntitlementMenu - Successfully added the candidate
+2025-07-03 00:03:35 [main] INFO  TestBase - Successfully quite the browser
