@@ -352,4 +352,20 @@ private Keywords kw ;
 		
 	}
 	
+	@FindBy(css="form > div:nth-child(3) > div > div:nth-child(1) > div > span")
+	WebElement emailRequiredError ;
+	
+	public boolean checkErrorMsg() {
+		kw.waitForElementToBeVisible(emailRequiredError);
+		kw.scrollToElement(emailRequiredError);
+		boolean isDisplay = false;
+		if(emailRequiredError.isDisplayed()) {
+			isDisplay =  true;
+		}
+		
+		LOG.info("Error Displayed: "+ isDisplay);
+		return isDisplay;
+	}
+	
+	
 }

@@ -59,7 +59,7 @@ public class TestSprint3 extends TestBase{
     @Step("login and navigate to recruitment page, add candidate for QA Engineer")
     @Feature("Recruitment > Candidates")
     @Story("Candidate options")
-	public void AdminAddsNewCandidateForAnExistingVacancy() throws InterruptedException, AWTException {
+	public void AddsNewCandidateForAnExistingVacancy() throws InterruptedException, AWTException {
 		
 		login.logMeIn();
 		recruitment.clickOnRecruitmentMenu();
@@ -76,12 +76,34 @@ public class TestSprint3 extends TestBase{
 		
 	}
 	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("recruitment page options Candidate")
+    @Step("login and navigate to recruitment page, add candidate without emailID")
+    @Feature("Recruitment > Candidates")
+    @Story("Candidate options")
+	public void AddsNewCandidateForAnExistingVacancyWithoutEmail() throws InterruptedException, AWTException {
+		
+		login.logMeIn();
+		recruitment.clickOnRecruitmentMenu();
+		recruitment.clickOnCandidateMenu();
+		recruitment.clickOnAddCandidateButton();
+		recruitment.enterCandidateFullName("Sam", "Ron", "Miles");
+		recruitment.clickOnOpenVacanciesList();
+		recruitment.enterCandidateContactNumber("9558754562");
+		recruitment.selectCandidateResume();
+		recruitment.clickOnConcentClickBox();
+		recruitment.clickOnSaveCandidateButton();
+		Assert.assertTrue(recruitment.checkErrorMsg());
+	}
+	
 	@Test(enabled = false)
 	public void test() throws InterruptedException, AWTException {
 		
 		login.logMeIn();
 		
 	}
+	
 	
 	
 }

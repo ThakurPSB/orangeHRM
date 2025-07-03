@@ -323,13 +323,6 @@ public class TestSprint2 extends TestBase {
 		Assert.assertTrue(entitlement.CheckLeaveBalance()>leaveBalance);
 	}
 
-	@Test(enabled = false)
-	public void TryAndError() throws InterruptedException {
-		login.logMeIn();
-		leaveApply.clickOnLeaveMenu();
-		entitlement.clickOnLeaveEntitlementMenu();
-		
-		Thread.sleep(10000);
-	}
+
 	
 }
