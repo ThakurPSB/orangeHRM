@@ -172,7 +172,9 @@ public class PerformanceMenu {
 	        LOG.info("Successfully Searched KPI, deleting it " + text);
 	        if( text.equals(s)) {
 	        	WebElement delete = getTableRow(6);
+	        	kw.waitForElementToBeVisible(delete);
 	        	delete.click();
+	        	kw.waitForElementToBeVisible(confirmDelete);
 	        	kw.waitForElementToBeClickable(confirmDelete);
 	        	kw.scrollToElement(confirmDelete);
 	        	confirmDelete.click();
