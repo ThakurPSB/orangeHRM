@@ -107,6 +107,12 @@ public class Keywords {
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
+	//overloading application for By locator
+	public void waitForElementToBeVisible(By locator) {
+	    new WebDriverWait(driver, Duration.ofSeconds(10))
+	        .until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	
 	/**
 	 * wait for the element till its click-able
 	 * @param element

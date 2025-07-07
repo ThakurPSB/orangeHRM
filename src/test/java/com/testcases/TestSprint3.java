@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.base.TestBase;
 import com.pages.LoginPage;
+import com.pages.PerformanceMenu;
 import com.pages.RecruitmentMenu;
 
 import io.qameta.allure.Description;
@@ -21,11 +22,14 @@ public class TestSprint3 extends TestBase{
 
 	private LoginPage login;
 	private RecruitmentMenu recruitment;
+	private PerformanceMenu performance;
 	
 	@BeforeMethod
 	public void pageSetup() {
         login = new LoginPage(kw); 
         recruitment = new RecruitmentMenu(kw);
+        performance = new PerformanceMenu(kw);
+        
 	}
 	
 	@Test
@@ -103,6 +107,37 @@ public class TestSprint3 extends TestBase{
 		login.logMeIn();
 		
 	}
+	
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("performace options adding KPI for job title")
+    @Step("login and navigate to performance page, add KPI")
+    @Feature("Performance > Configure > KPI")
+    @Story("Performance Options")
+	public void addNewKPIForTheJobTitle() throws InterruptedException {
+		
+		login.logMeIn();
+		performance.clickOnPerformanceMenu();
+		performance.clickOnPerformanceConfigure();
+		performance.clickOnKPIs();
+		performance.clickOnAddKPIButton();
+		performance.enterKeyPerformanceIndicator("Bug Detection Rate");
+		performance.selecrJobTitleToAddKPI();
+		performance.enterMinAndMaxRatings();
+		performance.clickOnSaveKPIButton();
+		performance.clickOnPerformanceConfigure();
+		Assert.assertTrue(performance.searchResultKPI("Bug Detection Rate"));
+		performance.searchResultKPIAndDelete("Bug Detection Rate");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
