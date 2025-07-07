@@ -120,6 +120,8 @@ public class TerminationReasons {
 			WebElement deleteButton = found.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
 			deleteButton.click();
 			if(!errorToastMessageText()) {
+				kw.waitForElementToBeVisible(confirmDeleteYes);
+				kw.scrollToElement(confirmDeleteYes);
 				kw.waitForElementToBeClickable(confirmDeleteYes);
 		        confirmDeleteYes.click();
 		        LOG.info(name+" - Termination option deleted");
