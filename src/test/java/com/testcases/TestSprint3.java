@@ -121,6 +121,9 @@ public class TestSprint3 extends TestBase{
 		performance.clickOnPerformanceMenu();
 		performance.clickOnPerformanceConfigure();
 		performance.clickOnKPIs();
+		performance.searchResultKPIAndDelete("Bug Detection Rate");
+		performance.clickOnPerformanceConfigure();
+		performance.clickOnKPIs();
 		performance.clickOnAddKPIButton();
 		performance.enterKeyPerformanceIndicator("Bug Detection Rate");
 		performance.selecrJobTitleToAddKPI();
@@ -128,7 +131,6 @@ public class TestSprint3 extends TestBase{
 		performance.clickOnSaveKPIButton();
 		performance.clickOnPerformanceConfigure();
 		Assert.assertTrue(performance.searchResultKPI("Bug Detection Rate"));
-		performance.searchResultKPIAndDelete("Bug Detection Rate");
 	}
 	
 	

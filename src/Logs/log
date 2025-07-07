@@ -1,16 +1,18 @@
-2025-07-05 23:17:17 [main] INFO  Keywords - Launched Chrome Browser
-2025-07-05 23:17:18 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-07-05 23:17:18 [main] INFO  TestBase - Successfully launched the web Application
-2025-07-05 23:17:19 [main] INFO  LoginPage - Successfully Loogged in
-2025-07-05 23:17:23 [main] INFO  PerformanceMenu - Successfully clicked on Performance tab
-2025-07-05 23:17:24 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
-2025-07-05 23:17:25 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
-2025-07-05 23:17:27 [main] INFO  PerformanceMenu - Successfully clicked on add KPI button
-2025-07-05 23:17:27 [main] INFO  PerformanceMenu - Successfully entered the KPI Bug Detection Rate
-2025-07-05 23:17:28 [main] INFO  PerformanceMenu - Successfully updated the job Title for KPI
-2025-07-05 23:17:28 [main] INFO  PerformanceMenu - Uppdated min rating 1 and max rating 5
-2025-07-05 23:17:28 [main] INFO  PerformanceMenu - Successfully added the KPI for QA Engineer
-2025-07-05 23:17:29 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
-2025-07-05 23:17:33 [main] INFO  PerformanceMenu - Successfully Searched KPI: Bug Detection Rate
-2025-07-05 23:17:33 [main] INFO  PerformanceMenu - Successfully Searched KPI: Bug Detection Rate
-2025-07-05 23:17:44 [main] INFO  TestBase - Successfully quite the browser
+2025-07-07 11:26:37 [main] INFO  Keywords - Launched Chrome Browser
+2025-07-07 11:26:38 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-07-07 11:26:38 [main] INFO  TestBase - Successfully launched the web Application
+2025-07-07 11:26:39 [main] INFO  LoginPage - Successfully Loogged in
+2025-07-07 11:26:43 [main] INFO  PerformanceMenu - Successfully clicked on Performance tab
+2025-07-07 11:26:43 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
+2025-07-07 11:26:44 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
+2025-07-07 11:26:45 [main] INFO  PerformanceMenu - Successfully Searched KPI, deleting it Bug Detection Rate
+2025-07-07 11:26:47 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
+2025-07-07 11:26:47 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
+2025-07-07 11:26:48 [main] INFO  PerformanceMenu - Successfully clicked on add KPI button
+2025-07-07 11:26:49 [main] INFO  PerformanceMenu - Successfully entered the KPI Bug Detection Rate
+2025-07-07 11:26:49 [main] INFO  PerformanceMenu - Successfully updated the job Title for KPI
+2025-07-07 11:26:50 [main] INFO  PerformanceMenu - Uppdated min rating 1 and max rating 5
+2025-07-07 11:26:50 [main] INFO  PerformanceMenu - Successfully added the KPI for QA Engineer
+2025-07-07 11:26:50 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
+2025-07-07 11:26:54 [main] INFO  PerformanceMenu - Successfully Searched KPI: Bug Detection Rate
+2025-07-07 11:26:54 [main] INFO  TestBase - Successfully quite the browser
