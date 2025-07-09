@@ -161,25 +161,30 @@ public class PerformanceMenu {
 		
 		//as the findElement running too fast hence need to load the css selector and check the visibility first
 		By locatorcss = By.cssSelector("div.oxd-table-body > div");
-		kw.waitForElementToBeVisible(locatorcss);
-		
-	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
-	    if (tableRows != null && !tableRows.isEmpty()) {
-	        kw.waitForAllElementAreVisible(tableRows);
-	        WebElement temp = getTableRow(1); 
-	        kw.scrollToElement(temp);
-	        String text = temp.getText();
-	        LOG.info("Successfully Searched KPI, deleting it " + text);
-	        if( text.equals(s)) {
-	        	WebElement delete = getTableRow(6);
-	        	kw.waitForElementToBeVisible(delete);
-	        	delete.click();
-	        	kw.waitForElementToBeVisible(confirmDelete);
-	        	kw.waitForElementToBeClickable(confirmDelete);
-	        	kw.scrollToElement(confirmDelete);
-	        	confirmDelete.click();
-	        }
-	    }
+		List<WebElement> elements = kw.getDriver().findElements(locatorcss);
+		if (!elements.isEmpty()) {
+		    kw.waitForElementToBeVisible(locatorcss);
+		    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+		    if (tableRows != null && !tableRows.isEmpty()) {
+		        kw.waitForAllElementAreVisible(tableRows);
+		        WebElement temp = getTableRow(1); 
+		        kw.scrollToElement(temp);
+		        String text = temp.getText();
+		        LOG.info("Successfully Searched KPI, deleting it " + text);
+		        if( text.equals(s)) {
+		        	WebElement delete = getTableRow(6);
+		        	kw.waitForElementToBeVisible(delete);
+		        	delete.click();
+		        	kw.waitForElementToBeVisible(confirmDelete);
+		        	kw.waitForElementToBeClickable(confirmDelete);
+		        	kw.scrollToElement(confirmDelete);
+		        	confirmDelete.click();
+		        }
+		    }
+		} else {
+		    LOG.info("Table not present. Skipping wait.");
+		}
+	    
 	}
 	    
 
