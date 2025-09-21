@@ -28,7 +28,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ru.yandex.qatools.ashot.AShot;
@@ -42,7 +41,7 @@ public class Keywords {
 
 	// static instances of the remote web driver and fluentwait
 	public static RemoteWebDriver driver = null;
-	public static FluentWait<WebDriver> wait = null;
+	public static WebDriverWait wait = null;
 	
 	//logger instance for the keyword class
 	private static final Logger LOG = Logger.getLogger(Keywords.class);
@@ -91,7 +90,7 @@ public class Keywords {
 		driver.manage().window().maximize();
 		
 		//setting fluent wait parameters
-		wait = new FluentWait<WebDriver>(driver);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		wait.withTimeout(Duration.ofSeconds(15));
 		wait.pollingEvery(Duration.ofMillis(500));
 		wait.ignoring(NoSuchElementException.class);
