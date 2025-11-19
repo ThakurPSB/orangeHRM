@@ -7,6 +7,7 @@ import java.util.concurrent.TimeoutException;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -49,6 +50,21 @@ public class TestSprint1 extends TestBase{
         
     }
 	
+	@AfterMethod
+	public void tearDown() throws InterruptedException {
+		login = null;
+		profile = null;
+		pim = null;
+		user = null;
+		customField = null;
+		rm = null;
+		tr = null;
+		emplist = null;
+		addemp = null;
+		Thread.sleep(3000);
+	}
+	
+	
 	
 	private static final Logger LOG = Logger.getLogger(TestSprint1.class);
 	
@@ -81,12 +97,11 @@ public class TestSprint1 extends TestBase{
 				LOG.info("Test Passed - Login unsuccesfull with incorrect credentials");
 			}
 		}
-		Thread.sleep(3000);
 	}
 	
 	@Test
     @Severity(SeverityLevel.NORMAL)
-    @Description("Verify if all the links in the profile menu working or not")
+    @Description("To Verify if all the links in the profile menu working or not")
     @Step("Login , click on userprofile menu and check each option one by one")
     @Feature("User Dropdown")
     @Story("Respected links / dialog box should be visible")
@@ -104,13 +119,12 @@ public class TestSprint1 extends TestBase{
 		profile.clickOnUserProfile();
 		profile.clickOnChangePassword();
 		Assert.assertTrue(profile.checkIfChangePasswordPage());
-		Thread.sleep(3000);
 	}
 	
 	
 	@Test
     @Severity(SeverityLevel.NORMAL)
-    @Description("Check if PIM Menu > Configuration > Optional field page is working properly.")
+    @Description("To Check if PIM Menu > Configuration > Optional field page is options saving correctly.")
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save")
     @Feature("Configuration/Optional Fields")
     @Story("Create a page object for PIM menu")
@@ -130,13 +144,12 @@ public class TestSprint1 extends TestBase{
 		pim.clickOnSaveButtonOptionalFidls();
 		Assert.assertTrue(pim.SaveToastMessageText());
 		
-		Thread.sleep(3000);
 	}
 	
 	
 	@Test
 	@Severity(SeverityLevel.NORMAL)
-    @Description("Check if PIM Menu > Configuration > Optional field toggle reflecting in user profile.")
+    @Description("To verify after login into application and selecting PIM menu optional field toggle is available.")
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save > go to user profile > check if fields are visible")
     @Feature("OptionalFieldToggle")
     @Story("Create a page object for user profile")
@@ -180,7 +193,6 @@ public class TestSprint1 extends TestBase{
 		Assert.assertTrue(user.checkSSNdisplayed());
 		Assert.assertTrue(user.checkTaxExemptionDisplayed());
 		
-		Thread.sleep(3000);
 	}
 
 	@Test
