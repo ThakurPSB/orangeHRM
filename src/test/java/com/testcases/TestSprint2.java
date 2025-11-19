@@ -3,6 +3,7 @@ package com.testcases;
 
 //import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -46,6 +47,19 @@ public class TestSprint2 extends TestBase {
         entitlement = new LeaveEntitlementMenu(kw);
     }
 	
+	@AfterMethod
+	public void tearDowntest() throws InterruptedException {
+		login = null;
+		admin = null;
+		jobs = null;
+		orgMenu = null;
+		qualification = null;
+		leaveApply= null;
+		myLeave = null;
+		entitlement = null;
+		
+		Thread.sleep(3000);
+	}
 	
 	//private static final Logger LOG = Logger.getLogger(TestSprint2.class);
 	
