@@ -51,7 +51,7 @@ public class TestSprint1 extends TestBase{
     }
 	
 	@AfterMethod
-	public void tearDown() throws InterruptedException {
+	public void tearDowntest() throws InterruptedException {
 		login = null;
 		profile = null;
 		pim = null;
@@ -75,29 +75,56 @@ public class TestSprint1 extends TestBase{
     @Feature("Login Feature")
     @Story("Valid login credentials should grant access")
 	public void CheckIfLoginSuccessfullWithCorrectCredentials() throws InterruptedException {
-		
-		HashMap <String ,String> credentials = new HashMap<>();
-		
-		credentials.put("admin", "Piyush@2050");
-		credentials.put("admin", "admin45");
-		credentials.put("user1", "admin123");
-		
-		for(Map.Entry<String,String> entry: credentials.entrySet()) {
-			if (entry.getKey().equalsIgnoreCase("admin") && entry.getValue().equalsIgnoreCase("Piyush@2050")){
-				login.enterCredentials(entry.getKey(), entry.getValue());
+					
+				login.enterCredentials("admin", "Piyush@2050");
 				login.ClickOnLoginButton();
 				Assert.assertEquals(login.dashboardText(), "Dashboard");
 				login.clickOnLogoutButton();
 				LOG.info("Test Passed - Login succesfull with correct credentials");
-			}
-			else {
-				login.enterCredentials(entry.getKey(), entry.getValue());
-				login.ClickOnLoginButton();
-				Assert.assertEquals(login.errorText(), "Invalid credentials");
-				LOG.info("Test Passed - Login unsuccesfull with incorrect credentials");
-			}
+			
+		
+	}
+	
+	@Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify invalid login with incorrect username and password")
+    @Step("Login with username: {0} and password: {1}")
+    @Feature("Login Feature")
+    @Story("InValid login credentials should show error message")
+	public void CheckIfLoginSuccessfullWithIncorrectCredentials() throws InterruptedException {
+		
+		HashMap <String ,String> credentials = new HashMap<>();
+		
+		credentials.put("admin", "admin45");
+		credentials.put("user1", "admin123");
+		
+		for(Map.Entry<String,String> entry: credentials.entrySet()) {
+			
+			login.enterCredentials(entry.getKey(), entry.getValue());
+			login.ClickOnLoginButton();
+			Assert.assertEquals(login.errorText(), "Invalid credentials");
+			LOG.info("Test Passed - Login unsuccesfull with incorrect credentials");
+		
 		}
 	}
+	
+	
+	@Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("tO Verify when username and password left blank and login button clicked should display required field error message")
+    @Step("Login with username: {0} and password: {1}")
+    @Feature("Login Feature")
+    @Story("blank login credentials should show required error message")
+	public void CheckIfLoginSuccessfullWithCredentialsFieldBlank() throws InterruptedException {
+		
+			login.enterCredentials("","");
+			login.ClickOnLoginButton();
+			
+			Assert.assertEquals(login.usernameRequiredError(), "Required");
+			LOG.info("Test Passed - Login unsuccesfull with blank credentials required field error displayed");
+		
+	}
+	
 	
 	@Test
     @Severity(SeverityLevel.NORMAL)

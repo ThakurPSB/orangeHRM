@@ -1,1 +1,12 @@
-2025-11-19 11:37:16 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-19 12:15:23 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-19 12:15:24 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-11-19 12:15:24 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-19 12:15:25 [main] INFO  LoginPage - Successfully entered login credentials
+2025-11-19 12:15:25 [main] INFO  LoginPage - Successfully clicked on login button
+2025-11-19 12:15:26 [main] INFO  LoginPage - Successfully displayed error for invalid credentials 
+2025-11-19 12:15:26 [main] INFO  TestSprint1 - Test Passed - Login unsuccesfull with incorrect credentials
+2025-11-19 12:15:26 [main] INFO  LoginPage - Successfully entered login credentials
+2025-11-19 12:15:26 [main] INFO  LoginPage - Successfully clicked on login button
+2025-11-19 12:15:27 [main] INFO  LoginPage - Successfully displayed error for invalid credentials 
+2025-11-19 12:15:27 [main] INFO  TestSprint1 - Test Passed - Login unsuccesfull with incorrect credentials
+2025-11-19 12:15:30 [main] INFO  TestBase - Successfully quite the browser

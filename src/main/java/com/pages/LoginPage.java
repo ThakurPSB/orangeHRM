@@ -39,6 +39,9 @@ public class LoginPage {
     
     @FindBy(css="body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > header:nth-child(2) > div:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)")
 	WebElement logoutButton ;
+    
+    @FindBy(css="oxd-input-field-error-message")
+    WebElement requiredUsernameError;
 
     /**
      * Enter the user name and password
@@ -103,5 +106,12 @@ public class LoginPage {
     	login.click();
     	LOG.info("Successfully Loogged in");
 	}
+    
+    public String usernameRequiredError() {
+		kw.waitForElementToBeVisible(requiredUsernameError);
+		String text = requiredUsernameError.getText();
+		LOG.info("Successfully displayed error for required username field ");
+		return text;
+    }
    
 }
