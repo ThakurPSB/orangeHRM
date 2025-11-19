@@ -37,11 +37,15 @@ public class LoginPage {
     @FindBy(css=".oxd-userdropdown-tab")
 	WebElement userDropdown;
     
-    @FindBy(css="body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > header:nth-child(2) > div:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)")
+    @FindBy(css="a.oxd-userdropdown-link[href*=\"auth/logout\"]")
 	WebElement logoutButton ;
     
-    @FindBy(css="oxd-input-field-error-message")
+    @FindBy(css="form:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(3)")
     WebElement requiredUsernameError;
+    
+    
+    
+   
 
     /**
      * Enter the user name and password
@@ -108,7 +112,7 @@ public class LoginPage {
 	}
     
     public String usernameRequiredError() {
-		kw.waitForElementToBeVisible(requiredUsernameError);
+		kw.waitForElementToBeClickable(requiredUsernameError);
 		String text = requiredUsernameError.getText();
 		LOG.info("Successfully displayed error for required username field ");
 		return text;

@@ -219,6 +219,67 @@ public class LeaveApplyMenu {
 		return false;
 	}
 	
+	@FindBy(css="body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)")
+	WebElement userLeaveMenu;
+	 
+	public void clickOnUserLeaveMenu() {
+		kw.waitForElementToBeClickable(userLeaveMenu);
+		kw.scrollToElement(userLeaveMenu);
+		userLeaveMenu.click();
+		LOG.info("Successfully clicked on User Leave Menu");
+	}
+
+	
+	@FindBy(css="button[class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space']")
+	WebElement approveLeaveButton ;
+
+	public void clickOnApproveLeaveButton() {
+		
+		kw.waitForElementToBeClickable(approveLeaveButton);
+		kw.scrollToElement(approveLeaveButton);
+		approveLeaveButton.click();
+		LOG.info("Successfully clicked on Approve leave button");
+	}
+	
+	@FindBy(css="div[class='oxd-multiselect-wrapper'] div[class='oxd-select-text-input']")
+	WebElement leaveStatusDropdown ;
+	
+	
+	public void selectLeaveStatus(String s) {
+		kw.waitForElementToBeClickable(leaveStatusDropdown);
+		leaveStatusDropdown.click();
+		leaveStatusDropdown.sendKeys(s);
+		leaveStatusDropdown.sendKeys(Keys.ENTER);
+		LOG.info("successfully selected leave status filter as taken");
+	}
+	
+	@FindBy(css="button[type='submit']")
+	WebElement searchLeaveButton ;
+	
+	public void clickOnSearchLeaveButton() {
+		kw.waitForElementToBeClickable(searchLeaveButton);
+		searchLeaveButton.click();
+		LOG.info("Successfully clicked on Search leave button ");
+	}
+	
+	@FindBy(css="li.oxd-table-dropdown button.oxd-icon-button")
+	WebElement moreOptionsButton ;
+	
+	public void clickOnMoreOptionsButton() {
+		kw.waitForElementToBeClickable(moreOptionsButton);
+		kw.scrollToElement(moreOptionsButton);
+		moreOptionsButton.click();
+		LOG.info("Successfully clicked on More options button");
+	}
+	
+	@FindBy(css="li:nth-child(4) p:nth-child(1)")
+	WebElement cancelLeaveOption ;
+	
+	public void clickOnCancelLeaveOption() {
+		kw.waitForElementToBeClickable(cancelLeaveOption);
+		cancelLeaveOption.click();
+		LOG.info("Successfully clicked on Cancel leave option");
+	}
 	
 	
 }

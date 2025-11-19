@@ -1,12 +1,23 @@
-2025-11-19 12:15:23 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-19 12:15:24 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-11-19 12:15:24 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-19 12:15:25 [main] INFO  LoginPage - Successfully entered login credentials
-2025-11-19 12:15:25 [main] INFO  LoginPage - Successfully clicked on login button
-2025-11-19 12:15:26 [main] INFO  LoginPage - Successfully displayed error for invalid credentials 
-2025-11-19 12:15:26 [main] INFO  TestSprint1 - Test Passed - Login unsuccesfull with incorrect credentials
-2025-11-19 12:15:26 [main] INFO  LoginPage - Successfully entered login credentials
-2025-11-19 12:15:26 [main] INFO  LoginPage - Successfully clicked on login button
-2025-11-19 12:15:27 [main] INFO  LoginPage - Successfully displayed error for invalid credentials 
-2025-11-19 12:15:27 [main] INFO  TestSprint1 - Test Passed - Login unsuccesfull with incorrect credentials
-2025-11-19 12:15:30 [main] INFO  TestBase - Successfully quite the browser
+2025-11-19 22:49:00 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-19 22:49:01 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-11-19 22:49:01 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-19 22:49:02 [main] INFO  LoginPage - Successfully entered login credentials
+2025-11-19 22:49:03 [main] INFO  LoginPage - Successfully clicked on login button
+2025-11-19 22:49:06 [main] INFO  LeaveApplyMenu - Successfully clicked on User Leave Menu
+2025-11-19 22:49:08 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-11-19 22:49:09 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-11-19 22:49:09 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-11-19 22:49:09 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-11-19 22:49:10 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-11-19 22:49:11 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-11-19 22:49:13 [main] INFO  LoginPage - Successfully clicked on Logout button
+2025-11-19 22:49:14 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-19 22:49:17 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-11-19 22:49:19 [main] INFO  LeaveApplyMenu - Successfully clicked on Approve leave button
+2025-11-19 22:49:19 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-11-19 22:49:20 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-11-19 22:49:21 [main] INFO  LeaveApplyMenu - successfully selected leave status filter as taken
+2025-11-19 22:49:21 [main] INFO  LeaveApplyMenu - Successfully clicked on Search leave button 
+2025-11-19 22:49:36 [main] INFO  LeaveApplyMenu - Successfully clicked on More options button
+2025-11-19 22:49:36 [main] INFO  LeaveApplyMenu - Successfully clicked on Cancel leave option
+2025-11-19 22:49:39 [main] INFO  TestBase - Successfully quite the browser

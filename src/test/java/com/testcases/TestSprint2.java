@@ -216,6 +216,38 @@ public class TestSprint2 extends TestBase {
 	
 	@Test
 	@Severity(SeverityLevel.NORMAL)
+    @Description("To verify when leave is applied can admin or manager able to approve leave")
+    @Step("login and navigate to leave page, check approve leave menu ")
+	@Prerequisite("login - dummyUser  pass - Dumadm@12 - assign reporting manager to employee as Admin User")
+    @Feature("Leave Module")
+    @Story("Approve leave successfully")
+	public void approveLeaveApplication() throws InterruptedException {
+	
+		
+		login.enterCredentials("dummyUser", "Dumadm@12");
+		login.ClickOnLoginButton();
+		leaveApply.clickOnUserLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectLeaveType("e");
+		leaveApply.selectFromDate();
+		leaveApply.selectToDate();
+		leaveApply.clickOnApplyLeaveButton();
+		leaveApply.clickOnLeaveMenu();
+		login.clickOnLogoutButton();
+		login.logMeIn(); //logged in as admin
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnApproveLeaveButton();
+		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.selectLeaveStatus("t");
+		leaveApply.clickOnSearchLeaveButton();
+		leaveApply.clickOnMoreOptionsButton();
+		leaveApply.clickOnCancelLeaveOption();
+		
+	}
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves with invalid dates")
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
     @Feature("Leave Module")
@@ -265,7 +297,7 @@ public class TestSprint2 extends TestBase {
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves with past dates")
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
-    @Feature("Leave Module > past leaves")
+    @Feature("Leave Module")
     @Story("Apply leave with past dates")
 	public void ApplyLeaveWithPastDates() throws InterruptedException {
 		
@@ -288,7 +320,7 @@ public class TestSprint2 extends TestBase {
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves without sufficient balance")
     @Step("login and navigate to leave page, check apply leave with floating leave ")
-    @Feature("Leave Module > apply leave > leave type floating")
+    @Feature("Leave Module")
     @Story("Apply leave with insufficient balance and check for error")
 	public void ApplyLeaveWithInsufficientBalance() throws InterruptedException {
 	

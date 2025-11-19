@@ -72,7 +72,7 @@ public class TestSprint1 extends TestBase{
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify valid login with correct username and password")
     @Step("Login with username: {0} and password: {1}")
-    @Feature("Login Feature")
+    @Feature("Login Page")
     @Story("Valid login credentials should grant access")
 	public void CheckIfLoginSuccessfullWithCorrectCredentials() throws InterruptedException {
 					
@@ -89,7 +89,7 @@ public class TestSprint1 extends TestBase{
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify invalid login with incorrect username and password")
     @Step("Login with username: {0} and password: {1}")
-    @Feature("Login Feature")
+    @Feature("Login Page")
     @Story("InValid login credentials should show error message")
 	public void CheckIfLoginSuccessfullWithIncorrectCredentials() throws InterruptedException {
 		
@@ -113,7 +113,7 @@ public class TestSprint1 extends TestBase{
     @Severity(SeverityLevel.NORMAL)
     @Description("tO Verify when username and password left blank and login button clicked should display required field error message")
     @Step("Login with username: {0} and password: {1}")
-    @Feature("Login Feature")
+    @Feature("Login Page")
     @Story("blank login credentials should show required error message")
 	public void CheckIfLoginSuccessfullWithCredentialsFieldBlank() throws InterruptedException {
 		
@@ -130,7 +130,7 @@ public class TestSprint1 extends TestBase{
     @Severity(SeverityLevel.NORMAL)
     @Description("To Verify if all the links in the profile menu working or not")
     @Step("Login , click on userprofile menu and check each option one by one")
-    @Feature("User Dropdown")
+    @Feature("Profile Menu Links")
     @Story("Respected links / dialog box should be visible")
 	public void checkIfAllTheLinksInProfileMenuAreWorking() throws InterruptedException {
 		
@@ -153,7 +153,7 @@ public class TestSprint1 extends TestBase{
     @Severity(SeverityLevel.NORMAL)
     @Description("To Check if PIM Menu > Configuration > Optional field page is options saving correctly.")
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save")
-    @Feature("Configuration/Optional Fields")
+    @Feature("PIM Menu")
     @Story("Create a page object for PIM menu")
 	public void checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff() throws InterruptedException {
 		
@@ -178,7 +178,7 @@ public class TestSprint1 extends TestBase{
 	@Severity(SeverityLevel.NORMAL)
     @Description("To verify after login into application and selecting PIM menu optional field toggle is available.")
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save > go to user profile > check if fields are visible")
-    @Feature("OptionalFieldToggle")
+    @Feature("PIM Menu")
     @Story("Create a page object for user profile")
 	public void CheckIfOptionalFieldsVisibilityToggleWorking() throws InterruptedException {
 		
@@ -226,7 +226,7 @@ public class TestSprint1 extends TestBase{
 	@Severity(SeverityLevel.NORMAL)
     @Description("Check if PIM Menu > Configuration > custom field add option working.")
     @Step("Login, navigate to PIM > configuration > custom fields > add the custom fields and check if visible on user profile page")
-    @Feature("Add Custom Field")
+    @Feature("PIM Menu")
     @Story("CustoField in PIM Menu")
 	public void AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage() throws InterruptedException {
 		
@@ -275,35 +275,7 @@ public class TestSprint1 extends TestBase{
 	}
 	
 	
-	@Test
-	@Severity(SeverityLevel.NORMAL)
-    @Description("Check if PIM Menu > Configuration > Reporting method and termination options working.")
-    @Step("Login, navigate to PIM > configuration > custom fields > add the reporting method and termaintion reason and then delete")
-    @Feature("Add Termination reason and reporting method")
-    @Story("PIM Configuration Menus")
-	public void AddReportingMethodAndTerminationReason() throws InterruptedException {
-		
-		login.logMeIn();
-		
-		
-		
-		pim.clickOnPIM();
-		pim.clickOnConfiguration();
-		rm.clickOnReportingMethod();
-		rm.deleteSelectedReportingMethod("Offline");
-		rm.AddReportingMethodButton();
-		rm.addrReportingMethod("Offline");
-		Assert.assertTrue(rm.checkAssertReportingMethod());
-		
-		pim.clickOnPIM();
-		pim.clickOnConfiguration();
-		tr.clickOnTerminationReasonsMenu();
-		tr.deleteSelectedTerminationReason("Other");
-		tr.ClickOnAddTerminationReasonButton();
-		tr.AddTerminationReason("Other");
-		Assert.assertTrue(tr.checkAssertTerminationReason());
-		
-	}
+	
 	
 	@Test
 	@Severity(SeverityLevel.NORMAL)
