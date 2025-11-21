@@ -114,12 +114,7 @@ public class TestSprint3 extends TestBase{
 		Assert.assertTrue(recruitment.checkErrorMsg());
 	}
 	
-	@Test(enabled = false)
-	public void test() throws InterruptedException, AWTException {
-		
-		login.logMeIn();
-		
-	}
+
 	
 	
 	@Test

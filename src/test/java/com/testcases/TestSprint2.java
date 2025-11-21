@@ -200,7 +200,7 @@ public class TestSprint2 extends TestBase {
 	public void ApplyLeaveWithValidInputs() throws InterruptedException {
 	
 		
-		login.logMeIn();
+		login.logMeInAsUser();
 		leaveApply.clickOnLeaveMenu();
 		leaveApply.clickOnApplyLeave();
 		leaveApply.selectLeaveType("e");
@@ -208,13 +208,10 @@ public class TestSprint2 extends TestBase {
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
 		Assert.assertTrue(leaveApply.SaveToastMessageText());
-		myLeave.clickOnLeaveMenu();
-		myLeave.clickOnMyLeaveMenu();
-		myLeave.cancelAllLeaves();
 		
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "ApplyLeaveWithValidInputs")
 	@Severity(SeverityLevel.NORMAL)
     @Description("To verify when leave is applied can admin or manager able to approve leave")
     @Step("login and navigate to leave page, check approve leave menu ")
@@ -224,16 +221,6 @@ public class TestSprint2 extends TestBase {
 	public void approveLeaveApplication() throws InterruptedException {
 	
 		
-		login.enterCredentials("dummyUser", "Dumadm@12");
-		login.ClickOnLoginButton();
-		leaveApply.clickOnUserLeaveMenu();
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType("e");
-		leaveApply.selectFromDate();
-		leaveApply.selectToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		leaveApply.clickOnLeaveMenu();
-		login.clickOnLogoutButton();
 		login.logMeIn(); //logged in as admin
 		leaveApply.clickOnLeaveMenu();
 		leaveApply.clickOnApproveLeaveButton();

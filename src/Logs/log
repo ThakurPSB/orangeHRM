@@ -1,1 +1,16 @@
-2025-11-21 14:48:03 [main] INFO  TestBase - Successfully quite the browser
+2025-11-21 15:14:26 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-21 15:14:27 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
+2025-11-21 15:14:27 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-21 15:14:28 [main] INFO  LoginPage - Successfully Loogged in as user
+2025-11-21 15:14:31 [main] INFO  TimeMenu - Successfully clicked on Menu Time
+2025-11-21 15:14:33 [main] INFO  TimeMenu - Clicked on Edit Timesheet Button
+2025-11-21 15:14:33 [main] INFO  TimeMenu - Successfully cleared previous timesheet entry details
+2025-11-21 15:14:33 [main] INFO  Keywords - Successfully cleared text box
+2025-11-21 15:14:35 [main] INFO  TimeMenu - Successfully entered project name
+2025-11-21 15:14:36 [main] INFO  TimeMenu - successfully selected activity
+2025-11-21 15:14:36 [main] INFO  Keywords - Successfully cleared text box
+2025-11-21 15:14:36 [main] INFO  Keywords - Successfully cleared text box
+2025-11-21 15:14:36 [main] INFO  TimeMenu - Successfully entered hours for Monday and Tuesday
+2025-11-21 15:14:36 [main] INFO  TimeMenu - Successfully clicked on Save Timesheet Button
+2025-11-21 15:14:37 [main] INFO  TimeMenu - Success Toast Message Displayed
+2025-11-21 15:14:40 [main] INFO  TestBase - Successfully quite the browser
