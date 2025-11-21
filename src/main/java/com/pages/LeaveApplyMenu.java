@@ -241,6 +241,16 @@ public class LeaveApplyMenu {
 		LOG.info("Successfully clicked on Approve leave button");
 	}
 	
+	@FindBy(css="button[class='oxd-button oxd-button--medium oxd-button--label-danger oxd-table-cell-action-space']")
+	WebElement rejectLeaveButton ;
+	
+	public void clickOnRejectLeaveButton() {
+        kw.waitForElementToBeClickable(rejectLeaveButton);
+        kw.scrollToElement(rejectLeaveButton);
+        rejectLeaveButton.click();
+        LOG.info("Successfully clicked on Reject leave button");
+    }
+	
 	@FindBy(css="div[class='oxd-multiselect-wrapper'] div[class='oxd-select-text-input']")
 	WebElement leaveStatusDropdown ;
 	
@@ -280,6 +290,7 @@ public class LeaveApplyMenu {
 		cancelLeaveOption.click();
 		LOG.info("Successfully clicked on Cancel leave option");
 	}
+	
 	
 	
 }

@@ -195,7 +195,7 @@ public class TestSprint2 extends TestBase {
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves")
     @Step("login and navigate to leave page, check apply leave menu ")
-    @Feature("Leave Module > apply leave")
+    @Feature("Leave Module")
     @Story("Apply leave successfully with valid inputs")
 	public void ApplyLeaveWithValidInputs() throws InterruptedException {
 	
@@ -243,6 +243,33 @@ public class TestSprint2 extends TestBase {
 		leaveApply.clickOnSearchLeaveButton();
 		leaveApply.clickOnMoreOptionsButton();
 		leaveApply.clickOnCancelLeaveOption();
+		
+	}
+	
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("To verify when leave is applied can admin or manager able to reject leave")
+    @Step("login and navigate to leave page, check Reject leave  ")
+	@Prerequisite("login - dummyUser  pass - Dumadm@12 - assign reporting manager to employee as Admin User")
+    @Feature("Leave Module")
+    @Story("Reject leave successfully")
+	public void RejectLeaveApplication() throws InterruptedException {
+	
+		
+		login.enterCredentials("dummyUser", "Dumadm@12");
+		login.ClickOnLoginButton();
+		leaveApply.clickOnUserLeaveMenu();
+		leaveApply.clickOnApplyLeave();
+		leaveApply.selectLeaveType("e");
+		leaveApply.selectFromDate();
+		leaveApply.selectToDate();
+		leaveApply.clickOnApplyLeaveButton();
+		leaveApply.clickOnLeaveMenu();
+		login.clickOnLogoutButton();
+		login.logMeIn(); //logged in as admin
+		leaveApply.clickOnLeaveMenu();
+		leaveApply.clickOnRejectLeaveButton();
+		Assert.assertTrue(leaveApply.SaveToastMessageText());
 		
 	}
 	

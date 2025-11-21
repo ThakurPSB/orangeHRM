@@ -463,6 +463,5 @@ public class EmployeeListMenu {
 		
 	}
 	
-	@FindBy(css="oxd-table-card")
-	WebElement tableCards ;
+
 }

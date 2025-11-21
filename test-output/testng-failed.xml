@@ -3,16 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.TestSprint2">
+      <class name="com.testcases.TestSprint3">
         <methods>
+          <include name="employeeEditingTimesheetBeforeSubmission"/>
           <include name="setUp"/>
+          <include name="employeeSubmittedTimeSheetWithDetails"/>
           <include name="tearDowntest"/>
-          <include name="approveLeaveApplication"/>
           <include name="closeBrowser"/>
           <include name="cleanAllureResults"/>
+          <include name="managerApprovesOrRejectsTimesheet"/>
           <include name="pageSetup"/>
         </methods>
-      </class> <!-- com.testcases.TestSprint2 -->
+      </class> <!-- com.testcases.TestSprint3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

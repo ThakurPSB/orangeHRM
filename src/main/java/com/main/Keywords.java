@@ -19,6 +19,7 @@ import org.apache.log4j.Logger;
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,6 +36,7 @@ import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 
 
 public class Keywords {
@@ -316,4 +318,27 @@ public class Keywords {
         wait.until(ExpectedConditions.textToBePresentInElement(element, expectedText));
     }
     
+    /**
+     * This method checks if the element is present on the page
+     * @param element
+     */
+	public boolean isElementPresent(WebElement element) {
+		try {
+	        return element != null && element.isDisplayed();
+	    } catch (NoSuchElementException | StaleElementReferenceException e) {
+	        return false;
+	    }
+	}
+	
+	/**
+	 * This method clear the text box
+	 * 
+	 */
+	public void clearTextBox(WebElement element) {
+		element.click();
+		element.sendKeys(Keys.LEFT_CONTROL + "A");
+		element.sendKeys(Keys.DELETE);
+		LOG.info("Successfully cleared text box");
+	}
+	
 }

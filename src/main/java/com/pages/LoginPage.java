@@ -111,6 +111,15 @@ public class LoginPage {
     	LOG.info("Successfully Loogged in");
 	}
     
+    public void logMeInAsUser() {
+    	kw.waitForElementToBeVisible(username);
+    	username.sendKeys("dummyUser");
+    	kw.waitForElementToBeVisible(password);
+    	password.sendKeys("Dumadm@12");
+    	login.click();
+    	LOG.info("Successfully Loogged in as user");
+	}
+    
     public String usernameRequiredError() {
 		kw.waitForElementToBeClickable(requiredUsernameError);
 		String text = requiredUsernameError.getText();
