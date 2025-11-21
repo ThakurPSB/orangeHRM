@@ -126,5 +126,20 @@ public class LoginPage {
 		LOG.info("Successfully displayed error for required username field ");
 		return text;
     }
+    
+    @FindBy(css=".oxd-main-menu-item")
+	WebElement menuSearchResult ;
+	
+	@FindBy(css="input[placeholder='Search']")
+	WebElement menuSearchField ;
+	
+	public void clickOnMenu(String menuName) {
+		kw.waitForElementToBeClickable(menuSearchField);
+		menuSearchField.click();
+		menuSearchField.sendKeys(menuName);
+		menuSearchResult.click();
+		LOG.info("Successfully clicked on Menu "+menuName);
+	}
+	
    
 }

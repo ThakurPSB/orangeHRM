@@ -201,7 +201,7 @@ public class TestSprint2 extends TestBase {
 	
 		
 		login.logMeInAsUser();
-		leaveApply.clickOnLeaveMenu();
+		login.clickOnMenu("Leave");
 		leaveApply.clickOnApplyLeave();
 		leaveApply.selectLeaveType("e");
 		leaveApply.selectFromDate();
