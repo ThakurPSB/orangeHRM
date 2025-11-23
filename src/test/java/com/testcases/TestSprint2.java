@@ -239,23 +239,20 @@ public class TestSprint2 extends TestBase {
     @Step("login and navigate to leave page, check Reject leave  ")
     @Feature("Leave Module")
     @Story("Reject leave successfully")
-	public void RejectLeaveApplication() throws InterruptedException {
+	public void userCancelLeaveApplication() throws InterruptedException {
 	
-		
-		login.enterCredentials("dummyUser", "Dumadm@12");
-		login.ClickOnLoginButton();
-		leaveApply.clickOnUserLeaveMenu();
+		login.logMeInAsUser();
+		login.clickOnMenu("Leave");
 		leaveApply.clickOnApplyLeave();
 		leaveApply.selectLeaveType("e");
 		leaveApply.selectFromDate();
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
-		leaveApply.clickOnLeaveMenu();
-		login.clickOnLogoutButton();
-		login.logMeIn(); //logged in as admin
-		leaveApply.clickOnLeaveMenu();
-		leaveApply.clickOnRejectLeaveButton();
 		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		login.clickOnMenu("Leave");
+		leaveApply.clickOnUserCancelLeaveButton();
+		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		
 		
 	}
 	

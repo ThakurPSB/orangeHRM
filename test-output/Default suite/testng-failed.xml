@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDowntest"/>
-          <include name="approveLeaveApplication"/>
+          <include name="userCancelLeaveApplication"/>
           <include name="closeBrowser"/>
           <include name="cleanAllureResults"/>
           <include name="pageSetup"/>

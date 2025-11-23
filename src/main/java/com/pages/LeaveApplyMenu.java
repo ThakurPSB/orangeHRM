@@ -291,6 +291,14 @@ public class LeaveApplyMenu {
 		LOG.info("Successfully clicked on Cancel leave option");
 	}
 	
+	@FindBy(css="button[class='oxd-button oxd-button--medium oxd-button--label-warn oxd-table-cell-action-space']")
+	WebElement userCancelLeaveButton ;
 	
+	public void clickOnUserCancelLeaveButton() {
+		kw.waitForElementToBeClickable(userCancelLeaveButton);
+		kw.scrollToElement(userCancelLeaveButton);
+		userCancelLeaveButton.click();
+		LOG.info("Successfully clicked on User Cancel leave button");
+	}
 	
 }
