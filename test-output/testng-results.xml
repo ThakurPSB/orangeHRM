@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-21T15:14:24 IST" name="Default suite" finished-at="2025-11-21T15:14:40 IST" duration-ms="16215">
+  <suite started-at="2025-11-23T12:20:23 IST" name="Default suite" finished-at="2025-11-23T12:21:10 IST" duration-ms="47171">
     <groups>
+      <group name="smoke">
+        <method signature="TestSprint3.employeeSubmittedTimeSheetWithDetails()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" name="employeeSubmittedTimeSheetWithDetails" class="com.testcases.TestSprint3"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-11-21T15:14:24 IST" name="Default test" finished-at="2025-11-21T15:14:40 IST" duration-ms="16215">
+    <test started-at="2025-11-23T12:20:23 IST" name="Default test" finished-at="2025-11-23T12:21:10 IST" duration-ms="47171">
       <class name="com.testcases.TestSprint3">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint3@7915bca3]" started-at="2025-11-21T15:14:24 IST" name="cleanAllureResults" finished-at="2025-11-21T15:14:24 IST" duration-ms="70" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:23 IST" name="cleanAllureResults" finished-at="2025-11-23T12:20:23 IST" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint3@7915bca3]" started-at="2025-11-21T15:14:24 IST" name="setUp" finished-at="2025-11-21T15:14:27 IST" duration-ms="2848" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:23 IST" name="setUp" finished-at="2025-11-23T12:20:25 IST" duration-ms="2722" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,19 +30,83 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@7915bca3]" started-at="2025-11-21T15:14:27 IST" name="pageSetup" finished-at="2025-11-21T15:14:27 IST" duration-ms="60" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:26 IST" name="pageSetup" finished-at="2025-11-23T12:20:26 IST" duration-ms="65" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="employeeSubmittedTimeSheetWithDetails()[pri:0, instance:com.testcases.TestSprint3@7915bca3]" started-at="2025-11-21T15:14:27 IST" name="employeeSubmittedTimeSheetWithDetails" finished-at="2025-11-21T15:14:37 IST" duration-ms="9779" status="PASS">
+        <test-method signature="employeeSubmittedTimeSheetWithDetails()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:26 IST" name="employeeSubmittedTimeSheetWithDetails" finished-at="2025-11-23T12:20:35 IST" duration-ms="9326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- employeeSubmittedTimeSheetWithDetails -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@7915bca3]" started-at="2025-11-21T15:14:37 IST" name="tearDowntest" finished-at="2025-11-21T15:14:40 IST" duration-ms="3013" status="PASS">
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:35 IST" name="tearDowntest" finished-at="2025-11-23T12:20:38 IST" duration-ms="3014" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint3@7915bca3]" started-at="2025-11-21T15:14:40 IST" name="closeBrowser" finished-at="2025-11-21T15:14:40 IST" duration-ms="270" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:38 IST" name="closeBrowser" finished-at="2025-11-23T12:20:38 IST" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:38 IST" name="setUp" finished-at="2025-11-23T12:20:40 IST" duration-ms="1735" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost/orangehrm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:40 IST" name="pageSetup" finished-at="2025-11-23T12:20:40 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="employeeEditingTimesheetBeforeSubmission()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:40 IST" name="employeeEditingTimesheetBeforeSubmission" finished-at="2025-11-23T12:20:50 IST" depends-on-methods="com.testcases.TestSprint3.employeeSubmittedTimeSheetWithDetails" duration-ms="9669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- employeeEditingTimesheetBeforeSubmission -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:50 IST" name="tearDowntest" finished-at="2025-11-23T12:20:53 IST" duration-ms="3010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:53 IST" name="closeBrowser" finished-at="2025-11-23T12:20:53 IST" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:53 IST" name="setUp" finished-at="2025-11-23T12:20:55 IST" duration-ms="1728" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost/orangehrm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:55 IST" name="pageSetup" finished-at="2025-11-23T12:20:55 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="managerApprovesOrRejectsTimesheet()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:20:55 IST" name="managerApprovesOrRejectsTimesheet" finished-at="2025-11-23T12:21:07 IST" depends-on-methods="com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission" duration-ms="12098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- managerApprovesOrRejectsTimesheet -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:21:07 IST" name="tearDowntest" finished-at="2025-11-23T12:21:10 IST" duration-ms="3013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint3@1d23ff23]" started-at="2025-11-23T12:21:10 IST" name="closeBrowser" finished-at="2025-11-23T12:21:10 IST" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

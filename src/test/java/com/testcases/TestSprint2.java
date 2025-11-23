@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+//import org.testng.log4testng.Logger;
 
 import com.base.TestBase;
 import com.pages.AdminJobTitles;
@@ -191,7 +192,7 @@ public class TestSprint2 extends TestBase {
 		qualification.deleteEnteredSkill("java");
 	}
 	
-	@Test
+	@Test(groups = {"smoke"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves")
     @Step("login and navigate to leave page, check apply leave menu ")
@@ -211,11 +212,10 @@ public class TestSprint2 extends TestBase {
 		
 	}
 	
-	@Test(dependsOnMethods = "ApplyLeaveWithValidInputs")
+	@Test(dependsOnMethods = "ApplyLeaveWithValidInputs", groups = {"smoke"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("To verify when leave is applied can admin or manager able to approve leave")
     @Step("login and navigate to leave page, check approve leave menu ")
-	@Prerequisite("login - dummyUser  pass - Dumadm@12 - assign reporting manager to employee as Admin User")
     @Feature("Leave Module")
     @Story("Approve leave successfully")
 	public void approveLeaveApplication() throws InterruptedException {
@@ -233,11 +233,10 @@ public class TestSprint2 extends TestBase {
 		
 	}
 	
-	@Test
+	@Test(groups = {"smoke"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("To verify when leave is applied can admin or manager able to reject leave")
     @Step("login and navigate to leave page, check Reject leave  ")
-	@Prerequisite("login - dummyUser  pass - Dumadm@12 - assign reporting manager to employee as Admin User")
     @Feature("Leave Module")
     @Story("Reject leave successfully")
 	public void RejectLeaveApplication() throws InterruptedException {

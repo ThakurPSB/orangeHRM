@@ -68,7 +68,7 @@ public class TestSprint1 extends TestBase{
 	
 	private static final Logger LOG = Logger.getLogger(TestSprint1.class);
 	
-	@Test
+	@Test(groups= {"smoke"})
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify valid login with correct username and password")
     @Step("Login with username: {0} and password: {1}")

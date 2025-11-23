@@ -40,12 +40,12 @@ public class TestSprint3 extends TestBase{
 		login = null;
 		recruitment = null;
 		performance = null;
-		
+		timemenu = null;
 		Thread.sleep(3000);
 	
 	}
 	
-	@Test
+	@Test(groups = {"smoke"})
     @Severity(SeverityLevel.NORMAL)
     @Description("recruitment page options vacancies")
     @Step("login and navigate to recruitment page, add vacancy for asst mananger")
@@ -142,7 +142,7 @@ public class TestSprint3 extends TestBase{
 	}
 	
 	
-	@Test
+	@Test(groups = {"smoke"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("to verify timesheet editable by employee")
     @Step("login as user and navigate to time page, edit time sheet")
