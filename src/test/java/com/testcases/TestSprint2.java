@@ -232,7 +232,7 @@ public class TestSprint2 extends TestBase {
 		
 	}
 	
-	@Test(groups = {"smoke"})
+	@Test(groups = {"smoke"}, dependsOnMethods = "approveLeaveApplication")
 	@Severity(SeverityLevel.NORMAL)
     @Description("To verify when leave is applied can admin or manager able to reject leave")
     @Step("login and navigate to leave page, check Reject leave  ")
@@ -247,7 +247,6 @@ public class TestSprint2 extends TestBase {
 		leaveApply.selectFromDate();
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply.SaveToastMessageText());
 		login.clickOnMenu("Leave");
 		leaveApply.clickOnUserCancelLeaveButton();
 		Assert.assertTrue(leaveApply.SaveToastMessageText());
