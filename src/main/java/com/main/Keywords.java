@@ -31,6 +31,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -69,20 +70,26 @@ public class Keywords {
 	public void launchBrowser(String browserName) {
 		
 		if(browserName.equalsIgnoreCase("Chrome")) {
-		
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
+
 	        ChromeOptions options = new ChromeOptions();
 	        //options.addArguments("--headless=new"); // Use newer headless mode
 	        options.addArguments("--window-size=1920,1080"); // Set proper resolution
-
 	        driver = new ChromeDriver(options);
-
 			LOG.info("Launched Chrome Browser");
+			
 		} else if(browserName.equalsIgnoreCase("Edge")) {
+			
+			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/msedgedriver.exe");
 			driver= new EdgeDriver();
 			LOG.info("Launched Edge Browser");
+			
 		} else if(browserName.equalsIgnoreCase("Firefox")) {
+			
+			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/geckodriver.exe");
 			driver= new FirefoxDriver();
 			LOG.info("Launched firefox Browser");
+			
 		} else {
 			LOG.error("Invalid browser name");
 		}

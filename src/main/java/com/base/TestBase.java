@@ -6,10 +6,9 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 
 import com.main.Keywords;
+import com.util.PropertiesUtil;
 
 public class TestBase {
 	
@@ -39,11 +38,10 @@ public class TestBase {
 	 * ( String url, String browserName)
 	 */
 	@BeforeMethod
-	@Parameters({"browserName", "url"})
-	public void setUp(@Optional("Chrome") String browserName, @Optional("http://localhost/orangehrm") String url) throws Exception {
+	public void setUp() throws IOException {
 		kw = Keywords.getInstance();
-		kw.launchBrowser(browserName);
-		kw.launchURL(url);
+		kw.launchBrowser(PropertiesUtil.getProperty("browser"));
+		kw.launchURL(PropertiesUtil.getProperty("local.url"));
 		LOG.info("Successfully launched the web Application");
 	}
 	

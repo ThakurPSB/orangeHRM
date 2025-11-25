@@ -2,47 +2,35 @@
 <testng-results ignored="12" total="13" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-23T12:54:18 IST" name="Default suite" finished-at="2025-11-23T12:54:34 IST" duration-ms="15450">
+  <suite started-at="2025-11-25T14:13:04 IST" name="Default suite" finished-at="2025-11-25T14:13:47 IST" duration-ms="42969">
     <groups>
       <group name="smoke">
-        <method signature="TestSprint2.userCancelLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@66b59b7d]" name="userCancelLeaveApplication" class="com.testcases.TestSprint2"/>
+        <method signature="TestSprint2.userCancelLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@625dfff3]" name="userCancelLeaveApplication" class="com.testcases.TestSprint2"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-11-23T12:54:18 IST" name="Default test" finished-at="2025-11-23T12:54:34 IST" duration-ms="15450">
+    <test started-at="2025-11-25T14:13:04 IST" name="Default test" finished-at="2025-11-25T14:13:47 IST" duration-ms="42969">
       <class name="com.testcases.TestSprint2">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint2@66b59b7d]" started-at="2025-11-23T12:54:18 IST" name="cleanAllureResults" finished-at="2025-11-23T12:54:18 IST" duration-ms="54" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint2@625dfff3]" started-at="2025-11-25T14:13:04 IST" name="cleanAllureResults" finished-at="2025-11-25T14:13:04 IST" duration-ms="91" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.TestSprint2@66b59b7d]" started-at="2025-11-23T12:54:19 IST" name="setUp" finished-at="2025-11-23T12:54:21 IST" duration-ms="2797" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/orangehrm]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@625dfff3]" started-at="2025-11-25T14:13:04 IST" name="setUp" finished-at="2025-11-25T14:13:22 IST" duration-ms="18165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@66b59b7d]" started-at="2025-11-23T12:54:22 IST" name="pageSetup" finished-at="2025-11-23T12:54:22 IST" duration-ms="78" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@625dfff3]" started-at="2025-11-25T14:13:22 IST" name="pageSetup" finished-at="2025-11-25T14:13:22 IST" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="userCancelLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@66b59b7d]" started-at="2025-11-23T12:54:22 IST" name="userCancelLeaveApplication" finished-at="2025-11-23T12:54:31 IST" duration-ms="9079" status="PASS">
+        <test-method signature="userCancelLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@625dfff3]" started-at="2025-11-25T14:13:22 IST" name="userCancelLeaveApplication" finished-at="2025-11-25T14:13:44 IST" duration-ms="21271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userCancelLeaveApplication -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@66b59b7d]" started-at="2025-11-23T12:54:31 IST" name="tearDowntest" finished-at="2025-11-23T12:54:34 IST" duration-ms="3016" status="PASS">
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@625dfff3]" started-at="2025-11-25T14:13:44 IST" name="tearDowntest" finished-at="2025-11-25T14:13:47 IST" duration-ms="3012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@66b59b7d]" started-at="2025-11-23T12:54:34 IST" name="closeBrowser" finished-at="2025-11-23T12:54:34 IST" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@625dfff3]" started-at="2025-11-25T14:13:47 IST" name="closeBrowser" finished-at="2025-11-25T14:13:47 IST" duration-ms="200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

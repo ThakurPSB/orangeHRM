@@ -1,15 +1,15 @@
-2025-11-23 12:54:20 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-23 12:54:21 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm
-2025-11-23 12:54:21 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-23 12:54:22 [main] INFO  LoginPage - Successfully Loogged in as user
-2025-11-23 12:54:25 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-11-23 12:54:26 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
-2025-11-23 12:54:27 [main] INFO  LeaveApplyMenu - successfully selected leave type
-2025-11-23 12:54:27 [main] INFO  LeaveApplyMenu - Successfully from date selected
-2025-11-23 12:54:28 [main] INFO  LeaveApplyMenu - Successfully to date selected
-2025-11-23 12:54:28 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
-2025-11-23 12:54:28 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
-2025-11-23 12:54:29 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-11-23 12:54:30 [main] INFO  LeaveApplyMenu - Successfully clicked on User Cancel leave button
-2025-11-23 12:54:31 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
-2025-11-23 12:54:34 [main] INFO  TestBase - Successfully quite the browser
+2025-11-25 14:13:06 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-25 14:13:22 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-25 14:13:22 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-25 14:13:23 [main] INFO  LoginPage - Successfully Loogged in as user
+2025-11-25 14:13:34 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-11-25 14:13:37 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-11-25 14:13:38 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-11-25 14:13:39 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-11-25 14:13:39 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-11-25 14:13:39 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-11-25 14:13:41 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-11-25 14:13:41 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-11-25 14:13:43 [main] INFO  LeaveApplyMenu - Successfully clicked on User Cancel leave button
+2025-11-25 14:13:44 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-11-25 14:13:47 [main] INFO  TestBase - Successfully quite the browser

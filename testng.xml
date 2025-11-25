@@ -7,8 +7,10 @@
     </listeners>
 	
   <test name="regression tests">
+	<!-- //We are using properties file to manage parameters
 	<parameter name="url" value="http://localhost/orangehrm"></parameter>
     <parameter name="browserName" value="Chrome"></parameter>
+    -->
 	<classes>
 		<class name="com.testcases.TestSprint1"></class>
 		<class name="com.testcases.TestSprint2"></class>

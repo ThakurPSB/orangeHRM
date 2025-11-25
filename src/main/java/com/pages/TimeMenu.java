@@ -97,10 +97,12 @@ public class TimeMenu {
 	public void enterProjectName(String projectName) throws InterruptedException {
 		kw.waitForElementToBeVisible(projectNameField);
 		kw.clearTextBox(projectNameField);
+		projectNameField.sendKeys(Keys.TAB);
+		projectNameField.sendKeys(Keys.ESCAPE);
+		projectNameField.click();
 		projectNameField.sendKeys(projectName);
-		kw.waitForElementToBeVisible(projectNameFieldList);
 		kw.waitForElementToBeClickable(projectNameFieldList);
-		kw.normalWait(1000);
+		kw.normalWait(2000);
 		projectNameField.sendKeys(Keys.ARROW_DOWN);
 		projectNameField.sendKeys(Keys.ENTER);
 		//projectNameField.sendKeys(Keys.TAB);
