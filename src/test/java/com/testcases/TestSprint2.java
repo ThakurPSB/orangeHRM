@@ -200,7 +200,6 @@ public class TestSprint2 extends TestBase {
     @Story("Apply leave successfully with valid inputs")
 	public void ApplyLeaveWithValidInputs() throws InterruptedException {
 	
-		
 		login.logMeInAsUser();
 		login.clickOnMenu("Leave");
 		leaveApply.clickOnApplyLeave();
@@ -208,7 +207,7 @@ public class TestSprint2 extends TestBase {
 		leaveApply.selectFromDate();
 		leaveApply.selectToDate();
 		leaveApply.clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply.SaveToastMessageText());
+		Assert.assertTrue(leaveApply.leaveAppliedSuccessfullyOrOverlapingLeave());
 		
 	}
 	

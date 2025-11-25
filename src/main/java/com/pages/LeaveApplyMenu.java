@@ -131,6 +131,26 @@ public class LeaveApplyMenu {
 		return false;
 	}
 	
+	public boolean leaveAppliedSuccessfullyOrOverlapingLeave() throws TimeoutException {
+		try {
+			kw.waitForElementToBeVisibleShort(saveSuccessfullToast, 10);
+			kw.scrollToElement(saveSuccessfullToast);
+			boolean isDisplayed = saveSuccessfullToast.isDisplayed();
+			LOG.info("Leave applied successfully toast Displayed");
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+		} catch (NoSuchElementException e) {
+			if (checkOverlappingLeaveMessage()) {
+				return true;
+			} else {
+				LOG.warn("Toast element not found in DOM.");
+			}
+			LOG.warn("Toast element not found in DOM.");
+		}
+		return false;
+	}
+	
 	@FindBy(css="div.oxd-toast--warn")
 	WebElement warningFailedToSubmitToast ;
 	
@@ -305,5 +325,24 @@ public class LeaveApplyMenu {
 		userCancelLeaveButton.click();
 		LOG.info("Successfully clicked on User Cancel leave button");
 	}
+	
+	@FindBy(css="div[class='orangehrm-header-container'] h6[class='oxd-text oxd-text--h6 orangehrm-main-title']")
+	WebElement OVerlappingLeaveMessage ;
+	
+	public boolean checkOverlappingLeaveMessage() {
+		kw.waitForElementToBeVisible(OVerlappingLeaveMessage);
+		boolean isDisplayed = false;
+		if (OVerlappingLeaveMessage.isDisplayed()) {
+			isDisplayed = true;
+			LOG.info("Overlapping leave message is displayed");
+		} else {
+			LOG.info("Overlapping leave message is not displayed");
+		}
+		return isDisplayed;
+	}
+	
+	
+	
+	
 	
 }
