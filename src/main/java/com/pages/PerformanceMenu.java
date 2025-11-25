@@ -35,11 +35,28 @@ public class PerformanceMenu {
 	WebElement performanceConfigure  ;
 
 	public void clickOnPerformanceConfigure() throws InterruptedException {
+		kw.waitForElementToBeInvisible(loader);
 		kw.waitForElementToBeClickable(performanceConfigure);
 		kw.scrollToElement(performanceConfigure);
 		kw.normalWait(200);
 		performanceConfigure.click();
 		LOG.info("Successfully clicked on Configure in performance menu");
+	}
+	
+	@FindBy(css="button[class = 'oxd-icon-button oxd-table-cell-action-space']:nth-of-type(2)")
+	WebElement deleteKPIIcon ;
+	
+	@FindBy(css="button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
+	WebElement confirmDeleteKPI ;
+	
+	public void clickOnDeleteKPIIcon() {
+		kw.waitForElementToBeInvisible(loader);
+		kw.waitForElementToBeClickable(deleteKPIIcon);
+		kw.scrollToElement(deleteKPIIcon);
+		deleteKPIIcon.click();
+		kw.waitForElementToBeClickable(confirmDeleteKPI);
+		confirmDeleteKPI.click();
+		LOG.info("Successfully clicked on delete KPI button");
 	}
 	
 	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(1)")
@@ -186,22 +203,10 @@ public class PerformanceMenu {
 		}
 	    
 	}
-	    
+	
+	@FindBy(css=".oxd-form-loader")
+	WebElement loader;
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	    
 	
 }

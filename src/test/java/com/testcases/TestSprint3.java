@@ -142,6 +142,8 @@ public class TestSprint3 extends TestBase{
 		performance.clickOnSaveKPIButton();
 		performance.clickOnPerformanceConfigure();
 		Assert.assertTrue(performance.searchResultKPI("Bug Detection Rate"));
+		performance.clickOnDeleteKPIIcon();
+		
 	}
 	
 	
@@ -222,7 +224,7 @@ public class TestSprint3 extends TestBase{
 	public void dashboardApplyLeaveLinkDirectToLeavePage() {
 		login.logMeInAsUser();
 		dashboard.clickOnMenu("Dashboard");
-		dashboard.clickOnPunchInButton();
+		dashboard.clickOnDashboardApplyLeaveShortcutbutton();
 		Assert.assertTrue(dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/leave/applyLeave"));
 	}
 	
@@ -236,7 +238,7 @@ public class TestSprint3 extends TestBase{
 	public void dashboardMyTimesheetLinkDirectToMyTimesheetPage() {
 		login.logMeInAsUser();
 		dashboard.clickOnMenu("Dashboard");
-		dashboard.clickOnPunchInButton();
+		dashboard.clickOnDashboardMyTimesheetShortcutbutton();
 		Assert.assertTrue(
 		dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/time/viewMyTimesheet"));
 	}

@@ -364,6 +364,12 @@ public class Keywords {
 	        return driver.getCurrentUrl();
 	}
 
-	
+	/**
+	 * This method wait for the element to be invisible
+	 * 
+	 */
+	public void waitForElementToBeInvisible(WebElement element) {
+		wait.until(ExpectedConditions.invisibilityOf(element));
+	}
 	
 }

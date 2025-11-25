@@ -1,8 +1,19 @@
-2025-11-25 19:08:43 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-25 19:08:44 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-25 19:08:44 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-25 19:08:44 [main] INFO  LoginPage - Successfully Loogged in as user
-2025-11-25 19:08:47 [main] INFO  TimeMenu - Successfully clicked on Menu Dashboard
-2025-11-25 19:08:49 [main] INFO  TimeMenu - Successfully clicked on timeEntry button on dashboard
-2025-11-25 19:08:49 [main] INFO  TimeMenu - Successfully diverted URL http://localhost/orangehrm/web/index.php/attendance/punchIn
-2025-11-25 19:08:52 [main] INFO  TestBase - Successfully quite the browser
+2025-11-25 20:36:15 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-25 20:36:17 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-25 20:36:17 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-25 20:36:19 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-25 20:36:25 [main] INFO  PerformanceMenu - Successfully clicked on Performance tab
+2025-11-25 20:36:26 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
+2025-11-25 20:36:28 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
+2025-11-25 20:36:29 [main] INFO  PerformanceMenu - Table not present. Skipping wait.
+2025-11-25 20:36:30 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
+2025-11-25 20:36:31 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
+2025-11-25 20:36:33 [main] INFO  PerformanceMenu - Successfully clicked on add KPI button
+2025-11-25 20:36:34 [main] INFO  PerformanceMenu - Successfully entered the KPI Bug Detection Rate
+2025-11-25 20:36:35 [main] INFO  PerformanceMenu - Successfully updated the job Title for KPI
+2025-11-25 20:36:35 [main] INFO  PerformanceMenu - Uppdated min rating 1 and max rating 5
+2025-11-25 20:36:36 [main] INFO  PerformanceMenu - Successfully added the KPI for QA Engineer
+2025-11-25 20:36:40 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
+2025-11-25 20:36:41 [main] INFO  PerformanceMenu - Successfully Searched KPI: Bug Detection Rate
+2025-11-25 20:36:42 [main] INFO  PerformanceMenu - Successfully clicked on delete KPI button
+2025-11-25 20:36:45 [main] INFO  TestBase - Successfully quite the browser

@@ -276,6 +276,7 @@ public class LeaveApplyMenu {
 	WebElement moreOptionsButton ;
 	
 	public void clickOnMoreOptionsButton() {
+		kw.waitForElementToBeInvisible(loader);
 		kw.waitForElementToBeClickable(moreOptionsButton);
 		kw.scrollToElement(moreOptionsButton);
 		moreOptionsButton.click();
@@ -294,7 +295,11 @@ public class LeaveApplyMenu {
 	@FindBy(css="button[class='oxd-button oxd-button--medium oxd-button--label-warn oxd-table-cell-action-space']")
 	WebElement userCancelLeaveButton ;
 	
+	@FindBy(css=".oxd-form-loader")
+	WebElement loader;
+	
 	public void clickOnUserCancelLeaveButton() {
+		kw.waitForElementToBeInvisible(loader);
 		kw.waitForElementToBeClickable(userCancelLeaveButton);
 		kw.scrollToElement(userCancelLeaveButton);
 		userCancelLeaveButton.click();
