@@ -224,7 +224,7 @@ public class TestSprint2 extends TestBase {
 		leaveApply.clickOnLeaveMenu();
 		leaveApply.clickOnApproveLeaveButton();
 		Assert.assertTrue(leaveApply.SaveToastMessageText());
-		leaveApply.clickOnLeaveMenu();
+		login.clickOnMenu("Leave");
 		leaveApply.selectLeaveStatus("t");
 		leaveApply.clickOnSearchLeaveButton();
 		leaveApply.clickOnMoreOptionsButton();

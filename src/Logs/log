@@ -1,13 +1,25 @@
-2025-11-25 21:55:24 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-25 21:55:25 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-25 21:55:25 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-25 21:55:26 [main] INFO  LoginPage - Successfully Loogged in as user
-2025-11-25 21:55:29 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-11-25 21:55:30 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
-2025-11-25 21:55:31 [main] INFO  LeaveApplyMenu - successfully selected leave type
-2025-11-25 21:55:31 [main] INFO  LeaveApplyMenu - Successfully from date selected
-2025-11-25 21:55:32 [main] INFO  LeaveApplyMenu - Successfully to date selected
-2025-11-25 21:55:32 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
-2025-11-25 21:55:42 [main] INFO  LeaveApplyMenu - Overlapping leave message is displayed
-2025-11-25 21:55:42 [main] INFO  LeaveApplyMenu - Overlapping leave message displayed
-2025-11-25 21:55:46 [main] INFO  TestBase - Successfully quite the browser
+2025-11-25 23:37:13 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-25 23:37:14 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-25 23:37:14 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-25 23:37:15 [main] INFO  LoginPage - Successfully Loogged in as user
+2025-11-25 23:37:17 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-11-25 23:37:19 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-11-25 23:37:21 [main] INFO  LeaveApplyMenu - Leave applied successfully toast Displayed
+2025-11-25 23:37:24 [main] INFO  TestBase - Successfully quite the browser
+2025-11-25 23:37:25 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-25 23:37:26 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-25 23:37:26 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-25 23:37:27 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-25 23:37:29 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-11-25 23:37:31 [main] INFO  LeaveApplyMenu - Successfully clicked on Approve leave button
+2025-11-25 23:37:31 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-11-25 23:37:32 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-11-25 23:37:34 [main] INFO  LeaveApplyMenu - successfully selected leave status filter as taken
+2025-11-25 23:37:34 [main] INFO  LeaveApplyMenu - Successfully clicked on Search leave button 
+2025-11-25 23:37:35 [main] INFO  LeaveApplyMenu - Successfully clicked on More options button
+2025-11-25 23:37:35 [main] INFO  LeaveApplyMenu - Successfully clicked on Cancel leave option
+2025-11-25 23:37:38 [main] INFO  TestBase - Successfully quite the browser

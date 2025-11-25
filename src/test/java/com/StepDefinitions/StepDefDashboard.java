@@ -1,5 +1,5 @@
 package com.StepDefinitions;
 
-public class dashboard {
+public class StepDefDashboard {
 
 }

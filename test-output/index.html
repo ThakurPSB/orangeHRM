@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse--686501209\testng-customsuite.xml</span>
+                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse-416987272\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.testcases.TestSprint2" class="method navigator-link" hash-for-method="ApplyLeaveWithValidInputs">ApplyLeaveWithValidInputs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.testcases.TestSprint2" class="method navigator-link" hash-for-method="approveLeaveApplication">approveLeaveApplication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,12 +136,19 @@
                   <span class="method-name">ApplyLeaveWithValidInputs</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="approveLeaveApplication">
+                  </a> <!-- approveLeaveApplication -->
+                  <span class="method-name">approveLeaveApplication</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse--686501209\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse-416987272\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,6 +160,7 @@
       &lt;class name=&quot;com.testcases.TestSprint2&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;ApplyLeaveWithValidInputs&quot;/&gt;
+          &lt;include name=&quot;approveLeaveApplication&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.testcases.TestSprint2 --&gt;
     &lt;/classes&gt;
@@ -180,6 +193,10 @@
                 <span class="method-in-group-name">ApplyLeaveWithValidInputs</span>
                 <br/>
               </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">approveLeaveApplication</span>
+                <br/>
+              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -197,16 +214,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ApplyLeaveWithValidInputs')
+data.setCell(0, 1, 'approveLeaveApplication')
 data.setCell(0, 2, 'com.testcases.TestSprint2')
-data.setCell(0, 3, 17522);
+data.setCell(0, 3, 9453);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'ApplyLeaveWithValidInputs')
+data.setCell(1, 2, 'com.testcases.TestSprint2')
+data.setCell(1, 3, 7070);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,7 +242,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">12 ignored methods</span>
+            <span class="header-content">11 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -229,27 +250,25 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">CheckIfAddSkillOptionIsWorkingOrNot</span>
                 <br/>
-                <span class="ignored-method-name">SearchSystemUserWithDifferentSearchOptions</span>
-                <br/>
-                <span class="ignored-method-name">addLeaveEntitlement</span>
-                <br/>
-                <span class="ignored-method-name">ApplyLeaveWithInsufficientBalance</span>
-                <br/>
-                <span class="ignored-method-name">checkForOrganizationMenuAreShowingCorrectOptions</span>
-                <br/>
-                <span class="ignored-method-name">ApplyLeaveWithoutSelectingLeaveType</span>
-                <br/>
-                <span class="ignored-method-name">ApplyLeaveWithPastDates</span>
-                <br/>
                 <span class="ignored-method-name">userCancelLeaveApplication</span>
-                <br/>
-                <span class="ignored-method-name">ApplyLeaveWithOverlappingDates</span>
-                <br/>
-                <span class="ignored-method-name">approveLeaveApplication</span>
                 <br/>
                 <span class="ignored-method-name">checkForJobMenuAreShowingCorrectOptions</span>
                 <br/>
+                <span class="ignored-method-name">ApplyLeaveWithInsufficientBalance</span>
+                <br/>
                 <span class="ignored-method-name">CheckIfAddLocationOptionIsWorkingOrNot</span>
+                <br/>
+                <span class="ignored-method-name">ApplyLeaveWithoutSelectingLeaveType</span>
+                <br/>
+                <span class="ignored-method-name">SearchSystemUserWithDifferentSearchOptions</span>
+                <br/>
+                <span class="ignored-method-name">ApplyLeaveWithOverlappingDates</span>
+                <br/>
+                <span class="ignored-method-name">checkForOrganizationMenuAreShowingCorrectOptions</span>
+                <br/>
+                <span class="ignored-method-name">ApplyLeaveWithPastDates</span>
+                <br/>
+                <span class="ignored-method-name">addLeaveEntitlement</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -268,23 +287,43 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">153 ms</span>
+                <span class="method-start">165 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">pageSetup</span>
-                <span class="method-start">3255 ms</span>
+                <span class="method-start">2865 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ApplyLeaveWithValidInputs</span>
-                <span class="method-start">3345 ms</span>
+                <span class="method-start">2947 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDowntest</span>
-                <span class="method-start">20883 ms</span>
+                <span class="method-start">10032 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">23898 ms</span>
+                <span class="method-start">13051 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">13302 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">pageSetup</span>
+                <span class="method-start">14891 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">approveLeaveApplication</span>
+                <span class="method-start">14896 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDowntest</span>
+                <span class="method-start">24349 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">27379 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

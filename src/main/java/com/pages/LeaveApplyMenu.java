@@ -274,12 +274,19 @@ public class LeaveApplyMenu {
 	@FindBy(css="div[class='oxd-multiselect-wrapper'] div[class='oxd-select-text-input']")
 	WebElement leaveStatusDropdown ;
 	
+	@FindBy(css=".oxd-icon.bi-x.--clear")
+	WebElement pendingLeaveFilterRemove;
 	
-	public void selectLeaveStatus(String s) {
+	
+	
+	public void selectLeaveStatus(String s) throws InterruptedException {
+		kw.waitForElementToBeClickable(pendingLeaveFilterRemove);
+		pendingLeaveFilterRemove.click();
 		kw.waitForElementToBeClickable(leaveStatusDropdown);
 		leaveStatusDropdown.click();
 		leaveStatusDropdown.sendKeys(s);
 		leaveStatusDropdown.sendKeys(Keys.ENTER);
+		kw.normalWait(1000);
 		LOG.info("successfully selected leave status filter as taken");
 	}
 	
@@ -292,12 +299,12 @@ public class LeaveApplyMenu {
 		LOG.info("Successfully clicked on Search leave button ");
 	}
 	
-	@FindBy(css="li.oxd-table-dropdown button.oxd-icon-button")
+	@FindBy(css="i.oxd-icon.bi-three-dots-vertical")
 	WebElement moreOptionsButton ;
 	
 	public void clickOnMoreOptionsButton() {
 		kw.waitForElementToBeInvisible(loader);
-		kw.waitForElementToBeClickable(moreOptionsButton);
+		kw.waitForElementToBeVisible(moreOptionsButton);
 		kw.scrollToElement(moreOptionsButton);
 		moreOptionsButton.click();
 		LOG.info("Successfully clicked on More options button");
@@ -318,8 +325,13 @@ public class LeaveApplyMenu {
 	@FindBy(css=".oxd-form-loader")
 	WebElement loader;
 	
+	@FindBy(css="div[class='oxd-table-card'] div:nth-child(7)")
+	WebElement leaveLine ;
+	
 	public void clickOnUserCancelLeaveButton() {
+
 		kw.waitForElementToBeInvisible(loader);
+		kw.waitForElementToBeClickable(leaveLine);
 		kw.waitForElementToBeClickable(userCancelLeaveButton);
 		kw.scrollToElement(userCancelLeaveButton);
 		userCancelLeaveButton.click();
