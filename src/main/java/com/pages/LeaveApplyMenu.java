@@ -299,7 +299,7 @@ public class LeaveApplyMenu {
 		LOG.info("Successfully clicked on Search leave button ");
 	}
 	
-	@FindBy(css="i.oxd-icon.bi-three-dots-vertical")
+	@FindBy(css="li.oxd-table-dropdown i.oxd-icon.bi-three-dots-vertical")
 	WebElement moreOptionsButton ;
 	
 	public void clickOnMoreOptionsButton() {
