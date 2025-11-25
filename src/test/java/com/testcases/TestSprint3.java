@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
+import com.pages.DashboardMenu;
 import com.pages.LoginPage;
 import com.pages.PerformanceMenu;
 import com.pages.RecruitmentMenu;
@@ -26,6 +27,7 @@ public class TestSprint3 extends TestBase{
 	private RecruitmentMenu recruitment;
 	private PerformanceMenu performance;
 	private TimeMenu timemenu;
+	private DashboardMenu dashboard;
 	
 	@BeforeMethod
 	public void pageSetup() {
@@ -33,6 +35,7 @@ public class TestSprint3 extends TestBase{
         recruitment = new RecruitmentMenu(kw);
         performance = new PerformanceMenu(kw);
         timemenu = new TimeMenu(kw);
+        dashboard = new DashboardMenu(kw);
 	}
 	
 	@AfterMethod
@@ -195,6 +198,47 @@ public class TestSprint3 extends TestBase{
 		timemenu.clickOnRejectTimesheetButton();
 		Assert.assertTrue(timemenu.SaveToastMessageText());
 		
+	}
+	
+	@Test()
+	@Severity(SeverityLevel.NORMAL)
+    @Description("to verify dashboard punch in link")
+    @Step("login and navigate to dashboard page, click on punch in link")
+    @Feature("Dashboard Module")
+    @Story("Dashboard Punch In Link")
+	public void dashboardPunchInLinkDirectToPunchInPage() throws InterruptedException {
+		login.logMeInAsUser();
+		dashboard.clickOnMenu("Dashboard");
+		dashboard.clickOnPunchInButton();
+		Assert.assertTrue(dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/attendance/punchIn"));
+	}
+	
+	@Test()
+	@Severity(SeverityLevel.NORMAL)
+    @Description("to verify dashboard apply leave link")
+    @Step("login and navigate to dashboard page, click on apply leave link")
+    @Feature("Dashboard Module")
+    @Story("Dashboard apply leaveLink")
+	public void dashboardApplyLeaveLinkDirectToLeavePage() {
+		login.logMeInAsUser();
+		dashboard.clickOnMenu("Dashboard");
+		dashboard.clickOnPunchInButton();
+		Assert.assertTrue(dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/leave/applyLeave"));
+	}
+	
+	@Test()
+	@Severity(SeverityLevel.NORMAL)
+    @Description("to verify dashboard my timesheet link")
+    @Step("login and navigate to dashboard page, click on my timesheet link")
+    @Feature("Dashboard Module")
+    @Story("Dashboard my timesheet Link")
+	
+	public void dashboardMyTimesheetLinkDirectToMyTimesheetPage() {
+		login.logMeInAsUser();
+		dashboard.clickOnMenu("Dashboard");
+		dashboard.clickOnPunchInButton();
+		Assert.assertTrue(
+		dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/time/viewMyTimesheet"));
 	}
 	
 	

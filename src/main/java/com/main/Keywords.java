@@ -31,7 +31,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -325,6 +324,8 @@ public class Keywords {
         wait.until(ExpectedConditions.textToBePresentInElement(element, expectedText));
     }
     
+    
+    
     /**
      * This method checks if the element is present on the page
      * @param element
@@ -338,6 +339,13 @@ public class Keywords {
 	}
 	
 	/**
+	 * This method wait for the page url to be changed
+	 */
+	public void waitForUrlToBeChanged(String oldUrl) {
+		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(oldUrl)));
+	}
+	
+	/**
 	 * This method clear the text box
 	 * 
 	 */
@@ -347,5 +355,15 @@ public class Keywords {
 		element.sendKeys(Keys.DELETE);
 		LOG.info("Successfully cleared text box");
 	}
+	
+	/**
+	 * This method get the text of the current url
+	 * @return current url
+	 */
+	public String getCurrentURL() {
+	        return driver.getCurrentUrl();
+	}
+
+	
 	
 }
