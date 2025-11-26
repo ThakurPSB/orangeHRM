@@ -26,8 +26,8 @@ public class LeaveApplyMenu {
 	 * so this page object can use it later.
 	 */
 	public LeaveApplyMenu(Keywords key) {
-		PageFactory.initElements(Keywords.driver, this);
 		this.kw = key;
+	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	
 	private static final Logger LOG = Logger.getLogger(LeaveApplyMenu.class);

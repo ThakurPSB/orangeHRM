@@ -1,33 +1,48 @@
-2025-11-26 14:02:00 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
-2025-11-26 14:02:03 [main] INFO  TestBase - Successfully quite the browser
-2025-11-26 14:02:04 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-26 14:02:05 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-26 14:02:05 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-26 14:02:06 [main] INFO  LoginPage - Successfully Loogged in
-2025-11-26 14:02:09 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-11-26 14:02:09 [main] INFO  AdminQualificationMenu - Clicked on Admin > Qualification Menu
-2025-11-26 14:02:10 [main] INFO  AdminQualificationMenu - Clicked on Qualification> Skill menu
-2025-11-26 14:02:11 [main] INFO  AdminQualificationMenu - clicked on Add skills button
-2025-11-26 14:02:12 [main] INFO  AdminQualificationMenu - entered the skill name to add
-2025-11-26 14:02:12 [main] INFO  AdminQualificationMenu - clicked on Save skill button
-2025-11-26 14:02:13 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
-2025-11-26 14:02:17 [main] INFO  AdminQualificationMenu - Successfully deleted the skill java
-2025-11-26 14:02:21 [main] INFO  TestBase - Successfully quite the browser
-2025-11-26 14:02:21 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-26 14:02:22 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-26 14:02:22 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-26 14:02:23 [main] INFO  LoginPage - Successfully Loogged in
-2025-11-26 14:02:26 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-11-26 14:02:27 [main] INFO  AdminJobTitles - Cliked on Admin Menu
-2025-11-26 14:02:28 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-11-26 14:02:29 [main] INFO  AdminJobTitles - Clicked on : Job Titles
-2025-11-26 14:02:31 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Assistant Manager
-2025-11-26 14:02:31 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-11-26 14:02:31 [main] INFO  AdminJobTitles - Clicked on : Pay Grades
-2025-11-26 14:02:33 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Grade A
-2025-11-26 14:02:33 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-11-26 14:02:34 [main] INFO  AdminJobTitles - Clicked on : Employment Status
-2025-11-26 14:02:35 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Active
-2025-11-26 14:02:35 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-11-26 14:02:36 [main] INFO  AdminJobTitles - Clicked on : Job Categories
-2025-11-26 14:02:40 [main] INFO  TestBase - Successfully quite the browser
+2025-11-27 00:37:00 [TestNG-test-regression tests-4] INFO  LoginPage - Successfully Loogged in
+2025-11-27 00:37:02 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in
+2025-11-27 00:37:04 [TestNG-test-regression tests-3] INFO  LoginPage - Successfully Loogged in
+2025-11-27 00:37:07 [TestNG-test-regression tests-1] INFO  LeaveEntitlementMenu - Successfully clicked on recruitment Menu
+2025-11-27 00:37:12 [TestNG-test-regression tests-1] INFO  LeaveEntitlementMenu - Successfully Clicked on Candidate Menu
+2025-11-27 00:37:12 [TestNG-test-regression tests-3] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_addVacancywithallDetailsAndCheckIfReflectsInCandidateField_003707.png
+2025-11-27 00:37:12 [TestNG-test-regression tests-3] ERROR TestListener - Test Failed: addVacancywithallDetailsAndCheckIfReflectsInCandidateField
+2025-11-27 00:37:12 [TestNG-test-regression tests-2] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_addNewKPIForTheJobTitle_003705.png
+2025-11-27 00:37:12 [TestNG-test-regression tests-2] ERROR TestListener - Test Failed: addNewKPIForTheJobTitle
+2025-11-27 00:37:14 [TestNG-test-regression tests-1] INFO  LeaveEntitlementMenu - Successfully clicked on Add Candidate button
+2025-11-27 00:37:14 [TestNG-test-regression tests-4] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_AddsNewCandidateForAnExistingVacancyWithoutEmail_003707.png
+2025-11-27 00:37:14 [TestNG-test-regression tests-4] ERROR TestListener - Test Failed: AddsNewCandidateForAnExistingVacancyWithoutEmail
+2025-11-27 00:37:15 [TestNG-test-regression tests-3] INFO  TestBase - Successfully quit the browser
+2025-11-27 00:37:15 [TestNG-test-regression tests-2] INFO  TestBase - Successfully quit the browser
+2025-11-27 00:37:16 [TestNG-test-regression tests-3] INFO  Keywords - Launched Chrome Browser
+2025-11-27 00:37:17 [TestNG-test-regression tests-2] INFO  Keywords - Launched Chrome Browser
+2025-11-27 00:37:17 [TestNG-test-regression tests-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 00:37:17 [TestNG-test-regression tests-2] INFO  TestBase - Successfully launched the web Application
+2025-11-27 00:37:18 [TestNG-test-regression tests-4] INFO  TestBase - Successfully quit the browser
+2025-11-27 00:37:18 [TestNG-test-regression tests-3] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 00:37:18 [TestNG-test-regression tests-3] INFO  TestBase - Successfully launched the web Application
+2025-11-27 00:37:19 [TestNG-test-regression tests-4] INFO  Keywords - Launched Chrome Browser
+2025-11-27 00:37:19 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 00:37:20 [TestNG-test-regression tests-4] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 00:37:20 [TestNG-test-regression tests-4] INFO  TestBase - Successfully launched the web Application
+2025-11-27 00:37:21 [TestNG-test-regression tests-3] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 00:37:21 [TestNG-test-regression tests-4] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 00:37:22 [TestNG-test-regression tests-1] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_AddsNewCandidateForAnExistingVacancy_003714.png
+2025-11-27 00:37:22 [TestNG-test-regression tests-1] ERROR TestListener - Test Failed: AddsNewCandidateForAnExistingVacancy
+2025-11-27 00:37:24 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Menu Dashboard
+2025-11-27 00:37:26 [TestNG-test-regression tests-1] INFO  TestBase - Successfully quit the browser
+2025-11-27 00:37:26 [TestNG-test-regression tests-1] INFO  Keywords - Launched Chrome Browser
+2025-11-27 00:37:28 [TestNG-test-regression tests-1] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 00:37:28 [TestNG-test-regression tests-1] INFO  TestBase - Successfully launched the web Application
+2025-11-27 00:37:28 [TestNG-test-regression tests-1] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 00:37:30 [TestNG-test-regression tests-4] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_dashboardPunchInLinkDirectToPunchInPage_003725.png
+2025-11-27 00:37:30 [TestNG-test-regression tests-4] ERROR TestListener - Test Failed: dashboardPunchInLinkDirectToPunchInPage
+2025-11-27 00:37:30 [TestNG-test-regression tests-3] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_dashboardApplyLeaveLinkDirectToLeavePage_003725.png
+2025-11-27 00:37:30 [TestNG-test-regression tests-3] ERROR TestListener - Test Failed: dashboardApplyLeaveLinkDirectToLeavePage
+2025-11-27 00:37:30 [TestNG-test-regression tests-2] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_dashboardMyTimesheetLinkDirectToMyTimesheetPage_003726.png
+2025-11-27 00:37:30 [TestNG-test-regression tests-2] ERROR TestListener - Test Failed: dashboardMyTimesheetLinkDirectToMyTimesheetPage
+2025-11-27 00:37:33 [TestNG-test-regression tests-4] INFO  TestBase - Successfully quit the browser
+2025-11-27 00:37:33 [TestNG-test-regression tests-3] INFO  TestBase - Successfully quit the browser
+2025-11-27 00:37:33 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Menu Time
+2025-11-27 00:37:34 [TestNG-test-regression tests-2] INFO  TestBase - Successfully quit the browser
+2025-11-27 00:37:36 [TestNG-test-regression tests-1] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_employeeSubmittedTimeSheetWithDetails_003733.png
+2025-11-27 00:37:36 [TestNG-test-regression tests-1] ERROR TestListener - Test Failed: employeeSubmittedTimeSheetWithDetails
+2025-11-27 00:37:39 [TestNG-test-regression tests-1] INFO  TestBase - Successfully quit the browser

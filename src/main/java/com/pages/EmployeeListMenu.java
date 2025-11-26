@@ -20,19 +20,13 @@ public class EmployeeListMenu {
 	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
 
-	/*
-	 * Constructor to initialize the PageFactory elements
-	 * @param kw - Keywords class reference
-	 * this.kw = key means Take the Keywords object passed into the constructor and 
-	 * assign it to the page object’s private field, 
-	 * so this page object can use it later.
-	 */
+
 	public EmployeeListMenu(Keywords key) {
-		PageFactory.initElements(Keywords.driver, this);
 		this.kw = key;
+	    PageFactory.initElements(kw.getDriver(), this);
 	}
 
-	Actions action = new Actions(Keywords.driver);
+	Actions action = new Actions(kw.getDriver());
 	private static final Logger LOG = Logger.getLogger(EmployeeListMenu.class);
 	
 	@FindBy(css="header > div.oxd-topbar-body > nav > ul > li.oxd-topbar-body-nav-tab.--visited > a")

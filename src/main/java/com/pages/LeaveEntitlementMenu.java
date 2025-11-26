@@ -27,8 +27,8 @@ public class LeaveEntitlementMenu {
 	 */
 	
 	public LeaveEntitlementMenu(Keywords key) {
-		PageFactory.initElements(Keywords.driver, this);
 		this.kw = key;
+	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	
 	private static final Logger LOG = Logger.getLogger(LeaveEntitlementMenu.class);

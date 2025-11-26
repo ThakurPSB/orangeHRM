@@ -13,16 +13,10 @@ public class UserProfile {
 	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
 
-	/*
-	 * Constructor to initialize the PageFactory elements
-	 * @param key - Keywords class reference from testbase
-	 * this.kw = key means Take the Keywords object passed into the constructor and 
-	 * assign it to the page object’s private field, 
-	 * so this page object can use it later.
-	 */
+	
 	public UserProfile(Keywords key) {
-		PageFactory.initElements(Keywords.driver, this);
 		this.kw = key;
+	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	
 	private static final Logger LOG = Logger.getLogger(UserProfile.class);

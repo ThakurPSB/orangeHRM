@@ -12,7 +12,7 @@ import com.util.PropertiesUtil;
 
 public class TestBase {
 	
-	//declaring kw variable of type Keywords class which is null until declared. 
+	//declaring key variable of type Keywords class which is null until declared. 
 	protected Keywords key;
 	
 	private static final Logger LOG = Logger.getLogger(TestBase.class);
@@ -50,17 +50,14 @@ public class TestBase {
 	}
 	
 	/**
-	 * close the browser after each test case
-	 * here we can also use kw.driver.quit();
-	 * but it will show static driver variable as kw instance 
-	 * As driver is static we can access it directly by class name. 
-	 * And it will show more clearly that driver is static variable of Keywords class
+	 * close the browser after each test case for each thread.
 	 */
-	@AfterMethod
-	public void closeBrowser() {
-		Keywords.driver.quit();
-		LOG.info("Successfully quite the browser");
+	@AfterMethod(alwaysRun = true)
+	public void tearDown() {
+	    key.quitBrowser();
+	    LOG.info("Successfully quit the browser");
 	}
+
 	
 	
 

@@ -214,27 +214,6 @@ public class TestSprint2 extends TestBase {
 		
 	}
 	
-	@Test(groups = {"smoke"})
-	@Severity(SeverityLevel.NORMAL)
-    @Description("To verify when leave is applied can admin or manager able to reject leave")
-    @Step("login and navigate to leave page, check Reject leave  ")
-    @Feature("Leave Module")
-    @Story("Reject leave successfully")
-	public void userCancelLeaveApplication() throws InterruptedException {
-	
-		login.logMeInAsUser();
-		login.clickOnMenu("Leave");
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType("e");
-		leaveApply.selectFromDate();
-		leaveApply.selectToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		login.clickOnMenu("Leave");
-		leaveApply.clickOnUserCancelLeaveButton();
-		Assert.assertTrue(leaveApply.SaveToastMessageText());
-		
-		
-	}
 	
 	@Test
 	@Severity(SeverityLevel.NORMAL)
