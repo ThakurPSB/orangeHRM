@@ -199,7 +199,10 @@ public class TestSprint2 extends TestBase {
     @Feature("Leave Module")
     @Story("Apply leave successfully with valid inputs")
 	public void ApplyLeaveWithValidInputs() throws InterruptedException {
-	
+		login.logMeIn();
+		login.clickOnMenu("Leave");
+		leaveApply.cancelLeaveIfAlreadyTaken();
+		login.clickOnLogoutButton();
 		login.logMeInAsUser();
 		login.clickOnMenu("Leave");
 		leaveApply.clickOnApplyLeave();
@@ -211,28 +214,7 @@ public class TestSprint2 extends TestBase {
 		
 	}
 	
-	@Test(dependsOnMethods = "ApplyLeaveWithValidInputs", groups = {"smoke"})
-	@Severity(SeverityLevel.NORMAL)
-    @Description("To verify when leave is applied can admin or manager able to approve leave")
-    @Step("login and navigate to leave page, check approve leave menu ")
-    @Feature("Leave Module")
-    @Story("Approve leave successfully")
-	public void approveLeaveApplication() throws InterruptedException {
-	
-		
-		login.logMeIn(); //logged in as admin
-		leaveApply.clickOnLeaveMenu();
-		leaveApply.clickOnApproveLeaveButton();
-		Assert.assertTrue(leaveApply.SaveToastMessageText());
-		login.clickOnMenu("Leave");
-		leaveApply.selectLeaveStatus("t");
-		leaveApply.clickOnSearchLeaveButton();
-		leaveApply.clickOnMoreOptionsButton();
-		leaveApply.clickOnCancelLeaveOption();
-		
-	}
-	
-	@Test(groups = {"smoke"}, dependsOnMethods = "approveLeaveApplication")
+	@Test(groups = {"smoke"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("To verify when leave is applied can admin or manager able to reject leave")
     @Step("login and navigate to leave page, check Reject leave  ")

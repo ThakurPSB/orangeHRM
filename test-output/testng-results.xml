@@ -1,57 +1,420 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="13" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="10" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-25T23:37:11 IST" name="Default suite" finished-at="2025-11-25T23:37:38 IST" duration-ms="27493">
+  <suite started-at="2025-11-26T13:58:20 IST" name="Default suite" finished-at="2025-11-26T14:02:40 IST" duration-ms="260013">
     <groups>
       <group name="smoke">
-        <method signature="TestSprint2.ApplyLeaveWithValidInputs()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" name="ApplyLeaveWithValidInputs" class="com.testcases.TestSprint2"/>
-        <method signature="TestSprint2.approveLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" name="approveLeaveApplication" class="com.testcases.TestSprint2"/>
+        <method signature="TestSprint2.ApplyLeaveWithValidInputs()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" name="ApplyLeaveWithValidInputs" class="com.testcases.TestSprint2"/>
+        <method signature="TestSprint2.approveLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" name="approveLeaveApplication" class="com.testcases.TestSprint2"/>
+        <method signature="TestSprint2.userCancelLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" name="userCancelLeaveApplication" class="com.testcases.TestSprint2"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-11-25T23:37:11 IST" name="Default test" finished-at="2025-11-25T23:37:38 IST" duration-ms="27493">
+    <test started-at="2025-11-26T13:58:20 IST" name="Default test" finished-at="2025-11-26T14:02:40 IST" duration-ms="260013">
       <class name="com.testcases.TestSprint2">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:11 IST" name="cleanAllureResults" finished-at="2025-11-25T23:37:11 IST" duration-ms="89" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:20 IST" name="cleanAllureResults" finished-at="2025-11-26T13:58:20 IST" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:11 IST" name="setUp" finished-at="2025-11-25T23:37:14 IST" duration-ms="2562" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:20 IST" name="setUp" finished-at="2025-11-26T13:58:23 IST" duration-ms="2693" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:14 IST" name="pageSetup" finished-at="2025-11-25T23:37:14 IST" duration-ms="76" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:23 IST" name="pageSetup" finished-at="2025-11-26T13:58:23 IST" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="ApplyLeaveWithValidInputs()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:14 IST" name="ApplyLeaveWithValidInputs" finished-at="2025-11-25T23:37:21 IST" duration-ms="7070" status="PASS">
+        <test-method signature="ApplyLeaveWithPastDates()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:23 IST" name="ApplyLeaveWithPastDates" finished-at="2025-11-26T13:58:36 IST" duration-ms="13185" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ApplyLeaveWithValidInputs -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:21 IST" name="tearDowntest" finished-at="2025-11-25T23:37:24 IST" duration-ms="3019" status="PASS">
+        </test-method> <!-- ApplyLeaveWithPastDates -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:36 IST" name="tearDowntest" finished-at="2025-11-26T13:58:39 IST" duration-ms="3022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:24 IST" name="closeBrowser" finished-at="2025-11-25T23:37:24 IST" duration-ms="236" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:39 IST" name="closeBrowser" finished-at="2025-11-26T13:58:39 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:24 IST" name="setUp" finished-at="2025-11-25T23:37:26 IST" duration-ms="1585" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:39 IST" name="setUp" finished-at="2025-11-26T13:58:41 IST" duration-ms="1387" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:26 IST" name="pageSetup" finished-at="2025-11-25T23:37:26 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:41 IST" name="pageSetup" finished-at="2025-11-26T13:58:41 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="approveLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:26 IST" name="approveLeaveApplication" finished-at="2025-11-25T23:37:35 IST" depends-on-methods="com.testcases.TestSprint2.ApplyLeaveWithValidInputs" duration-ms="9453" status="PASS">
+        <test-method signature="ApplyLeaveWithValidInputs()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:58:41 IST" name="ApplyLeaveWithValidInputs" finished-at="2025-11-26T13:59:06 IST" duration-ms="25297" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- approveLeaveApplication -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:35 IST" name="tearDowntest" finished-at="2025-11-25T23:37:38 IST" duration-ms="3029" status="PASS">
+        </test-method> <!-- ApplyLeaveWithValidInputs -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:06 IST" name="tearDowntest" finished-at="2025-11-26T13:59:09 IST" duration-ms="3001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@71c17a57]" started-at="2025-11-25T23:37:38 IST" name="closeBrowser" finished-at="2025-11-25T23:37:38 IST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:09 IST" name="closeBrowser" finished-at="2025-11-26T13:59:09 IST" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:09 IST" name="setUp" finished-at="2025-11-26T13:59:11 IST" duration-ms="1472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:11 IST" name="pageSetup" finished-at="2025-11-26T13:59:11 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="ApplyLeaveWithoutSelectingLeaveType()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:11 IST" name="ApplyLeaveWithoutSelectingLeaveType" finished-at="2025-11-26T13:59:18 IST" duration-ms="7039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ApplyLeaveWithoutSelectingLeaveType -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:18 IST" name="tearDowntest" finished-at="2025-11-26T13:59:21 IST" duration-ms="3002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:21 IST" name="closeBrowser" finished-at="2025-11-26T13:59:21 IST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:21 IST" name="setUp" finished-at="2025-11-26T13:59:22 IST" duration-ms="1407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:22 IST" name="pageSetup" finished-at="2025-11-26T13:59:22 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="SearchSystemUserWithDifferentSearchOptions()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:22 IST" name="SearchSystemUserWithDifferentSearchOptions" finished-at="2025-11-26T13:59:58 IST" duration-ms="35266" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62615}, goog:processID: 1552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62615/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 06507fd59b7bb22a40be83665f5d6ba4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62615}, goog:processID: 1552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62615/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 06507fd59b7bb22a40be83665f5d6ba4
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.main.Keywords.waitForAllElementAreVisible(Keywords.java:146)
+at com.pages.AdminMenu.enterEmployeeName(AdminMenu.java:199)
+at com.testcases.TestSprint2.SearchSystemUserWithDifferentSearchOptions(TestSprint2.java:91)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchSystemUserWithDifferentSearchOptions -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T13:59:58 IST" name="tearDowntest" finished-at="2025-11-26T14:00:01 IST" duration-ms="3002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:01 IST" name="closeBrowser" finished-at="2025-11-26T14:00:01 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:01 IST" name="setUp" finished-at="2025-11-26T14:00:02 IST" duration-ms="1407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:02 IST" name="pageSetup" finished-at="2025-11-26T14:00:02 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="addLeaveEntitlement()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:02 IST" name="addLeaveEntitlement" finished-at="2025-11-26T14:00:29 IST" duration-ms="26774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLeaveEntitlement -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:29 IST" name="tearDowntest" finished-at="2025-11-26T14:00:32 IST" duration-ms="3021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:32 IST" name="closeBrowser" finished-at="2025-11-26T14:00:32 IST" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:32 IST" name="setUp" finished-at="2025-11-26T14:00:34 IST" duration-ms="1450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:34 IST" name="pageSetup" finished-at="2025-11-26T14:00:34 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="approveLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:34 IST" name="approveLeaveApplication" finished-at="2025-11-26T14:00:53 IST" depends-on-methods="com.testcases.TestSprint2.ApplyLeaveWithValidInputs" duration-ms="19039" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: button[class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space']' (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: button[class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space']' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.main.Keywords.waitForElementToBeClickable(Keywords.java:129)
+at com.pages.LeaveApplyMenu.clickOnApproveLeaveButton(LeaveApplyMenu.java:268)
+at com.testcases.TestSprint2.approveLeaveApplication(TestSprint2.java:227)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"button[class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space']"}
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f61a9f832b91d7b7bc1119ee9ddcb0ab, findElement {value=button[class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56381}, goog:processID: 8608, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56381/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f61a9f832b91d7b7bc1119ee9ddcb0ab
+at jdk.internal.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- approveLeaveApplication -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:53 IST" name="tearDowntest" finished-at="2025-11-26T14:00:56 IST" duration-ms="3014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:56 IST" name="closeBrowser" finished-at="2025-11-26T14:00:56 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:56 IST" name="setUp" finished-at="2025-11-26T14:00:57 IST" duration-ms="1340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:57 IST" name="pageSetup" finished-at="2025-11-26T14:00:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="checkForOrganizationMenuAreShowingCorrectOptions()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:00:57 IST" name="checkForOrganizationMenuAreShowingCorrectOptions" finished-at="2025-11-26T14:01:07 IST" duration-ms="9264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkForOrganizationMenuAreShowingCorrectOptions -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:07 IST" name="tearDowntest" finished-at="2025-11-26T14:01:10 IST" duration-ms="3023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:10 IST" name="closeBrowser" finished-at="2025-11-26T14:01:10 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method signature="userCancelLeaveApplication()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:10 IST" name="userCancelLeaveApplication" finished-at="2025-11-26T14:01:10 IST" depends-on-methods="com.testcases.TestSprint2.approveLeaveApplication" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.testcases.TestSprint2.userCancelLeaveApplication() on instance com.testcases.TestSprint2@4012d5bc depends on not successfully finished methods 
+[com.testcases.TestSprint2.approveLeaveApplication() on instance com.testcases.TestSprint2@4012d5bc]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.testcases.TestSprint2.userCancelLeaveApplication() on instance com.testcases.TestSprint2@4012d5bc depends on not successfully finished methods 
+[com.testcases.TestSprint2.approveLeaveApplication() on instance com.testcases.TestSprint2@4012d5bc]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCancelLeaveApplication -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:10 IST" name="setUp" finished-at="2025-11-26T14:01:11 IST" duration-ms="1468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:11 IST" name="pageSetup" finished-at="2025-11-26T14:01:11 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="ApplyLeaveWithInsufficientBalance()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:11 IST" name="ApplyLeaveWithInsufficientBalance" finished-at="2025-11-26T14:01:19 IST" duration-ms="7875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ApplyLeaveWithInsufficientBalance -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:19 IST" name="tearDowntest" finished-at="2025-11-26T14:01:22 IST" duration-ms="3006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:22 IST" name="closeBrowser" finished-at="2025-11-26T14:01:22 IST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:22 IST" name="setUp" finished-at="2025-11-26T14:01:24 IST" duration-ms="1482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:24 IST" name="pageSetup" finished-at="2025-11-26T14:01:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="ApplyLeaveWithOverlappingDates()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:24 IST" name="ApplyLeaveWithOverlappingDates" finished-at="2025-11-26T14:01:39 IST" duration-ms="15140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ApplyLeaveWithOverlappingDates -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:39 IST" name="tearDowntest" finished-at="2025-11-26T14:01:42 IST" duration-ms="3004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:42 IST" name="closeBrowser" finished-at="2025-11-26T14:01:42 IST" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:42 IST" name="setUp" finished-at="2025-11-26T14:01:44 IST" duration-ms="1503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:44 IST" name="pageSetup" finished-at="2025-11-26T14:01:44 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="CheckIfAddLocationOptionIsWorkingOrNot()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:01:44 IST" name="CheckIfAddLocationOptionIsWorkingOrNot" finished-at="2025-11-26T14:02:00 IST" duration-ms="16278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckIfAddLocationOptionIsWorkingOrNot -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:00 IST" name="tearDowntest" finished-at="2025-11-26T14:02:03 IST" duration-ms="3013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:03 IST" name="closeBrowser" finished-at="2025-11-26T14:02:03 IST" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:03 IST" name="setUp" finished-at="2025-11-26T14:02:05 IST" duration-ms="1400" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:05 IST" name="pageSetup" finished-at="2025-11-26T14:02:05 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="CheckIfAddSkillOptionIsWorkingOrNot()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:05 IST" name="CheckIfAddSkillOptionIsWorkingOrNot" finished-at="2025-11-26T14:02:17 IST" duration-ms="12608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckIfAddSkillOptionIsWorkingOrNot -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:17 IST" name="tearDowntest" finished-at="2025-11-26T14:02:20 IST" duration-ms="3014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:20 IST" name="closeBrowser" finished-at="2025-11-26T14:02:21 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:21 IST" name="setUp" finished-at="2025-11-26T14:02:22 IST" duration-ms="1478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:22 IST" name="pageSetup" finished-at="2025-11-26T14:02:22 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageSetup -->
+        <test-method signature="checkForJobMenuAreShowingCorrectOptions()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:22 IST" name="checkForJobMenuAreShowingCorrectOptions" finished-at="2025-11-26T14:02:36 IST" duration-ms="14357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkForJobMenuAreShowingCorrectOptions -->
+        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:36 IST" name="tearDowntest" finished-at="2025-11-26T14:02:39 IST" duration-ms="3014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.testcases.TestSprint2@4012d5bc]" started-at="2025-11-26T14:02:39 IST" name="closeBrowser" finished-at="2025-11-26T14:02:40 IST" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

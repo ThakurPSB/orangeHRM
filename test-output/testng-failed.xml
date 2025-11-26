@@ -6,9 +6,11 @@
       <class name="com.testcases.TestSprint2">
         <methods>
           <include name="setUp"/>
+          <include name="SearchSystemUserWithDifferentSearchOptions"/>
           <include name="ApplyLeaveWithValidInputs"/>
           <include name="tearDowntest"/>
           <include name="approveLeaveApplication"/>
+          <include name="userCancelLeaveApplication"/>
           <include name="closeBrowser"/>
           <include name="cleanAllureResults"/>
           <include name="pageSetup"/>

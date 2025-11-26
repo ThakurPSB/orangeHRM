@@ -15,7 +15,7 @@ public class DashboardMenu {
 	/*
 	 * Constructor to initialize the PageFactory elements
 	 * @param kw - Keywords class reference
-	 * this.kw = kw means Take the Keywords object passed into the constructor and 
+	 * this.kw = key means Take the Keywords object passed into the constructor and 
 	 * assign it to the page object’s private field, 
 	 * so this page object can use it later.
 	 */

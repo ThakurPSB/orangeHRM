@@ -23,12 +23,18 @@ import io.qameta.allure.Story;
 
 public class TestSprint3 extends TestBase{
 
+	/*
+	 * private page object fields to encapsulate and reuse them across tests.
+	 */
 	private LoginPage login;
 	private RecruitmentMenu recruitment;
 	private PerformanceMenu performance;
 	private TimeMenu timemenu;
 	private DashboardMenu dashboard;
 	
+	/*
+	 * Inject dependencies "key" for consistent setup for each test run.
+	 * */
 	@BeforeMethod
 	public void pageSetup() {
         login = new LoginPage(key); 

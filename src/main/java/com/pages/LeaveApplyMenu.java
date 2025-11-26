@@ -1,6 +1,7 @@
 package com.pages;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
@@ -334,17 +335,37 @@ public class LeaveApplyMenu {
 	@FindBy(css=".oxd-form-loader")
 	WebElement loader;
 	
-	@FindBy(css="div[class='oxd-table-card'] div:nth-child(7)")
-	WebElement leaveLine ;
+	@FindBy(css="div[class='oxd-table-card']")
+	List<WebElement> leaveLines ;
+	
+	public boolean hasLeaveRecords() {
+	    return leaveLines.size() > 1;
+	}
 	
 	public void clickOnUserCancelLeaveButton() {
-
 		kw.waitForElementToBeInvisible(loader);
-		kw.waitForElementToBeClickable(leaveLine);
 		kw.waitForElementToBeClickable(userCancelLeaveButton);
 		kw.scrollToElement(userCancelLeaveButton);
 		userCancelLeaveButton.click();
 		LOG.info("Successfully clicked on User Cancel leave button");
+	}
+
+	
+	public void cancelLeaveIfAlreadyTaken() throws InterruptedException {
+
+		kw.waitForElementToBeInvisible(loader);
+		selectLeaveStatus("Taken");
+		clickOnSearchLeaveButton();
+		// Check if any leave records are present
+		if (hasLeaveRecords()) {
+		    // Only execute cancel flow if records exist
+		    clickOnMoreOptionsButton();
+		    clickOnCancelLeaveOption();
+		    LOG.info("Leave record found and cancelled successfully");
+		} else {
+		    LOG.info("No leave records found, skipping cancel flow");
+		}
+
 	}
 	
 	@FindBy(css="div[class='orangehrm-header-container'] h6[class='oxd-text oxd-text--h6 orangehrm-main-title']")

@@ -1,25 +1,33 @@
-2025-11-25 23:37:13 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-25 23:37:14 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-25 23:37:14 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-25 23:37:15 [main] INFO  LoginPage - Successfully Loogged in as user
-2025-11-25 23:37:17 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-11-25 23:37:19 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
-2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - successfully selected leave type
-2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - Successfully from date selected
-2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - Successfully to date selected
-2025-11-25 23:37:20 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
-2025-11-25 23:37:21 [main] INFO  LeaveApplyMenu - Leave applied successfully toast Displayed
-2025-11-25 23:37:24 [main] INFO  TestBase - Successfully quite the browser
-2025-11-25 23:37:25 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-25 23:37:26 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-25 23:37:26 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-25 23:37:27 [main] INFO  LoginPage - Successfully Loogged in
-2025-11-25 23:37:29 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
-2025-11-25 23:37:31 [main] INFO  LeaveApplyMenu - Successfully clicked on Approve leave button
-2025-11-25 23:37:31 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
-2025-11-25 23:37:32 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-11-25 23:37:34 [main] INFO  LeaveApplyMenu - successfully selected leave status filter as taken
-2025-11-25 23:37:34 [main] INFO  LeaveApplyMenu - Successfully clicked on Search leave button 
-2025-11-25 23:37:35 [main] INFO  LeaveApplyMenu - Successfully clicked on More options button
-2025-11-25 23:37:35 [main] INFO  LeaveApplyMenu - Successfully clicked on Cancel leave option
-2025-11-25 23:37:38 [main] INFO  TestBase - Successfully quite the browser
+2025-11-26 14:02:00 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
+2025-11-26 14:02:03 [main] INFO  TestBase - Successfully quite the browser
+2025-11-26 14:02:04 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-26 14:02:05 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-26 14:02:05 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-26 14:02:06 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-26 14:02:09 [main] INFO  AdminMenu - Cliked on Admin Menu
+2025-11-26 14:02:09 [main] INFO  AdminQualificationMenu - Clicked on Admin > Qualification Menu
+2025-11-26 14:02:10 [main] INFO  AdminQualificationMenu - Clicked on Qualification> Skill menu
+2025-11-26 14:02:11 [main] INFO  AdminQualificationMenu - clicked on Add skills button
+2025-11-26 14:02:12 [main] INFO  AdminQualificationMenu - entered the skill name to add
+2025-11-26 14:02:12 [main] INFO  AdminQualificationMenu - clicked on Save skill button
+2025-11-26 14:02:13 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
+2025-11-26 14:02:17 [main] INFO  AdminQualificationMenu - Successfully deleted the skill java
+2025-11-26 14:02:21 [main] INFO  TestBase - Successfully quite the browser
+2025-11-26 14:02:21 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-26 14:02:22 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-26 14:02:22 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-26 14:02:23 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-26 14:02:26 [main] INFO  AdminMenu - Cliked on Admin Menu
+2025-11-26 14:02:27 [main] INFO  AdminJobTitles - Cliked on Admin Menu
+2025-11-26 14:02:28 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
+2025-11-26 14:02:29 [main] INFO  AdminJobTitles - Clicked on : Job Titles
+2025-11-26 14:02:31 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Assistant Manager
+2025-11-26 14:02:31 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
+2025-11-26 14:02:31 [main] INFO  AdminJobTitles - Clicked on : Pay Grades
+2025-11-26 14:02:33 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Grade A
+2025-11-26 14:02:33 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
+2025-11-26 14:02:34 [main] INFO  AdminJobTitles - Clicked on : Employment Status
+2025-11-26 14:02:35 [main] INFO  AdminJobTitles - Successfully Searched employee with status: Active
+2025-11-26 14:02:35 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
+2025-11-26 14:02:36 [main] INFO  AdminJobTitles - Clicked on : Job Categories
+2025-11-26 14:02:40 [main] INFO  TestBase - Successfully quite the browser
