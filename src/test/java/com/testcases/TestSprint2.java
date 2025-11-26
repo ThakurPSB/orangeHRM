@@ -38,14 +38,14 @@ public class TestSprint2 extends TestBase {
 
 	@BeforeMethod
 	public void pageSetup() {
-        login = new LoginPage(kw); 
-        admin = new AdminMenu(kw);
-        jobs = new AdminJobTitles(kw);
-        orgMenu = new AdminOrganizationMenu(kw);
-        qualification = new AdminQualificationMenu(kw);
-        leaveApply= new LeaveApplyMenu(kw);
-        myLeave = new LeaveMyLeaveMenu(kw);
-        entitlement = new LeaveEntitlementMenu(kw);
+        login = new LoginPage(key); 
+        admin = new AdminMenu(key);
+        jobs = new AdminJobTitles(key);
+        orgMenu = new AdminOrganizationMenu(key);
+        qualification = new AdminQualificationMenu(key);
+        leaveApply= new LeaveApplyMenu(key);
+        myLeave = new LeaveMyLeaveMenu(key);
+        entitlement = new LeaveEntitlementMenu(key);
     }
 	
 	@AfterMethod

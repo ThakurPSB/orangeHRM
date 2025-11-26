@@ -12,7 +12,8 @@ import com.util.PropertiesUtil;
 
 public class TestBase {
 	
-	protected Keywords kw;
+	//declaring kw variable of type Keywords class which is null until declared. 
+	protected Keywords key;
 	
 	private static final Logger LOG = Logger.getLogger(TestBase.class);
 	
@@ -39,14 +40,21 @@ public class TestBase {
 	 */
 	@BeforeMethod
 	public void setUp() throws IOException {
-		kw = Keywords.getInstance();
-		kw.launchBrowser(PropertiesUtil.getProperty("browser"));
-		kw.launchURL(PropertiesUtil.getProperty("local.url"));
+		
+		//its now points to the shared instance of Keywords class.
+		key = Keywords.getInstance();
+		
+		key.launchBrowser(PropertiesUtil.getProperty("browser"));
+		key.launchURL(PropertiesUtil.getProperty("local.url"));
 		LOG.info("Successfully launched the web Application");
 	}
 	
 	/**
 	 * close the browser after each test case
+	 * here we can also use kw.driver.quit();
+	 * but it will show static driver variable as kw instance 
+	 * As driver is static we can access it directly by class name. 
+	 * And it will show more clearly that driver is static variable of Keywords class
 	 */
 	@AfterMethod
 	public void closeBrowser() {

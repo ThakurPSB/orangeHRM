@@ -9,11 +9,19 @@ import com.main.Keywords;
 
 public class DashboardMenu {
 	
+	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
 
-	public DashboardMenu(Keywords kw) {
+	/*
+	 * Constructor to initialize the PageFactory elements
+	 * @param kw - Keywords class reference
+	 * this.kw = kw means Take the Keywords object passed into the constructor and 
+	 * assign it to the page object’s private field, 
+	 * so this page object can use it later.
+	 */
+	public DashboardMenu(Keywords key) {
 		PageFactory.initElements(Keywords.driver, this);
-		this.kw = kw;
+		this.kw = key;
 	}
 	
 	private static final Logger LOG = Logger.getLogger(TimeMenu.class);

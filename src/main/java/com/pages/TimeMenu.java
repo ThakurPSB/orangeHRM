@@ -13,10 +13,19 @@ import com.main.Keywords;
 
 public class TimeMenu {
 	
+	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
-	public TimeMenu(Keywords kw) {
+
+	/*
+	 * Constructor to initialize the PageFactory elements
+	 * @param kw - Keywords class reference
+	 * this.kw = key means Take the Keywords object passed into the constructor and 
+	 * assign it to the page object’s private field, 
+	 * so this page object can use it later.
+	 */
+	public TimeMenu(Keywords key) {
 		PageFactory.initElements(Keywords.driver, this);
-		this.kw = kw;
+		this.kw = key;
 	}
 	
 	private static final Logger LOG = Logger.getLogger(TimeMenu.class);

@@ -38,15 +38,15 @@ public class TestSprint1 extends TestBase{
 	
 	@BeforeMethod
 	public void pageSetup() {
-        login = new LoginPage(kw); 
-        profile = new UserDropdownMenu(kw);
-        pim = new PimMenu(kw);
-        user = new UserProfile(kw);
-        customField = new PimCustomFields(kw);
-        rm = new ReportingMethod(kw);	
-		tr = new TerminationReasons(kw);
-		emplist = new EmployeeListMenu(kw);
-		addemp = new AddEmployeePage(kw);
+        login = new LoginPage(key); 
+        profile = new UserDropdownMenu(key);
+        pim = new PimMenu(key);
+        user = new UserProfile(key);
+        customField = new PimCustomFields(key);
+        rm = new ReportingMethod(key);	
+		tr = new TerminationReasons(key);
+		emplist = new EmployeeListMenu(key);
+		addemp = new AddEmployeePage(key);
         
     }
 	

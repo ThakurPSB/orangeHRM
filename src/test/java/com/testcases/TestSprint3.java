@@ -31,11 +31,11 @@ public class TestSprint3 extends TestBase{
 	
 	@BeforeMethod
 	public void pageSetup() {
-        login = new LoginPage(kw); 
-        recruitment = new RecruitmentMenu(kw);
-        performance = new PerformanceMenu(kw);
-        timemenu = new TimeMenu(kw);
-        dashboard = new DashboardMenu(kw);
+        login = new LoginPage(key); 
+        recruitment = new RecruitmentMenu(key);
+        performance = new PerformanceMenu(key);
+        timemenu = new TimeMenu(key);
+        dashboard = new DashboardMenu(key);
 	}
 	
 	@AfterMethod
