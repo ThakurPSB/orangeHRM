@@ -1,19 +1,55 @@
-2025-11-27 21:28:01 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Menu Time
-2025-11-27 21:28:03 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Edit Timesheet Button
-2025-11-27 21:28:04 [TestNG-test-regression tests-1] INFO  Keywords - Successfully cleared text box
-2025-11-27 21:28:04 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully entered updated Monday hours
-2025-11-27 21:28:04 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Save Timesheet Button
-2025-11-27 21:28:09 [TestNG-test-regression tests-1] INFO  TestBase - Successfully quit the browser
-2025-11-27 21:28:10 [TestNG-test-regression tests-1] INFO  Keywords - Launched Chrome Browser
-2025-11-27 21:28:10 [TestNG-test-regression tests-1] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-27 21:28:10 [TestNG-test-regression tests-1] INFO  TestBase - Successfully launched the web Application
-2025-11-27 21:28:11 [TestNG-test-regression tests-1] INFO  LoginPage - Successfully Loogged in as user
-2025-11-27 21:28:14 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Menu Time
-2025-11-27 21:28:16 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Submit Timesheet Button
-2025-11-27 21:28:17 [TestNG-test-regression tests-1] INFO  LoginPage - Successfully clicked on Logout button
-2025-11-27 21:28:18 [TestNG-test-regression tests-1] INFO  LoginPage - Successfully Loogged in
-2025-11-27 21:28:21 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Menu Time
-2025-11-27 21:28:22 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on View Timesheet Button
-2025-11-27 21:28:24 [TestNG-test-regression tests-1] INFO  TimeMenu - Successfully clicked on Reject Timesheet Button
-2025-11-27 21:28:24 [TestNG-test-regression tests-1] INFO  TimeMenu - Success Toast Message Displayed
-2025-11-27 21:28:25 [TestNG-test-regression tests-1] INFO  TestBase - Successfully quit the browser
+2025-11-27 22:25:00 [TestNG-test-regression tests-2] INFO  Keywords - Launched Chrome Browser
+2025-11-27 22:25:00 [TestNG-test-regression tests-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 22:25:00 [TestNG-test-regression tests-2] INFO  TestBase - Successfully launched the web Application
+2025-11-27 22:25:01 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 22:25:04 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Menu Dashboard
+2025-11-27 22:25:06 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on dashboard my timesheet shortcut
+2025-11-27 22:25:06 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully diverted URL http://localhost/orangehrm/web/index.php/time/viewMyTimesheet
+2025-11-27 22:25:06 [TestNG-test-regression tests-2] INFO  TestBase - Successfully quit the browser
+2025-11-27 22:25:07 [TestNG-test-regression tests-2] INFO  Keywords - Launched Chrome Browser
+2025-11-27 22:25:07 [TestNG-test-regression tests-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 22:25:07 [TestNG-test-regression tests-2] INFO  TestBase - Successfully launched the web Application
+2025-11-27 22:25:08 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 22:25:11 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Menu Dashboard
+2025-11-27 22:25:13 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on timeEntry button on dashboard
+2025-11-27 22:25:13 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully diverted URL http://localhost/orangehrm/web/index.php/attendance/punchIn
+2025-11-27 22:25:13 [TestNG-test-regression tests-2] INFO  TestBase - Successfully quit the browser
+2025-11-27 22:25:13 [TestNG-test-regression tests-2] INFO  Keywords - Launched Chrome Browser
+2025-11-27 22:25:14 [TestNG-test-regression tests-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 22:25:14 [TestNG-test-regression tests-2] INFO  TestBase - Successfully launched the web Application
+2025-11-27 22:25:15 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 22:25:18 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Menu Time
+2025-11-27 22:25:20 [TestNG-test-regression tests-2] INFO  TimeMenu - Clicked on Edit Timesheet Button
+2025-11-27 22:25:21 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully cleared previous timesheet entry details
+2025-11-27 22:25:21 [TestNG-test-regression tests-2] INFO  Keywords - Successfully cleared text box
+2025-11-27 22:25:23 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully entered project name
+2025-11-27 22:25:25 [TestNG-test-regression tests-2] INFO  TimeMenu - successfully selected activity
+2025-11-27 22:25:25 [TestNG-test-regression tests-2] INFO  Keywords - Successfully cleared text box
+2025-11-27 22:25:25 [TestNG-test-regression tests-2] INFO  Keywords - Successfully cleared text box
+2025-11-27 22:25:25 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully entered hours for Monday and Tuesday
+2025-11-27 22:25:25 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Save Timesheet Button
+2025-11-27 22:25:26 [TestNG-test-regression tests-2] INFO  TimeMenu - Success Toast Message Displayed
+2025-11-27 22:25:26 [TestNG-test-regression tests-2] INFO  TestBase - Successfully quit the browser
+2025-11-27 22:25:27 [TestNG-test-regression tests-2] INFO  Keywords - Launched Chrome Browser
+2025-11-27 22:25:27 [TestNG-test-regression tests-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 22:25:27 [TestNG-test-regression tests-2] INFO  TestBase - Successfully launched the web Application
+2025-11-27 22:25:28 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 22:25:31 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Menu Time
+2025-11-27 22:25:33 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Edit Timesheet Button
+2025-11-27 22:25:34 [TestNG-test-regression tests-2] INFO  Keywords - Successfully cleared text box
+2025-11-27 22:25:34 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully entered updated Monday hours
+2025-11-27 22:25:34 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Save Timesheet Button
+2025-11-27 22:25:39 [TestNG-test-regression tests-2] INFO  TestBase - Successfully quit the browser
+2025-11-27 22:25:40 [TestNG-test-regression tests-2] INFO  Keywords - Launched Chrome Browser
+2025-11-27 22:25:40 [TestNG-test-regression tests-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 22:25:40 [TestNG-test-regression tests-2] INFO  TestBase - Successfully launched the web Application
+2025-11-27 22:25:41 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in as user
+2025-11-27 22:25:44 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Menu Time
+2025-11-27 22:25:46 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Submit Timesheet Button
+2025-11-27 22:25:47 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully clicked on Logout button
+2025-11-27 22:25:48 [TestNG-test-regression tests-2] INFO  LoginPage - Successfully Loogged in
+2025-11-27 22:25:51 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Menu Time
+2025-11-27 22:25:52 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on View Timesheet Button
+2025-11-27 22:25:54 [TestNG-test-regression tests-2] INFO  TimeMenu - Successfully clicked on Reject Timesheet Button
+2025-11-27 22:25:55 [TestNG-test-regression tests-2] INFO  TimeMenu - Success Toast Message Displayed
+2025-11-27 22:25:55 [TestNG-test-regression tests-2] INFO  TestBase - Successfully quit the browser

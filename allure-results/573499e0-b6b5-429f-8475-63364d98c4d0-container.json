@@ -1,0 +1,1 @@
+{"uuid":"573499e0-b6b5-429f-8475-63364d98c4d0","name":"Master Suite","children":["cc54d70a-48a9-4f40-9a37-a4933048b2f3"],"befores":[{"name":"cleanAllureResults","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1764262208658,"stop":1764262208771}],"afters":[],"start":1764262208617,"stop":1764262555466}
