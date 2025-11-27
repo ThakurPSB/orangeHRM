@@ -111,8 +111,8 @@
 			    <artifactId>ashot</artifactId>
 			    <version>1.5.4</version>
 			</dependency>
-			
-			<!-- WebDriverManager -->
+
+		<!-- WebDriverManager -->
 			<dependency>
 				<groupId>io.github.bonigarcia</groupId>
 				<artifactId>webdrivermanager</artifactId>
