@@ -126,6 +126,9 @@ public class Keywords {
 				options.addArguments("--no-sandbox");
 				options.addArguments("--disable-dev-shm-usage");
 				options.addArguments("--window-size=1920,1080");
+				options.addArguments("--start-maximized");
+				options.addArguments("--force-device-scale-factor=1");
+				options.addArguments("--disable-infobars");
 			}
 	        
 	        dr = new ChromeDriver(options);
@@ -144,6 +147,9 @@ public class Keywords {
 		    options.addArguments("--no-sandbox");
 		    options.addArguments("--disable-dev-shm-usage");
 		    options.addArguments("--window-size=1920,1080");
+		    options.addArguments("--start-maximized");
+		    options.addArguments("--force-device-scale-factor=1");
+		    options.addArguments("--disable-infobars");
 			}
 			
 			dr = new EdgeDriver();
@@ -161,6 +167,9 @@ public class Keywords {
 		    options.addArguments("--headless");
 		    options.addArguments("--width=1920");
 		    options.addArguments("--height=1080");
+		    options.addArguments("--start-maximized");
+		    options.addArguments("--force-device-scale-factor=1");
+		    options.addArguments("--disable-infobars");
 			}
 			
 			dr = new FirefoxDriver();
