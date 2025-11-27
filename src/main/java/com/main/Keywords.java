@@ -122,13 +122,13 @@ public class Keywords {
 			if (isJenkins) {
 				LOG.info("Running in Jenkins environment, applying headless options.");
 				options.addArguments("--headless=new");
-				options.addArguments("--disable-gpu");
-				options.addArguments("--no-sandbox");
-				options.addArguments("--disable-dev-shm-usage");
-				options.addArguments("--window-size=1920,1080");
-				options.addArguments("--start-maximized");
-				options.addArguments("--force-device-scale-factor=1");
-				options.addArguments("--disable-infobars");
+				//options.addArguments("--disable-gpu");
+				//options.addArguments("--no-sandbox");
+				//options.addArguments("--disable-dev-shm-usage");
+				//options.addArguments("--window-size=1920,1080");
+				//options.addArguments("--start-maximized");
+				//options.addArguments("--force-device-scale-factor=1");
+				//options.addArguments("--disable-infobars");
 			}
 	        
 	        dr = new ChromeDriver(options);
