@@ -18,16 +18,17 @@ public class PimCustomFields {
 	
 	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
-
+	Actions action = null;
 	
 	public PimCustomFields() {
 		this.kw = Keywords.getInstance();
 	    PageFactory.initElements(kw.getDriver(), this);
+	    this.action = new Actions(kw.getDriver());
 	}
 	
 	private static final Logger LOG = Logger.getLogger(PimCustomFields.class);
 	
-	Actions action = new Actions(kw.getDriver());
+	
 	
 	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(2) > a")
 	WebElement customFields ;

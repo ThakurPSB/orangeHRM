@@ -19,14 +19,15 @@ public class EmployeeListMenu {
 	
 	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
-
+	Actions action = null;
 
 	public EmployeeListMenu() {
 		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
+	    this.action = new Actions(kw.getDriver());
 	}
 
-	Actions action = new Actions(kw.getDriver());
+	
 	private static final Logger LOG = Logger.getLogger(EmployeeListMenu.class);
 	
 	@FindBy(css="header > div.oxd-topbar-body > nav > ul > li.oxd-topbar-body-nav-tab.--visited > a")

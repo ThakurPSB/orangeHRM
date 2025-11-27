@@ -1,67 +1,13 @@
-2025-11-27 14:08:00 [TestNG-test-regression tests(failed)-1] INFO  AdminQualificationMenu - entered the skill name to add
-2025-11-27 14:08:00 [TestNG-test-regression tests(failed)-1] INFO  AdminQualificationMenu - clicked on Save skill button
-2025-11-27 14:08:01 [TestNG-test-regression tests(failed)-2] INFO  LeaveApplyMenu - successfully selected leave type
-2025-11-27 14:08:01 [TestNG-test-regression tests(failed)-2] INFO  LeaveApplyMenu - Successfully from date selected for past Date
-2025-11-27 14:08:01 [TestNG-test-regression tests(failed)-2] INFO  LeaveApplyMenu - Successfully to date selected for past date
-2025-11-27 14:08:01 [TestNG-test-regression tests(failed)-2] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
-2025-11-27 14:08:03 [TestNG-test-regression tests(failed)-2] INFO  LeaveApplyMenu - Success Toast Message Displayed
-2025-11-27 14:08:03 [TestNG-test-regression tests(failed)-2] INFO  LeaveMyLeaveMenu - Successfully clicked on Leave Menu
-2025-11-27 14:08:05 [TestNG-test-regression tests(failed)-2] INFO  LeaveMyLeaveMenu - Successfully clicked on My Leave menu
-2025-11-27 14:08:05 [TestNG-test-regression tests(failed)-1] WARN  AdminOrganizationMenu - Toast element not found in DOM.
-2025-11-27 14:08:09 [TestNG-test-regression tests(failed)-2] INFO  LeaveMyLeaveMenu - Cancelled the Leave application : 1
-2025-11-27 14:08:09 [TestNG-test-regression tests(failed)-2] INFO  TestBase - Successfully quit the browser
-2025-11-27 14:08:10 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Launched Chrome Browser
-2025-11-27 14:08:10 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-27 14:08:10 [TestNG-test-regression tests(failed)-2] INFO  TestBase - Successfully launched the web Application
-2025-11-27 14:08:11 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_CheckIfAddSkillOptionIsWorkingOrNot_140805.png
-2025-11-27 14:08:11 [TestNG-test-regression tests(failed)-1] ERROR TestListener - Test Failed: CheckIfAddSkillOptionIsWorkingOrNot
-2025-11-27 14:08:11 [TestNG-test-regression tests(failed)-1] INFO  TestBase - Successfully quit the browser
-2025-11-27 14:08:12 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Launched Chrome Browser
-2025-11-27 14:08:12 [TestNG-test-regression tests(failed)-2] INFO  LoginPage - Successfully Loogged in as user
-2025-11-27 14:08:13 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-27 14:08:13 [TestNG-test-regression tests(failed)-1] INFO  TestBase - Successfully launched the web Application
-2025-11-27 14:08:14 [TestNG-test-regression tests(failed)-1] INFO  LoginPage - Successfully Loogged in
-2025-11-27 14:08:16 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully clicked on Menu Time
-2025-11-27 14:08:18 [TestNG-test-regression tests(failed)-1] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-11-27 14:08:19 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Clicked on Edit Timesheet Button
-2025-11-27 14:08:19 [TestNG-test-regression tests(failed)-1] INFO  PimMenu - Successfully clicked the configuration menu button.
-2025-11-27 14:08:20 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully cleared previous timesheet entry details
-2025-11-27 14:08:20 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Successfully cleared text box
-2025-11-27 14:08:22 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully entered project name
-2025-11-27 14:08:24 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage_140819.png
-2025-11-27 14:08:24 [TestNG-test-regression tests(failed)-1] ERROR TestListener - Test Failed: AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage
-2025-11-27 14:08:24 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - successfully selected activity
-2025-11-27 14:08:24 [TestNG-test-regression tests(failed)-1] INFO  TestBase - Successfully quit the browser
-2025-11-27 14:08:24 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Successfully cleared text box
-2025-11-27 14:08:25 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Launched Chrome Browser
-2025-11-27 14:08:25 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Successfully cleared text box
-2025-11-27 14:08:25 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully entered hours for Monday and Tuesday
-2025-11-27 14:08:25 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully clicked on Save Timesheet Button
-2025-11-27 14:08:25 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-27 14:08:25 [TestNG-test-regression tests(failed)-1] INFO  TestBase - Successfully launched the web Application
-2025-11-27 14:08:27 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Success Toast Message Displayed
-2025-11-27 14:08:27 [TestNG-test-regression tests(failed)-1] INFO  LoginPage - Successfully Loogged in
-2025-11-27 14:08:27 [TestNG-test-regression tests(failed)-2] INFO  TestBase - Successfully quit the browser
-2025-11-27 14:08:28 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Launched Chrome Browser
-2025-11-27 14:08:29 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-27 14:08:29 [TestNG-test-regression tests(failed)-2] INFO  TestBase - Successfully launched the web Application
-2025-11-27 14:08:30 [TestNG-test-regression tests(failed)-2] INFO  LoginPage - Successfully Loogged in as user
-2025-11-27 14:08:32 [TestNG-test-regression tests(failed)-1] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-11-27 14:08:34 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully clicked on Menu Time
-2025-11-27 14:08:35 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_addUserandCheckIfAllOptionsAreWorkingWhileCreating_140832.png
-2025-11-27 14:08:35 [TestNG-test-regression tests(failed)-1] ERROR TestListener - Test Failed: addUserandCheckIfAllOptionsAreWorkingWhileCreating
-2025-11-27 14:08:35 [TestNG-test-regression tests(failed)-1] INFO  TestBase - Successfully quit the browser
-2025-11-27 14:08:36 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Launched Chrome Browser
-2025-11-27 14:08:36 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully retrieved Monday hours
-2025-11-27 14:08:37 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-27 14:08:37 [TestNG-test-regression tests(failed)-1] INFO  TestBase - Successfully launched the web Application
-2025-11-27 14:08:37 [TestNG-test-regression tests(failed)-2] INFO  TimeMenu - Successfully clicked on Edit Timesheet Button
-2025-11-27 14:08:38 [TestNG-test-regression tests(failed)-1] INFO  LoginPage - Successfully Loogged in
-2025-11-27 14:08:38 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Successfully cleared text box
-2025-11-27 14:08:41 [TestNG-test-regression tests(failed)-1] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-11-27 14:08:43 [TestNG-test-regression tests(failed)-2] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_employeeEditingTimesheetBeforeSubmission_140838.png
-2025-11-27 14:08:43 [TestNG-test-regression tests(failed)-2] ERROR TestListener - Test Failed: employeeEditingTimesheetBeforeSubmission
-2025-11-27 14:08:43 [TestNG-test-regression tests(failed)-2] INFO  TestBase - Successfully quit the browser
-2025-11-27 14:08:44 [TestNG-test-regression tests(failed)-1] INFO  Keywords - Screenshot saved at: C:\Users\piyus\eclipse-workspace\orangeHRM\screenshots\27-11-2025\Screenshot_checkSearchOptionsInPIMMenuEmployeeListPage_140841.png
-2025-11-27 14:08:44 [TestNG-test-regression tests(failed)-1] ERROR TestListener - Test Failed: checkSearchOptionsInPIMMenuEmployeeListPage
-2025-11-27 14:08:44 [TestNG-test-regression tests(failed)-1] INFO  TestBase - Successfully quit the browser
+2025-11-27 15:36:31 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-27 15:36:32 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-27 15:36:32 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-27 15:36:33 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-27 15:36:36 [main] INFO  AdminMenu - Cliked on Admin Menu
+2025-11-27 15:36:37 [main] INFO  AdminQualificationMenu - Clicked on Admin > Qualification Menu
+2025-11-27 15:36:38 [main] INFO  AdminQualificationMenu - Clicked on Qualification> Skill menu
+2025-11-27 15:36:39 [main] INFO  AdminQualificationMenu - Successfully deleted the skill: java
+2025-11-27 15:36:39 [main] INFO  AdminQualificationMenu - clicked on Add skills button
+2025-11-27 15:36:40 [main] INFO  AdminQualificationMenu - entered the skill name to add
+2025-11-27 15:36:40 [main] INFO  AdminQualificationMenu - clicked on Save skill button
+2025-11-27 15:36:41 [main] INFO  AdminOrganizationMenu - Successfully added orgnization details
+2025-11-27 15:36:42 [main] INFO  TestBase - Successfully quit the browser

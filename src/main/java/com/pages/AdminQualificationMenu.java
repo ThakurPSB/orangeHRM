@@ -101,18 +101,32 @@ public class AdminQualificationMenu {
 
 	public void deleteEnteredSkill(String name) {
 		kw.waitForAllElementAreVisible(rows);
-		for(WebElement row: rows) {
-			
-			List <WebElement> cells = row.findElements(By.cssSelector(".oxd-table-cell"));
-			
-			if(cells.size()>1 && cells.get(1).getText().equalsIgnoreCase(name)) {
-				row.findElement(By.cssSelector(".oxd-icon.bi-trash")).click();
-				break;
-			}
-		}
-		kw.waitForElementToBeClickable(confirmDeleteButton);
-		confirmDeleteButton.click();
-		LOG.info("Successfully deleted the skill "+name);
+		
+		if (rows == null || rows.isEmpty()) {
+	        LOG.info("No rows found — nothing to delete for skill: " + name);
+	        return;
+	    }
+
+	    boolean found = false;
+
+	    for (WebElement row : rows) {
+	        List<WebElement> cells = row.findElements(By.cssSelector(".oxd-table-cell"));
+
+	        if (cells.size() > 1 && cells.get(1).getText().trim().equalsIgnoreCase(name)) {
+	            row.findElement(By.cssSelector(".oxd-icon.bi-trash")).click();
+	            found = true;
+	            break;
+	        }
+	    }
+	    
+	    if (!found) {
+	        LOG.info("Skill '" + name + "' NOT found — no deletion performed.");
+	        return;
+	    }
+
+	    kw.waitForElementToBeClickable(confirmDeleteButton);
+	    confirmDeleteButton.click();
+	    LOG.info("Successfully deleted the skill: " + name);
 	}
 	
 }

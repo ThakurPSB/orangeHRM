@@ -125,10 +125,10 @@ public class TimeMenu {
 		LOG.info("successfully selected activity");
 	}
 	
-	@FindBy(css="table > tbody > tr:nth-child(1) > td:nth-child(3) > div > div:nth-child(2) > input")
+	@FindBy(css="table tbody tr:first-child td:nth-child(3) input")
 	WebElement mondayHoursField ;
 	
-	@FindBy(css="table > tbody > tr:nth-child(1) > td:nth-child(4) > div > div:nth-child(2) > input")
+	@FindBy(css="table tbody tr:first-child td:nth-child(4) input")
 	WebElement tuesdayHoursField ;
 	
 	public void enterHoursForMondayAndTuesday() {
@@ -152,37 +152,61 @@ public class TimeMenu {
         LOG.info("Successfully clicked on Save Timesheet Button");
     }
 	
-	@FindBy(css="body > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(3) > span:nth-child(2)")
+	
+	
+	@FindBy(css="input[name='monday']")
+	WebElement mondayHoursInputField;
+	
+	public String getMondayHoursAfterEdit() {
+	    kw.waitForElementToBeVisible(mondayHoursInputField);
+	    String hours = mondayHoursInputField.getDomProperty("value");
+	    LOG.info("Successfully retrieved updated Monday hours");
+	    return hours;
+	}
+	
+	@FindBy(css="table tbody tr:first-child td:nth-child(3) span")
 	WebElement verifyMondayHours ;
 	
 	public String getMondayHours() {
         kw.waitForElementToBeVisible(verifyMondayHours);
         String hours = verifyMondayHours.getText();
         LOG.info("Successfully retrieved Monday hours");
-        hrString = hours;
         return hours;
 	}
 	
-	String hrString;
+	@FindBy(css = "table tbody tr:first-child td:nth-child(3) span")
+	WebElement mondayHoursViewMode;
+
+	public String getMondayHours_ViewMode() {
+	    kw.waitForElementToBeVisible(mondayHoursViewMode);
+	    return mondayHoursViewMode.getText().trim();
+	}
 	
-	public String randomIncrementDecrementInHours() {
+	@FindBy(css = "input[name='monday']")
+	WebElement mondayHoursEditMode;
+
+	public String getMondayHours_EditMode() {
+	    kw.waitForElementToBeVisible(mondayHoursEditMode);
+	    return mondayHoursEditMode.getDomProperty("value").trim();
+	}
 	
-		int hr = Integer.parseInt(hrString.split(":")[0]);
-		double randomValue = Math.random();
-		if (randomValue < 0.5) {
-			hr = hr - 1;
-		} else {
-			hr = hr + 1;
-		}
-		return Integer.toString(hr);
+	public String randomIncrementDecrementInHours(String hrString) {
+	
+		 if (hrString == null) {
+		        hrString = getMondayHours();
+		    }
+		    int hr = Integer.parseInt(hrString.split(":")[0]);
+		    double randomValue = Math.random();
+		    hr = randomValue < 0.5 ? hr - 1 : hr + 1;
+		    return Integer.toString(hr);
 	}
 	
 	
-	public void enterUpdatedMondayHours() {
+	public void enterUpdatedMondayHours(String currentHours) {
 		kw.waitForElementToBeVisible(mondayHoursField);
 		mondayHoursField.click();
 		kw.clearTextBox(mondayHoursField);
-		mondayHoursField.sendKeys(randomIncrementDecrementInHours());
+		mondayHoursField.sendKeys(randomIncrementDecrementInHours(currentHours));
 		LOG.info("Successfully entered updated Monday hours");
 	}
 	

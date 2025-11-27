@@ -139,11 +139,11 @@ public class TestSprint2 extends TestBase {
 		admin().clickOnAdminMenu();
 		qualification().clickOnQualificationMenu();
 		qualification().clickOnSkills();
+		qualification().deleteEnteredSkill("java");
 		qualification().clickOnAddSkillsButton();
 		qualification().enterSkillName("java");
 		qualification().clickOnSaveSkillButton();
 		Assert.assertTrue(orgMenu().SaveToastMessageText());
-		qualification().deleteEnteredSkill("java");
 	}
 	
 	@Test(groups = {"smoke"})

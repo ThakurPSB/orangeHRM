@@ -181,8 +181,6 @@ public class TestSprint1 extends TestBase{
 	public void AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage() throws InterruptedException {
 		
 		login().logMeIn();
-		
-		
 		//deleting already created custom fields
 		
 		pim().clickOnPIM();
@@ -192,7 +190,6 @@ public class TestSprint1 extends TestBase{
 		customField().SelectFieldToDelete("OfficeTransport");
 		
 		//Creating custom fields
-	
 		pim().clickOnPIM();
 		pim().clickOnConfiguration();
 		customField().clickOnCustomFields();

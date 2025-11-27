@@ -1,1 +1,0 @@
-{"uuid":"43922e9e-b0dd-45f7-8fce-687564373537","name":"Failed suite [Master Suite]","children":["1126a8d4-597a-4a05-8ec7-6ff18ca7fb4b"],"befores":[{"name":"cleanAllureResults","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1764232667218,"stop":1764232667347}],"afters":[],"start":1764232667163,"stop":1764232724325}
