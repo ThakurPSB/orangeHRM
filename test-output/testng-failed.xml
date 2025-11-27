@@ -1,68 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="4" parallel="methods" name="Failed suite [Master Suite]" guice-stage="DEVELOPMENT">
+<suite thread-count="2" parallel="methods" name="Failed suite [Failed suite [Master Suite]]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.listeners.TestListener"/>
   </listeners>
-  <test thread-count="4" parallel="methods" name="regression tests(failed)">
+  <test thread-count="2" parallel="methods" name="regression tests(failed)(failed)">
     <classes>
       <class name="com.testcases.TestSprint2">
         <methods>
-          <include name="ApplyLeaveWithoutSelectingLeaveType"/>
           <include name="setUp"/>
-          <include name="SearchSystemUserWithDifferentSearchOptions"/>
-          <include name="ApplyLeaveWithOverlappingDates"/>
-          <include name="CheckIfAddLocationOptionIsWorkingOrNot"/>
-          <include name="pageSetup"/>
-          <include name="addLeaveEntitlement"/>
-          <include name="ApplyLeaveWithValidInputs"/>
-          <include name="tearDowntest"/>
           <include name="tearDown"/>
-          <include name="checkForOrganizationMenuAreShowingCorrectOptions"/>
-          <include name="ApplyLeaveWithInsufficientBalance"/>
           <include name="CheckIfAddSkillOptionIsWorkingOrNot"/>
-          <include name="checkForJobMenuAreShowingCorrectOptions"/>
           <include name="cleanAllureResults"/>
-          <include name="ApplyLeaveWithPastDates"/>
         </methods>
       </class> <!-- com.testcases.TestSprint2 -->
       <class name="com.testcases.TestSprint3">
         <methods>
-          <include name="dashboardMyTimesheetLinkDirectToMyTimesheetPage"/>
           <include name="setUp"/>
           <include name="employeeEditingTimesheetBeforeSubmission"/>
-          <include name="AddsNewCandidateForAnExistingVacancyWithoutEmail"/>
-          <include name="addVacancywithallDetailsAndCheckIfReflectsInCandidateField"/>
-          <include name="addNewKPIForTheJobTitle"/>
           <include name="employeeSubmittedTimeSheetWithDetails"/>
-          <include name="dashboardPunchInLinkDirectToPunchInPage"/>
-          <include name="managerApprovesOrRejectsTimesheet"/>
-          <include name="pageSetup"/>
-          <include name="AddsNewCandidateForAnExistingVacancy"/>
-          <include name="dashboardApplyLeaveLinkDirectToLeavePage"/>
           <include name="tearDown"/>
-          <include name="tearDowntest"/>
           <include name="cleanAllureResults"/>
+          <include name="managerApprovesOrRejectsTimesheet"/>
         </methods>
       </class> <!-- com.testcases.TestSprint3 -->
       <class name="com.testcases.TestSprint1">
         <methods>
-          <include name="setUp"/>
-          <include name="CheckIfLoginSuccessfullWithIncorrectCredentials"/>
-          <include name="checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff"/>
-          <include name="pageSetup"/>
-          <include name="CheckIfLoginSuccessfullWithCredentialsFieldBlank"/>
-          <include name="checkSearchOptionsInPIMMenuEmployeeListPage"/>
-          <include name="tearDowntest"/>
           <include name="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
           <include name="addUserandCheckIfAllOptionsAreWorkingWhileCreating"/>
-          <include name="CheckIfOptionalFieldsVisibilityToggleWorking"/>
-          <include name="checkIfAllTheLinksInProfileMenuAreWorking"/>
           <include name="cleanAllureResults"/>
-          <include name="CheckIfLoginSuccessfullWithCorrectCredentials"/>
+          <include name="checkSearchOptionsInPIMMenuEmployeeListPage"/>
         </methods>
       </class> <!-- com.testcases.TestSprint1 -->
     </classes>
-  </test> <!-- regression tests(failed) -->
-</suite> <!-- Failed suite [Master Suite] -->
+  </test> <!-- regression tests(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Master Suite]] -->

@@ -3,20 +3,11 @@ package com.testcases;
 
 //import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 //import org.testng.log4testng.Logger;
 
 import com.base.TestBase;
-import com.pages.AdminJobTitles;
-import com.pages.AdminMenu;
-import com.pages.AdminOrganizationMenu;
-import com.pages.AdminQualificationMenu;
-import com.pages.LeaveApplyMenu;
-import com.pages.LeaveEntitlementMenu;
-import com.pages.LeaveMyLeaveMenu;
-import com.pages.LoginPage;
+
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -27,43 +18,6 @@ import io.qameta.allure.Story;
 
 public class TestSprint2 extends TestBase {
 	
-	private LoginPage login;
-	private AdminMenu admin;
-	private AdminJobTitles jobs;
-	private AdminOrganizationMenu orgMenu;
-	private AdminQualificationMenu qualification;
-	private LeaveApplyMenu leaveApply;
-	private LeaveMyLeaveMenu myLeave;
-	private LeaveEntitlementMenu entitlement;
-
-	@BeforeMethod(alwaysRun = true, dependsOnMethods = {"setUp"})
-	public void pageSetup() {
-        login = new LoginPage(key); 
-        admin = new AdminMenu(key);
-        jobs = new AdminJobTitles(key);
-        orgMenu = new AdminOrganizationMenu(key);
-        qualification = new AdminQualificationMenu(key);
-        leaveApply= new LeaveApplyMenu(key);
-        myLeave = new LeaveMyLeaveMenu(key);
-        entitlement = new LeaveEntitlementMenu(key);
-    }
-	
-	@AfterMethod
-	public void tearDowntest() throws InterruptedException {
-		login = null;
-		admin = null;
-		jobs = null;
-		orgMenu = null;
-		qualification = null;
-		leaveApply= null;
-		myLeave = null;
-		entitlement = null;
-		
-		Thread.sleep(3000);
-	}
-	
-	//private static final Logger LOG = Logger.getLogger(TestSprint2.class);
-	
 	@Test
     @Severity(SeverityLevel.NORMAL)
     @Description("Checking admin page options")
@@ -72,31 +26,31 @@ public class TestSprint2 extends TestBase {
     @Story("Admin page options")
 	public void SearchSystemUserWithDifferentSearchOptions() throws InterruptedException {
 		
-		login.logMeIn();
+		login().logMeIn();
 		
-		admin.clickOnAdminMenu();
-		
-		
-		admin.enterUsername("admin");
-		admin.clickOnSearchButton();
-		Assert.assertTrue(admin.searchResultUsername("admin"));
-		
-		admin.clickOnResetButton();
-		admin.selectUserRole("ESS");
-		admin.clickOnSearchButton();
-		Assert.assertTrue(admin.searchResultRole("ESS"));
+		admin().clickOnAdminMenu();
 		
 		
-		admin.clickOnResetButton();
-		admin.enterEmployeeName("Piyush");
-		admin.clickOnSearchButton();
-		Assert.assertTrue(admin.searchResultsEmployeeName("Piyush Thakur"));
+		admin().enterUsername("admin");
+		admin().clickOnSearchButton();
+		Assert.assertTrue(admin().searchResultUsername("admin"));
+		
+		admin().clickOnResetButton();
+		admin().selectUserRole("ESS");
+		admin().clickOnSearchButton();
+		Assert.assertTrue(admin().searchResultRole("ESS"));
 		
 		
-		admin.clickOnResetButton();
-		admin.selectLoginStatus("Enabled");
-		admin.clickOnSearchButton();
-		Assert.assertTrue(admin.searchResultStatus("Enabled"));
+		admin().clickOnResetButton();
+		admin().enterEmployeeName("Piyush");
+		admin().clickOnSearchButton();
+		Assert.assertTrue(admin().searchResultsEmployeeName("Piyush Thakur"));
+		
+		
+		admin().clickOnResetButton();
+		admin().selectLoginStatus("Enabled");
+		admin().clickOnSearchButton();
+		Assert.assertTrue(admin().searchResultStatus("Enabled"));
 		
 	}
 	
@@ -108,18 +62,18 @@ public class TestSprint2 extends TestBase {
     @Story("Admin page options jobs submenu checking")
 	public void checkForJobMenuAreShowingCorrectOptions() throws InterruptedException {
 		
-		login.logMeIn();
-		admin.clickOnAdminMenu();
+		login().logMeIn();
+		admin().clickOnAdminMenu();
 		
 		
-		jobs.clickOnAdminMenu();
-		jobs.clickOnJobSubMenu("Job Titles");
-		Assert.assertTrue(jobs.checkElementinTable("Assistant Manager"));
-		jobs.clickOnJobSubMenu("Pay Grades");
-		Assert.assertTrue(jobs.checkElementinTable("Grade A"));
-		jobs.clickOnJobSubMenu("Employment Status");
-		Assert.assertTrue(jobs.checkElementinTable("Active"));
-		jobs.clickOnJobSubMenu("Job Categories");
+		jobs().clickOnAdminMenu();
+		jobs().clickOnJobSubMenu("Job Titles");
+		Assert.assertTrue(jobs().checkElementinTable("Assistant Manager"));
+		jobs().clickOnJobSubMenu("Pay Grades");
+		Assert.assertTrue(jobs().checkElementinTable("Grade A"));
+		jobs().clickOnJobSubMenu("Employment Status");
+		Assert.assertTrue(jobs().checkElementinTable("Active"));
+		jobs().clickOnJobSubMenu("Job Categories");
 		
 	
 		
@@ -135,20 +89,20 @@ public class TestSprint2 extends TestBase {
     @Story("Admin page options oragnization submenu checking")
 	public void checkForOrganizationMenuAreShowingCorrectOptions() throws InterruptedException {
 		
-		login.logMeIn();
-		admin.clickOnAdminMenu();
+		login().logMeIn();
+		admin().clickOnAdminMenu();
 		
-		orgMenu.clickOnOrgMenu();
-		orgMenu.clickOnOrgSubMenu("General Information");
-		orgMenu.clickOnEditButton();
-		orgMenu.updateRegNum("123456");
-		orgMenu.updateOrgName("PsychoCorps");
-		orgMenu.updateTaxID("PVT1419S8809");
-		orgMenu.clickOnSave();
-		Assert.assertTrue(orgMenu.SaveToastMessageText());
-		Assert.assertTrue(orgMenu.orgNameTextCheck("PsychoCorps"));
-		Assert.assertTrue(orgMenu.taxIDtextCheck("PVT1419S8809"));
-		Assert.assertTrue(orgMenu.regNumberCheck("123456"));
+		orgMenu().clickOnOrgMenu();
+		orgMenu().clickOnOrgSubMenu("General Information");
+		orgMenu().clickOnEditButton();
+		orgMenu().updateRegNum("123456");
+		orgMenu().updateOrgName("PsychoCorps");
+		orgMenu().updateTaxID("PVT1419S8809");
+		orgMenu().clickOnSave();
+		Assert.assertTrue(orgMenu().SaveToastMessageText());
+		Assert.assertTrue(orgMenu().orgNameTextCheck("PsychoCorps"));
+		Assert.assertTrue(orgMenu().taxIDtextCheck("PVT1419S8809"));
+		Assert.assertTrue(orgMenu().regNumberCheck("123456"));
 	}
 	
 	@Test
@@ -158,20 +112,20 @@ public class TestSprint2 extends TestBase {
     @Feature("admin Features Organization menu locations")
     @Story("Admin page options oragnization submenu checking location field")
 	public void CheckIfAddLocationOptionIsWorkingOrNot() throws InterruptedException {
-		login.logMeIn();
-		admin.clickOnAdminMenu();
-		orgMenu.clickOnOrgMenu();
-		orgMenu.clickOnOrgSubMenu("Locations");
-		orgMenu.searchLocation("MumbaiCBO");
-		orgMenu.deleteSelected("MumbaiCBO");
-		orgMenu.clickOnAddLocationButton();
-		orgMenu.enterLocation("MumbaiCBO");
-		orgMenu.enterCity("Mumbai");
-		orgMenu.enterState("MH");
-		orgMenu.enterZip("400521");
-		orgMenu.selectCountry("India");
-		orgMenu.clickOnSaveLocationButton();
-		Assert.assertTrue(orgMenu.SaveToastMessageText());
+		login().logMeIn();
+		admin().clickOnAdminMenu();
+		orgMenu().clickOnOrgMenu();
+		orgMenu().clickOnOrgSubMenu("Locations");
+		orgMenu().searchLocation("MumbaiCBO");
+		orgMenu().deleteSelected("MumbaiCBO");
+		orgMenu().clickOnAddLocationButton();
+		orgMenu().enterLocation("MumbaiCBO");
+		orgMenu().enterCity("Mumbai");
+		orgMenu().enterState("MH");
+		orgMenu().enterZip("400521");
+		orgMenu().selectCountry("India");
+		orgMenu().clickOnSaveLocationButton();
+		Assert.assertTrue(orgMenu().SaveToastMessageText());
 	}
 	
 	@Test
@@ -181,15 +135,15 @@ public class TestSprint2 extends TestBase {
     @Feature("admin Features Organization menu skills")
     @Story("Admin page options oragnization submenu checking skills")
 	public void CheckIfAddSkillOptionIsWorkingOrNot() throws InterruptedException {
-		login.logMeIn();
-		admin.clickOnAdminMenu();
-		qualification.clickOnQualificationMenu();
-		qualification.clickOnSkills();
-		qualification.clickOnAddSkillsButton();
-		qualification.enterSkillName("java");
-		qualification.clickOnSaveSkillButton();
-		Assert.assertTrue(orgMenu.SaveToastMessageText());
-		qualification.deleteEnteredSkill("java");
+		login().logMeIn();
+		admin().clickOnAdminMenu();
+		qualification().clickOnQualificationMenu();
+		qualification().clickOnSkills();
+		qualification().clickOnAddSkillsButton();
+		qualification().enterSkillName("java");
+		qualification().clickOnSaveSkillButton();
+		Assert.assertTrue(orgMenu().SaveToastMessageText());
+		qualification().deleteEnteredSkill("java");
 	}
 	
 	@Test(groups = {"smoke"})
@@ -199,18 +153,18 @@ public class TestSprint2 extends TestBase {
     @Feature("Leave Module")
     @Story("Apply leave successfully with valid inputs")
 	public void ApplyLeaveWithValidInputs() throws InterruptedException {
-		login.logMeIn();
-		login.clickOnMenu("Leave");
-		leaveApply.cancelLeaveIfAlreadyTaken();
-		login.clickOnLogoutButton();
-		login.logMeInAsUser();
-		login.clickOnMenu("Leave");
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType("e");
-		leaveApply.selectFromDate();
-		leaveApply.selectToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply.leaveAppliedSuccessfullyOrOverlapingLeave());
+		login().logMeIn();
+		login().clickOnMenu("Leave");
+		leaveApply().cancelLeaveIfAlreadyTaken();
+		login().clickOnLogoutButton();
+		login().logMeInAsUser();
+		login().clickOnMenu("Leave");
+		leaveApply().clickOnApplyLeave();
+		leaveApply().selectLeaveType("e");
+		leaveApply().selectFromDate();
+		leaveApply().selectToDate();
+		leaveApply().clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply().leaveAppliedSuccessfullyOrOverlapingLeave());
 		
 	}
 	
@@ -223,22 +177,22 @@ public class TestSprint2 extends TestBase {
     @Story("Apply leave with overlapping dates")
 	public void ApplyLeaveWithOverlappingDates() throws InterruptedException {
 		
-		login.logMeIn();
-		leaveApply.clickOnLeaveMenu();
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType("e");
-		leaveApply.selectFromDate();
-		leaveApply.selectToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType("e");
-		leaveApply.selectFromDate();
-		leaveApply.selectToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply.failedToApplyLeaveToastText());
-		myLeave.clickOnLeaveMenu();
-		myLeave.clickOnMyLeaveMenu();
-		myLeave.cancelAllLeaves();
+		login().logMeIn();
+		leaveApply().clickOnLeaveMenu();
+		leaveApply().clickOnApplyLeave();
+		leaveApply().selectLeaveType("e");
+		leaveApply().selectFromDate();
+		leaveApply().selectToDate();
+		leaveApply().clickOnApplyLeaveButton();
+		leaveApply().clickOnApplyLeave();
+		leaveApply().selectLeaveType("e");
+		leaveApply().selectFromDate();
+		leaveApply().selectToDate();
+		leaveApply().clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply().failedToApplyLeaveToastText());
+		myLeave().clickOnLeaveMenu();
+		myLeave().clickOnMyLeaveMenu();
+		myLeave().cancelAllLeaves();
 	}
 	
 	
@@ -251,13 +205,13 @@ public class TestSprint2 extends TestBase {
     @Story("Apply leave without leave type")
 	public void ApplyLeaveWithoutSelectingLeaveType() {
 		
-		login.logMeIn();
-		leaveApply.clickOnLeaveMenu();
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectFromDate();
-		leaveApply.selectToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply.checkWarningForLeaveType());
+		login().logMeIn();
+		leaveApply().clickOnLeaveMenu();
+		leaveApply().clickOnApplyLeave();
+		leaveApply().selectFromDate();
+		leaveApply().selectToDate();
+		leaveApply().clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply().checkWarningForLeaveType());
 		
 	}
 	
@@ -270,17 +224,17 @@ public class TestSprint2 extends TestBase {
     @Story("Apply leave with past dates")
 	public void ApplyLeaveWithPastDates() throws InterruptedException {
 		
-		login.logMeIn();
-		leaveApply.clickOnLeaveMenu();
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType("e");
-		leaveApply.selectPastFromDate();
-		leaveApply.selectPastToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply.SaveToastMessageText());
-		myLeave.clickOnLeaveMenu();
-		myLeave.clickOnMyLeaveMenu();
-		myLeave.cancelAllLeaves();
+		login().logMeIn();
+		leaveApply().clickOnLeaveMenu();
+		leaveApply().clickOnApplyLeave();
+		leaveApply().selectLeaveType("e");
+		leaveApply().selectPastFromDate();
+		leaveApply().selectPastToDate();
+		leaveApply().clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply().SaveToastMessageText());
+		myLeave().clickOnLeaveMenu();
+		myLeave().clickOnMyLeaveMenu();
+		myLeave().cancelAllLeaves();
 		
 	}
 	
@@ -294,14 +248,14 @@ public class TestSprint2 extends TestBase {
 	public void ApplyLeaveWithInsufficientBalance() throws InterruptedException {
 	
 		
-		login.logMeIn();
-		leaveApply.clickOnLeaveMenu();
-		leaveApply.clickOnApplyLeave();
-		leaveApply.selectLeaveType("f"); // f for floating leave
-		leaveApply.selectFromDate();
-		leaveApply.selectToDate();
-		leaveApply.clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply.errorLeaveBalance());
+		login().logMeIn();
+		leaveApply().clickOnLeaveMenu();
+		leaveApply().clickOnApplyLeave();
+		leaveApply().selectLeaveType("f"); // f for floating leave
+		leaveApply().selectFromDate();
+		leaveApply().selectToDate();
+		leaveApply().clickOnApplyLeaveButton();
+		Assert.assertTrue(leaveApply().errorLeaveBalance());
 		
 	}
 	
@@ -312,30 +266,30 @@ public class TestSprint2 extends TestBase {
     @Feature("Leave > Entitlements")
     @Story("Add Leave entitlement to single employee")
 	public void addLeaveEntitlement() throws InterruptedException  {
-		login.logMeIn();
-		leaveApply.clickOnLeaveMenu();
-		entitlement.clickOnLeaveEntitlementMenu();
-		entitlement.clickEmployeeEntitlement();
-		entitlement.enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
-		entitlement.selectLeaveTypeInEntitlement("Earned");
-		entitlement.clickOnSearchButton();
-		double leaveBalance = entitlement.CheckLeaveBalance();
-		leaveApply.clickOnLeaveMenu();
-		entitlement.clickOnLeaveEntitlementMenu();
-		entitlement.clickOnAddEntitlement();
-		entitlement.selectIndividualOrMultipleEmployee("individual");
-		entitlement.enterEmployeeName("Adriana Jones");
-		entitlement.selectLeaveType("Earned");
-		entitlement.enterEntitlement("1");
-		entitlement.clickOnSaveButton();
-		entitlement.clickOnConfirmButton();
-		Assert.assertTrue(entitlement.SaveToastMessageText());
-		entitlement.clickOnLeaveEntitlementMenu();
-		entitlement.clickEmployeeEntitlement();
-		entitlement.enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
-		entitlement.selectLeaveTypeInEntitlement("Earned");
-		entitlement.clickOnSearchButton();
-		Assert.assertTrue(entitlement.CheckLeaveBalance()>leaveBalance);
+		login().logMeIn();
+		leaveApply().clickOnLeaveMenu();
+		entitlement().clickOnLeaveEntitlementMenu();
+		entitlement().clickEmployeeEntitlement();
+		entitlement().enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
+		entitlement().selectLeaveTypeInEntitlement("Earned");
+		entitlement().clickOnSearchButton();
+		double leaveBalance = entitlement().CheckLeaveBalance();
+		leaveApply().clickOnLeaveMenu();
+		entitlement().clickOnLeaveEntitlementMenu();
+		entitlement().clickOnAddEntitlement();
+		entitlement().selectIndividualOrMultipleEmployee("individual");
+		entitlement().enterEmployeeName("Adriana Jones");
+		entitlement().selectLeaveType("Earned");
+		entitlement().enterEntitlement("1");
+		entitlement().clickOnSaveButton();
+		entitlement().clickOnConfirmButton();
+		Assert.assertTrue(entitlement().SaveToastMessageText());
+		entitlement().clickOnLeaveEntitlementMenu();
+		entitlement().clickEmployeeEntitlement();
+		entitlement().enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
+		entitlement().selectLeaveTypeInEntitlement("Earned");
+		entitlement().clickOnSearchButton();
+		Assert.assertTrue(entitlement().CheckLeaveBalance()>leaveBalance);
 	}
 
 

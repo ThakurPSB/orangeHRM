@@ -18,15 +18,9 @@ public class LeaveApplyMenu {
 	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
 
-	/*
-	 * Constructor to initialize the PageFactory elements
-	 * @param kw - Keywords class reference
-	 * this.kw = kw means Take the Keywords object passed into the constructor and 
-	 * assign it to the page object’s private field, 
-	 * so this page object can use it later.
-	 */
-	public LeaveApplyMenu(Keywords key) {
-		this.kw = key;
+	
+	public LeaveApplyMenu() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

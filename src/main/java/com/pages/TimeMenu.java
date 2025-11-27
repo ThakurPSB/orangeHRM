@@ -17,8 +17,8 @@ public class TimeMenu {
 	private Keywords kw;
 
 	
-	public TimeMenu(Keywords key) {
-		this.kw = key;
+	public TimeMenu() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

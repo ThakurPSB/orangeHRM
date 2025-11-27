@@ -1,19 +1,9 @@
 package com.testcases;
 
 import java.awt.AWTException;
-
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.base.TestBase;
-import com.pages.DashboardMenu;
-import com.pages.LoginPage;
-import com.pages.PerformanceMenu;
-import com.pages.RecruitmentMenu;
-import com.pages.TimeMenu;
-
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
@@ -22,37 +12,6 @@ import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
 public class TestSprint3 extends TestBase{
-
-	/*
-	 * private page object fields to encapsulate and reuse them across tests.
-	 */
-	private LoginPage login;
-	private RecruitmentMenu recruitment;
-	private PerformanceMenu performance;
-	private TimeMenu timemenu;
-	private DashboardMenu dashboard;
-	
-	/*
-	 * Inject dependencies "key" for consistent setup for each test run.
-	 * */
-	@BeforeMethod
-	public void pageSetup() {
-        login = new LoginPage(key); 
-        recruitment = new RecruitmentMenu(key);
-        performance = new PerformanceMenu(key);
-        timemenu = new TimeMenu(key);
-        dashboard = new DashboardMenu(key);
-	}
-	
-	@AfterMethod
-	public void tearDowntest() throws InterruptedException {
-		login = null;
-		recruitment = null;
-		performance = null;
-		timemenu = null;
-		Thread.sleep(3000);
-	
-	}
 	
 	@Test(groups = {"smoke"})
     @Severity(SeverityLevel.NORMAL)
@@ -62,19 +21,19 @@ public class TestSprint3 extends TestBase{
     @Story("vacancies options")
 	public void addVacancywithallDetailsAndCheckIfReflectsInCandidateField() throws InterruptedException {
 		
-		login.logMeIn();
-		recruitment.clickOnRecruitmentMenu();
-		recruitment.clickOnVacanciesMenu();
-		recruitment.clickOnAddVacancyButton();
-		recruitment.enterVacancyName("Marketing Asst Manager");
-		recruitment.selectJobTitle("Assistant Manager");
-		recruitment.selectHiringManager("Piyush");
-		recruitment.enterNumberOfVacancy("1");
-		recruitment.clickOnSaveVacancyButton();
-		recruitment.clickOnVacanciesMenu();
-		recruitment.clickOnVacancySearchButton();
-		Assert.assertTrue(recruitment.checkVacancyAddedOrNot("Marketing Asst Manager"));
-		recruitment.deleteEnteredVacancy("Marketing Asst Manager");
+		login().logMeIn();
+		recruitment().clickOnRecruitmentMenu();
+		recruitment().clickOnVacanciesMenu();
+		recruitment().clickOnAddVacancyButton();
+		recruitment().enterVacancyName("Marketing Asst Manager");
+		recruitment().selectJobTitle("Assistant Manager");
+		recruitment().selectHiringManager("Piyush");
+		recruitment().enterNumberOfVacancy("1");
+		recruitment().clickOnSaveVacancyButton();
+		recruitment().clickOnVacanciesMenu();
+		recruitment().clickOnVacancySearchButton();
+		Assert.assertTrue(recruitment().checkVacancyAddedOrNot("Marketing Asst Manager"));
+		recruitment().deleteEnteredVacancy("Marketing Asst Manager");
 		
 	}
 	
@@ -87,18 +46,18 @@ public class TestSprint3 extends TestBase{
     @Story("Candidate options")
 	public void AddsNewCandidateForAnExistingVacancy() throws InterruptedException, AWTException {
 		
-		login.logMeIn();
-		recruitment.clickOnRecruitmentMenu();
-		recruitment.clickOnCandidateMenu();
-		recruitment.clickOnAddCandidateButton();
-		recruitment.enterCandidateFullName("Sam", "Ron", "Miles");
-		recruitment.clickOnOpenVacanciesList();
-		recruitment.enterCandidateEmailID("samRMiles@gmail.com");
-		recruitment.enterCandidateContactNumber("9558754562");
-		recruitment.selectCandidateResume();
-		recruitment.clickOnConcentClickBox();
-		recruitment.clickOnSaveCandidateButton();
-		Assert.assertTrue(recruitment.SaveToastMessageText());
+		login().logMeIn();
+		recruitment().clickOnRecruitmentMenu();
+		recruitment().clickOnCandidateMenu();
+		recruitment().clickOnAddCandidateButton();
+		recruitment().enterCandidateFullName("Sam", "Ron", "Miles");
+		recruitment().clickOnOpenVacanciesList();
+		recruitment().enterCandidateEmailID("samRMiles@gmail.com");
+		recruitment().enterCandidateContactNumber("9558754562");
+		recruitment().selectCandidateResume();
+		recruitment().clickOnConcentClickBox();
+		recruitment().clickOnSaveCandidateButton();
+		Assert.assertTrue(recruitment().SaveToastMessageText());
 		
 	}
 	
@@ -110,17 +69,17 @@ public class TestSprint3 extends TestBase{
     @Story("Candidate options")
 	public void AddsNewCandidateForAnExistingVacancyWithoutEmail() throws InterruptedException, AWTException {
 		
-		login.logMeIn();
-		recruitment.clickOnRecruitmentMenu();
-		recruitment.clickOnCandidateMenu();
-		recruitment.clickOnAddCandidateButton();
-		recruitment.enterCandidateFullName("Sam", "Ron", "Miles");
-		recruitment.clickOnOpenVacanciesList();
-		recruitment.enterCandidateContactNumber("9558754562");
-		recruitment.selectCandidateResume();
-		recruitment.clickOnConcentClickBox();
-		recruitment.clickOnSaveCandidateButton();
-		Assert.assertTrue(recruitment.checkErrorMsg());
+		login().logMeIn();
+		recruitment().clickOnRecruitmentMenu();
+		recruitment().clickOnCandidateMenu();
+		recruitment().clickOnAddCandidateButton();
+		recruitment().enterCandidateFullName("Sam", "Ron", "Miles");
+		recruitment().clickOnOpenVacanciesList();
+		recruitment().enterCandidateContactNumber("9558754562");
+		recruitment().selectCandidateResume();
+		recruitment().clickOnConcentClickBox();
+		recruitment().clickOnSaveCandidateButton();
+		Assert.assertTrue(recruitment().checkErrorMsg());
 	}
 	
 
@@ -134,21 +93,21 @@ public class TestSprint3 extends TestBase{
     @Story("Performance Options")
 	public void addNewKPIForTheJobTitle() throws InterruptedException {
 		
-		login.logMeIn();
-		performance.clickOnPerformanceMenu();
-		performance.clickOnPerformanceConfigure();
-		performance.clickOnKPIs();
-		performance.searchResultKPIAndDelete("Bug Detection Rate");
-		performance.clickOnPerformanceConfigure();
-		performance.clickOnKPIs();
-		performance.clickOnAddKPIButton();
-		performance.enterKeyPerformanceIndicator("Bug Detection Rate");
-		performance.selecrJobTitleToAddKPI();
-		performance.enterMinAndMaxRatings();
-		performance.clickOnSaveKPIButton();
-		performance.clickOnPerformanceConfigure();
-		Assert.assertTrue(performance.searchResultKPI("Bug Detection Rate"));
-		performance.clickOnDeleteKPIIcon();
+		login().logMeIn();
+		performance().clickOnPerformanceMenu();
+		performance().clickOnPerformanceConfigure();
+		performance().clickOnKPIs();
+		performance().searchResultKPIAndDelete("Bug Detection Rate");
+		performance().clickOnPerformanceConfigure();
+		performance().clickOnKPIs();
+		performance().clickOnAddKPIButton();
+		performance().enterKeyPerformanceIndicator("Bug Detection Rate");
+		performance().selecrJobTitleToAddKPI();
+		performance().enterMinAndMaxRatings();
+		performance().clickOnSaveKPIButton();
+		performance().clickOnPerformanceConfigure();
+		Assert.assertTrue(performance().searchResultKPI("Bug Detection Rate"));
+		performance().clickOnDeleteKPIIcon();
 		
 	}
 	
@@ -160,15 +119,15 @@ public class TestSprint3 extends TestBase{
     @Feature("Time Module")
     @Story("Timesheet Submission")
 	public void employeeSubmittedTimeSheetWithDetails() throws InterruptedException {
-		login.logMeInAsUser();
-		timemenu.clickOnMenu("Time");
-		timemenu.clickOnCreateTimesheetButtonOrEditTimesheetButton();
-		timemenu.clickOnDeleteTimesheetEntryIcon();
-		timemenu.enterProjectName("S");
-		timemenu.selectActivity("c");
-		timemenu.enterHoursForMondayAndTuesday();
-		timemenu.clickOnSaveTimesheetButton();
-		Assert.assertTrue(timemenu.SaveToastMessageText());
+		login().logMeInAsUser();
+		timemenu().clickOnMenu("Time");
+		timemenu().clickOnCreateTimesheetButtonOrEditTimesheetButton();
+		timemenu().clickOnDeleteTimesheetEntryIcon();
+		timemenu().enterProjectName("S");
+		timemenu().selectActivity("c");
+		timemenu().enterHoursForMondayAndTuesday();
+		timemenu().clickOnSaveTimesheetButton();
+		Assert.assertTrue(timemenu().SaveToastMessageText());
 	}
 	
 	
@@ -180,13 +139,13 @@ public class TestSprint3 extends TestBase{
     @Feature("Time Module")
     @Story("Timesheet editing before submission")
 	public void employeeEditingTimesheetBeforeSubmission() throws InterruptedException {
-		login.logMeInAsUser();
-		timemenu.clickOnMenu("Time");
-		String beforeValue = timemenu.getMondayHours();
-		timemenu.clickOnEditTimesheetButton();
-		timemenu.enterUpdatedMondayHours();
-		timemenu.clickOnSaveTimesheetButton();
-		Assert.assertNotEquals(timemenu.getMondayHours(), beforeValue);
+		login().logMeInAsUser();
+		timemenu().clickOnMenu("Time");
+		String beforeValue = timemenu().getMondayHours();
+		timemenu().clickOnEditTimesheetButton();
+		timemenu().enterUpdatedMondayHours();
+		timemenu().clickOnSaveTimesheetButton();
+		Assert.assertNotEquals(timemenu().getMondayHours(), beforeValue);
 	}
 	
 	@Test(dependsOnMethods = "employeeEditingTimesheetBeforeSubmission")
@@ -196,15 +155,15 @@ public class TestSprint3 extends TestBase{
     @Feature("Time Module")
     @Story("Timesheet approval/Rejection")
 	public void managerApprovesOrRejectsTimesheet() throws InterruptedException {
-		login.logMeInAsUser();
-		timemenu.clickOnMenu("Time");
-		timemenu.clickOnSubmitTimesheetButton();
-		login.clickOnLogoutButton();
-		login.logMeIn();
-		timemenu.clickOnMenu("Time");
-		timemenu.clickOnViewTimesheetButton();
-		timemenu.clickOnRejectTimesheetButton();
-		Assert.assertTrue(timemenu.SaveToastMessageText());
+		login().logMeInAsUser();
+		timemenu().clickOnMenu("Time");
+		timemenu().clickOnSubmitTimesheetButton();
+		login().clickOnLogoutButton();
+		login().logMeIn();
+		timemenu().clickOnMenu("Time");
+		timemenu().clickOnViewTimesheetButton();
+		timemenu().clickOnRejectTimesheetButton();
+		Assert.assertTrue(timemenu().SaveToastMessageText());
 		
 	}
 	
@@ -215,10 +174,10 @@ public class TestSprint3 extends TestBase{
     @Feature("Dashboard Module")
     @Story("Dashboard Punch In Link")
 	public void dashboardPunchInLinkDirectToPunchInPage() throws InterruptedException {
-		login.logMeInAsUser();
-		dashboard.clickOnMenu("Dashboard");
-		dashboard.clickOnPunchInButton();
-		Assert.assertTrue(dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/attendance/punchIn"));
+		login().logMeInAsUser();
+		dashboard().clickOnMenu("Dashboard");
+		dashboard().clickOnPunchInButton();
+		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/attendance/punchIn"));
 	}
 	
 	@Test()
@@ -228,10 +187,10 @@ public class TestSprint3 extends TestBase{
     @Feature("Dashboard Module")
     @Story("Dashboard apply leaveLink")
 	public void dashboardApplyLeaveLinkDirectToLeavePage() {
-		login.logMeInAsUser();
-		dashboard.clickOnMenu("Dashboard");
-		dashboard.clickOnDashboardApplyLeaveShortcutbutton();
-		Assert.assertTrue(dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/leave/applyLeave"));
+		login().logMeInAsUser();
+		dashboard().clickOnMenu("Dashboard");
+		dashboard().clickOnDashboardApplyLeaveShortcutbutton();
+		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/leave/applyLeave"));
 	}
 	
 	@Test()
@@ -242,11 +201,10 @@ public class TestSprint3 extends TestBase{
     @Story("Dashboard my timesheet Link")
 	
 	public void dashboardMyTimesheetLinkDirectToMyTimesheetPage() {
-		login.logMeInAsUser();
-		dashboard.clickOnMenu("Dashboard");
-		dashboard.clickOnDashboardMyTimesheetShortcutbutton();
-		Assert.assertTrue(
-		dashboard.checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/time/viewMyTimesheet"));
+		login().logMeInAsUser();
+		dashboard().clickOnMenu("Dashboard");
+		dashboard().clickOnDashboardMyTimesheetShortcutbutton();
+		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/time/viewMyTimesheet"));
 	}
 	
 	

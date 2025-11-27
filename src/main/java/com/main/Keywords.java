@@ -151,13 +151,17 @@ public class Keywords {
 	}
 	
 	public void quitBrowser() {
-        if (getDriver() != null) {
-            getDriver().quit();
-            driver.remove();
-            wait.remove();
-            instance.remove();
-        }
-    }
+		try {
+	        if (getDriver() != null) {
+	            getDriver().quit();
+	        }
+	    } finally {
+	        driver.remove();
+	        wait.remove();
+	        fluentWait.remove();
+	        instance.remove();
+	    }
+	}
 
 	
 	/**
@@ -267,13 +271,13 @@ public class Keywords {
      * @param element The WebElement to scroll to
      */
     public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
     }
     
     
     public void scrollToElement(List<WebElement> elist) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", elist);
     }
     
@@ -284,7 +288,7 @@ public class Keywords {
      * @return 
      */
     public Object JSExecutor(String script , WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         @Nullable Object s = js.executeScript(script, element);
 		return s;
         

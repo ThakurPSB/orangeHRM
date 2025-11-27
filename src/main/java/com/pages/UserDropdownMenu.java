@@ -12,8 +12,8 @@ public class UserDropdownMenu {
 	private Keywords kw;
 
 	
-	public UserDropdownMenu(Keywords key) {
-		this.kw = key;
+	public UserDropdownMenu() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

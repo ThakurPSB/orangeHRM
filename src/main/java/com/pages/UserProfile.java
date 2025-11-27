@@ -14,8 +14,8 @@ public class UserProfile {
 	private Keywords kw;
 
 	
-	public UserProfile(Keywords key) {
-		this.kw = key;
+	public UserProfile() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

@@ -17,8 +17,8 @@ public class PerformanceMenu {
 	private Keywords kw;
 
 	//Constructor to initialize the Page object and its elements
-	public PerformanceMenu(Keywords key) {
-		this.kw = key;
+	public PerformanceMenu() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

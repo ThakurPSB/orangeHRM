@@ -18,8 +18,8 @@ public class AdminQualificationMenu {
 	private Keywords kw;
 
 
-	public AdminQualificationMenu(Keywords key) {
-		this.kw = key;
+	public AdminQualificationMenu() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

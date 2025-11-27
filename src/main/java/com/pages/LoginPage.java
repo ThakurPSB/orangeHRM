@@ -15,8 +15,8 @@ public class LoginPage {
 	private Keywords kw;
 
 	
-	public LoginPage(Keywords key) {
-		this.kw = key;
+	public LoginPage() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

@@ -16,8 +16,8 @@ public class LeaveMyLeaveMenu {
 	private Keywords kw;
 
 	//Constructor to initialize the Page object and its elements
-	public LeaveMyLeaveMenu(Keywords key) {
-		this.kw = key;
+	public LeaveMyLeaveMenu() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 

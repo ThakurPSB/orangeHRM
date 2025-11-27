@@ -18,8 +18,8 @@ public class TerminationReasons {
 	private Keywords kw;
 
 	//
-	public TerminationReasons(Keywords key) {
-		this.kw = key;
+	public TerminationReasons() {
+		this.kw = Keywords.getInstance();;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

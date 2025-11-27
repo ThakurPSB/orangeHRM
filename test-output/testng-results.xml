@@ -1,39 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="30" passed="0" failed="19" skipped="11">
+<testng-results ignored="22" total="30" passed="2" failed="5" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-27T00:35:25 IST" name="Master Suite" finished-at="2025-11-27T00:37:39 IST" duration-ms="134097">
+  <suite started-at="2025-11-27T14:07:47 IST" name="Failed suite [Master Suite]" finished-at="2025-11-27T14:08:44 IST" duration-ms="56935">
     <groups>
       <group name="smoke">
-        <method signature="TestSprint3.addVacancywithallDetailsAndCheckIfReflectsInCandidateField()[pri:0, instance:com.testcases.TestSprint3@399ca607]" name="addVacancywithallDetailsAndCheckIfReflectsInCandidateField" class="com.testcases.TestSprint3"/>
-        <method signature="TestSprint3.employeeSubmittedTimeSheetWithDetails()[pri:0, instance:com.testcases.TestSprint3@399ca607]" name="employeeSubmittedTimeSheetWithDetails" class="com.testcases.TestSprint3"/>
-        <method signature="TestSprint1.CheckIfLoginSuccessfullWithCorrectCredentials()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" name="CheckIfLoginSuccessfullWithCorrectCredentials" class="com.testcases.TestSprint1"/>
-        <method signature="TestSprint2.ApplyLeaveWithValidInputs()[pri:0, instance:com.testcases.TestSprint2@516592b1]" name="ApplyLeaveWithValidInputs" class="com.testcases.TestSprint2"/>
+        <method signature="TestSprint3.employeeSubmittedTimeSheetWithDetails()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" name="employeeSubmittedTimeSheetWithDetails" class="com.testcases.TestSprint3"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-11-27T00:35:25 IST" name="regression tests" finished-at="2025-11-27T00:37:39 IST" duration-ms="134097">
+    <test started-at="2025-11-27T14:07:47 IST" name="regression tests(failed)" finished-at="2025-11-27T14:08:44 IST" duration-ms="56935">
       <class name="com.testcases.TestSprint1">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:24 IST" name="cleanAllureResults" finished-at="2025-11-27T00:35:25 IST" duration-ms="126" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:25 IST" name="setUp" finished-at="2025-11-27T00:35:48 IST" duration-ms="23079" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:11 IST" name="setUp" finished-at="2025-11-27T14:08:13 IST" duration-ms="1919" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:25 IST" name="setUp" finished-at="2025-11-27T00:35:48 IST" duration-ms="23058" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:25 IST" name="setUp" finished-at="2025-11-27T00:35:48 IST" duration-ms="23066" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:25 IST" name="setUp" finished-at="2025-11-27T00:35:48 IST" duration-ms="23059" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:48 IST" name="pageSetup" finished-at="2025-11-27T00:35:49 IST" duration-ms="96" status="FAIL">
+        <test-method signature="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:13 IST" name="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage" finished-at="2025-11-27T14:08:19 IST" duration-ms="6073" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
@@ -41,276 +22,14 @@
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
 at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
+at com.base.TestBase.customField(TestBase.java:91)
+at com.testcases.TestSprint1.AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage(TestSprint1.java:190)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:48 IST" name="pageSetup" finished-at="2025-11-27T00:35:49 IST" duration-ms="96" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:48 IST" name="pageSetup" finished-at="2025-11-27T00:35:49 IST" duration-ms="94" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:48 IST" name="pageSetup" finished-at="2025-11-27T00:35:49 IST" duration-ms="96" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="CheckIfLoginSuccessfullWithIncorrectCredentials()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="CheckIfLoginSuccessfullWithIncorrectCredentials" finished-at="2025-11-27T00:35:49 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckIfLoginSuccessfullWithIncorrectCredentials -->
-        <test-method signature="CheckIfLoginSuccessfullWithCredentialsFieldBlank()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="CheckIfLoginSuccessfullWithCredentialsFieldBlank" finished-at="2025-11-27T00:35:49 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckIfLoginSuccessfullWithCredentialsFieldBlank -->
-        <test-method signature="CheckIfLoginSuccessfullWithCorrectCredentials()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="CheckIfLoginSuccessfullWithCorrectCredentials" finished-at="2025-11-27T00:35:49 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckIfLoginSuccessfullWithCorrectCredentials -->
-        <test-method signature="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage" finished-at="2025-11-27T00:35:49 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
@@ -329,122 +48,30 @@ at java.base/java.lang.Thread.run(Thread.java:842)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDowntest" finished-at="2025-11-27T00:35:49 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDowntest" finished-at="2025-11-27T00:35:49 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDowntest" finished-at="2025-11-27T00:35:49 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDowntest" finished-at="2025-11-27T00:35:49 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="758" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:24 IST" name="tearDown" finished-at="2025-11-27T14:08:24 IST" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="748" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="721" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:49 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="716" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:24 IST" name="setUp" finished-at="2025-11-27T14:08:25 IST" duration-ms="1477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="pageSetup" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="pageSetup" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="pageSetup" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="CheckIfOptionalFieldsVisibilityToggleWorking()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="CheckIfOptionalFieldsVisibilityToggleWorking" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="addUserandCheckIfAllOptionsAreWorkingWhileCreating()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:25 IST" name="addUserandCheckIfAllOptionsAreWorkingWhileCreating" finished-at="2025-11-27T14:08:32 IST" duration-ms="6842" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
+at com.pages.EmployeeListMenu.<init>(EmployeeListMenu.java:29)
+at com.base.TestBase.emplist(TestBase.java:103)
+at com.testcases.TestSprint1.addUserandCheckIfAllOptionsAreWorkingWhileCreating(TestSprint1.java:299)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckIfOptionalFieldsVisibilityToggleWorking -->
-        <test-method signature="addUserandCheckIfAllOptionsAreWorkingWhileCreating()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="addUserandCheckIfAllOptionsAreWorkingWhileCreating" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
@@ -463,143 +90,30 @@ at java.base/java.lang.Thread.run(Thread.java:842)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addUserandCheckIfAllOptionsAreWorkingWhileCreating -->
-        <test-method signature="checkIfAllTheLinksInProfileMenuAreWorking()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="checkIfAllTheLinksInProfileMenuAreWorking" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkIfAllTheLinksInProfileMenuAreWorking -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="pageSetup" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDowntest" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method signature="checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDowntest" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDowntest" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:35 IST" name="tearDown" finished-at="2025-11-27T14:08:35 IST" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:35 IST" name="setUp" finished-at="2025-11-27T14:08:37 IST" duration-ms="1784" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="pageSetup" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDowntest" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="checkSearchOptionsInPIMMenuEmployeeListPage()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="checkSearchOptionsInPIMMenuEmployeeListPage" finished-at="2025-11-27T00:35:50 IST" duration-ms="1" status="SKIP">
+        <test-method signature="checkSearchOptionsInPIMMenuEmployeeListPage()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:37 IST" name="checkSearchOptionsInPIMMenuEmployeeListPage" finished-at="2025-11-27T14:08:41 IST" duration-ms="4613" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "com.main.Keywords.getDriver()" because "this.kw" is null
-at com.pages.PimCustomFields.<init>(PimCustomFields.java:30)
-at com.testcases.TestSprint1.pageSetup(TestSprint1.java:45)
+at com.pages.EmployeeListMenu.<init>(EmployeeListMenu.java:29)
+at com.base.TestBase.emplist(TestBase.java:103)
+at com.testcases.TestSprint1.checkSearchOptionsInPIMMenuEmployeeListPage(TestSprint1.java:241)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
@@ -618,158 +132,40 @@ at java.base/java.lang.Thread.run(Thread.java:842)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkSearchOptionsInPIMMenuEmployeeListPage -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDowntest" finished-at="2025-11-27T00:35:50 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@4ed9f7b1]" started-at="2025-11-27T00:35:50 IST" name="tearDown" finished-at="2025-11-27T00:35:50 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint1@76536c53]" started-at="2025-11-27T14:08:44 IST" name="tearDown" finished-at="2025-11-27T14:08:44 IST" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.testcases.TestSprint1 -->
       <class name="com.testcases.TestSprint2">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:55 IST" duration-ms="4818" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestSprint2@1ec22831]" started-at="2025-11-27T14:07:47 IST" name="cleanAllureResults" finished-at="2025-11-27T14:07:47 IST" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanAllureResults -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@1ec22831]" started-at="2025-11-27T14:07:47 IST" name="setUp" finished-at="2025-11-27T14:07:50 IST" duration-ms="3245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:54 IST" duration-ms="3967" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@1ec22831]" started-at="2025-11-27T14:07:47 IST" name="setUp" finished-at="2025-11-27T14:07:51 IST" duration-ms="3874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:54 IST" duration-ms="4184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:50 IST" name="setUp" finished-at="2025-11-27T00:35:53 IST" duration-ms="3230" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:53 IST" name="pageSetup" finished-at="2025-11-27T00:35:53 IST" duration-ms="246" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="ApplyLeaveWithValidInputs()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:53 IST" name="ApplyLeaveWithValidInputs" finished-at="2025-11-27T00:36:17 IST" duration-ms="23334" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.pages.LeaveApplyMenu.cancelLeaveIfAlreadyTaken()" because "this.leaveApply" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.pages.LeaveApplyMenu.cancelLeaveIfAlreadyTaken()" because "this.leaveApply" is null
-at com.testcases.TestSprint2.ApplyLeaveWithValidInputs(TestSprint2.java:204)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ApplyLeaveWithValidInputs -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:54 IST" name="pageSetup" finished-at="2025-11-27T00:35:54 IST" duration-ms="19" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="ApplyLeaveWithOverlappingDates()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:54 IST" name="ApplyLeaveWithOverlappingDates" finished-at="2025-11-27T00:36:06 IST" duration-ms="12133" status="FAIL">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')
-at com.main.Keywords.scrollToElement(Keywords.java:270)
-at com.pages.LeaveApplyMenu.clickOnLeaveMenu(LeaveApplyMenu.java:40)
-at com.testcases.TestSprint2.ApplyLeaveWithOverlappingDates(TestSprint2.java:227)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ApplyLeaveWithOverlappingDates -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:54 IST" name="pageSetup" finished-at="2025-11-27T00:35:54 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="ApplyLeaveWithPastDates()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:54 IST" name="ApplyLeaveWithPastDates" finished-at="2025-11-27T00:36:06 IST" duration-ms="12297" status="FAIL">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')
-at com.main.Keywords.scrollToElement(Keywords.java:270)
-at com.pages.LeaveApplyMenu.clickOnLeaveMenu(LeaveApplyMenu.java:40)
-at com.testcases.TestSprint2.ApplyLeaveWithPastDates(TestSprint2.java:274)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
+        <test-method signature="ApplyLeaveWithPastDates()[pri:0, instance:com.testcases.TestSprint2@1ec22831]" started-at="2025-11-27T14:07:51 IST" name="ApplyLeaveWithPastDates" finished-at="2025-11-27T14:08:09 IST" duration-ms="18106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ApplyLeaveWithPastDates -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:55 IST" name="pageSetup" finished-at="2025-11-27T00:35:55 IST" duration-ms="18" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="ApplyLeaveWithInsufficientBalance()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:35:55 IST" name="ApplyLeaveWithInsufficientBalance" finished-at="2025-11-27T00:36:06 IST" duration-ms="11420" status="FAIL">
-          <exception class="java.lang.ClassCastException">
+        <test-method signature="CheckIfAddSkillOptionIsWorkingOrNot()[pri:0, instance:com.testcases.TestSprint2@1ec22831]" started-at="2025-11-27T14:07:51 IST" name="CheckIfAddSkillOptionIsWorkingOrNot" finished-at="2025-11-27T14:08:05 IST" duration-ms="14464" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')
-at com.main.Keywords.scrollToElement(Keywords.java:270)
-at com.pages.LeaveApplyMenu.clickOnLeaveMenu(LeaveApplyMenu.java:40)
-at com.testcases.TestSprint2.ApplyLeaveWithInsufficientBalance(TestSprint2.java:298)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.testcases.TestSprint2.CheckIfAddSkillOptionIsWorkingOrNot(TestSprint2.java:145)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -790,1002 +186,56 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:842)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ApplyLeaveWithInsufficientBalance -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:15 IST" name="tearDowntest" finished-at="2025-11-27T00:36:18 IST" duration-ms="3016" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:15 IST" name="tearDowntest" finished-at="2025-11-27T00:36:18 IST" duration-ms="3014" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:18 IST" name="tearDown" finished-at="2025-11-27T00:36:19 IST" duration-ms="280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:18 IST" name="tearDown" finished-at="2025-11-27T00:36:19 IST" duration-ms="280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:19 IST" name="setUp" finished-at="2025-11-27T00:36:21 IST" duration-ms="2730" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:19 IST" name="setUp" finished-at="2025-11-27T00:36:21 IST" duration-ms="2078" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:21 IST" name="pageSetup" finished-at="2025-11-27T00:36:21 IST" duration-ms="19" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="CheckIfAddLocationOptionIsWorkingOrNot()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:21 IST" name="CheckIfAddLocationOptionIsWorkingOrNot" finished-at="2025-11-27T00:36:22 IST" duration-ms="1696" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.pages.AdminMenu.clickOnAdminMenu()" because "this.admin" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.pages.AdminMenu.clickOnAdminMenu()" because "this.admin" is null
-at com.testcases.TestSprint2.CheckIfAddLocationOptionIsWorkingOrNot(TestSprint2.java:162)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckIfAddLocationOptionIsWorkingOrNot -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:21 IST" name="pageSetup" finished-at="2025-11-27T00:36:21 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="ApplyLeaveWithoutSelectingLeaveType()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:21 IST" name="ApplyLeaveWithoutSelectingLeaveType" finished-at="2025-11-27T00:36:22 IST" duration-ms="1080" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.pages.LeaveApplyMenu.clickOnLeaveMenu()" because "this.leaveApply" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.pages.LeaveApplyMenu.clickOnLeaveMenu()" because "this.leaveApply" is null
-at com.testcases.TestSprint2.ApplyLeaveWithoutSelectingLeaveType(TestSprint2.java:255)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ApplyLeaveWithoutSelectingLeaveType -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:22 IST" name="tearDowntest" finished-at="2025-11-27T00:36:25 IST" duration-ms="3015" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:25 IST" name="tearDowntest" finished-at="2025-11-27T00:36:28 IST" duration-ms="3013" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:25 IST" name="tearDown" finished-at="2025-11-27T00:36:26 IST" duration-ms="946" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:26 IST" name="tearDowntest" finished-at="2025-11-27T00:36:29 IST" duration-ms="3004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:26 IST" name="tearDowntest" finished-at="2025-11-27T00:36:29 IST" duration-ms="3011" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:26 IST" name="setUp" finished-at="2025-11-27T00:36:29 IST" duration-ms="2353" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:28 IST" name="tearDown" finished-at="2025-11-27T00:36:29 IST" duration-ms="1093" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:29 IST" name="pageSetup" finished-at="2025-11-27T00:36:29 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="CheckIfAddSkillOptionIsWorkingOrNot()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:29 IST" name="CheckIfAddSkillOptionIsWorkingOrNot" finished-at="2025-11-27T00:36:44 IST" duration-ms="14881" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"nav>ul>li:nth-of-type(4)"}
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [14e544c6783d27c5b2d1ee60467c8d82, findElement {value=nav>ul>li:nth-of-type(4), using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51867}, goog:processID: 14416, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51867/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 14e544c6783d27c5b2d1ee60467c8d82]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"nav>ul>li:nth-of-type(4)"}
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [14e544c6783d27c5b2d1ee60467c8d82, findElement {value=nav>ul>li:nth-of-type(4), using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51867}, goog:processID: 14416, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51867/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 14e544c6783d27c5b2d1ee60467c8d82
-at jdk.internal.reflect.GeneratedConstructorAccessor30.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at com.pages.AdminQualificationMenu.clickOnQualificationMenu(AdminQualificationMenu.java:33)
-at com.testcases.TestSprint2.CheckIfAddSkillOptionIsWorkingOrNot(TestSprint2.java:186)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckIfAddSkillOptionIsWorkingOrNot -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:29 IST" name="setUp" finished-at="2025-11-27T00:36:31 IST" duration-ms="2164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:29 IST" name="tearDown" finished-at="2025-11-27T00:36:30 IST" duration-ms="719" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@1ec22831]" started-at="2025-11-27T14:08:09 IST" name="tearDown" finished-at="2025-11-27T14:08:09 IST" duration-ms="274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:29 IST" name="tearDown" finished-at="2025-11-27T00:36:30 IST" duration-ms="885" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:30 IST" name="setUp" finished-at="2025-11-27T00:36:34 IST" duration-ms="3749" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:30 IST" name="setUp" finished-at="2025-11-27T00:36:33 IST" duration-ms="2491" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:31 IST" name="pageSetup" finished-at="2025-11-27T00:36:31 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="SearchSystemUserWithDifferentSearchOptions()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:31 IST" name="SearchSystemUserWithDifferentSearchOptions" finished-at="2025-11-27T00:36:41 IST" duration-ms="10136" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [14e544c6783d27c5b2d1ee60467c8d82, clickElement {id=f.FEDB1242096E9B1DF6E43DC817E081DF.d.6C98D93928C2D79468EE4180CB1278DA.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51867}, goog:processID: 14416, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51867/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (14e544c6783d27c5b2d1ee60467c8d82)] -> css selector: div.oxd-sidepanel-body > ul > li:nth-child(1) > a > span]
-Session ID: 14e544c6783d27c5b2d1ee60467c8d82]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [14e544c6783d27c5b2d1ee60467c8d82, clickElement {id=f.FEDB1242096E9B1DF6E43DC817E081DF.d.6C98D93928C2D79468EE4180CB1278DA.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51867}, goog:processID: 14416, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51867/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (14e544c6783d27c5b2d1ee60467c8d82)] -> css selector: div.oxd-sidepanel-body > ul > li:nth-child(1) > a > span]
-Session ID: 14e544c6783d27c5b2d1ee60467c8d82
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at com.pages.AdminMenu.clickOnAdminMenu(AdminMenu.java:37)
-at com.testcases.TestSprint2.SearchSystemUserWithDifferentSearchOptions(TestSprint2.java:77)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchSystemUserWithDifferentSearchOptions -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:33 IST" name="pageSetup" finished-at="2025-11-27T00:36:33 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="checkForJobMenuAreShowingCorrectOptions()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:33 IST" name="checkForJobMenuAreShowingCorrectOptions" finished-at="2025-11-27T00:36:44 IST" duration-ms="11607" status="FAIL">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')
-at com.main.Keywords.scrollToElement(Keywords.java:270)
-at com.pages.AdminJobTitles.clickOnJobSubMenu(AdminJobTitles.java:48)
-at com.testcases.TestSprint2.checkForJobMenuAreShowingCorrectOptions(TestSprint2.java:116)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkForJobMenuAreShowingCorrectOptions -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:34 IST" name="pageSetup" finished-at="2025-11-27T00:36:34 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="addLeaveEntitlement()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:34 IST" name="addLeaveEntitlement" finished-at="2025-11-27T00:36:39 IST" duration-ms="4972" status="FAIL">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')
-at com.main.Keywords.scrollToElement(Keywords.java:270)
-at com.pages.LeaveApplyMenu.clickOnLeaveMenu(LeaveApplyMenu.java:40)
-at com.testcases.TestSprint2.addLeaveEntitlement(TestSprint2.java:316)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addLeaveEntitlement -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:44 IST" name="tearDowntest" finished-at="2025-11-27T00:36:47 IST" duration-ms="3001" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:47 IST" name="tearDown" finished-at="2025-11-27T00:36:47 IST" duration-ms="187" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:47 IST" name="setUp" finished-at="2025-11-27T00:36:49 IST" duration-ms="2030" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:49 IST" name="tearDowntest" finished-at="2025-11-27T00:36:52 IST" duration-ms="3018" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:49 IST" name="tearDowntest" finished-at="2025-11-27T00:36:52 IST" duration-ms="3011" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:49 IST" name="pageSetup" finished-at="2025-11-27T00:36:49 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="checkForOrganizationMenuAreShowingCorrectOptions()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:49 IST" name="checkForOrganizationMenuAreShowingCorrectOptions" finished-at="2025-11-27T00:36:51 IST" duration-ms="1879" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.pages.AdminMenu.clickOnAdminMenu()" because "this.admin" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.pages.AdminMenu.clickOnAdminMenu()" because "this.admin" is null
-at com.testcases.TestSprint2.checkForOrganizationMenuAreShowingCorrectOptions(TestSprint2.java:139)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkForOrganizationMenuAreShowingCorrectOptions -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:51 IST" name="tearDowntest" finished-at="2025-11-27T00:36:54 IST" duration-ms="3005" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:52 IST" name="tearDown" finished-at="2025-11-27T00:36:52 IST" duration-ms="266" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:52 IST" name="tearDown" finished-at="2025-11-27T00:36:53 IST" duration-ms="404" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:54 IST" name="tearDown" finished-at="2025-11-27T00:36:55 IST" duration-ms="925" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:54 IST" name="tearDowntest" finished-at="2025-11-27T00:36:57 IST" duration-ms="3008" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@516592b1]" started-at="2025-11-27T00:36:57 IST" name="tearDown" finished-at="2025-11-27T00:36:57 IST" duration-ms="418" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint2@1ec22831]" started-at="2025-11-27T14:08:11 IST" name="tearDown" finished-at="2025-11-27T14:08:11 IST" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.testcases.TestSprint2 -->
       <class name="com.testcases.TestSprint3">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:52 IST" name="setUp" finished-at="2025-11-27T00:36:55 IST" duration-ms="2788" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" started-at="2025-11-27T14:08:09 IST" name="setUp" finished-at="2025-11-27T14:08:10 IST" duration-ms="1296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:53 IST" name="setUp" finished-at="2025-11-27T00:36:55 IST" duration-ms="2741" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:55 IST" name="setUp" finished-at="2025-11-27T00:36:57 IST" duration-ms="2147" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:55 IST" name="pageSetup" finished-at="2025-11-27T00:36:55 IST" duration-ms="42" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="AddsNewCandidateForAnExistingVacancy()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:55 IST" name="AddsNewCandidateForAnExistingVacancy" finished-at="2025-11-27T00:37:14 IST" duration-ms="18924" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.pages.RecruitmentMenu.enterCandidateFullName(String, String, String)" because "this.recruitment" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.pages.RecruitmentMenu.enterCandidateFullName(String, String, String)" because "this.recruitment" is null
-at com.testcases.TestSprint3.AddsNewCandidateForAnExistingVacancy(TestSprint3.java:94)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddsNewCandidateForAnExistingVacancy -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:55 IST" name="pageSetup" finished-at="2025-11-27T00:36:55 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="AddsNewCandidateForAnExistingVacancyWithoutEmail()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:55 IST" name="AddsNewCandidateForAnExistingVacancyWithoutEmail" finished-at="2025-11-27T00:37:07 IST" duration-ms="11924" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af461e31265fdabac1f6903abdf78f64, clickElement {id=f.B7E6AB211B5D75ED3C54DBC58A0CCDB6.d.D24C1E9EB4D944849975EE2A548F0827.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49744}, goog:processID: 8352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49744/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af461e31265fdabac1f6903abdf78f64)] -> css selector: aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(5) > a > span]
-Session ID: af461e31265fdabac1f6903abdf78f64]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af461e31265fdabac1f6903abdf78f64, clickElement {id=f.B7E6AB211B5D75ED3C54DBC58A0CCDB6.d.D24C1E9EB4D944849975EE2A548F0827.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49744}, goog:processID: 8352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49744/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af461e31265fdabac1f6903abdf78f64)] -> css selector: aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(5) > a > span]
-Session ID: af461e31265fdabac1f6903abdf78f64
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at jdk.internal.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at com.pages.RecruitmentMenu.clickOnRecruitmentMenu(RecruitmentMenu.java:39)
-at com.testcases.TestSprint3.AddsNewCandidateForAnExistingVacancyWithoutEmail(TestSprint3.java:114)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddsNewCandidateForAnExistingVacancyWithoutEmail -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:57 IST" name="pageSetup" finished-at="2025-11-27T00:36:57 IST" duration-ms="21" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="addNewKPIForTheJobTitle()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:57 IST" name="addNewKPIForTheJobTitle" finished-at="2025-11-27T00:37:05 IST" duration-ms="8269" status="FAIL">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')
-at com.main.Keywords.scrollToElement(Keywords.java:270)
-at com.pages.PerformanceMenu.clickOnPerformanceMenu(PerformanceMenu.java:32)
-at com.testcases.TestSprint3.addNewKPIForTheJobTitle(TestSprint3.java:138)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addNewKPIForTheJobTitle -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:57 IST" name="setUp" finished-at="2025-11-27T00:36:59 IST" duration-ms="1715" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:59 IST" name="pageSetup" finished-at="2025-11-27T00:36:59 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="addVacancywithallDetailsAndCheckIfReflectsInCandidateField()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:36:59 IST" name="addVacancywithallDetailsAndCheckIfReflectsInCandidateField" finished-at="2025-11-27T00:37:07 IST" duration-ms="8042" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af461e31265fdabac1f6903abdf78f64, clickElement {id=f.B7E6AB211B5D75ED3C54DBC58A0CCDB6.d.D24C1E9EB4D944849975EE2A548F0827.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49744}, goog:processID: 8352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49744/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af461e31265fdabac1f6903abdf78f64)] -> css selector: aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(5) > a > span]
-Session ID: af461e31265fdabac1f6903abdf78f64]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af461e31265fdabac1f6903abdf78f64, clickElement {id=f.B7E6AB211B5D75ED3C54DBC58A0CCDB6.d.D24C1E9EB4D944849975EE2A548F0827.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49744}, goog:processID: 8352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49744/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af461e31265fdabac1f6903abdf78f64)] -> css selector: aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(5) > a > span]
-Session ID: af461e31265fdabac1f6903abdf78f64
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at jdk.internal.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at com.pages.RecruitmentMenu.clickOnRecruitmentMenu(RecruitmentMenu.java:39)
-at com.testcases.TestSprint3.addVacancywithallDetailsAndCheckIfReflectsInCandidateField(TestSprint3.java:66)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addVacancywithallDetailsAndCheckIfReflectsInCandidateField -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:12 IST" name="tearDowntest" finished-at="2025-11-27T00:37:15 IST" duration-ms="3004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:12 IST" name="tearDowntest" finished-at="2025-11-27T00:37:15 IST" duration-ms="3004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:14 IST" name="tearDowntest" finished-at="2025-11-27T00:37:17 IST" duration-ms="3008" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:15 IST" name="tearDown" finished-at="2025-11-27T00:37:15 IST" duration-ms="200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:15 IST" name="setUp" finished-at="2025-11-27T00:37:18 IST" duration-ms="2510" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:15 IST" name="tearDown" finished-at="2025-11-27T00:37:15 IST" duration-ms="240" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:15 IST" name="setUp" finished-at="2025-11-27T00:37:17 IST" duration-ms="1695" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:17 IST" name="pageSetup" finished-at="2025-11-27T00:37:17 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="dashboardMyTimesheetLinkDirectToMyTimesheetPage()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:17 IST" name="dashboardMyTimesheetLinkDirectToMyTimesheetPage" finished-at="2025-11-27T00:37:26 IST" duration-ms="8436" status="FAIL">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: class java.lang.ThreadLocal cannot be cast to class org.openqa.selenium.JavascriptExecutor (java.lang.ThreadLocal is in module java.base of loader 'bootstrap'; org.openqa.selenium.JavascriptExecutor is in unnamed module of loader 'app')
-at com.main.Keywords.scrollToElement(Keywords.java:270)
-at com.pages.DashboardMenu.clickOnDashboardMyTimesheetShortcutbutton(DashboardMenu.java:73)
-at com.testcases.TestSprint3.dashboardMyTimesheetLinkDirectToMyTimesheetPage(TestSprint3.java:247)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dashboardMyTimesheetLinkDirectToMyTimesheetPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:17 IST" name="tearDown" finished-at="2025-11-27T00:37:18 IST" duration-ms="327" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:18 IST" name="setUp" finished-at="2025-11-27T00:37:20 IST" duration-ms="2361" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:18 IST" name="pageSetup" finished-at="2025-11-27T00:37:18 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="dashboardApplyLeaveLinkDirectToLeavePage()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:18 IST" name="dashboardApplyLeaveLinkDirectToLeavePage" finished-at="2025-11-27T00:37:25 IST" duration-ms="7006" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".oxd-main-menu-item"}
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7702b8de8d2c6352cf69d4fd3c14b561, findElement {value=.oxd-main-menu-item, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 17776, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7702b8de8d2c6352cf69d4fd3c14b561]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".oxd-main-menu-item"}
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7702b8de8d2c6352cf69d4fd3c14b561, findElement {value=.oxd-main-menu-item, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 17776, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7702b8de8d2c6352cf69d4fd3c14b561
-at jdk.internal.reflect.GeneratedConstructorAccessor30.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at com.pages.DashboardMenu.clickOnMenu(DashboardMenu.java:33)
-at com.testcases.TestSprint3.dashboardApplyLeaveLinkDirectToLeavePage(TestSprint3.java:232)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dashboardApplyLeaveLinkDirectToLeavePage -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:20 IST" name="pageSetup" finished-at="2025-11-27T00:37:20 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="dashboardPunchInLinkDirectToPunchInPage()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:20 IST" name="dashboardPunchInLinkDirectToPunchInPage" finished-at="2025-11-27T00:37:25 IST" duration-ms="4618" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".oxd-main-menu-item"}
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7702b8de8d2c6352cf69d4fd3c14b561, findElement {value=.oxd-main-menu-item, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 17776, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7702b8de8d2c6352cf69d4fd3c14b561]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".oxd-main-menu-item"}
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7702b8de8d2c6352cf69d4fd3c14b561, findElement {value=.oxd-main-menu-item, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\piyus\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 17776, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7702b8de8d2c6352cf69d4fd3c14b561
-at jdk.internal.reflect.GeneratedConstructorAccessor30.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at com.pages.DashboardMenu.clickOnMenu(DashboardMenu.java:33)
-at com.testcases.TestSprint3.dashboardPunchInLinkDirectToPunchInPage(TestSprint3.java:219)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dashboardPunchInLinkDirectToPunchInPage -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:22 IST" name="tearDowntest" finished-at="2025-11-27T00:37:25 IST" duration-ms="3007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:25 IST" name="tearDown" finished-at="2025-11-27T00:37:26 IST" duration-ms="498" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:26 IST" name="setUp" finished-at="2025-11-27T00:37:28 IST" duration-ms="1924" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:28 IST" name="pageSetup" finished-at="2025-11-27T00:37:28 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageSetup -->
-        <test-method signature="employeeSubmittedTimeSheetWithDetails()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:28 IST" name="employeeSubmittedTimeSheetWithDetails" finished-at="2025-11-27T00:37:33 IST" duration-ms="5619" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.pages.TimeMenu.clickOnCreateTimesheetButtonOrEditTimesheetButton()" because "this.timemenu" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.pages.TimeMenu.clickOnCreateTimesheetButtonOrEditTimesheetButton()" because "this.timemenu" is null
-at com.testcases.TestSprint3.employeeSubmittedTimeSheetWithDetails(TestSprint3.java:165)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="employeeSubmittedTimeSheetWithDetails()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" started-at="2025-11-27T14:08:10 IST" name="employeeSubmittedTimeSheetWithDetails" finished-at="2025-11-27T14:08:27 IST" duration-ms="16205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- employeeSubmittedTimeSheetWithDetails -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:30 IST" name="tearDowntest" finished-at="2025-11-27T00:37:33 IST" duration-ms="3007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:30 IST" name="tearDowntest" finished-at="2025-11-27T00:37:33 IST" duration-ms="3004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:31 IST" name="tearDowntest" finished-at="2025-11-27T00:37:34 IST" duration-ms="3006" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:33 IST" name="tearDown" finished-at="2025-11-27T00:37:33 IST" duration-ms="276" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" started-at="2025-11-27T14:08:27 IST" name="tearDown" finished-at="2025-11-27T14:08:27 IST" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:33 IST" name="tearDown" finished-at="2025-11-27T00:37:33 IST" duration-ms="284" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" started-at="2025-11-27T14:08:27 IST" name="setUp" finished-at="2025-11-27T14:08:29 IST" duration-ms="1826" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:34 IST" name="tearDown" finished-at="2025-11-27T00:37:34 IST" duration-ms="271" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDowntest()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:36 IST" name="tearDowntest" finished-at="2025-11-27T00:37:39 IST" duration-ms="3012" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDowntest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:39 IST" name="tearDown" finished-at="2025-11-27T00:37:39 IST" duration-ms="188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="employeeEditingTimesheetBeforeSubmission()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:39 IST" name="employeeEditingTimesheetBeforeSubmission" finished-at="2025-11-27T00:37:39 IST" depends-on-methods="com.testcases.TestSprint3.employeeSubmittedTimeSheetWithDetails" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- setUp -->
+        <test-method signature="employeeEditingTimesheetBeforeSubmission()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" started-at="2025-11-27T14:08:29 IST" name="employeeEditingTimesheetBeforeSubmission" finished-at="2025-11-27T14:08:38 IST" depends-on-methods="com.testcases.TestSprint3.employeeSubmittedTimeSheetWithDetails" duration-ms="9450" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Method com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission() on instance com.testcases.TestSprint3@399ca607 depends on not successfully finished methods 
-[com.testcases.TestSprint3.employeeSubmittedTimeSheetWithDetails() on instance com.testcases.TestSprint3@399ca607]]]>
+              <![CDATA[Cannot invoke "String.split(String)" because "this.hrString" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission() on instance com.testcases.TestSprint3@399ca607 depends on not successfully finished methods 
-[com.testcases.TestSprint3.employeeSubmittedTimeSheetWithDetails() on instance com.testcases.TestSprint3@399ca607]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.split(String)" because "this.hrString" is null
+at com.pages.TimeMenu.randomIncrementDecrementInHours(TimeMenu.java:170)
+at com.pages.TimeMenu.enterUpdatedMondayHours(TimeMenu.java:185)
+at com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission(TestSprint3.java:146)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
@@ -1796,19 +246,23 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:842)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- employeeEditingTimesheetBeforeSubmission -->
-        <test-method signature="managerApprovesOrRejectsTimesheet()[pri:0, instance:com.testcases.TestSprint3@399ca607]" started-at="2025-11-27T00:37:39 IST" name="managerApprovesOrRejectsTimesheet" finished-at="2025-11-27T00:37:39 IST" depends-on-methods="com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" started-at="2025-11-27T14:08:43 IST" name="tearDown" finished-at="2025-11-27T14:08:43 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="managerApprovesOrRejectsTimesheet()[pri:0, instance:com.testcases.TestSprint3@2a235b8e]" started-at="2025-11-27T14:08:43 IST" name="managerApprovesOrRejectsTimesheet" finished-at="2025-11-27T14:08:43 IST" depends-on-methods="com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method com.testcases.TestSprint3.managerApprovesOrRejectsTimesheet() on instance com.testcases.TestSprint3@399ca607 depends on not successfully finished methods 
-[com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission() on instance com.testcases.TestSprint3@399ca607]]]>
+              <![CDATA[Method com.testcases.TestSprint3.managerApprovesOrRejectsTimesheet() on instance com.testcases.TestSprint3@2a235b8e depends on not successfully finished methods 
+[com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission() on instance com.testcases.TestSprint3@2a235b8e]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method com.testcases.TestSprint3.managerApprovesOrRejectsTimesheet() on instance com.testcases.TestSprint3@399ca607 depends on not successfully finished methods 
-[com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission() on instance com.testcases.TestSprint3@399ca607]
+              <![CDATA[java.lang.Throwable: Method com.testcases.TestSprint3.managerApprovesOrRejectsTimesheet() on instance com.testcases.TestSprint3@2a235b8e depends on not successfully finished methods 
+[com.testcases.TestSprint3.employeeEditingTimesheetBeforeSubmission() on instance com.testcases.TestSprint3@2a235b8e]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -1825,6 +279,6 @@ at java.base/java.lang.Thread.run(Thread.java:842)
           </reporter-output>
         </test-method> <!-- managerApprovesOrRejectsTimesheet -->
       </class> <!-- com.testcases.TestSprint3 -->
-    </test> <!-- regression tests -->
-  </suite> <!-- Master Suite -->
+    </test> <!-- regression tests(failed) -->
+  </suite> <!-- Failed suite [Master Suite] -->
 </testng-results>
