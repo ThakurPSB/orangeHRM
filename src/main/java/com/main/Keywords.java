@@ -117,20 +117,7 @@ public class Keywords {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
 
 	        ChromeOptions options = new ChromeOptions();
-	        boolean isJenkins = System.getenv("JENKINS_HOME") != null;
-	        
-			if (isJenkins) {
-				LOG.info("Running in Jenkins environment, applying headless options.");
-				options.addArguments("--headless=new");
-				//options.addArguments("--disable-gpu");
-				//options.addArguments("--no-sandbox");
-				//options.addArguments("--disable-dev-shm-usage");
-				//options.addArguments("--window-size=1920,1080");
-				//options.addArguments("--start-maximized");
-				//options.addArguments("--force-device-scale-factor=1");
-				//options.addArguments("--disable-infobars");
-			}
-	        
+	        options.addArguments("--start-maximized");
 	        dr = new ChromeDriver(options);
 			LOG.info("Launched Chrome Browser");
 			
@@ -139,19 +126,7 @@ public class Keywords {
 			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/msedgedriver.exe");
 			
 			EdgeOptions options = new EdgeOptions();
-
-			boolean isJenkins = System.getenv("JENKINS_HOME") != null;
-			if (isJenkins) {
-		    options.addArguments("--headless=new");
-		    options.addArguments("--disable-gpu");
-		    options.addArguments("--no-sandbox");
-		    options.addArguments("--disable-dev-shm-usage");
-		    options.addArguments("--window-size=1920,1080");
 		    options.addArguments("--start-maximized");
-		    options.addArguments("--force-device-scale-factor=1");
-		    options.addArguments("--disable-infobars");
-			}
-			
 			dr = new EdgeDriver();
 			dr.manage().window().setSize(new Dimension(1920,1080));
 			LOG.info("Launched Edge Browser");
@@ -161,17 +136,8 @@ public class Keywords {
 			System.setProperty("webdriver.firefox.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/geckodriver.exe");
 			
 			FirefoxOptions options = new FirefoxOptions();
-			boolean isJenkins = System.getenv("JENKINS_HOME") != null;
-			
-			if (isJenkins) {
-		    options.addArguments("--headless");
-		    options.addArguments("--width=1920");
-		    options.addArguments("--height=1080");
 		    options.addArguments("--start-maximized");
-		    options.addArguments("--force-device-scale-factor=1");
-		    options.addArguments("--disable-infobars");
-			}
-			
+		    
 			dr = new FirefoxDriver();
 			dr.manage().window().setSize(new Dimension(1920,1080));
 			LOG.info("Launched firefox Browser");
