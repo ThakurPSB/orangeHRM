@@ -179,11 +179,11 @@ public class Keywords {
 		dr.manage().window().maximize();
 		
 		//Assigning explicit wait to Thread local
-		wait.set(new WebDriverWait(dr, Duration.ofSeconds(15)));
+		wait.set(new WebDriverWait(dr, Duration.ofSeconds(30)));
 
 		//Assigning wait to Thread local
 		fluentWait.set(new FluentWait<>(dr)
-		        .withTimeout(Duration.ofSeconds(15))
+		        .withTimeout(Duration.ofSeconds(30))
 		        .pollingEvery(Duration.ofMillis(500))
 		        .ignoring(NoSuchElementException.class));
 		
