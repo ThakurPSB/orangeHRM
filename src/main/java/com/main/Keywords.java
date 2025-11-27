@@ -18,6 +18,7 @@ import javax.imageio.ImageIO;
 import org.apache.log4j.Logger;
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
@@ -25,7 +26,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -114,21 +117,54 @@ public class Keywords {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
 
 	        ChromeOptions options = new ChromeOptions();
-	        //options.addArguments("--headless=new"); // Use newer headless mode
-	        options.addArguments("--window-size=1920,1080"); // Set proper resolution
+	        boolean isJenkins = System.getenv("JENKINS_HOME") != null;
+	        
+			if (isJenkins) {
+				LOG.info("Running in Jenkins environment, applying headless options.");
+				options.addArguments("--headless=new");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--window-size=1920,1080");
+			}
+	        
 	        dr = new ChromeDriver(options);
 			LOG.info("Launched Chrome Browser");
 			
 		} else if(browserName.equalsIgnoreCase("Edge")) {
 			
 			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/msedgedriver.exe");
+			
+			EdgeOptions options = new EdgeOptions();
+
+			boolean isJenkins = System.getenv("JENKINS_HOME") != null;
+			if (isJenkins) {
+		    options.addArguments("--headless=new");
+		    options.addArguments("--disable-gpu");
+		    options.addArguments("--no-sandbox");
+		    options.addArguments("--disable-dev-shm-usage");
+		    options.addArguments("--window-size=1920,1080");
+			}
+			
 			dr = new EdgeDriver();
+			dr.manage().window().setSize(new Dimension(1920,1080));
 			LOG.info("Launched Edge Browser");
 			
 		} else if(browserName.equalsIgnoreCase("Firefox")) {
 			
 			System.setProperty("webdriver.firefox.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/geckodriver.exe");
+			
+			FirefoxOptions options = new FirefoxOptions();
+			boolean isJenkins = System.getenv("JENKINS_HOME") != null;
+			
+			if (isJenkins) {
+		    options.addArguments("--headless");
+		    options.addArguments("--width=1920");
+		    options.addArguments("--height=1080");
+			}
+			
 			dr = new FirefoxDriver();
+			dr.manage().window().setSize(new Dimension(1920,1080));
 			LOG.info("Launched firefox Browser");
 			
 		} else {
@@ -141,6 +177,9 @@ public class Keywords {
 		// Apply driver-level settings
 		dr.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		dr.manage().window().maximize();
+		
+		//Assigning explicit wait to Thread local
+		wait.set(new WebDriverWait(dr, Duration.ofSeconds(15)));
 
 		//Assigning wait to Thread local
 		fluentWait.set(new FluentWait<>(dr)
@@ -277,8 +316,9 @@ public class Keywords {
     
     
     public void scrollToElement(List<WebElement> elist) {
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", elist);
+    	if (elist != null && !elist.isEmpty()) {
+            scrollToElement(elist.get(0));
+        }
     }
     
     /**
@@ -298,13 +338,13 @@ public class Keywords {
     /**
      * This method check if the list is displayed or not, its empty or not
      * @param elements
-     * @return
+     * @return boolean
      */
     public boolean isElementListPresent(List<WebElement> elements) {
     	try {
-            return elements.isEmpty() && elements.get(0).isDisplayed();
+            return elements != null && !elements.isEmpty() && elements.get(0).isDisplayed();
         } catch (Exception e) {
-            return false; 
+            return false;
         }
 	}
 
