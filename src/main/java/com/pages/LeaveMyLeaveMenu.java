@@ -28,6 +28,7 @@ public class LeaveMyLeaveMenu {
 	
 	public void clickOnMyLeaveMenu() {
 		kw.waitForElementToBeVisible(myLeaveMenu);
+		kw.scrollToElement(myLeaveMenu);
 		myLeaveMenu.click();
 		LOG.info("Successfully clicked on My Leave menu");
 	}

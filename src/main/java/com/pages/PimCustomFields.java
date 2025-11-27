@@ -38,6 +38,7 @@ public class PimCustomFields {
 	 */
 	public void clickOnCustomFields() {
 		kw.waitForElementToBeVisible(customFields);
+		kw.scrollToElement(customFields);
 		customFields.click();
 		LOG.info("Successfully clicked on Custom Field Option ");
 	}
@@ -50,6 +51,7 @@ public class PimCustomFields {
 	 */
 	public void clickOnAddCustomFieldsButton() {
 		kw.waitForElementToBeClickable(addCustomFields);
+		kw.scrollToElement(addCustomFields);
 		addCustomFields.click();
 		LOG.info("Successfully clicked on the Add custom Field Button");
 	}
@@ -59,6 +61,7 @@ public class PimCustomFields {
 	
 	public void enterFieldName(String field) {
 		kw.waitForElementToBeClickable(fieldName);
+		kw.scrollToElement(fieldName);
 		fieldName.click();
 		fieldName.sendKeys(field);
 		LOG.info("Successfully entered the field name in text box");
@@ -73,6 +76,7 @@ public class PimCustomFields {
 	 */
 	public void clickOnScreenOption() {
 		kw.waitForElementToBeClickable(screen);
+		kw.scrollToElement(screen);
 		screen.click();
 		for(int i = 1; i<=11;i++) {
 			screen.sendKeys(Keys.ARROW_DOWN);
@@ -89,6 +93,7 @@ public class PimCustomFields {
 	 */
 	public void SelectTypeOfInputDropdown() {
 		kw.waitForElementToBeClickable(typeOfInput);
+		kw.scrollToElement(typeOfInput);
 		typeOfInput.sendKeys(Keys.ARROW_DOWN);
 		typeOfInput.sendKeys(Keys.ARROW_DOWN);
 		typeOfInput.sendKeys(Keys.ENTER);		
@@ -100,6 +105,7 @@ public class PimCustomFields {
 	 */
 	public void selectTypeOfInputText() {
 		kw.waitForElementToBeClickable(typeOfInput);
+		kw.scrollToElement(typeOfInput);
 		typeOfInput.sendKeys(Keys.ARROW_DOWN);
 		typeOfInput.sendKeys(Keys.ENTER);
 		LOG.info("Successfully selected the input style as Text");
@@ -113,6 +119,7 @@ public class PimCustomFields {
 	 */
 	public void enterOptions(String opt) {
 		kw.waitForElementToBeVisible(selectOptionstextbox);
+		kw.scrollToElement(selectOptionstextbox);
 		selectOptionstextbox.sendKeys(opt);
 		LOG.info("Successfully entered the options for dropdown");
 	}
@@ -125,6 +132,7 @@ public class PimCustomFields {
 	 */
 	public void clickOnSaveCustomFieldButton() {
 		kw.waitForElementToBeClickable(saveCustomField);
+		kw.scrollToElement(saveCustomField);
 		saveCustomField.click();
 		LOG.info("Successfully clicked on the Save Custom Field button ");
 	}
@@ -137,6 +145,7 @@ public class PimCustomFields {
 	 */
 	public boolean SaveToastMessageText() {
 		kw.waitForElementToBeVisible(saveSuccessfullToast);
+		kw.scrollToElement(saveSuccessfullToast);
 		boolean isDisplayed = saveSuccessfullToast.isDisplayed();
 		LOG.info("Successfully saved the custom field");
 		return isDisplayed;
@@ -167,9 +176,11 @@ public class PimCustomFields {
 	    if (isFieldFound) { 
 	    	LOG.info("Found custome field to be deleted ");
 	        WebElement delButton = found.findElement(By.cssSelector("button.oxd-icon-button.oxd-table-cell-action-space i.oxd-icon.bi-trash"));
+	        kw.scrollToElement(delButton);
 	    	delButton.click();
 	    	kw.normalWait(200);
 	    	kw.waitForElementToBeClickable(confirmDeleteYes);
+	    	kw.scrollToElement(confirmDeleteYes);
 	        confirmDeleteYes.click();
 	    }else {
 	    	LOG.info(fieldname+ " not found in the custom fields list");

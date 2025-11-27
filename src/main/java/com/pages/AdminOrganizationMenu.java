@@ -31,6 +31,7 @@ public class AdminOrganizationMenu {
 	
 	public void clickOnOrgMenu() {
 		kw.waitForElementToBeVisible(orgMenu);
+		kw.scrollToElement(orgMenu);
 		orgMenu.click();
 		LOG.info("Cliked on Organization Menu");
 	}
@@ -56,6 +57,7 @@ public class AdminOrganizationMenu {
 	    for (WebElement option : menuOptions) {
 	        if (option.getText().trim().equals(optionText)) {
 	            kw.waitForElementToBeClickable(option);
+	            kw.scrollToElement(option);
 	            option.click();
 	            LOG.info("Clicked on : " + optionText);
 	            kw.waitForTextToBe(pageLoadStatus, optionText);
@@ -71,6 +73,7 @@ public class AdminOrganizationMenu {
 	
 	public void clickOnEditButton() {
 		kw.waitForElementToBeVisibleShort(editButton, 5);
+		kw.scrollToElement(editButton);
 		editButton.click();
 		LOG.info("Cliked on edit button in organization Menu");
 	}
@@ -264,6 +267,7 @@ public class AdminOrganizationMenu {
 				deleteButton.click();
 				if(!errorToastMessageText()) {
 					kw.waitForElementToBeClickable(confirmDeleteYes);
+					kw.scrollToElement(confirmDeleteYes);
 			        confirmDeleteYes.click();
 			        LOG.info("Successfully Deleted the location "+loc);
 				}else {
@@ -293,6 +297,7 @@ public class AdminOrganizationMenu {
 	
 	public void enterLocation(String name) {
 		kw.waitForElementToBeClickable(enterLocationName);
+		kw.scrollToElement(enterLocationName);
 		enterLocationName.sendKeys(name);
 		LOG.info("Entered the location name ");
 	}
@@ -302,6 +307,7 @@ public class AdminOrganizationMenu {
 	
 	public void enterCity(String name) {
 		kw.waitForElementToBeClickable(enterCityName);
+		kw.scrollToElement(enterCityName);
 		enterCityName.sendKeys(name);
 		LOG.info("Entered the City Name ");
 	}
@@ -311,6 +317,7 @@ public class AdminOrganizationMenu {
 	
 	public void enterState(String name) {
 		kw.waitForElementToBeClickable(enterStateName);
+		kw.scrollToElement(enterStateName);
 		enterStateName.sendKeys(name);
 		LOG.info("Entered the State name ");
 	}
@@ -320,6 +327,7 @@ public class AdminOrganizationMenu {
 	
 	public void enterZip(String name) {
 		kw.waitForElementToBeClickable(enterZipCode);
+		kw.scrollToElement(enterZipCode);
 		enterZipCode.sendKeys(name);
 		LOG.info("Entered the Zip code ");
 	}
@@ -338,6 +346,7 @@ public class AdminOrganizationMenu {
 		for (WebElement option : countries) {
 		    if (option.getText().equalsIgnoreCase(country)) {
 		        kw.waitForElementToBeClickable(option);
+		        kw.scrollToElement(option);
 		        option.click();
 		        found = true;
 		        LOG.info("Selected the Country ");
@@ -355,6 +364,7 @@ public class AdminOrganizationMenu {
 	
 	public void clickOnSaveLocationButton() {
 		kw.waitForElementToBeClickable(locationSaveButton);
+		kw.scrollToElement(locationSaveButton);
 		locationSaveButton.click();
 		LOG.info("Clicked on Save button and Saved the location ");
 	}

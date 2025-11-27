@@ -32,6 +32,7 @@ public class ReportingMethod {
 	 */
 	public void clickOnReportingMethod() {
 		kw.waitForElementToBeClickable(reportingMethodMenu);
+		kw.scrollToElement(reportingMethodMenu);
 		reportingMethodMenu.click();
 		LOG.info("Successfully clicked on Reporting Method");
 	}
@@ -61,6 +62,7 @@ public class ReportingMethod {
 	
 	public void addrReportingMethod(String nm) {
 		kw.waitForElementToBeClickable(reportingMethodName);
+		kw.scrollToElement(reportingMethodName);
 		reportingMethodName.sendKeys(nm);
 		if(isAlreadyExistErrorPresent()) {
 			LOG.error("Reporing Method already Exists");
@@ -110,9 +112,11 @@ public class ReportingMethod {
 		if(isMethodFound) {
 			LOG.info("Found the reporting Method");
 			WebElement deleteButton = found.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
+			kw.scrollToElement(deleteButton);
 			deleteButton.click();
 			if(!errorToastMessageText()) {
 				kw.waitForElementToBeClickable(confirmDeleteYes);
+				kw.scrollToElement(confirmDeleteYes);
 		        confirmDeleteYes.click();
 		        LOG.info(name+" Reporing option deleted");
 			}else {

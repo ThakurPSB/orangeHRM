@@ -30,6 +30,7 @@ public class AdminQualificationMenu {
 	
 	public void clickOnQualificationMenu() {
 		kw.waitForElementToBeClickable(qualification);
+		kw.scrollToElement(qualification);
 		qualification.click();
 		LOG.info("Clicked on Admin > Qualification Menu");
 	}
@@ -39,6 +40,7 @@ public class AdminQualificationMenu {
 	
 	public void clickOnSkills() {
 		kw.waitForElementToBeVisible(skills);
+		kw.scrollToElement(skills);
 		skills.click();
 		LOG.info("Clicked on Qualification> Skill menu");
 	}
@@ -48,6 +50,7 @@ public class AdminQualificationMenu {
 	
 	public void clickOnAddSkillsButton() {
 		kw.waitForElementToBeVisible(addSkillsButton);
+		kw.scrollToElement(addSkillsButton);
 		addSkillsButton.click();
 		LOG.info("clicked on Add skills button");
 	}
@@ -57,6 +60,7 @@ public class AdminQualificationMenu {
 	
 	public void enterSkillName(String name) {
 		kw.waitForElementToBeVisible(addSkillsButton);
+		kw.scrollToElement(addSkillsButton);
 		skillNameTextbox.sendKeys(name);
 		LOG.info("entered the skill name to add");
 	}
@@ -66,6 +70,7 @@ public class AdminQualificationMenu {
 	
 	public void clickOnSaveSkillButton() {
 		kw.waitForElementToBeVisible(saveSkillButton);
+		kw.scrollToElement(saveSkillButton);
 		saveSkillButton.click();
 		LOG.info("clicked on Save skill button");
 	}
@@ -125,6 +130,7 @@ public class AdminQualificationMenu {
 	    }
 
 	    kw.waitForElementToBeClickable(confirmDeleteButton);
+	    kw.scrollToElement(confirmDeleteButton);
 	    confirmDeleteButton.click();
 	    LOG.info("Successfully deleted the skill: " + name);
 	}

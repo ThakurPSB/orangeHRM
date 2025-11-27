@@ -87,6 +87,7 @@ public class PerformanceMenu {
 	
 	public void enterKeyPerformanceIndicator(String s) {
 		kw.waitForElementToBeClickable(keyPerformanceIndicator);
+		kw.scrollToElement(keyPerformanceIndicator);
 		keyPerformanceIndicator.click();
 		keyPerformanceIndicator.sendKeys(s);
 		LOG.info("Successfully entered the KPI "+s);
@@ -100,8 +101,10 @@ public class PerformanceMenu {
 	
 	public void selecrJobTitleToAddKPI() throws InterruptedException {
 		kw.waitForElementToBeClickable(performanceKPIJobTitle);
+		kw.scrollToElement(performanceKPIJobTitle);
 		performanceKPIJobTitle.click();
 		kw.waitForElementToBeVisible(performanceKJobTitleList);
+		kw.scrollToElement(performanceKJobTitleList);
 		performanceKPIJobTitle.sendKeys(Keys.chord("q"));
 		performanceKPIJobTitle.sendKeys(Keys.ENTER);
 		LOG.info("Successfully updated the job Title for KPI");
@@ -115,6 +118,7 @@ public class PerformanceMenu {
 	
 	public void enterMinAndMaxRatings() {
 		kw.waitForElementToBeClickable(minRating);
+		kw.scrollToElement(minRating);
 		minRating.sendKeys("1");
 		maxRating.sendKeys("5");
 		LOG.info("Uppdated min rating 1 and max rating 5");
@@ -125,6 +129,7 @@ public class PerformanceMenu {
 	
 	public void clickOnSaveKPIButton() {
 		kw.waitForElementToBeClickable(saveKPIButton);
+		kw.scrollToElement(saveKPIButton);
 		saveKPIButton.click();
 		LOG.info("Successfully added the KPI for QA Engineer");
 	}
@@ -194,6 +199,7 @@ public class PerformanceMenu {
 		        if( text.equals(s)) {
 		        	WebElement delete = getTableRow(6);
 		        	kw.waitForElementToBeVisible(delete);
+		        	kw.scrollToElement(delete);
 		        	delete.click();
 		        	kw.waitForElementToBeVisible(confirmDelete);
 		        	kw.waitForElementToBeClickable(confirmDelete);

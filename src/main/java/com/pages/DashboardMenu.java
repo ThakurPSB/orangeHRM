@@ -28,6 +28,7 @@ public class DashboardMenu {
 	
 	public void clickOnMenu(String menuName) {
 		kw.waitForElementToBeClickable(menuSearchField);
+		kw.scrollToElement(menuSearchField);
 		menuSearchField.click();
 		menuSearchField.sendKeys(menuName);
 		menuSearchResult.click();
@@ -39,6 +40,7 @@ public class DashboardMenu {
 	
 	public void clickOnPunchInButton() {
 		kw.waitForElementToBeClickable(timeEntryButton);
+		kw.scrollToElement(timeEntryButton);
 		timeEntryButton.click();
 		LOG.info("Successfully clicked on timeEntry button on dashboard");
 	}

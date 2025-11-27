@@ -32,6 +32,7 @@ public class TimeMenu {
 	
 	public void clickOnMenu(String menuName) {
 		kw.waitForElementToBeClickable(menuSearchField);
+		kw.scrollToElement(menuSearchField);
 		menuSearchField.click();
 		menuSearchField.sendKeys(menuName);
 		menuSearchResult.click();
@@ -48,10 +49,12 @@ public class TimeMenu {
 	    try {
 	        if (kw.isElementPresent(createTimesheetButton) && createTimesheetButton.isDisplayed()) {
 	            kw.waitForElementToBeClickable(createTimesheetButton);
+	            kw.scrollToElement(createTimesheetButton);
 	            createTimesheetButton.click();
 	            LOG.info("Clicked on Create Timesheet Button");
 	        } else{
 	            kw.waitForElementToBeClickable(EditTimesheetButton);
+	            kw.scrollToElement(EditTimesheetButton);
 	            EditTimesheetButton.click();
 	            LOG.info("Clicked on Edit Timesheet Button");
 	        }
@@ -66,6 +69,7 @@ public class TimeMenu {
 	
 	public void clickOnEditTimesheetButton() {
 		kw.waitForElementToBeClickable(EditTimesheetButton);
+		kw.scrollToElement(EditTimesheetButton);
 		EditTimesheetButton.click();
 		LOG.info("Successfully clicked on Edit Timesheet Button");
 	}
@@ -75,6 +79,7 @@ public class TimeMenu {
 	
 	public void clickOnSubmitTimesheetButton() {
 		kw.waitForElementToBeClickable(SubmitTimesheetButton);
+		kw.scrollToElement(SubmitTimesheetButton);
 		SubmitTimesheetButton.click();
 		LOG.info("Successfully clicked on Submit Timesheet Button");
 	}
@@ -93,18 +98,21 @@ public class TimeMenu {
 	
 	public void clickOnDeleteTimesheetEntryIcon() {
 		kw.waitForElementToBeClickable(deleteTimesheetEntryIcon);
+		kw.scrollToElement(deleteTimesheetEntryIcon);
 		deleteTimesheetEntryIcon.click();
 		LOG.info("Successfully cleared previous timesheet entry details");
 	}
 	
 	public void enterProjectName(String projectName) throws InterruptedException {
 		kw.waitForElementToBeVisible(projectNameField);
+		kw.scrollToElement(projectNameField);
 		kw.clearTextBox(projectNameField);
 		projectNameField.sendKeys(Keys.TAB);
 		projectNameField.sendKeys(Keys.ESCAPE);
 		projectNameField.click();
 		projectNameField.sendKeys(projectName);
 		kw.waitForElementToBeClickable(projectNameFieldList);
+		kw.scrollToElement(projectNameFieldList);
 		kw.normalWait(2000);
 		projectNameField.sendKeys(Keys.ARROW_DOWN);
 		projectNameField.sendKeys(Keys.ENTER);
@@ -117,6 +125,7 @@ public class TimeMenu {
 	
 	public void selectActivity(String activity) throws InterruptedException {
 		kw.waitForElementToBeClickable(activityDropdown);
+		kw.scrollToElement(activityDropdown);
 		activityDropdown.click();
 		//kw.waitForElementToBeVisible(activityFieldList);
 		kw.normalWait(1000);
@@ -133,10 +142,12 @@ public class TimeMenu {
 	
 	public void enterHoursForMondayAndTuesday() {
 		kw.waitForElementToBeVisible(mondayHoursField);
+		kw.scrollToElement(mondayHoursField);
 		mondayHoursField.click();
 		kw.clearTextBox(mondayHoursField);
 		mondayHoursField.sendKeys("6");
 		kw.waitForElementToBeVisible(tuesdayHoursField);
+		kw.scrollToElement(tuesdayHoursField);
 		tuesdayHoursField.click();
 		kw.clearTextBox(tuesdayHoursField);
 		tuesdayHoursField.sendKeys("6");
@@ -148,6 +159,7 @@ public class TimeMenu {
 	
 	public void clickOnSaveTimesheetButton() {
         kw.waitForElementToBeClickable(saveTimesheetButton);
+        kw.scrollToElement(saveTimesheetButton);
         saveTimesheetButton.click();
         LOG.info("Successfully clicked on Save Timesheet Button");
     }
@@ -159,6 +171,7 @@ public class TimeMenu {
 	
 	public String getMondayHoursAfterEdit() {
 	    kw.waitForElementToBeVisible(mondayHoursInputField);
+	    kw.scrollToElement(mondayHoursInputField);
 	    String hours = mondayHoursInputField.getDomProperty("value");
 	    LOG.info("Successfully retrieved updated Monday hours");
 	    return hours;
@@ -169,6 +182,7 @@ public class TimeMenu {
 	
 	public String getMondayHours() {
         kw.waitForElementToBeVisible(verifyMondayHours);
+        kw.scrollToElement(verifyMondayHours);
         String hours = verifyMondayHours.getText();
         LOG.info("Successfully retrieved Monday hours");
         return hours;
@@ -179,6 +193,7 @@ public class TimeMenu {
 
 	public String getMondayHours_ViewMode() {
 	    kw.waitForElementToBeVisible(mondayHoursViewMode);
+	    kw.scrollToElement(mondayHoursViewMode);
 	    return mondayHoursViewMode.getText().trim();
 	}
 	
@@ -187,6 +202,7 @@ public class TimeMenu {
 
 	public String getMondayHours_EditMode() {
 	    kw.waitForElementToBeVisible(mondayHoursEditMode);
+	    kw.scrollToElement(mondayHoursEditMode);
 	    return mondayHoursEditMode.getDomProperty("value").trim();
 	}
 	
@@ -204,6 +220,7 @@ public class TimeMenu {
 	
 	public void enterUpdatedMondayHours(String currentHours) {
 		kw.waitForElementToBeVisible(mondayHoursField);
+		kw.scrollToElement(mondayHoursField);
 		mondayHoursField.click();
 		kw.clearTextBox(mondayHoursField);
 		mondayHoursField.sendKeys(randomIncrementDecrementInHours(currentHours));
@@ -212,6 +229,7 @@ public class TimeMenu {
 	
 	public boolean checkIfMondayHoursUpdated() {
 		kw.waitForElementToBeVisible(verifyMondayHours);
+		kw.scrollToElement(verifyMondayHours);
 		String updatedHours = verifyMondayHours.getText();
 		if(!updatedHours.equals(getMondayHours())) {
             LOG.info("Monday hours updated successfully to: " + updatedHours);
@@ -250,6 +268,7 @@ public class TimeMenu {
 	
 	public void clickOnViewTimesheetButton() {
         kw.waitForElementToBeClickable(viewTimesheetButton);
+        kw.scrollToElement(viewTimesheetButton);
         viewTimesheetButton.click();
         LOG.info("Successfully clicked on View Timesheet Button");
 	}
@@ -259,6 +278,7 @@ public class TimeMenu {
 	
 	public void clickOnRejectTimesheetButton() {
         kw.waitForElementToBeClickable(rejectTimesheetButton);
+        kw.scrollToElement(rejectTimesheetButton);
         rejectTimesheetButton.click();
         LOG.info("Successfully clicked on Reject Timesheet Button");
 	}

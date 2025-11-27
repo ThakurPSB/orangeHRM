@@ -57,8 +57,10 @@ public class LoginPage {
      */
     public void enterCredentials(String user, String pass) {
     	kw.waitForElementToBeVisible(username);
+    	kw.scrollToElement(username);
     	username.sendKeys(user);
     	kw.waitForElementToBeVisible(password);
+    	kw.scrollToElement(password);
     	password.sendKeys(pass);
     	LOG.info("Successfully entered login credentials");
 	}
@@ -68,6 +70,7 @@ public class LoginPage {
      */
     public void ClickOnLoginButton() {
     	kw.waitForElementToBeClickable(login);
+    	kw.scrollToElement(login);
     	login.click();
     	LOG.info("Successfully clicked on login button");
 	}
@@ -79,6 +82,7 @@ public class LoginPage {
      */
     public String dashboardText() {
     	kw.waitForElementToBeVisible(dashboardLink);
+    	kw.scrollToElement(dashboardLink);
     	String text =  dashboardLink.getText();
     	LOG.info("Successfully logged in to the Dashboard page");
     	return text;
@@ -90,6 +94,7 @@ public class LoginPage {
      */
     public String errorText() {
     	kw.waitForElementToBeVisible(errorInvalidCredentials);
+    	kw.scrollToElement(errorInvalidCredentials);
     	String text = errorInvalidCredentials.getText();
     	LOG.info("Successfully displayed error for invalid credentials ");
     	return text;
@@ -100,16 +105,20 @@ public class LoginPage {
      */
     public void clickOnLogoutButton() {
     	kw.waitForElementToBeClickable(userDropdown);
+    	kw.scrollToElement(userDropdown);
     	userDropdown.click();
     	kw.waitForElementToBeClickable(logoutButton);
+    	kw.scrollToElement(logoutButton);
     	logoutButton.click();
     	LOG.info("Successfully clicked on Logout button");
 	}
     
     public void logMeIn() {
     	kw.waitForElementToBeVisible(username);
+    	kw.scrollToElement(username);
     	username.sendKeys("admin");
     	kw.waitForElementToBeVisible(password);
+    	kw.scrollToElement(password);
     	password.sendKeys("Piyush@2050");
     	login.click();
     	LOG.info("Successfully Loogged in");
@@ -117,8 +126,10 @@ public class LoginPage {
     
     public void logMeInAsUser() {
     	kw.waitForElementToBeVisible(username);
+    	kw.scrollToElement(username);
     	username.sendKeys("dummyUser");
     	kw.waitForElementToBeVisible(password);
+    	kw.scrollToElement(password);
     	password.sendKeys("Dumadm@12");
     	login.click();
     	LOG.info("Successfully Loogged in as user");
@@ -126,6 +137,7 @@ public class LoginPage {
     
     public String usernameRequiredError() {
 		kw.waitForElementToBeClickable(requiredUsernameError);
+		kw.scrollToElement(requiredUsernameError);
 		String text = requiredUsernameError.getText();
 		LOG.info("Successfully displayed error for required username field ");
 		return text;
@@ -139,6 +151,7 @@ public class LoginPage {
 	
 	public void clickOnMenu(String menuName) {
 		kw.waitForElementToBeClickable(menuSearchField);
+		kw.scrollToElement(menuSearchField);
 		menuSearchField.click();
 		menuSearchField.sendKeys(menuName);
 		menuSearchResult.click();

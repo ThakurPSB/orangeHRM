@@ -31,6 +31,7 @@ public class PimMenu {
 	 */
 	public void clickOnPIM() {
 		kw.waitForElementToBeVisible(PIMmenu);
+		kw.scrollToElement(PIMmenu);
 		PIMmenu.click();
 		LOG.info("Successfully clicked the PIM Menu button.");
 	}
@@ -43,6 +44,7 @@ public class PimMenu {
 	 */
 	public void clickOnConfiguration() {
 		kw.waitForElementToBeVisible(configuration);
+		kw.scrollToElement(configuration);
 		configuration.click();
 		LOG.info("Successfully clicked the configuration menu button.");
 	}
@@ -56,6 +58,7 @@ public class PimMenu {
 	 */
 	public void clickOnCustomFields() {
 		kw.waitForElementToBeVisible(ConfigOptList.get(1));
+		kw.scrollToElement(ConfigOptList.get(1));
 		ConfigOptList.get(1).click();
 		LOG.info("Successfully clicked the custome field button.");
 	}
@@ -68,6 +71,7 @@ public class PimMenu {
 	 */
 	public void clickOnOptionalFields() {
 		kw.waitForElementToBeClickable(optionalFields);
+		kw.scrollToElement(optionalFields);
 		optionalFields.click();
 		LOG.info("Successfully selected the optional filed option.");
 	}
@@ -84,6 +88,7 @@ public class PimMenu {
 	 */
 	public void turnONshowDeprecatedField() {
 		kw.waitForElementToBeClickable(showDeprecatedFieldsLabel);
+		kw.scrollToElement(showDeprecatedFieldsLabel);
 		showDeprecatedFieldsLabel.click();
 		if(!showDeprecatedFieldsInput.isSelected()) {
 			LOG.info("Show Deprecated field Option is OFF Turning it ON");
@@ -98,6 +103,7 @@ public class PimMenu {
 	 */
 	public void turnOFFshowDeprecatedField() {
 		kw.waitForElementToBeClickable(showDeprecatedFieldsLabel);
+		kw.scrollToElement(showDeprecatedFieldsLabel);
 		showDeprecatedFieldsLabel.click();
 		if(showDeprecatedFieldsInput.isSelected()) {
 			LOG.info("Show Deprecated field Option is ON Turning it OFF");
@@ -118,6 +124,7 @@ public class PimMenu {
 	 */
 	public void turnONSSNfield() {
 		kw.waitForElementToBeClickable(SSNfieldLabel);
+		kw.scrollToElement(SSNfieldLabel);
 		SSNfieldLabel.click();
 		if(!SSNfieldInput.isSelected()) {
 			LOG.info("SSN field Option is OFF Turning it ON");
@@ -132,6 +139,7 @@ public class PimMenu {
 	 */
 	public void turnOFFSSNfield() {
 		kw.waitForElementToBeClickable(SSNfieldLabel);
+		kw.scrollToElement(SSNfieldLabel);
 		SSNfieldLabel.click();
 		if(SSNfieldInput.isSelected()) {
 			LOG.info("SSN field Option is ON Turning it OFF");
@@ -152,6 +160,7 @@ public class PimMenu {
 	 */
 	public void turnONSINfield() {
 		kw.waitForElementToBeClickable(SINfieldLabel);
+		kw.scrollToElement(SINfieldLabel);
 		SINfieldLabel.click();
 		if(!SINfieldInput.isSelected()) {
 			LOG.info("SIN field Option is OFF Turning it ON");
@@ -166,6 +175,7 @@ public class PimMenu {
 	 */
 	public void turnOFFSINfield() {
 		kw.waitForElementToBeClickable(SINfieldLabel);
+		kw.scrollToElement(SINfieldLabel);
 		SINfieldLabel.click();
 		if(SINfieldInput.isSelected()) {
 			LOG.info("SIN field Option is ON Turning it OFF");
@@ -188,6 +198,7 @@ public class PimMenu {
 	 */
 	public void turnONUStaxExemptionMenufield() {
 		kw.waitForElementToBeClickable(UStaxExemptionMenuLabel);
+		kw.scrollToElement(UStaxExemptionMenuLabel);
 		UStaxExemptionMenuLabel.click();
 		if(!UStaxExemptionMenuInput.isSelected()) {
 			LOG.info("Tax exemptions Menu field Option is OFF Turning it ON");
@@ -202,6 +213,7 @@ public class PimMenu {
 	 */
 	public void turnOFFUStaxExemptionMenufield() {
 		kw.waitForElementToBeClickable(UStaxExemptionMenuLabel);
+		kw.scrollToElement(UStaxExemptionMenuLabel);
 		UStaxExemptionMenuLabel.click();
 		if(UStaxExemptionMenuInput.isSelected()) {
 			LOG.info("Tax exemptions Menu field Option is ON Turning it OFF");
@@ -219,6 +231,7 @@ public class PimMenu {
 	 */
 	public void clickOnSaveButtonOptionalFidls() {
 		kw.waitForElementToBeClickable(OptionalFieldsSaveButton);
+		kw.scrollToElement(OptionalFieldsSaveButton);
 		OptionalFieldsSaveButton.click();
 		LOG.info("Successfully clicked optional field preferences.");
 	}
@@ -231,6 +244,7 @@ public class PimMenu {
 	 */
 	public boolean SaveToastMessageText() {
 		kw.waitForElementToBeVisible(saveSuccessfullToast);
+		kw.scrollToElement(saveSuccessfullToast);
 		boolean isDisplayed = saveSuccessfullToast.isDisplayed();
 		LOG.info("Successfully added the Optional field - confirmation message");
 		return isDisplayed;

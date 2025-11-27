@@ -39,6 +39,7 @@ public class EmployeeListMenu {
 	 */
 	public void clickOnEmployeeListMenu() throws InterruptedException {
 		kw.waitForElementToBeClickable(employeeListMenu);
+		kw.scrollToElement(employeeListMenu);
 		kw.normalWait(1000);
 		employeeListMenu.click();
 		LOG.info("Clicked the Employee list Menu.");
@@ -53,6 +54,7 @@ public class EmployeeListMenu {
 	 */
 	public void enterEmployeeName(String name) throws InterruptedException {
 		kw.waitForElementToBeVisible(employeeNameTextBox);
+		kw.scrollToElement(employeeNameTextBox);
 		employeeNameTextBox.click();
 		employeeNameTextBox.sendKeys(name);
 		kw.normalWait(200);
@@ -69,6 +71,7 @@ public class EmployeeListMenu {
 	 */
 	public void enterEmployeeID(int id){
 		kw.waitForElementToBeVisible(employeeIDTextBox);
+		kw.scrollToElement(employeeIDTextBox);
 		employeeIDTextBox.click();
 		employeeIDTextBox.sendKeys(String.valueOf(id));
 		employeeIDTextBox.sendKeys(Keys.ENTER);
@@ -83,6 +86,7 @@ public class EmployeeListMenu {
 	public void selectEmploymentStatus(String status) throws InterruptedException {
 		
 		kw.waitForElementToBeClickable(employmentStatus);
+		kw.scrollToElement(employmentStatus);
 		employmentStatus.click();
 		while(!employmentStatus.getText().equals(status)) {
 			employmentStatus.sendKeys(Keys.ARROW_DOWN);
@@ -100,6 +104,7 @@ public class EmployeeListMenu {
 	 */
 	public void includePastCurrentEmp(String oldnew) throws InterruptedException {
 		kw.waitForElementToBeClickable(include);
+		kw.scrollToElement(include);
 		
 		if(oldnew.equals("old")) {
 			include.click();
@@ -134,6 +139,7 @@ public class EmployeeListMenu {
 	 */
 	public void enterSupervisorName(String name) throws InterruptedException {
 		kw.waitForElementToBeVisible(supervisor);
+		kw.scrollToElement(supervisor);
 		supervisor.click();
 		supervisor.sendKeys(name);
 		kw.normalWait(3000);
@@ -163,6 +169,7 @@ public class EmployeeListMenu {
 	 */
 	public void selectJobTitle(String job) {
 		kw.waitForElementToBeVisible(jobTitleDropdown);
+		kw.scrollToElement(jobTitleDropdown);
 		jobTitleDropdown.click();
 		while(!jobTitleDropdown.getText().equals(job)) {
 			jobTitleDropdown.sendKeys(Keys.ARROW_DOWN);
@@ -180,6 +187,7 @@ public class EmployeeListMenu {
 	 */
 	public void selectSubUnit(String unit) {
 		kw.waitForElementToBeVisible(subUnit);
+		kw.scrollToElement(subUnit);
 		subUnit.click();
 		while(!subUnit.getText().equals(unit)) {
 			subUnit.sendKeys(Keys.ARROW_DOWN);
@@ -197,6 +205,7 @@ public class EmployeeListMenu {
 	 */
 	public void clickOnSearchButton() throws InterruptedException  {
 		kw.waitForElementToBeVisible(SearchButton);
+		kw.scrollToElement(SearchButton);
 		kw.normalWait(1000);
 		SearchButton.click();
 		LOG.info("Clicked the Search button.");
@@ -402,6 +411,7 @@ public class EmployeeListMenu {
 	
 	public void clickOnAddNewEmployeeButton() throws InterruptedException {
 		kw.waitForElementToBeClickable(addNewEmployeeButton);
+		kw.scrollToElement(addNewEmployeeButton);
 		kw.normalWait(200);
 		addNewEmployeeButton.click();
 		LOG.info("Clicked on add new employee button");
@@ -433,11 +443,13 @@ public class EmployeeListMenu {
 		
 		if(clickOnSelectAll()) {
 			kw.waitForElementToBeClickable(deleteSelectedButton);
+			kw.scrollToElement(deleteSelectedButton);
 			kw.normalWait(200);
 			deleteSelectedButton.click();
 			LOG.info("Successfully Clicked on delete button");
 			kw.normalWait(500);
 			kw.waitForElementToBeClickable(confirmDelete);
+			kw.scrollToElement(confirmDelete);
 			confirmDelete.click();
 			LOG.info("Clicked on confirm delete button");
 		}

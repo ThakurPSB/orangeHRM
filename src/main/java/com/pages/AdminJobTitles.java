@@ -34,6 +34,7 @@ public class AdminJobTitles {
 	 */
 	public void clickOnAdminMenu() {
 		kw.waitForElementToBeVisible(adminMenu);
+		kw.scrollToElement(adminMenu);
 		adminMenu.click();
 		LOG.info("Cliked on Admin Menu");
 	}
@@ -57,6 +58,7 @@ public class AdminJobTitles {
 	    for (WebElement option : menuOptions) {
 	        if (option.getText().trim().equals(optionText)) {
 	            kw.waitForElementToBeClickable(option);
+	            kw.scrollToElement(option);
 	            option.click();
 	            LOG.info("Clicked on : " + optionText);
 	            kw.waitForTextToBe(pageLoadStatus, optionText);

@@ -40,6 +40,7 @@ public class UserProfile {
 	 */
 	public void clickOnUser1() {
 		kw.waitForElementToBeClickable(user1);
+		kw.scrollToElement(user1);
 		user1.click();
 		LOG.info("Selected the 1st user.");
 	}
@@ -52,6 +53,7 @@ public class UserProfile {
 	 */
 	public void clickOnPersonalDetails() {
 		kw.waitForElementToBeClickable(PersonalDetails);
+		kw.scrollToElement(PersonalDetails);
 		PersonalDetails.click();
 		LOG.info("Clicked on personal details section .");
 	}
@@ -73,6 +75,7 @@ public class UserProfile {
 	 */
 	public boolean checkSSNdisplayed() {
 		kw.waitForElementToBeVisible(SSN);
+		kw.scrollToElement(SSN);
         boolean isDisplayed = SSN.isDisplayed();
         LOG.info("check SSN is diplayed : " + isDisplayed);
         return isDisplayed;
@@ -95,6 +98,7 @@ public class UserProfile {
 	 */
 	public boolean checkSINdisplayed() {
 		kw.waitForElementToBeVisible(SIN);
+		kw.scrollToElement(SIN);
 		boolean isDisplayed = SIN.isDisplayed();
         LOG.info("Check SIN is displayed : " + isDisplayed);
         return isDisplayed;
@@ -119,6 +123,7 @@ public class UserProfile {
 	 */
 	public boolean checkNicknameDisplayed() {
 		kw.waitForElementToBeVisible(nickname);
+		kw.scrollToElement(nickname);
 		boolean isDisplayed = nickname.isDisplayed();
         LOG.info("check nickname is displayed: " + isDisplayed);
         return isDisplayed;
@@ -142,6 +147,7 @@ public class UserProfile {
 	 */
 	public boolean checkTaxExemptionDisplayed() {
 		kw.waitForElementToBeVisible(TaxExemptionMenu);
+		kw.scrollToElement(TaxExemptionMenu);
 		boolean isDisplayed = TaxExemptionMenu.isDisplayed();
         LOG.info("Tax exemption field display status: " + isDisplayed);
         return isDisplayed;
@@ -155,6 +161,7 @@ public class UserProfile {
 	 */
 	public void ClickOnMemebership() {
 		kw.waitForElementToBeVisible(memberships);
+		kw.scrollToElement(memberships);
 		memberships.click();
 		LOG.info("Clicked on membership menu.");
 		
@@ -177,6 +184,7 @@ public class UserProfile {
 	 */
 	public boolean checkInsuranceIDDisplayed() {
 		kw.waitForElementToBeVisible(insuranceID);
+		kw.scrollToElement(insuranceID);
 		boolean isDisplayed = insuranceID.isDisplayed();
         LOG.info("Insurance ID field display status: " + isDisplayed);
         return isDisplayed;
@@ -199,6 +207,7 @@ public class UserProfile {
 	 */
 	public boolean checkOfficeTransportDisplayed() {
 		kw.waitForElementToBeVisible(officeTransport);
+		kw.scrollToElement(officeTransport);
 		boolean isDisplayed = officeTransport.isDisplayed();
         LOG.info("Office transport field display status: " + isDisplayed);
         return isDisplayed;

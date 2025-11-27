@@ -41,6 +41,7 @@ public class LeaveApplyMenu {
 	
 	public void clickOnApplyLeave() {
 		kw.waitForElementToBeClickable(applyLeave);
+		kw.scrollToElement(applyLeave);
 		applyLeave.click();
 		LOG.info("Successfully clicked on Apply button");
 	}
@@ -53,9 +54,11 @@ public class LeaveApplyMenu {
 	
 	public void selectLeaveType(String s) {
 		kw.waitForElementToBeClickable(leaveType);
+		kw.scrollToElement(leaveType);
 		leaveType.click();
 		leaveType.sendKeys(s);
 		kw.waitForElementToBeVisible(LeaveOptionsTemp);
+		kw.scrollToElement(LeaveOptionsTemp);
 		leaveType.sendKeys(Keys.ENTER);
 		LOG.info("successfully selected leave type");
 	}
@@ -67,6 +70,7 @@ public class LeaveApplyMenu {
 	
 	public void selectFromDate() {
 		kw.waitForElementToBeClickable(fromCalButton);
+		kw.scrollToElement(fromCalButton);
 		fromCalButton.click();
 		String s = "";
 		if(today.getDayOfWeek().toString().equals("SATURDAY")) {
@@ -87,6 +91,7 @@ public class LeaveApplyMenu {
 	
 	public void selectToDate() {
 		kw.waitForElementToBeClickable(toCalButton);
+		kw.scrollToElement(toCalButton);
 		toCalButton.click();
 		toCalButton.sendKeys(Keys.LEFT_CONTROL+ "A");
 		toCalButton.sendKeys(Keys.DELETE);
@@ -108,6 +113,7 @@ public class LeaveApplyMenu {
 	
 	public void clickOnApplyLeaveButton() {
 		kw.waitForElementToBeClickable(applyButton);
+		kw.scrollToElement(applyButton);
 		applyButton.click();
 		LOG.info("Successfully clicked on apply leave button ");
 	}
@@ -161,6 +167,7 @@ public class LeaveApplyMenu {
 	public boolean failedToApplyLeaveToastText() throws TimeoutException {
 		try {
 			kw.waitForElementToBeVisibleShort(warningFailedToSubmitToast,10);
+			kw.scrollToElement(warningFailedToSubmitToast);
 			boolean isDisplayed = warningFailedToSubmitToast.isDisplayed();
 			LOG.info("Failed to submit toast Displayed");
 			return isDisplayed;
@@ -178,6 +185,7 @@ public class LeaveApplyMenu {
 	
 	public boolean checkWarningForLeaveType() {
 		kw.waitForElementToBeVisible(leaveTypeRequiredWarning);
+		kw.scrollToElement(leaveTypeRequiredWarning);
 		boolean isDisplayed = false;
 		if(leaveTypeRequiredWarning.isDisplayed()) {
 			isDisplayed = true;
@@ -191,6 +199,7 @@ public class LeaveApplyMenu {
 	
 	public void selectPastFromDate() {
 		kw.waitForElementToBeClickable(fromCalButton);
+		kw.scrollToElement(fromCalButton);
 		fromCalButton.click();
 		String s = "";
 		if(today.getDayOfWeek().toString().equals("SATURDAY")) {
@@ -209,6 +218,7 @@ public class LeaveApplyMenu {
 	
 	public void selectPastToDate() {
 		kw.waitForElementToBeClickable(toCalButton);
+		kw.scrollToElement(toCalButton);
 		toCalButton.click();
 		toCalButton.sendKeys(Keys.LEFT_CONTROL+ "A");
 		toCalButton.sendKeys(Keys.DELETE);
@@ -231,6 +241,7 @@ public class LeaveApplyMenu {
 	public boolean errorLeaveBalance() throws TimeoutException {
 		try {
 			kw.waitForElementToBeVisibleShort(errorToastLeaveBalance,10);
+			kw.scrollToElement(errorToastLeaveBalance);
 			boolean isDisplayed = errorToastLeaveBalance.isDisplayed();
 			LOG.info("\"Error - Leave balance\" toast Displayed");
 			return isDisplayed;
@@ -285,8 +296,10 @@ public class LeaveApplyMenu {
 	
 	public void selectLeaveStatus(String s) throws InterruptedException {
 		kw.waitForElementToBeClickable(pendingLeaveFilterRemove);
+		kw.scrollToElement(pendingLeaveFilterRemove);
 		pendingLeaveFilterRemove.click();
 		kw.waitForElementToBeClickable(leaveStatusDropdown);
+		kw.scrollToElement(leaveStatusDropdown);
 		leaveStatusDropdown.click();
 		leaveStatusDropdown.sendKeys(s);
 		leaveStatusDropdown.sendKeys(Keys.ENTER);
@@ -299,6 +312,7 @@ public class LeaveApplyMenu {
 	
 	public void clickOnSearchLeaveButton() {
 		kw.waitForElementToBeClickable(searchLeaveButton);
+		kw.scrollToElement(searchLeaveButton);
 		searchLeaveButton.click();
 		LOG.info("Successfully clicked on Search leave button ");
 	}
@@ -319,6 +333,7 @@ public class LeaveApplyMenu {
 	
 	public void clickOnCancelLeaveOption() {
 		kw.waitForElementToBeClickable(cancelLeaveOption);
+		kw.scrollToElement(cancelLeaveOption);
 		cancelLeaveOption.click();
 		LOG.info("Successfully clicked on Cancel leave option");
 	}
@@ -367,6 +382,7 @@ public class LeaveApplyMenu {
 	
 	public boolean checkOverlappingLeaveMessage() {
 		kw.waitForElementToBeVisible(OVerlappingLeaveMessage);
+		kw.scrollToElement(OVerlappingLeaveMessage);
 		boolean isDisplayed = false;
 		if (OVerlappingLeaveMessage.isDisplayed()) {
 			isDisplayed = true;

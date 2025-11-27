@@ -34,6 +34,7 @@ public class AdminMenu {
 	 */
 	public void clickOnAdminMenu() {
 		kw.waitForElementToBeVisible(adminMenu);
+		kw.scrollToElement(adminMenu);
 		adminMenu.click();
 		LOG.info("Cliked on Admin Menu");
 	}
@@ -43,6 +44,7 @@ public class AdminMenu {
 	
 	public void enterUsername(String user) {
 		kw.waitForElementToBeClickable(usernametextbox);
+		kw.scrollToElement(usernametextbox);
 		usernametextbox.sendKeys(user);
 		LOG.info("entered the username in system user search  menu");
 	}
@@ -93,6 +95,7 @@ public class AdminMenu {
 	
 	public void selectUserRole(String role) {
 		kw.waitForElementToBeClickable(userRole);
+		kw.scrollToElement(userRole);
 		userRole.click();
 		while(!userRole.getText().equals(role)) {
 			userRole.sendKeys(Keys.ARROW_DOWN);
@@ -187,6 +190,7 @@ public class AdminMenu {
 	public void enterEmployeeName(String user) throws InterruptedException {
 		
 		kw.waitForElementToBeVisible(employeeNameTextbox);
+		kw.scrollToElement(employeeNameTextbox);
 		employeeNameTextbox.click();
 		employeeNameTextbox.sendKeys(user);
 		kw.normalWait(3000);

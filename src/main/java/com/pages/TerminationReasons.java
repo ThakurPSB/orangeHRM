@@ -33,6 +33,7 @@ public class TerminationReasons {
 	 */
 	public void clickOnTerminationReasonsMenu() {
 		kw.waitForElementToBeClickable(TerminationReasons);
+		kw.scrollToElement(TerminationReasons);
 		TerminationReasons.click();
 		LOG.info("Successfully click on the Termination Reason Menu");
 	}
@@ -67,6 +68,7 @@ public class TerminationReasons {
 	public void AddTerminationReason(String name) {
 		kw.waitForElementToBeClickable(AddTerminationReasonSaveButton);
 		kw.waitForElementToBeClickable(EnterTerminationReason);
+		kw.scrollToElement(EnterTerminationReason);
 		EnterTerminationReason.sendKeys(name);
 		EnterTerminationReason.sendKeys(Keys.TAB);
 		if(isAlreadyExistErrorPresent()) {
@@ -121,6 +123,7 @@ public class TerminationReasons {
 		if(isReasonFound) {
 			LOG.info("Found the Termination Reason");
 			WebElement deleteButton = found.findElement(By.cssSelector("button.oxd-icon-button > i.oxd-icon.bi-trash"));
+			kw.waitForElementToBeClickable(deleteButton);
 			deleteButton.click();
 			if(!errorToastMessageText()) {
 				kw.waitForElementToBeVisible(confirmDeleteYes);

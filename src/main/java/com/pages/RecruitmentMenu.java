@@ -36,6 +36,7 @@ public class RecruitmentMenu {
 
 	public void clickOnRecruitmentMenu() {
 		kw.waitForElementToBeClickable(recruitmentMenu);
+		kw.scrollToElement(recruitmentMenu);
 		recruitmentMenu.click();
 		LOG.info("Successfully clicked on recruitment Menu");
 	}
@@ -45,6 +46,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnVacanciesMenu() {
 		kw.waitForElementToBeClickable(vacanciesMenu);
+		kw.scrollToElement(vacanciesMenu);
 		vacanciesMenu.click();
 		LOG.info("Successfully clicked on vacancies Menu");
 	}
@@ -54,6 +56,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnCandidatesMenu() {
 		kw.waitForElementToBeClickable(candidatesMenu);
+		kw.scrollToElement(candidatesMenu);
 		candidatesMenu.click();
 		LOG.info("Successfully clicked on candidates Menu");
 	}
@@ -82,6 +85,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnAddVacancyButton() {
 		kw.waitForElementToBeClickable(addVacancyButton);
+		kw.scrollToElement(addVacancyButton);
 		addVacancyButton.click();
 		LOG.info("Successfully clicked on add vacancy button");
 	}
@@ -91,6 +95,7 @@ public class RecruitmentMenu {
 	
 	public void enterVacancyName(String s) {
 		kw.waitForElementToBeClickable(vacancyNameText);
+		kw.scrollToElement(vacancyNameText);
 		vacancyNameText.sendKeys(s);
 		LOG.info("successfully entered the vacancy name "+s);
 	}
@@ -103,6 +108,7 @@ public class RecruitmentMenu {
 	
 	public void selectHiringManager(String s) throws InterruptedException {
 		kw.waitForElementToBeClickable(hiringManager);
+		kw.scrollToElement(hiringManager);
 		hiringManager.click();
 		hiringManager.sendKeys(s);
 		kw.normalWait(3000);
@@ -117,6 +123,7 @@ public class RecruitmentMenu {
 	
 	public void enterNumberOfVacancy(String s) {
 		kw.waitForElementToBeClickable(numberOfVacancy);
+		kw.scrollToElement(numberOfVacancy);
 		numberOfVacancy.clear();
 		numberOfVacancy.sendKeys(s);
 		LOG.info("Successfully entered required vacancies");
@@ -140,6 +147,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnJobTitleSearch(String s) throws InterruptedException {
 		kw.waitForElementToBeClickable(vacancyJobTitleSearch);
+		kw.scrollToElement(vacancyJobTitleSearch);
 		vacancyJobTitleSearch.click();
 		kw.normalWait(1000);
 		List <WebElement> options = kw.getDriver().findElements(By.cssSelector("div>div.oxd-select-option[role='option']"));
@@ -158,6 +166,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnVacancySearchButton() {
 		kw.waitForElementToBeClickable(vacancyJobTitleSearch);
+		kw.scrollToElement(vacancySearchButton);
 		vacancySearchButton.click();
 		LOG.info("Successfully Clicked on Vacancy Search Button");
 	}
@@ -182,6 +191,7 @@ public class RecruitmentMenu {
 			}
 		}
 		kw.waitForElementToBeClickable(confirmDeleteButton);
+		kw.scrollToElement(confirmDeleteButton);
 		confirmDeleteButton.click();
 		LOG.info("Successfully deleted the skill "+s);
 	}
@@ -210,6 +220,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnCandidateMenu() {
 		kw.waitForElementToBeClickable(candidatesMenu);
+		kw.scrollToElement(candidateMenu);
 		candidateMenu.click();
 		LOG.info("Successfully Clicked on Candidate Menu");
 	}
@@ -219,6 +230,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnAddCandidateButton() {
 		kw.waitForElementToBeClickable(addCandidateButton);
+		kw.scrollToElement(addCandidateButton);
 		addCandidateButton.click();
 		LOG.info("Successfully clicked on Add Candidate button");
 	}
@@ -234,6 +246,7 @@ public class RecruitmentMenu {
 	
 	public void enterCandidateFullName(String first, String  middle, String last) {
 		kw.waitForElementToBeClickable(candidateFirstName);
+		kw.scrollToElement(candidateFirstName);
 		candidateFirstName.sendKeys(first);
 		candidateMiddleName.sendKeys(middle);
 		candidateLastName.sendKeys(last);
@@ -245,6 +258,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnOpenVacanciesList() throws InterruptedException {
 		kw.waitForElementToBeClickable(openVacanciesList);
+		kw.scrollToElement(openVacanciesList);
 		openVacanciesList.click();
 		openVacanciesList.sendKeys(Keys.DOWN);
 		openVacanciesList.sendKeys(Keys.ENTER);
@@ -267,6 +281,7 @@ public class RecruitmentMenu {
 	
 	public void enterCandidateContactNumber(String s) {
 		kw.waitForElementToBeClickable(candidateContactNumber);
+		kw.scrollToElement(candidateContactNumber);
 		candidateContactNumber.click();
 		candidateContactNumber.sendKeys(s);
 		LOG.info("Successfully entered candidate contact number");
@@ -326,6 +341,7 @@ public class RecruitmentMenu {
 	
 	public void clickOnSaveCandidateButton() {
 		kw.waitForElementToBeClickable(SaveCandidateButton);
+		kw.scrollToElement(SaveCandidateButton);
 		SaveCandidateButton.click();
 		LOG.info("Successfully clicked on Save Candidate button");
 	}

@@ -31,6 +31,7 @@ public class LeaveEntitlementMenu {
 	
 	public void clickOnLeaveEntitlementMenu() {
 		kw.waitForElementToBeClickable(leaveEntitlementDropdown);
+		kw.scrollToElement(leaveEntitlementDropdown);
 		leaveEntitlementDropdown.click();
 		LOG.info("Successfully clicked on Leave Entitlement");
 	}
@@ -40,6 +41,7 @@ public class LeaveEntitlementMenu {
 	
 	public void clickOnAddEntitlement() {
 		kw.waitForElementToBeClickable(addEntitlementMenu);
+		kw.scrollToElement(addEntitlementMenu);
 		addEntitlementMenu.click();
 		LOG.info("Successfully clicked on Add Entitlement button");
 	}
@@ -49,6 +51,7 @@ public class LeaveEntitlementMenu {
 	
 	public void enterEmployeeName(String s) throws InterruptedException {
 		kw.waitForElementToBeVisible(employeeNameTextBox);
+		kw.scrollToElement(employeeNameTextBox);
 		employeeNameTextBox.click();
 		employeeNameTextBox.sendKeys(s);
 		kw.normalWait(3000);
@@ -80,6 +83,7 @@ public class LeaveEntitlementMenu {
 	
 	public void selectLeaveType(String s) throws InterruptedException {
 		kw.waitForElementToBeClickable(leaveType);
+		kw.scrollToElement(leaveType);
 		leaveType.click();
 		kw.normalWait(1000);
 		List <WebElement> types = kw.getDriver().findElements(By.cssSelector("div.oxd-select-dropdown div.oxd-select-option"));
@@ -97,6 +101,7 @@ public class LeaveEntitlementMenu {
 	
 	public void enterEntitlement(String s) {
 		kw.waitForElementToBeClickable(entitlement);
+		kw.scrollToElement(entitlement);
 		entitlement.click();
 		entitlement.sendKeys(s);
 		LOG.info("Successfully updated the entitlement leave - "+s);
@@ -107,6 +112,7 @@ public class LeaveEntitlementMenu {
 	
 	public void clickOnSaveButton() {
 		kw.waitForElementToBeClickable(submitButton);
+		kw.scrollToElement(submitButton);
 		submitButton.click();
 		LOG.info("Successfully clicked on save button");
 	}
@@ -117,6 +123,7 @@ public class LeaveEntitlementMenu {
 	
 	public void clickOnConfirmButton() {
 		kw.waitForElementToBeClickable(confirmAdd);
+		kw.scrollToElement(confirmAdd);
 		confirmAdd.click();
 		LOG.info("Clicked on Confirm add entitlement");
 	}
@@ -152,6 +159,7 @@ public class LeaveEntitlementMenu {
 	
 	public void clickEmployeeEntitlement() {
 		kw.waitForElementToBeClickable(employeeEntitlements);
+		kw.scrollToElement(employeeEntitlements);
 		employeeEntitlements.click();
 		LOG.info("Successfully clicked on employee Entitlements button");
 	}
@@ -164,6 +172,7 @@ public class LeaveEntitlementMenu {
 	
 	public void enterEmployeeNameInSearchBoxEmplpyeeEntitlement(String s) throws InterruptedException {
 		kw.waitForElementToBeVisible(enterEmployeeNameEntitlement);
+		kw.scrollToElement(enterEmployeeNameEntitlement);
 		enterEmployeeNameEntitlement.click();
 		enterEmployeeNameEntitlement.sendKeys(s);
 		kw.normalWait(3000);
@@ -178,6 +187,7 @@ public class LeaveEntitlementMenu {
 	
 	public void selectLeaveTypeInEntitlement(String s) throws InterruptedException {
 		kw.waitForElementToBeClickable(leaveTypeSelectEntitlement);
+		kw.scrollToElement(leaveTypeSelectEntitlement);
 		leaveTypeSelectEntitlement.click();
 		kw.normalWait(1000);
 		List <WebElement> types = kw.getDriver().findElements(By.cssSelector("div>div.oxd-select-option"));
@@ -197,6 +207,7 @@ public class LeaveEntitlementMenu {
 	
 	public void clickOnSearchButton() {
 		kw.waitForElementToBeClickable(searchButton);
+		kw.scrollToElement(searchButton);
 		searchButton.click();
 		LOG.info("Successfully clicked on Search Button");
 	}
@@ -206,6 +217,7 @@ public class LeaveEntitlementMenu {
 	
 	public double CheckLeaveBalance() {
 		kw.waitForElementToBeVisible(leaveBalance);
+		kw.scrollToElement(leaveBalance);
 		String s = leaveBalance.getText();
 		LOG.info("LeaveBalance Checked: "+s);
 		return Double.parseDouble(s);

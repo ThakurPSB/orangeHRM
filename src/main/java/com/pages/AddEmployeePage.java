@@ -37,6 +37,7 @@ public class AddEmployeePage {
 	 */
 	public void clickOnAddNewEmployeeButton() {
 		kw.waitForElementToBeClickable(addNewEmployeeButton);
+		kw.scrollToElement(addNewEmployeeButton);
 		addNewEmployeeButton.click();
 		LOG.info("Successfully clicked on add new employee button");
 	}
@@ -75,6 +76,7 @@ public class AddEmployeePage {
 	 */
 	public void selectProfilePic() throws AWTException, InterruptedException {
 		kw.waitForElementToBeClickable(profilePicAddButton);
+		kw.scrollToElement(profilePicAddButton);
 		profilePicAddButton.click();
 		uploadFileUsingRobot("C:\\Users\\piyus\\OneDrive\\Pictures\\profile.jpg");
 	    LOG.info("Profile pic selected");
@@ -101,6 +103,7 @@ public class AddEmployeePage {
 	
 	public void EnterUserDetails(String fname,String mname, String lname) throws InterruptedException, TimeoutException {
 		kw.waitForElementToBeVisible(firstName);
+		kw.scrollToElement(firstName);
 		firstName.sendKeys(fname);
 		middleName.sendKeys(mname);
 		lastName.sendKeys(lname);
@@ -124,6 +127,7 @@ public class AddEmployeePage {
 	public void enterEmployeeID() throws InterruptedException, TimeoutException {
 		
 		kw.waitForElementToBeVisible(empID);
+		kw.scrollToElement(empID);
 		Object empid = kw.JSExecutor("return arguments[0].value;",empID);
 		int id = Integer.parseInt((String)empid);
 		empID.sendKeys(Keys.CONTROL+ "a");
@@ -136,6 +140,7 @@ public class AddEmployeePage {
 		for(int attempt = 1; attempt <=10; attempt++) {
 			kw.normalWait(1000);
 			kw.waitForElementToBeVisibleShort(empID, 2);
+			kw.scrollToElement(empID);
 		    boolean isErrorDisplayed = false;
 		    
 		    try {
@@ -167,6 +172,7 @@ public class AddEmployeePage {
 	
 	public void clickOnSaveButton() {
 		kw.waitForElementToBeClickable(SaveEmployeeButton);
+		kw.scrollToElement(SaveEmployeeButton);
 		SaveEmployeeButton.click();
 		LOG.info("Successfully clicked on the Save button");
 	}
@@ -205,6 +211,7 @@ public class AddEmployeePage {
 	
 	public void clickOnCreateLoginDetails() {
 		kw.waitForElementToBeVisible(loginDetailsLabel);
+		kw.scrollToElement(loginDetailsLabel);
 		loginDetailsLabel.click();
 		if(!loginDetailsInput.isSelected()) {
 			loginDetailsLabel.click();
@@ -232,6 +239,7 @@ public class AddEmployeePage {
 	public void enterLoginDetails(String usernm, String pass, boolean status) {
 		
 		kw.waitForElementToBeClickable(enterUsername);
+		kw.scrollToElement(enterUsername);
 		enterUsername.sendKeys(usernm);
 		enterPassword.sendKeys(pass);
 		confirmPassword.sendKeys(pass);
