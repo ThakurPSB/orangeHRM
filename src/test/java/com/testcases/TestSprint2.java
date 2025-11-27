@@ -36,7 +36,7 @@ public class TestSprint2 extends TestBase {
 	private LeaveMyLeaveMenu myLeave;
 	private LeaveEntitlementMenu entitlement;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true, dependsOnMethods = {"setUp"})
 	public void pageSetup() {
         login = new LoginPage(key); 
         admin = new AdminMenu(key);

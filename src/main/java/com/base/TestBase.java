@@ -38,7 +38,7 @@ public class TestBase {
 	 * @throws Exception
 	 * ( String url, String browserName)
 	 */
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws IOException {
 		
 		//its now points to the shared instance of Keywords class.
