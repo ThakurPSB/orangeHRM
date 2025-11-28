@@ -21,8 +21,8 @@ public class EmployeeListMenu {
 	private Keywords kw;
 	Actions action = null;
 
-	public EmployeeListMenu() {
-		this.kw = Keywords.getInstance();;
+	public EmployeeListMenu(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	    this.action = new Actions(kw.getDriver());
 	}

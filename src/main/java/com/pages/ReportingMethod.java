@@ -17,8 +17,8 @@ public class ReportingMethod {
 	private Keywords kw;
 
 	
-	public ReportingMethod() {
-		this.kw = Keywords.getInstance();;
+	public ReportingMethod(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

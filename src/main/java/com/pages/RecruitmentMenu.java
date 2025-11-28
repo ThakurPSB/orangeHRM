@@ -24,8 +24,8 @@ public class RecruitmentMenu {
 	private Keywords kw;
 
 	
-	public RecruitmentMenu() {
-		this.kw = Keywords.getInstance();;
+	public RecruitmentMenu(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

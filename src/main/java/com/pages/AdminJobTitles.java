@@ -19,8 +19,8 @@ public class AdminJobTitles {
 	/*
 	 * Constructor to initialize the Page object and its elements
 	 */
-	public AdminJobTitles() {
-		this.kw = Keywords.getInstance();;
+	public AdminJobTitles(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

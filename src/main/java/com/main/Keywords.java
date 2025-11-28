@@ -51,8 +51,8 @@ public class Keywords {
 	
 	private static final ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
     private static final ThreadLocal<WebDriverWait> wait = new ThreadLocal<>();
-    private static final ThreadLocal<Keywords> instance = ThreadLocal.withInitial(Keywords::new);
     private static final ThreadLocal<FluentWait<RemoteWebDriver>> fluentWait = new ThreadLocal<>();
+    private static final ThreadLocal<Keywords> instance = ThreadLocal.withInitial(Keywords::new);
     //in above line we have used Thread local to make sure each thread has its own instance of driver and wait.
     //
     /* instance simplification - 
@@ -66,9 +66,8 @@ public class Keywords {
      * */
     
     
-    //getter method for the singleton instance of Keywords class
     public static Keywords getInstance() {
-    	return instance.get();
+        return instance.get();
     }
     
     //getter method for the driver
@@ -90,8 +89,8 @@ public class Keywords {
 	//logger instance for the keyword class
 	private static final Logger LOG = Logger.getLogger(Keywords.class);
 	
-	//private constructor to prevent external instantiation
-	private Keywords() {}
+	//public constructor
+	public Keywords() {}
 	
 	
 	
@@ -127,7 +126,7 @@ public class Keywords {
 			
 			EdgeOptions options = new EdgeOptions();
 		    options.addArguments("--start-maximized");
-			dr = new EdgeDriver();
+			dr = new EdgeDriver(options);
 			dr.manage().window().setSize(new Dimension(1920,1080));
 			LOG.info("Launched Edge Browser");
 			
@@ -138,7 +137,7 @@ public class Keywords {
 			FirefoxOptions options = new FirefoxOptions();
 		    options.addArguments("--start-maximized");
 		    
-			dr = new FirefoxDriver();
+			dr = new FirefoxDriver(options);
 			dr.manage().window().setSize(new Dimension(1920,1080));
 			LOG.info("Launched firefox Browser");
 			
@@ -173,7 +172,6 @@ public class Keywords {
 	        driver.remove();
 	        wait.remove();
 	        fluentWait.remove();
-	        instance.remove();
 	    }
 	}
 

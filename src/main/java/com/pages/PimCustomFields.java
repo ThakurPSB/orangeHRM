@@ -20,8 +20,8 @@ public class PimCustomFields {
 	private Keywords kw;
 	Actions action = null;
 	
-	public PimCustomFields() {
-		this.kw = Keywords.getInstance();
+	public PimCustomFields(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	    this.action = new Actions(kw.getDriver());
 	}

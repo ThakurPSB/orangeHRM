@@ -18,8 +18,8 @@ public class LeaveEntitlementMenu {
 	//This variable allows Page object to use the keywords methods
 	private Keywords kw;
 	
-	public LeaveEntitlementMenu() {
-		this.kw = Keywords.getInstance();;
+	public LeaveEntitlementMenu(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

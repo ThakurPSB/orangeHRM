@@ -2,6 +2,8 @@ package com.base;
 import java.io.File;
 import java.io.IOException;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterMethod;
@@ -59,96 +61,106 @@ public class TestBase {
 	 * ( String url, String browserName)
 	 */
 	@BeforeMethod(alwaysRun = true)
-	public void setUp() throws IOException {
+	@Parameters({"browser"})
+	public void setUp(@Optional String browserFromXml) throws IOException {
+		
+		String finalBrowser;
+
+		if (browserFromXml != null && !browserFromXml.isEmpty()) {
+		    finalBrowser = browserFromXml;  // use XML
+		} else {
+		    finalBrowser = PropertiesUtil.getProperty("browser"); // fallback
+		}
 		
 		//its now points to the shared instance of Keywords class.
-		key = Keywords.getInstance();
+		key = new Keywords();
 		
-		key.launchBrowser(PropertiesUtil.getProperty("browser"));
+		key.launchBrowser(finalBrowser);
 		key.launchURL(PropertiesUtil.getProperty("local.url"));
+		
 		LOG.info("Successfully launched the web Application");
 	}
 	
 	
 	//Lazy factory design pattern
 	protected LoginPage login() {
-		return new LoginPage();
+		return new LoginPage(key);
 	}
 
 	protected UserDropdownMenu profile() {
-		return new UserDropdownMenu();
+		return new UserDropdownMenu(key);
 	}
 	
 	protected PimMenu pim() {
-		return new PimMenu();
+		return new PimMenu(key);
 	}
 	
 	protected UserProfile user() {
-		return new UserProfile();
+		return new UserProfile(key);
 	}
 	
 	protected PimCustomFields customField() {
-		return new PimCustomFields();
+		return new PimCustomFields(key);
 	}
 	
 	protected ReportingMethod reportingMethod() {
-		return new ReportingMethod();
+		return new ReportingMethod(key);
 	}
 	
 	protected TerminationReasons terminationReasons() {
-		return new TerminationReasons();
+		return new TerminationReasons(key);
 	}
 
 	protected EmployeeListMenu emplist() {
-		return new EmployeeListMenu();
+		return new EmployeeListMenu(key);
 	}
 
 	protected AddEmployeePage addemp() {
-		return new AddEmployeePage();
+		return new AddEmployeePage(key);
 	}
 	
 	protected AdminMenu admin() {
-		return new AdminMenu();
+		return new AdminMenu(key);
 	}
 	
 	protected AdminJobTitles jobs() {
-		return new AdminJobTitles();
+		return new AdminJobTitles(key);
 	}
 	
 	protected AdminOrganizationMenu orgMenu() {
-		return new AdminOrganizationMenu();
+		return new AdminOrganizationMenu(key);
 	}
 	
 	protected AdminQualificationMenu qualification() {
-		return new AdminQualificationMenu();
+		return new AdminQualificationMenu(key);
 	}
 	
 	protected LeaveApplyMenu leaveApply() {
-		return new LeaveApplyMenu();
+		return new LeaveApplyMenu(key);
 	}
 	
 	protected LeaveMyLeaveMenu myLeave() {
-		return new LeaveMyLeaveMenu();
+		return new LeaveMyLeaveMenu(key);
 	}
 	
 	protected LeaveEntitlementMenu entitlement() {
-		return new LeaveEntitlementMenu();
+		return new LeaveEntitlementMenu(key);
 	}
 	
 	protected RecruitmentMenu recruitment() {
-		return new RecruitmentMenu();
+		return new RecruitmentMenu(key);
 	}
 	
 	protected PerformanceMenu performance() {
-		return new PerformanceMenu();
+		return new PerformanceMenu(key);
 	}
 	
 	protected TimeMenu timemenu() {
-		return new TimeMenu();
+		return new TimeMenu(key);
 	}
 	
 	protected DashboardMenu dashboard() {
-		return new DashboardMenu();
+		return new DashboardMenu(key);
 	}
 	
 	

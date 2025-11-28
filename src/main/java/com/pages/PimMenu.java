@@ -15,8 +15,8 @@ public class PimMenu {
 	private Keywords kw;
 
 	
-	public PimMenu() {
-		this.kw = Keywords.getInstance();;
+	public PimMenu(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

@@ -14,7 +14,7 @@ public class TestListener implements ITestListener{
     
     @Override
     public void onTestFailure(ITestResult result) {
-        Keywords kw = Keywords.getInstance(); // Get the existing instance of Keywords
+        Keywords kw = Keywords.getInstance() ; // Get the existing instance of Keywords
         
         try {
             String testName = result.getName();

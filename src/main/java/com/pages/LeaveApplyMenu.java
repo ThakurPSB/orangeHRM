@@ -19,8 +19,8 @@ public class LeaveApplyMenu {
 	private Keywords kw;
 
 	
-	public LeaveApplyMenu() {
-		this.kw = Keywords.getInstance();;
+	public LeaveApplyMenu(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

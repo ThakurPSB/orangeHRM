@@ -19,8 +19,8 @@ public class AdminOrganizationMenu {
 	private Keywords kw;
 
 	
-	public AdminOrganizationMenu() {
-		this.kw = Keywords.getInstance();;
+	public AdminOrganizationMenu(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

@@ -13,8 +13,8 @@ public class DashboardMenu {
 	private Keywords kw;
 
 	
-	public DashboardMenu() {
-		this.kw = Keywords.getInstance();;
+	public DashboardMenu(Keywords key) {
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	

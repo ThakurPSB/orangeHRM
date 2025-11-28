@@ -22,8 +22,8 @@ public class AddEmployeePage {
 	private Keywords kw;
 	
 	//Constructor to instanciate POM and receive kw from testbase
-	public AddEmployeePage() {
-		this.kw = Keywords.getInstance();;
+	public AddEmployeePage(Keywords key) {
+		this.kw = key;;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 
