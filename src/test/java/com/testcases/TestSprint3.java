@@ -141,13 +141,13 @@ public class TestSprint3 extends TestBase{
 	public void employeeEditingTimesheetBeforeSubmission() throws InterruptedException {
 		login().logMeInAsUser();
 		timemenu().clickOnMenu("Time");
-		String beforeValue = timemenu().getMondayHours_ViewMode();
+		String beforeValue = timemenu().getMondayHoursViewMode();
 		
 		timemenu().clickOnEditTimesheetButton();
 		timemenu().enterUpdatedMondayHours(beforeValue);
 		timemenu().clickOnSaveTimesheetButton();
 		
-		String afterValue = timemenu().getMondayHours_ViewMode();
+		String afterValue = timemenu().getMondayHoursViewMode();
 		
 		Assert.assertNotEquals(afterValue, beforeValue);
 	}

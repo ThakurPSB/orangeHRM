@@ -188,23 +188,7 @@ public class TimeMenu {
         return hours;
 	}
 	
-	@FindBy(css = "table tbody tr:first-child td:nth-child(3) span")
-	WebElement mondayHoursViewMode;
-
-	public String getMondayHours_ViewMode() {
-	    kw.waitForElementToBeVisible(mondayHoursViewMode);
-	    kw.scrollToElement(mondayHoursViewMode);
-	    return mondayHoursViewMode.getText().trim();
-	}
 	
-	@FindBy(css = "input[name='monday']")
-	WebElement mondayHoursEditMode;
-
-	public String getMondayHours_EditMode() {
-	    kw.waitForElementToBeVisible(mondayHoursEditMode);
-	    kw.scrollToElement(mondayHoursEditMode);
-	    return mondayHoursEditMode.getDomProperty("value").trim();
-	}
 	
 	public String randomIncrementDecrementInHours(String hrString) {
 	
@@ -263,6 +247,15 @@ public class TimeMenu {
 		return false;
 	}
 	
+	@FindBy(css = "table tbody tr:nth-of-type(1) td:nth-of-type(3) span")
+	private WebElement mondayHoursViewMode;
+	
+	public String getMondayHoursViewMode() {
+	    kw.waitForElementToBeVisible(mondayHoursViewMode);
+	    return mondayHoursViewMode.getText().trim();
+	}
+	
+	
 	@FindBy(css="button[class='oxd-button oxd-button--medium oxd-button--text oxd-table-cell-action-space']")
 	WebElement viewTimesheetButton ;
 	
@@ -282,6 +275,7 @@ public class TimeMenu {
         rejectTimesheetButton.click();
         LOG.info("Successfully clicked on Reject Timesheet Button");
 	}
+	
 	
 	
 

@@ -1,7 +1,22 @@
-2025-11-28 22:19:01 [TestNG-tests-2] INFO  LoginPage - Successfully Loogged in
-2025-11-28 22:19:03 [TestNG-tests-2] INFO  AdminMenu - Cliked on Admin Menu
-2025-11-28 22:19:04 [TestNG-tests-2] INFO  AdminOrganizationMenu - Cliked on Organization Menu
-2025-11-28 22:19:04 [TestNG-tests-2] INFO  AdminOrganizationMenu - Clicked on the organization Menu in Admin
-2025-11-28 22:19:05 [TestNG-tests-2] INFO  AdminOrganizationMenu - Clicked on : General Information
-2025-11-28 22:19:05 [TestNG-tests-2] INFO  AdminOrganizationMenu - Cliked on edit button in organization Menu
-2025-11-28 22:19:07 [TestNG-tests-2] INFO  TestBase - Successfully quit the browser
+2025-11-29 15:37:28 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-29 15:37:29 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-29 15:37:29 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-29 15:37:30 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-29 15:37:31 [main] INFO  UserDropdownMenu - Clicked on User Profile
+2025-11-29 15:37:32 [main] INFO  UserDropdownMenu - Clicked on About option
+2025-11-29 15:37:32 [main] INFO  UserDropdownMenu - Displayed the about information page 
+2025-11-29 15:37:33 [main] INFO  UserDropdownMenu - Clicked on Closed About info page
+2025-11-29 15:37:34 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-29 15:37:34 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-29 15:37:34 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-29 15:37:35 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-29 15:37:37 [main] INFO  UserDropdownMenu - Clicked on User Profile
+2025-11-29 15:37:38 [main] INFO  UserDropdownMenu - Clicked on support option 
+2025-11-29 15:37:39 [main] INFO  UserDropdownMenu - Displayed the support information page
+2025-11-29 15:37:40 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-29 15:37:40 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-29 15:37:40 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-29 15:37:41 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-29 15:37:43 [main] INFO  UserDropdownMenu - Clicked on User Profile
+2025-11-29 15:37:44 [main] INFO  UserDropdownMenu - Clicked on Change Password option
+2025-11-29 15:37:45 [main] INFO  UserDropdownMenu - Displayed the change password page
