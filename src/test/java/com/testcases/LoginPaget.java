@@ -16,9 +16,9 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
-public class TestngLoginPageTests extends TestBase {
+public class LoginPaget extends TestBase {
 	
-	private static final Logger LOG = Logger.getLogger(TestngLoginPageTests.class);
+	private static final Logger LOG = Logger.getLogger(LoginPaget.class);
 	
 	@Test(groups= {"smoke"})
     @Severity(SeverityLevel.CRITICAL)

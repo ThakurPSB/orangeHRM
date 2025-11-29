@@ -12,13 +12,13 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
-public class TestngDashboardTests extends TestBase {
+public class dash extends TestBase {
 	
 	@Test
     @Severity(SeverityLevel.NORMAL)
     @Description("To Verify if all the links in the profile menu working or not")
     @Step("Login , click on userprofile menu and check each option one by one")
-    @Feature("Profile Menu Links")
+    @Feature("Dashboard Module")
     @Story("Respected links / dialog box should be visible")
 	public void checkIfAllTheLinksInProfileMenuAreWorking() throws InterruptedException {
 		
