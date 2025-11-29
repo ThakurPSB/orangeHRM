@@ -12,7 +12,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
-public class dash extends TestBase {
+public class TestngDashboardTests extends TestBase {
 	
 	@Test
     @Severity(SeverityLevel.NORMAL)
