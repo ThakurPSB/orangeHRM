@@ -12,9 +12,16 @@
     <parameter name="browserName" value="Chrome"></parameter>
     -->
 	<classes>
-		<class name="com.testcases.TestSprint1"></class>
-		<class name="com.testcases.TestSprint2"></class>
-		<class name="com.testcases.TestSprint3"></class>
+		
+		<class name="com.testcases.TestngAdminTests"></class>
+		<class name="com.testcases.TestngDashboardTests"></class>
+		<class name="com.testcases.TestngEmployeeTests"></class>
+		<class name="com.testcases.TestngLeaveTests"></class>
+		<class name="com.testcases.TestngLoginPageTests"></class>
+		<class name="com.testcases.TestngPimMenuTests"></class>
+		<class name="com.testcases.TestngRecruitmentTests"></class>
+		<class name="com.testcases.TestngTimeEntryTests"></class>
+		
 	</classes>
   </test> 
    

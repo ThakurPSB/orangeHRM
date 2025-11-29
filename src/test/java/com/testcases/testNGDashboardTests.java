@@ -12,7 +12,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
-public class testNGDashboardTests extends TestBase {
+public class TestngDashboardTests extends TestBase {
 	
 	@Test
     @Severity(SeverityLevel.NORMAL)
@@ -34,6 +34,46 @@ public class testNGDashboardTests extends TestBase {
 		profile().clickOnUserProfile();
 		profile().clickOnChangePassword();
 		Assert.assertTrue(profile().checkIfChangePasswordPage());
+	}
+	
+	@Test()
+	@Severity(SeverityLevel.NORMAL)
+    @Description("to verify dashboard punch in link")
+    @Step("login and navigate to dashboard page, click on punch in link")
+    @Feature("Dashboard Module")
+    @Story("Dashboard Punch In Link")
+	public void dashboardPunchInLinkDirectToPunchInPage() throws InterruptedException {
+		login().logMeInAsUser();
+		dashboard().clickOnMenu("Dashboard");
+		dashboard().clickOnPunchInButton();
+		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/attendance/punchIn"));
+	}
+	
+	@Test()
+	@Severity(SeverityLevel.NORMAL)
+    @Description("to verify dashboard apply leave link")
+    @Step("login and navigate to dashboard page, click on apply leave link")
+    @Feature("Dashboard Module")
+    @Story("Dashboard apply leaveLink")
+	public void dashboardApplyLeaveLinkDirectToLeavePage() {
+		login().logMeInAsUser();
+		dashboard().clickOnMenu("Dashboard");
+		dashboard().clickOnDashboardApplyLeaveShortcutbutton();
+		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/leave/applyLeave"));
+	}
+	
+	@Test()
+	@Severity(SeverityLevel.NORMAL)
+    @Description("to verify dashboard my timesheet link")
+    @Step("login and navigate to dashboard page, click on my timesheet link")
+    @Feature("Dashboard Module")
+    @Story("Dashboard my timesheet Link")
+	
+	public void dashboardMyTimesheetLinkDirectToMyTimesheetPage() {
+		login().logMeInAsUser();
+		dashboard().clickOnMenu("Dashboard");
+		dashboard().clickOnDashboardMyTimesheetShortcutbutton();
+		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/time/viewMyTimesheet"));
 	}
 	
 
