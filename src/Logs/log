@@ -1,22 +1,11 @@
-2025-11-29 15:37:28 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-29 15:37:29 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-29 15:37:29 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-29 15:37:30 [main] INFO  LoginPage - Successfully Loogged in
-2025-11-29 15:37:31 [main] INFO  UserDropdownMenu - Clicked on User Profile
-2025-11-29 15:37:32 [main] INFO  UserDropdownMenu - Clicked on About option
-2025-11-29 15:37:32 [main] INFO  UserDropdownMenu - Displayed the about information page 
-2025-11-29 15:37:33 [main] INFO  UserDropdownMenu - Clicked on Closed About info page
-2025-11-29 15:37:34 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-29 15:37:34 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-29 15:37:34 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-29 15:37:35 [main] INFO  LoginPage - Successfully Loogged in
-2025-11-29 15:37:37 [main] INFO  UserDropdownMenu - Clicked on User Profile
-2025-11-29 15:37:38 [main] INFO  UserDropdownMenu - Clicked on support option 
-2025-11-29 15:37:39 [main] INFO  UserDropdownMenu - Displayed the support information page
-2025-11-29 15:37:40 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-29 15:37:40 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-29 15:37:40 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-29 15:37:41 [main] INFO  LoginPage - Successfully Loogged in
-2025-11-29 15:37:43 [main] INFO  UserDropdownMenu - Clicked on User Profile
-2025-11-29 15:37:44 [main] INFO  UserDropdownMenu - Clicked on Change Password option
-2025-11-29 15:37:45 [main] INFO  UserDropdownMenu - Displayed the change password page
+2025-11-29 23:41:00 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-29 23:41:00 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-29 23:41:02 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-29 23:41:10 [main] INFO  AdminMenu - Cliked on Admin Menu
+2025-11-29 23:41:11 [main] INFO  AdminQualificationMenu - Clicked on Admin > Qualification Menu
+2025-11-29 23:41:12 [main] INFO  AdminQualificationMenu - Clicked on Qualification> Skill menu
+2025-11-29 23:41:14 [main] INFO  AdminQualificationMenu - Successfully deleted the skill: java
+2025-11-29 23:41:16 [main] INFO  AdminQualificationMenu - clicked on Add skills button
+2025-11-29 23:41:17 [main] INFO  AdminQualificationMenu - entered the skill name to add
+2025-11-29 23:41:17 [main] INFO  AdminQualificationMenu - clicked on Save skill button
+2025-11-29 23:41:19 [main] INFO  AdminQualificationMenu - Success Toast Message Displayed

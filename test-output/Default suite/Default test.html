@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Nov 29 15:37:25 IST 2025</td>
+<td>Started on:</td><td>Sat Nov 29 23:38:08 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19835 ms)</td>
+<tr><td>Total time:</td><td>193 seconds (193412 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,33 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify Job submenu contains correct respective detail options", "Admin Module"</td>
+<td><div><pre>java.lang.AssertionError: Expected element not found in job table: Grade A expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.StepDefinition.StepDefAdmin.verifyElementInJobTable(StepDefAdmin.java:107)
+	at ✽.job table should contain entry &quot;Grade A&quot;(file:///C:/Users/piyus/eclipse-workspace/orangeHRM/src/test/resources/features/cucumberAdminTests.feature:35)
+</pre></div><a href='#' onClick='toggleBox("stack-trace942901628", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace942901628'><pre>java.lang.AssertionError: Expected element not found in job table: Grade A expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.StepDefinition.StepDefAdmin.verifyElementInJobTable(StepDefAdmin.java:107)
+	at ✽.job table should contain entry &quot;Grade A&quot;(file:///C:/Users/piyus/eclipse-workspace/orangeHRM/src/test/resources/features/cucumberAdminTests.feature:35)
+</pre></div></td>
+<td>22</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,20 +103,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when clicked on 'Change password' link 'password change' page opens", "To verify all links in profile menu working"</td>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify location details updated are reflecting correctly", "Admin Module"</td>
 <td></td>
-<td>5</td>
-<td>com.runner.TestRunner@610df783</td></tr>
+<td>35</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
 <tr>
-<td title='com.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when clicked on 'Support' link 'Support information' page opens", "To verify all links in profile menu working"</td>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify skills added reflecting in the field", "Admin Module"</td>
 <td></td>
-<td>5</td>
-<td>com.runner.TestRunner@610df783</td></tr>
+<td>23</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
 <tr>
-<td title='com.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when clicked on 'About' link 'About information' page opens", "To verify all links in profile menu working"</td>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when seardched with user role search result display for that role only", "Admin Module"</td>
 <td></td>
-<td>6</td>
-<td>com.runner.TestRunner@610df783</td></tr>
+<td>20</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
+<tr>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To veify organization details reflecting correctly after editing", "Admin Module"</td>
+<td></td>
+<td>22</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
+<tr>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when searched with userName search result displayed correctly", "Admin Module"</td>
+<td></td>
+<td>22</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
+<tr>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when seardched with employee name search result only show that employee", "Admin Module"</td>
+<td></td>
+<td>23</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
+<tr>
+<td title='com.runner.CucumberTests.runScenario()'><b>runScenario</b><br>Test class: com.runner.CucumberTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when seardched with login status search result display for login status", "Admin Module"</td>
+<td></td>
+<td>20</td>
+<td>com.runner.CucumberTests@1f387978</td></tr>
 </table><p>
 </body>
 </html>

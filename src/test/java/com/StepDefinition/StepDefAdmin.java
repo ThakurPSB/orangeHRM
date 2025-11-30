@@ -25,17 +25,17 @@ public class StepDefAdmin {
     }
 
 
-    @When("user enters admin username {string}")
+    @When("user enters admin Module username {string}")
     public void enterAdminUsername(String user) {
         admin.enterUsername(user);
     }
 
-    @When("user clicks on admin search button")
+    @When("user clicks on admin Module search button")
     public void clickAdminSearchButton() throws InterruptedException {
         admin.clickOnSearchButton();
     }
 
-    @When("user resets admin search filter")
+    @When("user resets admin Module search filter")
     public void clickAdminResetButton() throws InterruptedException {
         admin.clickOnResetButton();
     }
@@ -49,7 +49,7 @@ public class StepDefAdmin {
     }
 
 
-    @When("user selects admin user role {string}")
+    @When("user selects admin Module user role {string}")
     public void selectAdminUserRole(String role) {
         admin.selectUserRole(role);
     }
@@ -63,7 +63,7 @@ public class StepDefAdmin {
     }
 
 
-    @When("user enters employee name {string} in admin search")
+    @When("user enters employee name {string} in search")
     public void enterEmployeeNameInAdmin(String name) throws InterruptedException {
         admin.enterEmployeeName(name);
     }
@@ -77,7 +77,7 @@ public class StepDefAdmin {
     }
 
 
-    @When("user selects admin login status {string}")
+    @When("user selects admin Module login status {string}")
     public void selectAdminLoginStatus(String status) {
         admin.selectLoginStatus(status);
     }
@@ -90,7 +90,6 @@ public class StepDefAdmin {
         );
     }
     
-    // Navigate to Admin module
     @When("user clicks on admin main menu")
     public void clickOnAdminMainMenu() {
     	jobs.clickOnAdminMenu();
@@ -166,12 +165,17 @@ public class StepDefAdmin {
         orgMenu.clickOnSave();
     }
 
-    @Then("organization info should be saved successfully")
+    @Then("Saved Successfully message should be displayed")
     public void verifyOrganizationInfoSaved() throws Exception {
         Assert.assertTrue(orgMenu.SaveToastMessageText(),
                 "Organization info save toast not displayed");
     }
 
+    @Then ("Details saved suceessfully mesgae should be displayed")
+	public void SaveToastMessageText() throws Exception {
+		Assert.assertTrue(orgMenu.SaveToastMessageText(),
+				"Details saved successfully message displayed");
+	}
 
     @When("user searches for location named {string}")
     public void searchLocationByName(String locationName) {
@@ -221,7 +225,7 @@ public class StepDefAdmin {
         orgMenu.selectCountry(country);
     }
 
-    @When("user saves location")
+    @When("user clicks on save location button")
     public void saveLocation() {
         orgMenu.clickOnSaveLocationButton();
     }

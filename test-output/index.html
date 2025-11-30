@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse--1739694646\testng-customsuite.xml</span>
+                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse--1741952299\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To verify Job submenu contains correct respective detail options&quot;, &quot;Admin Module&quot;)">runScenario("To verify Job submenu contains correct respective detail options", "Admin Module")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +117,37 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when clicked on &#039;Change password&#039; link &#039;password change&#039; page opens&quot;, &quot;To verify all link...)">runScenario("To verify when clicked on 'Change password' link 'password change' page opens", "To verify all link...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To verify location details updated are reflecting correctly&quot;, &quot;Admin Module&quot;)">runScenario("To verify location details updated are reflecting correctly", "Admin Module")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when clicked on &#039;Support&#039; link &#039;Support information&#039; page opens&quot;, &quot;To verify all links in...)">runScenario("To verify when clicked on 'Support' link 'Support information' page opens", "To verify all links in...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To verify skills added reflecting in the field&quot;, &quot;Admin Module&quot;)">runScenario("To verify skills added reflecting in the field", "Admin Module")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when clicked on &#039;About&#039; link &#039;About information&#039; page opens&quot;, &quot;To verify all links in pro...)">runScenario("To verify when clicked on 'About' link 'About information' page opens", "To verify all links in pro...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when seardched with user role search result display for that role only&quot;, &quot;Admin Module&quot;)">runScenario("To verify when seardched with user role search result display for that role only", "Admin Module")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To veify organization details reflecting correctly after editing&quot;, &quot;Admin Module&quot;)">runScenario("To veify organization details reflecting correctly after editing", "Admin Module")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when searched with userName search result displayed correctly&quot;, &quot;Admin Module&quot;)">runScenario("To verify when searched with userName search result displayed correctly", "Admin Module")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when seardched with employee name search result only show that employee&quot;, &quot;Admin Module&quot;)">runScenario("To verify when seardched with employee name search result only show that employee", "Admin Module")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when seardched with login status search result display for login status&quot;, &quot;Admin Module&quot;)">runScenario("To verify when seardched with login status search result display for login status", "Admin Module")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -128,38 +162,104 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.runner.TestRunner</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.runner.CucumberTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;To verify when clicked on &#039;Change password&#039; link &#039;password change&#039; page opens&quot;, &quot;To verify all link...)">
-                  </a> <!-- runScenario("To verify when clicked on 'Change password' link 'password change' page opens", "To verify all link...) -->
+                  <a name="runScenario(&quot;To verify Job submenu contains correct respective detail options&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To verify Job submenu contains correct respective detail options", "Admin Module") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("To verify when clicked on 'Change password' link 'password change' page opens","To verify all links in profile menu working")</span>
+                  <span class="parameters">("To verify Job submenu contains correct respective detail options","Admin Module")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected element not found in job table: Grade A expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.StepDefinition.StepDefAdmin.verifyElementInJobTable(StepDefAdmin.java:107)
+	at ✽.job table should contain entry &quot;Grade A&quot;(file:///C:/Users/piyus/eclipse-workspace/orangeHRM/src/test/resources/features/cucumberAdminTests.feature:35)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.runner.CucumberTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To verify location details updated are reflecting correctly&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To verify location details updated are reflecting correctly", "Admin Module") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To verify location details updated are reflecting correctly","Admin Module")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;To verify when clicked on &#039;Support&#039; link &#039;Support information&#039; page opens&quot;, &quot;To verify all links in...)">
-                  </a> <!-- runScenario("To verify when clicked on 'Support' link 'Support information' page opens", "To verify all links in...) -->
+                  <a name="runScenario(&quot;To verify skills added reflecting in the field&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To verify skills added reflecting in the field", "Admin Module") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("To verify when clicked on 'Support' link 'Support information' page opens","To verify all links in profile menu working")</span>
+                  <span class="parameters">("To verify skills added reflecting in the field","Admin Module")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;To verify when clicked on &#039;About&#039; link &#039;About information&#039; page opens&quot;, &quot;To verify all links in pro...)">
-                  </a> <!-- runScenario("To verify when clicked on 'About' link 'About information' page opens", "To verify all links in pro...) -->
+                  <a name="runScenario(&quot;To verify when seardched with user role search result display for that role only&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To verify when seardched with user role search result display for that role only", "Admin Module") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("To verify when clicked on 'About' link 'About information' page opens","To verify all links in profile menu working")</span>
+                  <span class="parameters">("To verify when seardched with user role search result display for that role only","Admin Module")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To veify organization details reflecting correctly after editing&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To veify organization details reflecting correctly after editing", "Admin Module") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To veify organization details reflecting correctly after editing","Admin Module")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To verify when searched with userName search result displayed correctly&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To verify when searched with userName search result displayed correctly", "Admin Module") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To verify when searched with userName search result displayed correctly","Admin Module")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To verify when seardched with employee name search result only show that employee&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To verify when seardched with employee name search result only show that employee", "Admin Module") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To verify when seardched with employee name search result only show that employee","Admin Module")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;To verify when seardched with login status search result display for login status&quot;, &quot;Admin Module&quot;)">
+                  </a> <!-- runScenario("To verify when seardched with login status search result display for login status", "Admin Module") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("To verify when seardched with login status search result display for login status","Admin Module")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -169,7 +269,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse--1739694646\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse--1741952299\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -178,7 +278,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.runner.TestRunner&quot;/&gt;
+      &lt;class name=&quot;com.runner.CucumberTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -226,24 +326,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'com.runner.TestRunner')
-data.setCell(0, 3, 6698);
+data.setCell(0, 2, 'com.runner.CucumberTests')
+data.setCell(0, 3, 35066);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'com.runner.TestRunner')
-data.setCell(1, 3, 5935);
+data.setCell(1, 2, 'com.runner.CucumberTests')
+data.setCell(1, 3, 23477);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
-data.setCell(2, 2, 'com.runner.TestRunner')
-data.setCell(2, 3, 5891);
+data.setCell(2, 2, 'com.runner.CucumberTests')
+data.setCell(2, 3, 23434);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.runner.CucumberTests')
+data.setCell(3, 3, 22835);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'com.runner.CucumberTests')
+data.setCell(4, 3, 22564);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'com.runner.CucumberTests')
+data.setCell(5, 3, 22487);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'com.runner.CucumberTests')
+data.setCell(6, 3, 20943);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'com.runner.CucumberTests')
+data.setCell(7, 3, 20491);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -269,26 +389,48 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.runner.TestRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.runner.CucumberTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@331ad6eb)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@19b7852b)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("To verify when clicked on 'About' link 'About information' page opens", "To verify all links in pro...)</span>
-                <span class="method-start">1218 ms</span>
+                <span class="method-name">runScenario("To verify when searched with userName search result displayed correctly", "Admin Module")</span>
+                <span class="method-start">1893 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("To verify when clicked on 'Support' link 'Support information' page opens", "To verify all links in...)</span>
-                <span class="method-start">7920 ms</span>
+                <span class="method-name">runScenario("To verify when seardched with user role search result display for that role only", "Admin Module")</span>
+                <span class="method-start">24471 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("To verify when clicked on 'Change password' link 'password change' page opens", "To verify all link...)</span>
-                <span class="method-start">13859 ms</span>
+                <span class="method-name">runScenario("To verify when seardched with employee name search result only show that employee", "Admin Module")</span>
+                <span class="method-start">44966 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("To verify when seardched with login status search result display for login status", "Admin Module")</span>
+                <span class="method-start">68403 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("To verify Job submenu contains correct respective detail options", "Admin Module")</span>
+                <span class="method-start">89348 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("To veify organization details reflecting correctly after editing", "Admin Module")</span>
+                <span class="method-start">111838 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("To verify location details updated are reflecting correctly", "Admin Module")</span>
+                <span class="method-start">134676 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("To verify skills added reflecting in the field", "Admin Module")</span>
+                <span class="method-start">169745 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">19753 ms</span>
+                <span class="method-start">193231 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

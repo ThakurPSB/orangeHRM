@@ -25,8 +25,6 @@ public class TestngAdminTests extends TestBase{
 		login().logMeIn();
 		
 		admin().clickOnAdminMenu();
-		
-		
 		admin().enterUsername("admin");
 		admin().clickOnSearchButton();
 		Assert.assertTrue(admin().searchResultUsername("admin"));
@@ -61,7 +59,6 @@ public class TestngAdminTests extends TestBase{
 		login().logMeIn();
 		admin().clickOnAdminMenu();
 		
-		
 		jobs().clickOnAdminMenu();
 		jobs().clickOnJobSubMenu("Job Titles");
 		Assert.assertTrue(jobs().checkElementinTable("Assistant Manager"));
@@ -69,10 +66,7 @@ public class TestngAdminTests extends TestBase{
 		Assert.assertTrue(jobs().checkElementinTable("Grade A"));
 		jobs().clickOnJobSubMenu("Employment Status");
 		Assert.assertTrue(jobs().checkElementinTable("Active"));
-		jobs().clickOnJobSubMenu("Job Categories");
-		
-	
-		
+        
 	}
 	
 	

@@ -141,7 +141,7 @@ public class StepDefDashboard {
         Assert.assertTrue(user.checkOfficeTransportDisplayed(), "Office transport field is not displayed");
     }
     
-    @When("user clicks on dashboard menu {string}")
+    @When("user clicks on search in sidebar for menu and click {string}")
     public void clickOnDashboardMenu(String menuName) {
         dashboard.clickOnMenu(menuName);
     }
@@ -151,7 +151,7 @@ public class StepDefDashboard {
         dashboard.clickOnPunchInButton();
     }
 
-    @Then("user should be navigated to attendance page with url {string}")
+    @Then("user should be navigated to url {string}")
     public void verifyAttendanceUrl(String expectedUrl) {
         Assert.assertTrue(
                 dashboard.checkUrlChangeToAttendance(expectedUrl),

@@ -1,79 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-29T15:37:25 IST" name="Default suite" finished-at="2025-11-29T15:37:45 IST" duration-ms="19835">
+  <suite started-at="2025-11-29T23:38:08 IST" name="Default suite" finished-at="2025-11-29T23:41:21 IST" duration-ms="193412">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunner@610df783]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-11-29T15:37:25 IST" name="Default test" finished-at="2025-11-29T15:37:45 IST" duration-ms="19835">
-      <class name="com.runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestRunner@610df783]" started-at="2025-11-29T15:37:25 IST" name="setUpClass" finished-at="2025-11-29T15:37:26 IST" duration-ms="1195" status="PASS">
+    <test started-at="2025-11-29T23:38:08 IST" name="Default test" finished-at="2025-11-29T23:41:21 IST" duration-ms="193412">
+      <class name="com.runner.CucumberTests">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:38:08 IST" name="setUpClass" finished-at="2025-11-29T23:38:10 IST" duration-ms="1847" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@331ad6eb]]>
+                <![CDATA[org.testng.TestRunner@19b7852b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunner@610df783]" started-at="2025-11-29T15:37:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T15:37:33 IST" duration-ms="6698" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:38:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:38:32 IST" duration-ms="22564" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To verify when clicked on 'About' link 'About information' page opens"]]>
+                <![CDATA["To verify when searched with userName search result displayed correctly"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["To verify all links in profile menu working"]]>
+                <![CDATA["Admin Module"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunner@610df783]" started-at="2025-11-29T15:37:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T15:37:39 IST" duration-ms="5935" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:38:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:38:53 IST" duration-ms="20491" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To verify when clicked on 'Support' link 'Support information' page opens"]]>
+                <![CDATA["To verify when seardched with user role search result display for that role only"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["To verify all links in profile menu working"]]>
+                <![CDATA["Admin Module"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunner@610df783]" started-at="2025-11-29T15:37:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T15:37:45 IST" duration-ms="5891" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:38:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:39:16 IST" duration-ms="23434" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To verify when clicked on 'Change password' link 'password change' page opens"]]>
+                <![CDATA["To verify when seardched with employee name search result only show that employee"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["To verify all links in profile menu working"]]>
+                <![CDATA["Admin Module"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestRunner@610df783]" started-at="2025-11-29T15:37:45 IST" name="tearDownClass" finished-at="2025-11-29T15:37:45 IST" duration-ms="30" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:39:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:39:37 IST" duration-ms="20943" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify when seardched with login status search result display for login status"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:39:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:39:59 IST" duration-ms="22487" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify Job submenu contains correct respective detail options"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Module"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected element not found in job table: Grade A expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected element not found in job table: Grade A expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.StepDefinition.StepDefAdmin.verifyElementInJobTable(StepDefAdmin.java:107)
+at ✽.job table should contain entry "Grade A"(file:///C:/Users/piyus/eclipse-workspace/orangeHRM/src/test/resources/features/cucumberAdminTests.feature:35)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:39:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:40:22 IST" duration-ms="22835" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To veify organization details reflecting correctly after editing"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:40:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:40:57 IST" duration-ms="35066" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify location details updated are reflecting correctly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:40:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-29T23:41:21 IST" duration-ms="23477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify skills added reflecting in the field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Admin Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.CucumberTests@1f387978]" started-at="2025-11-29T23:41:21 IST" name="tearDownClass" finished-at="2025-11-29T23:41:21 IST" duration-ms="74" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.runner.TestRunner -->
+      </class> <!-- com.runner.CucumberTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
