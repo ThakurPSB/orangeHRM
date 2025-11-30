@@ -1,47 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-30T13:07:17 IST" name="Default suite" finished-at="2025-11-30T13:07:48 IST" duration-ms="30775">
+  <suite started-at="2025-11-30T15:31:34 IST" name="Default suite" finished-at="2025-11-30T15:31:50 IST" duration-ms="15407">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@47ec7422]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-11-30T13:07:17 IST" name="Default test" finished-at="2025-11-30T13:07:48 IST" duration-ms="30775">
-      <class name="com.runner.CucumberTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.CucumberTests@47ec7422]" started-at="2025-11-30T13:07:17 IST" name="setUpClass" finished-at="2025-11-30T13:07:19 IST" duration-ms="1187" status="PASS">
+    <test started-at="2025-11-30T15:31:34 IST" name="Default test" finished-at="2025-11-30T15:31:50 IST" duration-ms="15407">
+      <class name="com.testcases.TestngLeaveTests">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestngLeaveTests@623dcf2a]" started-at="2025-11-30T15:31:34 IST" name="cleanAllureResults" finished-at="2025-11-30T15:31:34 IST" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanAllureResults -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.testcases.TestngLeaveTests@623dcf2a]" started-at="2025-11-30T15:31:34 IST" name="setUp" finished-at="2025-11-30T15:31:37 IST" duration-ms="2357" status="PASS">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@19c24321]]>
-              </value>
+              <value is-null="true"/>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@47ec7422]" started-at="2025-11-30T13:07:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-30T13:07:48 IST" duration-ms="29480" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To verify when adding users all options working correctly"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Employee Module"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setUp -->
+        <test-method signature="ApplyLeaveWithWeekendDates()[pri:0, instance:com.testcases.TestngLeaveTests@623dcf2a]" started-at="2025-11-30T15:31:37 IST" name="ApplyLeaveWithWeekendDates" finished-at="2025-11-30T15:31:49 IST" duration-ms="12518" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.CucumberTests@47ec7422]" started-at="2025-11-30T13:07:48 IST" name="tearDownClass" finished-at="2025-11-30T13:07:48 IST" duration-ms="28" status="PASS">
+        </test-method> <!-- ApplyLeaveWithWeekendDates -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TestngLeaveTests@623dcf2a]" started-at="2025-11-30T15:31:49 IST" name="tearDown" finished-at="2025-11-30T15:31:50 IST" duration-ms="289" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.runner.CucumberTests -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.testcases.TestngLeaveTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

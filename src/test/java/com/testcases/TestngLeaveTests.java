@@ -90,16 +90,16 @@ public class TestngLeaveTests extends TestBase {
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
     @Feature("Leave Module")
     @Story("Apply leave with past dates")
-	public void ApplyLeaveWithPastDates() throws InterruptedException {
+	public void ApplyLeaveWithWeekendDates() throws InterruptedException {
 		
 		login().logMeIn();
 		leaveApply().clickOnLeaveMenu();
 		leaveApply().clickOnApplyLeave();
 		leaveApply().selectLeaveType("e");
-		leaveApply().selectPastFromDate();
-		leaveApply().selectPastToDate();
+		leaveApply().selectSaturdayFromDate();
+		leaveApply().selectSundayToDate();
 		leaveApply().clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply().SaveToastMessageText());
+		Assert.assertTrue(leaveApply().errorNonWorkingDayLeave());
 		myLeave().clickOnLeaveMenu();
 		myLeave().clickOnMyLeaveMenu();
 		myLeave().cancelAllLeaves();

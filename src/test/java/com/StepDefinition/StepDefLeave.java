@@ -72,23 +72,28 @@ public class StepDefLeave {
     }
 
 
-    @When("user selects past from date")
+    @When("user selects Saturday from date")
     public void selectPastFromDate() {
-        leaveApply.selectPastFromDate();
+        leaveApply.selectSaturdayFromDate();
     }
 
-    @When("user selects past to date")
+    @When("user selects Sunday to date")
     public void selectPastToDate() {
-        leaveApply.selectPastToDate();
+        leaveApply.selectSundayToDate();
     }
 
     @Then("system should show failed to apply leave toast")
-    public void verifyFailedToSubmitPastLeave() throws Exception {
+    public void verifyFailedToSubmitNonWorkingDayLeave() throws Exception {
         Assert.assertTrue(
                 leaveApply.failedToApplyLeaveToastText(),
                 "Past leave error toast NOT displayed"
         );
     }
+    
+    @Then("Warning for non working days should be displayed")
+	public void verifyNonWorkingDaysWarning() {
+		Assert.assertTrue(leaveApply.errorNonWorkingDayLeave(), "Warning for non working days NOT displayed");
+	}
 
 
     @When("user opens user leave menu")

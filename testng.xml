@@ -6,13 +6,12 @@
         <listener class-name="com.listeners.TestListener"/>
     </listeners>
 	
-  <test name="regression tests">
+  <test name="testNG tests">
 	<!-- //We are using properties file to manage parameters
 	<parameter name="url" value="http://localhost/orangehrm"></parameter>
     <parameter name="browserName" value="Chrome"></parameter>
     -->
 	<classes>
-		
 		<class name="com.testcases.TestngAdminTests"></class>
 		<class name="com.testcases.TestngDashboardTests"></class>
 		<class name="com.testcases.TestngEmployeeTests"></class>
@@ -21,9 +20,14 @@
 		<class name="com.testcases.TestngPimMenuTests"></class>
 		<class name="com.testcases.TestngRecruitmentTests"></class>
 		<class name="com.testcases.TestngTimeEntryTests"></class>
-		
 	</classes>
   </test> 
-   
+  
+  <test name="Cucumber Tests">
+  	<classes>
+    	<class name="com.runner.CucumberTests"></class>
+    </classes>
+  </test>
   
 </suite>
+

@@ -1,5 +1,6 @@
 package com.pages;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -196,43 +197,67 @@ public class LeaveApplyMenu {
 		return isDisplayed;
 	}
 	
-	
-	public void selectPastFromDate() {
-		kw.waitForElementToBeClickable(fromCalButton);
-		kw.scrollToElement(fromCalButton);
-		fromCalButton.click();
-		String s = "";
-		if(today.getDayOfWeek().toString().equals("SATURDAY")) {
-			s = today.minusDays(1).toString();
-		}else if(today.getDayOfWeek().toString().equals("SUNDAY")) {
-			s = today.minusDays(2).toString();
-		}else {
-			s = today.toString();
-		}
-		
-		fromCalButton.sendKeys(s);
-		fromCalButton.sendKeys(Keys.ENTER);
-		LOG.info("Successfully from date selected for past Date");
+	private LocalDate getLastSaturday() {
+	    LocalDate date = LocalDate.now();
+	    while (date.getDayOfWeek() != DayOfWeek.SATURDAY) {
+	        date = date.minusDays(1);
+	    }
+	    return date;
 	}
 
+	private LocalDate getLastSunday() {
+	    LocalDate date = LocalDate.now();
+	    while (date.getDayOfWeek() != DayOfWeek.SUNDAY) {
+	        date = date.minusDays(1);
+	    }
+	    return date;
+	}
 	
-	public void selectPastToDate() {
-		kw.waitForElementToBeClickable(toCalButton);
-		kw.scrollToElement(toCalButton);
-		toCalButton.click();
-		toCalButton.sendKeys(Keys.LEFT_CONTROL+ "A");
-		toCalButton.sendKeys(Keys.DELETE);
-		String s = "";
-		if(today.getDayOfWeek().toString().equals("SATURDAY")) {
-			s = today.minusDays(1).toString();
-		}else if(today.getDayOfWeek().toString().equals("SUNDAY")) {
-			s = today.minusDays(2).toString();
-		}else {
-			s = today.toString();
+	
+	
+	public void selectSaturdayFromDate() {
+		kw.waitForElementToBeClickable(fromCalButton);
+	    kw.scrollToElement(fromCalButton);
+	    fromCalButton.click();
+
+	    LocalDate saturday = getLastSaturday();
+	    fromCalButton.sendKeys(saturday.toString());
+	    fromCalButton.sendKeys(Keys.ENTER);
+
+		LOG.info("Successfully from date selected for past Date");
+	}
+	
+	
+	public void selectSundayToDate() {
+	    kw.waitForElementToBeClickable(toCalButton);
+	    kw.scrollToElement(toCalButton);
+	    toCalButton.click();
+
+	    toCalButton.sendKeys(Keys.chord(Keys.CONTROL, "A"));
+	    toCalButton.sendKeys(Keys.DELETE);
+
+	    LocalDate sunday = getLastSunday();
+	    toCalButton.sendKeys(sunday.toString());
+	    toCalButton.sendKeys(Keys.ENTER);
+	    LOG.info("Successfully to date selected for past date");
+	}
+	
+	
+	
+	public boolean errorNonWorkingDayLeave() throws TimeoutException {
+		try {
+			kw.waitForElementToBeVisibleShort(errorToastLeaveBalance, 10);
+			kw.scrollToElement(errorToastLeaveBalance);
+			boolean isDisplayed = errorToastLeaveBalance.isDisplayed();
+			LOG.info("\"Error - Non working day\" toast Displayed");
+			return isDisplayed;
+		} catch (TimeoutException e) {
+			LOG.warn("Toast message not found within timeout.");
+
+		} catch (NoSuchElementException e) {
+			LOG.warn("Toast element not found in DOM.");
 		}
-		toCalButton.sendKeys(s);
-		toCalButton.sendKeys(Keys.TAB);
-		LOG.info("Successfully to date selected for past date");
+		return false;
 	}
 	
 	@FindBy(css="div.oxd-toast-content.oxd-toast-content--error > p.oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text")

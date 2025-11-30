@@ -1,22 +1,15 @@
-2025-11-30 13:07:21 [main] INFO  Keywords - Launched Chrome Browser
-2025-11-30 13:07:21 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-11-30 13:07:21 [main] INFO  TestBase - Successfully launched the web Application
-2025-11-30 13:07:22 [main] INFO  LoginPage - Successfully Loogged in
-2025-11-30 13:07:26 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-11-30 13:07:28 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
-2025-11-30 13:07:28 [main] INFO  EmployeeListMenu - Entered the name in search name field.
-2025-11-30 13:07:30 [main] INFO  EmployeeListMenu - Clicked the Search button.
-2025-11-30 13:07:35 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
-2025-11-30 13:07:35 [main] INFO  EmployeeListMenu - Selected all the search results
-2025-11-30 13:07:35 [main] INFO  EmployeeListMenu - Successfully Clicked on delete button
-2025-11-30 13:07:36 [main] INFO  EmployeeListMenu - Clicked on confirm delete button
-2025-11-30 13:07:37 [main] INFO  PimMenu - Successfully clicked the PIM Menu button.
-2025-11-30 13:07:38 [main] INFO  AddEmployeePage - Successfully clicked on add new employee button
-2025-11-30 13:07:42 [main] INFO  AddEmployeePage - Profile pic selected
-2025-11-30 13:07:42 [main] INFO  AddEmployeePage - Successfully entered the user with details George L Wisley
-2025-11-30 13:07:42 [main] INFO  AddEmployeePage - loop start 0106
-2025-11-30 13:07:45 [main] INFO  AddEmployeePage - Error message not found, stopping loop.
-2025-11-30 13:07:45 [main] INFO  AddEmployeePage - Final Unique Employee ID: null
-2025-11-30 13:07:45 [main] INFO  AddEmployeePage - The Create login details button already turned on
-2025-11-30 13:07:46 [main] INFO  AddEmployeePage - Successfully clicked on the Save button
-2025-11-30 13:07:48 [main] INFO  AddEmployeePage - Successfully added the employee
+2025-11-30 15:31:36 [main] INFO  Keywords - Launched Chrome Browser
+2025-11-30 15:31:37 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-11-30 15:31:37 [main] INFO  TestBase - Successfully launched the web Application
+2025-11-30 15:31:37 [main] INFO  LoginPage - Successfully Loogged in
+2025-11-30 15:31:40 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-11-30 15:31:42 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-11-30 15:31:43 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-11-30 15:31:43 [main] INFO  LeaveApplyMenu - Successfully from date selected for past Date
+2025-11-30 15:31:43 [main] INFO  LeaveApplyMenu - Successfully to date selected for past date
+2025-11-30 15:31:44 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-11-30 15:31:44 [main] INFO  LeaveApplyMenu - "Error - Non working day" toast Displayed
+2025-11-30 15:31:45 [main] INFO  LeaveMyLeaveMenu - Successfully clicked on Leave Menu
+2025-11-30 15:31:46 [main] INFO  LeaveMyLeaveMenu - Successfully clicked on My Leave menu
+2025-11-30 15:31:49 [main] INFO  LeaveMyLeaveMenu - No leave application to cancel
+2025-11-30 15:31:50 [main] INFO  TestBase - Successfully quit the browser

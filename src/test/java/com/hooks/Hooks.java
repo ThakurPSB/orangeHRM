@@ -35,9 +35,11 @@ public class Hooks {
 		LoginPage login = new LoginPage(Hooks.key);
 	    if (scenario.getSourceTagNames().contains("@userLogin")) {
 	        login.logMeInAsUser();
-	    } else {
-	        login.logMeIn();
-	    }
+	    } else if (scenario.getSourceTagNames().contains("@noLogin")){
+	        return ;
+		} else {
+			login.logMeIn();
+		}
 	}
 	
 	@After
