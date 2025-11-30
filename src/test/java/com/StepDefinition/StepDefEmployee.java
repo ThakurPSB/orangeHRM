@@ -165,6 +165,7 @@ public class StepDefEmployee {
 
     @When("user selects profile picture")
     public void selectProfilePic() throws Exception {
+    	addemp = new AddEmployeePage(Hooks.key);
         addemp.selectProfilePic();
     }
 

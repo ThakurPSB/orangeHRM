@@ -6,7 +6,6 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -26,7 +25,8 @@ public class AddEmployeePage {
 		this.kw = key;;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
-
+	
+	
 	private static final Logger LOG = Logger.getLogger(AddEmployeePage.class);
 	
 	@FindBy(css="header > div.oxd-topbar-body > nav > ul > li:nth-child(3) > a")
@@ -42,30 +42,35 @@ public class AddEmployeePage {
 		LOG.info("Successfully clicked on add new employee button");
 	}
 	
-	@FindBy(css="Button.oxd-icon-button.employee-image-action" )
+	@FindBy(css="button.oxd-icon-button.employee-image-action" )
 	WebElement profilePicAddButton ;
 	
 	@FindBy(css="input.oxd-file-input")
 	WebElement filePath ;
 	
-	public void uploadFileUsingRobot(String filePath) throws AWTException, InterruptedException {
+	@FindBy(css="div.orangehrm-employee-image")
+    WebElement profilePicDiv ;
+	
+	public void uploadFileUsingRobot(String absolutePath) throws AWTException, InterruptedException {
 	    Robot robot = new Robot();
+	    kw.normalWait(700);
 	    
-	    StringSelection selection = new StringSelection(filePath);
+	    StringSelection selection = new StringSelection(absolutePath);
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
 
-	    kw.waitForClipBoardText(filePath);
+	    kw.normalWait(300);
 	    
 	    robot.keyPress(KeyEvent.VK_CONTROL);
 	    robot.keyPress(KeyEvent.VK_V);
 	    robot.keyRelease(KeyEvent.VK_V);
 	    robot.keyRelease(KeyEvent.VK_CONTROL);
 	    
-	    kw.waitForClipBoardText("");
+	    kw.normalWait(500);
 
 	    robot.keyPress(KeyEvent.VK_ENTER);
 	    robot.keyRelease(KeyEvent.VK_ENTER);
-	    kw.normalWait(300);
+	    
+	    kw.normalWait(800);
 	}
 	
 	
@@ -75,10 +80,13 @@ public class AddEmployeePage {
 	 * @throws InterruptedException 
 	 */
 	public void selectProfilePic() throws AWTException, InterruptedException {
+		
 		kw.waitForElementToBeClickable(profilePicAddButton);
-		kw.scrollToElement(profilePicAddButton);
-		profilePicAddButton.click();
-		uploadFileUsingRobot("C:\\Users\\piyus\\OneDrive\\Pictures\\profile.jpg");
+		kw.waitForElementToBeVisible(profilePicDiv);
+		kw.scrollToElement(profilePicDiv);
+		profilePicDiv.click();
+
+	    uploadFileUsingRobot("C:\\Users\\piyus\\OneDrive\\Pictures\\profile.jpg");
 	    LOG.info("Profile pic selected");
 	}
 	
