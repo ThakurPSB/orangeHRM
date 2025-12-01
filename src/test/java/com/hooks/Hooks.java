@@ -44,7 +44,14 @@ public class Hooks {
 	
 	@After
 	public void tearDown() {
-		key.quitBrowser();
+		try {
+	        if (key.getDriver() != null) {
+	            key.quitBrowser();
+	        }
+	    } finally {
+	        Keywords.reset();  // important
+	    }
+		LOG.info("Successfully quit the browser");
 	}
 	
 

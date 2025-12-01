@@ -56,6 +56,22 @@ public class TestBase {
 	
 	
 	/**
+	 * close the browser after each test case for each thread.
+	 */
+	@AfterMethod(alwaysRun = true)
+	public void tearDown() {
+		try {
+	        if (key.getDriver() != null) {
+	            key.quitBrowser();
+	        }
+	    } finally {
+	        Keywords.reset(); // Reset the ThreadLocal instance
+	    }
+	    LOG.info("Successfully quit the browser");
+	}
+	
+	
+	/**
 	 * launch the browser before each test case
 	 * @throws Exception
 	 * ( String url, String browserName)
@@ -164,15 +180,7 @@ public class TestBase {
 	}
 	
 	
-	
-	/**
-	 * close the browser after each test case for each thread.
-	 */
-	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
-	    key.quitBrowser();
-	    LOG.info("Successfully quit the browser");
-	}
+
 
 	
 	

@@ -19,6 +19,8 @@ import org.apache.log4j.Logger;
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
@@ -38,9 +40,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
-
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 
 
 public class Keywords {
@@ -73,6 +72,13 @@ public class Keywords {
     //getter method for the driver
     public RemoteWebDriver getDriver() { 
     	return driver.get(); 
+    }
+    
+    public static void reset() {
+        driver.remove();
+        wait.remove();
+        fluentWait.remove();
+        instance.remove();  
     }
     
     //getter method for the wait
