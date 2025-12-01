@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
         plugin = {"pretty", "html:target/cucumber-report.html"},
         monochrome = true,
         tags = "@login",
-        dryRun = true
+        dryRun = false
         
         
 )
