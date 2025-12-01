@@ -8,11 +8,8 @@ import io.cucumber.testng.CucumberOptions;
         glue = {"com.StepDefinition", "com.hooks"},
         plugin = {"pretty", "html:target/cucumber-report.html"},
         monochrome = true,
-        tags = "",
-        monochrome = true, 
-        strict = true,
-        publish = true,
-        failFast = true
+        tags = ""
+        
         
 )
 
