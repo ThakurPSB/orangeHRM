@@ -12,7 +12,7 @@ Scenario Outline: To verify when valid creadentials entered user logi successful
   Examples:
   | username 			| password  	|
   | Admin    			| Piyush@2050 |
-  | DummyUser   	| DumAdm@12 	|
+  | DummyUser   	| Dumadm@12 	|
 
 @noLogin
 Scenario: To verfiy when invalid credentials entered 'Invalid Credentials' error is shown
