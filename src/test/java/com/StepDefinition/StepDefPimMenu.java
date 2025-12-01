@@ -1,185 +1,173 @@
 package com.StepDefinition;
 
 import org.testng.Assert;
-
-import com.hooks.Hooks;
-import com.pages.PimCustomFields;
-import com.pages.PimMenu;
-import com.pages.ReportingMethod;
-import com.pages.TerminationReasons;
-
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StepDefPimMenu {
+public class StepDefPimMenu extends StepBase{
 	
-	PimMenu pim = new PimMenu(Hooks.key);
-	PimCustomFields customField = new PimCustomFields(Hooks.key);
-	ReportingMethod reportingMethod = new ReportingMethod(Hooks.key);
-	TerminationReasons terminationReasons = new TerminationReasons(Hooks.key);
-	
-    @When("user clicks on PIM menu")
+	@When("user clicks on PIM menu")
     public void clickOnPimMenu() {
-        pim.clickOnPIM();
+        pim().clickOnPIM();
     }
 
     @When("user clicks on PIM configuration")
     public void clickOnPimConfiguration() {
-        pim.clickOnConfiguration();
+        pim().clickOnConfiguration();
     }
 
     @When("user clicks on custom fields in configuration")
     public void clickOnCustomFields() {
-        pim.clickOnCustomFields();
+        pim().clickOnCustomFields();
     }
 
     @When("user clicks on optional fields in configuration")
     public void clickOnOptionalFields() {
-        pim.clickOnOptionalFields();
+        pim().clickOnOptionalFields();
     }
 
     @When("user clicks on PIM configuration submenu {string}")
     public void clickOnPimConfigurationSubMenu(String menu) {
-        pim.ClickOnSubMenuConfiguration(menu);
+        pim().ClickOnSubMenuConfiguration(menu);
     }
 
     @When("user turns on show deprecated fields")
     public void turnOnDeprecatedFields() {
-        pim.turnONshowDeprecatedField();
+        pim().turnONshowDeprecatedField();
     }
 
     @When("user turns off show deprecated fields")
     public void turnOffDeprecatedFields() {
-        pim.turnOFFshowDeprecatedField();
+        pim().turnOFFshowDeprecatedField();
     }
 
     @When("user turns on SSN field")
     public void turnOnSsnField() {
-        pim.turnONSSNfield();
+        pim().turnONSSNfield();
     }
 
     @When("user turns off SSN field")
     public void turnOffSsnField() {
-        pim.turnOFFSSNfield();
+        pim().turnOFFSSNfield();
     }
 
     @When("user turns on SIN field")
     public void turnOnSinField() {
-        pim.turnONSINfield();
+        pim().turnONSINfield();
     }
 
     @When("user turns off SIN field")
     public void turnOffSinField() {
-        pim.turnOFFSINfield();
+        pim().turnOFFSINfield();
     }
 
     @When("user turns on US tax exemption menu field")
     public void turnOnUsTaxExemptionMenu() {
-        pim.turnONUStaxExemptionMenufield();
+        pim().turnONUStaxExemptionMenufield();
     }
 
     @When("user turns off US tax exemption menu field")
     public void turnOffUsTaxExemptionMenu() {
-        pim.turnOFFUStaxExemptionMenufield();
+        pim().turnOFFUStaxExemptionMenufield();
     }
 
     @When("user saves optional field preferences")
     public void clickSaveOptionalFieldPreferences() {
-        pim.clickOnSaveButtonOptionalFidls();
+        pim().clickOnSaveButtonOptionalFidls();
     }
 
     @Then("optional field preferences should be saved successfully")
     public void verifyOptionalFieldSavedToast() {
         Assert.assertTrue(
-                pim.SaveToastMessageText(),
+                pim().SaveToastMessageText(),
                 "Success toast message not displayed after saving preferences"
         );
     }
     
     @When("user clicks on custom fields")
     public void clickOnCustomField() {
-        customField.clickOnCustomFields();
+        customField().clickOnCustomFields();
     }
 
     @When("user clicks on add custom field button")
     public void clickOnAddCustomFieldButton() {
-        customField.clickOnAddCustomFieldsButton();
+        customField().clickOnAddCustomFieldsButton();
     }
 
     @When("user enters custom field name {string}")
     public void enterCustomFieldName(String name) {
-        customField.enterFieldName(name);
+        customField().enterFieldName(name);
     }
 
     @When("user selects membership screen option")
     public void selectScreenOption() {
-        customField.clickOnScreenOption();
+        customField().clickOnScreenOption();
     }
 
     @When("user selects input type dropdown")
     public void selectInputTypeDropdown() {
-        customField.SelectTypeOfInputDropdown();
+        customField().SelectTypeOfInputDropdown();
     }
 
     @When("user selects input type text")
     public void selectInputTypeText() {
-        customField.selectTypeOfInputText();
+        customField().selectTypeOfInputText();
     }
 
     @When("user enters custom field dropdown options {string}")
     public void enterDropdownOptions(String options) {
-        customField.enterOptions(options);
+        customField().enterOptions(options);
     }
 
     @When("user saves the custom field")
     public void clickOnSaveCustomField() {
-        customField.clickOnSaveCustomFieldButton();
+        customField().clickOnSaveCustomFieldButton();
     }
 
     @Then("custom field should be saved successfully")
     public void verifyCustomFieldSaved() {
         Assert.assertTrue(
-                customField.SaveToastMessageText(),
+                customField().SaveToastMessageText(),
                 "Custom field save toast not displayed"
         );
     }
 
     @When("user deletes custom field named {string}")
     public void deleteCustomField(String fieldName) throws Exception {
-        customField.SelectFieldToDelete(fieldName);
+        customField().SelectFieldToDelete(fieldName);
     }
 
     @When("user clicks on reporting method menu")
     public void clickOnReportingMethodMenu() {
-        reportingMethod.clickOnReportingMethod();
+        reportingMethod().clickOnReportingMethod();
     }
 
     @When("user clicks on add reporting method button")
     public void clickOnAddReportingMethodButton() {
-        reportingMethod.AddReportingMethodButton();
+        reportingMethod().AddReportingMethodButton();
     }
 
     @When("user enters reporting method name {string}")
     public void enterReportingMethodName(String name) {
-        reportingMethod.addrReportingMethod(name);
+        reportingMethod().addrReportingMethod(name);
     }
 
     @Then("reporting method should be saved or duplicate error should appear")
     public void verifyReportingMethodSaveOrExist() {
         Assert.assertTrue(
-                reportingMethod.checkAssertReportingMethod(),
+                reportingMethod().checkAssertReportingMethod(),
                 "Reporting method not saved or error not displayed"
         );
     }
 
     @When("user deletes reporting method with name {string}")
     public void deleteReportingMethod(String name) throws Exception {
-        reportingMethod.deleteSelectedReportingMethod(name);
+        reportingMethod().deleteSelectedReportingMethod(name);
     }
 
     public void verifyReportingMethodSuccessToast() throws Exception {
         Assert.assertTrue(
-                reportingMethod.SaveToastMessageText(),
+                reportingMethod().SaveToastMessageText(),
                 "Success toast not displayed"
         );
     }
@@ -187,43 +175,43 @@ public class StepDefPimMenu {
     @Then("error toast for reporting method should be displayed")
     public void verifyReportingMethodErrorToast() throws Exception {
         Assert.assertTrue(
-                reportingMethod.errorToastMessageText(),
+                reportingMethod().errorToastMessageText(),
                 "Error toast not displayed"
         );
     }
     
     @When("user clicks on termination reasons menu")
     public void clickOnTerminationReasonsMenu() {
-        terminationReasons.clickOnTerminationReasonsMenu();
+        terminationReasons().clickOnTerminationReasonsMenu();
     }
 
     @When("user clicks on add termination reason button")
     public void clickOnAddTerminationReasonButton() {
-        terminationReasons.ClickOnAddTerminationReasonButton();
+        terminationReasons().ClickOnAddTerminationReasonButton();
     }
 
     @When("user enters termination reason {string}")
     public void enterTerminationReason(String reasonName) {
-        terminationReasons.AddTerminationReason(reasonName);
+        terminationReasons().AddTerminationReason(reasonName);
     }
 
     @Then("termination reason should be saved or duplicate error should appear")
     public void verifyTerminationReasonSavedOrExists() {
         Assert.assertTrue(
-                terminationReasons.checkAssertTerminationReason(),
+                terminationReasons().checkAssertTerminationReason(),
                 "Termination reason was neither saved nor identified as duplicate"
         );
     }
 
     @When("user deletes termination reason named {string}")
     public void deleteTerminationReason(String reason) throws Exception {
-        terminationReasons.deleteSelectedTerminationReason(reason);
+        terminationReasons().deleteSelectedTerminationReason(reason);
     }
 
     @Then("success toast for termination reason should be displayed")
     public void verifyTerminationReasonSuccessToast() {
         Assert.assertTrue(
-                terminationReasons.SaveToastMessageText(),
+                terminationReasons().SaveToastMessageText(),
                 "Success toast not displayed for termination reason"
         );
     }
@@ -231,7 +219,7 @@ public class StepDefPimMenu {
     @Then("error toast for termination reason should be displayed")
     public void verifyTerminationReasonErrorToast() throws Exception {
         Assert.assertTrue(
-                terminationReasons.errorToastMessageText(),
+                terminationReasons().errorToastMessageText(),
                 "Error toast not displayed for termination reason"
         );
     }

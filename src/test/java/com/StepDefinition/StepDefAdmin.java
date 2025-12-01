@@ -2,48 +2,36 @@ package com.StepDefinition;
 
 import org.testng.Assert;
 
-import com.hooks.Hooks;
-import com.pages.AdminJobTitles;
-import com.pages.AdminMenu;
-import com.pages.AdminOrganizationMenu;
-import com.pages.AdminQualificationMenu;
-
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StepDefAdmin {
-	
-	AdminMenu admin = new AdminMenu(Hooks.key);
-	AdminJobTitles jobs = new AdminJobTitles(Hooks.key);
-	AdminOrganizationMenu orgMenu = new AdminOrganizationMenu(Hooks.key);
-	AdminQualificationMenu qualification = new AdminQualificationMenu(Hooks.key);
-	
+public class StepDefAdmin extends StepBase{
 	
 	@When("user clicks on admin menu")
     public void clickOnAdminMenu() {
-        admin.clickOnAdminMenu();
+        admin().clickOnAdminMenu();
     }
 
 
     @When("user enters admin Module username {string}")
     public void enterAdminUsername(String user) {
-        admin.enterUsername(user);
+        admin().enterUsername(user);
     }
 
     @When("user clicks on admin Module search button")
     public void clickAdminSearchButton() throws InterruptedException {
-        admin.clickOnSearchButton();
+        admin().clickOnSearchButton();
     }
 
     @When("user resets admin Module search filter")
     public void clickAdminResetButton() throws InterruptedException {
-        admin.clickOnResetButton();
+        admin().clickOnResetButton();
     }
 
     @Then("username search result should show username {string}")
     public void verifyUsernameSearchResult(String expectedUser) {
         Assert.assertTrue(
-                admin.searchResultUsername(expectedUser),
+                admin().searchResultUsername(expectedUser),
                 "Username search result mismatch"
         );
     }
@@ -51,13 +39,13 @@ public class StepDefAdmin {
 
     @When("user selects admin Module user role {string}")
     public void selectAdminUserRole(String role) {
-        admin.selectUserRole(role);
+        admin().selectUserRole(role);
     }
 
     @Then("admin search result should show role {string}")
     public void verifyAdminRoleSearchResult(String expectedRole) {
         Assert.assertTrue(
-                admin.searchResultRole(expectedRole),
+                admin().searchResultRole(expectedRole),
                 "User role search result mismatch"
         );
     }
@@ -65,13 +53,13 @@ public class StepDefAdmin {
 
     @When("user enters employee name {string} in search")
     public void enterEmployeeNameInAdmin(String name) throws InterruptedException {
-        admin.enterEmployeeName(name);
+        admin().enterEmployeeName(name);
     }
 
     @Then("admin search result should show employee name {string}")
     public void verifyEmployeeNameSearchResult(String expectedName) {
         Assert.assertTrue(
-                admin.searchResultsEmployeeName(expectedName),
+                admin().searchResultsEmployeeName(expectedName),
                 "Employee name search result mismatch"
         );
     }
@@ -79,200 +67,200 @@ public class StepDefAdmin {
 
     @When("user selects admin Module login status {string}")
     public void selectAdminLoginStatus(String status) {
-        admin.selectLoginStatus(status);
+        admin().selectLoginStatus(status);
     }
 
     @Then("admin search result should show status {string}")
     public void verifyAdminStatusSearchResult(String expectedStatus) {
         Assert.assertTrue(
-                admin.searchResultStatus(expectedStatus),
+                admin().searchResultStatus(expectedStatus),
                 "Login status search result mismatch"
         );
     }
     
     @When("user clicks on admin main menu")
     public void clickOnAdminMainMenu() {
-    	jobs.clickOnAdminMenu();
+    	jobs().clickOnAdminMenu();
     }
 
     // Click Job submenu options: Job Titles, Pay Grades, Employment Status, etc.
     @When("user selects job submenu option {string}")
     public void selectJobSubmenuOption(String optionText) {
-        jobs.clickOnJobSubMenu(optionText);
+        jobs().clickOnJobSubMenu(optionText);
     }
 
     // Assert element presence in first row of the Job table
     @Then("job table should contain entry {string}")
     public void verifyElementInJobTable(String element) throws InterruptedException {
         Assert.assertTrue(
-                jobs.checkElementinTable(element),
+                jobs().checkElementinTable(element),
                 "Expected element not found in job table: " + element
         );
     }
     
     @When("user clicks on organization main menu")
     public void clickOnOrganizationMainMenu() {
-        orgMenu.clickOnOrgMenu();
+        orgMenu().clickOnOrgMenu();
     }
 
 
     @When("user selects organization sub menu option {string}")
     public void selectOrganizationSubMenuOption(String subMenu) {
-        orgMenu.clickOnOrgSubMenu(subMenu);
+        orgMenu().clickOnOrgSubMenu(subMenu);
     }
 
 
     @When("user clicks on organization edit button")
     public void clickOnOrganizationEditButton() {
-        orgMenu.clickOnEditButton();
+        orgMenu().clickOnEditButton();
     }
 
     @When("user updates registration number to {string}")
     public void updateRegistrationNumber(String regNo) {
-        orgMenu.updateRegNum(regNo);
+        orgMenu().updateRegNum(regNo);
     }
 
     @Then("registration number should update to {string}")
     public void verifyUpdatedRegistrationNumber(String expected) {
-        Assert.assertTrue(orgMenu.regNumberCheck(expected),
+        Assert.assertTrue(orgMenu().regNumberCheck(expected),
                 "Registration number mismatch");
     }
 
     @When("user updates organization name to {string}")
     public void updateOrganizationName(String name) {
-        orgMenu.updateOrgName(name);
+        orgMenu().updateOrgName(name);
     }
 
     @Then("organization name should update to {string}")
     public void verifyUpdatedOrganizationName(String expected) {
-        Assert.assertTrue(orgMenu.orgNameTextCheck(expected),
+        Assert.assertTrue(orgMenu().orgNameTextCheck(expected),
                 "Organization name mismatch");
     }
 
     @When("user updates tax id to {string}")
     public void updateTaxId(String tax) {
-        orgMenu.updateTaxID(tax);
+        orgMenu().updateTaxID(tax);
     }
 
     @Then("tax id should update to {string}")
     public void verifyUpdatedTaxId(String expected) {
-        Assert.assertTrue(orgMenu.taxIDtextCheck(expected),
+        Assert.assertTrue(orgMenu().taxIDtextCheck(expected),
                 "Tax ID mismatch");
     }
 
     @When("user saves organization info")
     public void saveOrganizationInformation() {
-        orgMenu.clickOnSave();
+        orgMenu().clickOnSave();
     }
 
     @Then("Saved Successfully message should be displayed")
     public void verifyOrganizationInfoSaved() throws Exception {
-        Assert.assertTrue(orgMenu.SaveToastMessageText(),
+        Assert.assertTrue(orgMenu().SaveToastMessageText(),
                 "Organization info save toast not displayed");
     }
 
     @Then ("Details saved suceessfully mesgae should be displayed")
 	public void SaveToastMessageText() throws Exception {
-		Assert.assertTrue(orgMenu.SaveToastMessageText(),
+		Assert.assertTrue(orgMenu().SaveToastMessageText(),
 				"Details saved successfully message displayed");
 	}
 
     @When("user searches for location named {string}")
     public void searchLocationByName(String locationName) {
-        orgMenu.searchLocation(locationName);
+        orgMenu().searchLocation(locationName);
     }
 
     @Then("error toast should be displayed for no location found")
     public void verifyLocationNotFoundToast() throws Exception {
-        Assert.assertTrue(orgMenu.errorToastMessageText(),
+        Assert.assertTrue(orgMenu().errorToastMessageText(),
                 "Expected error toast but not found");
     }
 
 
     @When("user deletes location named {string}")
     public void deleteLocation(String locationName) throws Exception {
-        orgMenu.deleteSelected(locationName);
+        orgMenu().deleteSelected(locationName);
     }
 
 
     @When("user clicks on add new location button")
     public void clickOnAddNewLocationButton() {
-        orgMenu.clickOnAddLocationButton();
+        orgMenu().clickOnAddLocationButton();
     }
 
     @When("user enters location name {string}")
     public void enterLocationName(String name) {
-        orgMenu.enterLocation(name);
+        orgMenu().enterLocation(name);
     }
 
     @When("user enters city name {string}")
     public void enterCityName(String city) {
-        orgMenu.enterCity(city);
+        orgMenu().enterCity(city);
     }
 
     @When("user enters state name {string}")
     public void enterStateName(String state) {
-        orgMenu.enterState(state);
+        orgMenu().enterState(state);
     }
 
     @When("user enters zip code {string}")
     public void enterZipCode(String zip) {
-        orgMenu.enterZip(zip);
+        orgMenu().enterZip(zip);
     }
 
     @When("user selects country {string}")
     public void selectLocationCountry(String country) throws Exception {
-        orgMenu.selectCountry(country);
+        orgMenu().selectCountry(country);
     }
 
     @When("user clicks on save location button")
     public void saveLocation() {
-        orgMenu.clickOnSaveLocationButton();
+        orgMenu().clickOnSaveLocationButton();
     }
 
     @Then("location should be saved successfully")
     public void verifyLocationSaved() throws Exception {
-        Assert.assertTrue(orgMenu.SaveToastMessageText(),
+        Assert.assertTrue(orgMenu().SaveToastMessageText(),
                 "Location save toast not displayed");
     }
     
     @When("user clicks on qualification main menu")
     public void clickOnQualificationMainMenu() {
-        qualification.clickOnQualificationMenu();
+        qualification().clickOnQualificationMenu();
     }
 
 
     @When("user opens skills menu")
     public void openSkillsMenu() {
-        qualification.clickOnSkills();
+        qualification().clickOnSkills();
     }
 
     @When("user clicks on add skill button")
     public void clickAddSkillButton() {
-        qualification.clickOnAddSkillsButton();
+        qualification().clickOnAddSkillsButton();
     }
 
     @When("user enters skill name {string}")
     public void enterSkillName(String skillName) {
-        qualification.enterSkillName(skillName);
+        qualification().enterSkillName(skillName);
     }
 
     @When("user saves the skill")
     public void saveSkill() {
-        qualification.clickOnSaveSkillButton();
+        qualification().clickOnSaveSkillButton();
     }
 
     @Then("skill should be saved successfully")
     public void verifySkillSavedSuccessfully() throws Exception {
         Assert.assertTrue(
-                qualification.SaveToastMessageText(),
+                qualification().SaveToastMessageText(),
                 "Skill save success toast not displayed"
         );
     }
 
     @When("user deletes skill named {string}")
     public void deleteSkillByName(String skill) {
-        qualification.deleteEnteredSkill(skill);
+        qualification().deleteEnteredSkill(skill);
     }
     
     

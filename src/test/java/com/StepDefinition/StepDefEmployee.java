@@ -9,7 +9,7 @@ import com.pages.EmployeeListMenu;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StepDefEmployee {
+public class StepDefEmployee extends StepBase{
 	
 	EmployeeListMenu emplist = new EmployeeListMenu(Hooks.key);
 	AddEmployeePage addemp = new AddEmployeePage(Hooks.key);

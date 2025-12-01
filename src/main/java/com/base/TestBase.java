@@ -1,6 +1,8 @@
 package com.base;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
+
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -59,14 +61,21 @@ public class TestBase {
 	 * close the browser after each test case for each thread.
 	 */
 	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
-		try {
-	        if (key.getDriver() != null) {
+	public void tearDown(Method method) {
+
+	    // Skip for Cucumber
+	    if (method.getDeclaringClass().getName().contains("CucumberTests")) {
+	        return;
+	    }
+
+	    try {
+	        if (key != null && key.getDriver() != null) {
 	            key.quitBrowser();
 	        }
 	    } finally {
-	        Keywords.reset(); // Reset the ThreadLocal instance
+	        Keywords.reset();
 	    }
+
 	    LOG.info("Successfully quit the browser");
 	}
 	
@@ -78,23 +87,26 @@ public class TestBase {
 	 */
 	@BeforeMethod(alwaysRun = true)
 	@Parameters({"browser"})
-	public void setUp(@Optional String browserFromXml) throws IOException {
-		
-		String finalBrowser;
+	public void setUp(@Optional String browserFromXml, Method method) throws IOException {
 
-		if (browserFromXml != null && !browserFromXml.isEmpty()) {
-		    finalBrowser = browserFromXml;  // use XML
-		} else {
-		    finalBrowser = PropertiesUtil.getProperty("browser"); // fallback
-		}
-		
-		//its now points to the shared instance of Keywords class.
-		key = new Keywords();
-		
-		key.launchBrowser(finalBrowser);
-		key.launchURL(PropertiesUtil.getProperty("local.url"));
-		
-		LOG.info("Successfully launched the web Application");
+	    // Skip TestBase for Cucumber runner
+	    if (method.getDeclaringClass().getName().contains("CucumberTests")) {
+	        return;
+	    }
+
+	    String finalBrowser;
+
+	    if (browserFromXml != null && !browserFromXml.isEmpty()) {
+	        finalBrowser = browserFromXml;      // use <parameter> from TestNG XML
+	    } else {
+	        finalBrowser = PropertiesUtil.getProperty("browser");   // fallback to properties
+	    }
+
+	    key = Keywords.getInstance();   // Use ThreadLocal Singleton
+	    key.launchBrowser(finalBrowser);
+	    key.launchURL(PropertiesUtil.getProperty("local.url"));
+
+	    LOG.info("Successfully launched the web Application");
 	}
 	
 	
