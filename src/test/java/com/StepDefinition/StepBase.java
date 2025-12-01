@@ -24,8 +24,6 @@ import com.pages.UserProfile;
 
 public class StepBase {
 	
-	protected final Hooks hooks = new Hooks();
-	
 	//Lazy factory design pattern
 	public LoginPage login() {
 		return new LoginPage(Hooks.key);
