@@ -1,4 +1,4 @@
-package com.StepDefinition;
+package com.stepdefinition;
 
 import com.hooks.Hooks;
 import com.pages.AddEmployeePage;

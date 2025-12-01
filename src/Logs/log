@@ -1,21 +1,6 @@
-2025-12-01 14:31:00 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
-2025-12-01 14:31:04 [main] INFO  EmployeeListMenu - Selected Supervisor: Piyush
-2025-12-01 14:31:04 [main] INFO  EmployeeListMenu - Entered the supervisor name in search name field.
-2025-12-01 14:31:05 [main] INFO  EmployeeListMenu - Clicked the Search button.
-2025-12-01 14:31:11 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
-2025-12-01 14:31:11 [main] INFO  EmployeeListMenu - Successfully Searched employee with supervisor name: Piyush Thakur
-2025-12-01 14:31:11 [main] INFO  EmployeeListMenu - Clicked the reset button.
-2025-12-01 14:31:13 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
-2025-12-01 14:31:14 [main] INFO  EmployeeListMenu - Selected job title - Executive
-2025-12-01 14:31:15 [main] INFO  EmployeeListMenu - Clicked the Search button.
-2025-12-01 14:31:20 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
-2025-12-01 14:31:20 [main] INFO  EmployeeListMenu - Successfully Searched employee with job title: Executive
-2025-12-01 14:31:21 [main] INFO  EmployeeListMenu - Clicked the reset button.
-2025-12-01 14:31:22 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
-2025-12-01 14:31:24 [main] INFO  EmployeeListMenu - Selected sub unit - Mumbai
-2025-12-01 14:31:25 [main] INFO  EmployeeListMenu - Clicked the Search button.
-2025-12-01 14:31:30 [main] WARN  EmployeeListMenu - No match found - Toast not found in DOM.
-2025-12-01 14:31:30 [main] INFO  EmployeeListMenu - Successfully Searched employee with location: Mumbai
-2025-12-01 14:31:31 [main] INFO  EmployeeListMenu - Clicked the reset button.
-2025-12-01 14:31:32 [main] INFO  EmployeeListMenu - Clicked the Employee list Menu.
-2025-12-01 14:31:35 [main] INFO  TestBase - Successfully quit the browser
+2025-12-01 19:04:08 [main] INFO  TestBase - Successfully quit the browser
+2025-12-01 19:04:09 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-01 19:04:10 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-01 19:04:10 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-01 19:04:11 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-01 19:04:41 [main] INFO  TestBase - Successfully quit the browser

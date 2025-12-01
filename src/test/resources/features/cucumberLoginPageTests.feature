@@ -4,6 +4,7 @@ Feature: Login Functionality
   
 Background:
 
+@noLogin
 Scenario Outline: To verify when valid creadentials entered user logi successfully
   When user enters username "<username>" and password "<password>"
   And user clicks on login button
@@ -12,12 +13,14 @@ Scenario Outline: To verify when valid creadentials entered user logi successful
   | username 			| password  	|
   | Admin    			| Piyush@2050 |
   | DummyUser   	| DumAdm@12 	|
-    
+
+@noLogin
 Scenario: To verfiy when invalid credentials entered 'Invalid Credentials' error is shown
 	When user enters username "admin" and password "admin123"
 	And user clicks on login button
 	Then invalid credential error should be displayed
 	
+@noLogin
 Scenario: To veify when credentials left blank invalid credentials error is shown
 	When user enters username "" and password ""
 	And user clicks on login button
