@@ -149,11 +149,23 @@ public class LoginPage {
 	@FindBy(css="input[placeholder='Search']")
 	WebElement menuSearchField ;
 	
+	@FindBy(css="div.oxd-layout-navigation > aside > nav > div.oxd-sidepanel-body > div > div > button")
+	WebElement menuToggleButton ;
+	
 	public void clickOnMenu(String menuName) {
+		
+		if (!kw.isElementPresent(menuSearchField)){
+			kw.waitForElementToBeClickable(menuToggleButton);
+			kw.scrollToElement(menuToggleButton);
+			menuToggleButton.click();
+			LOG.info("Successfully clicked on Menu Toggle button");
+		}
 		kw.waitForElementToBeClickable(menuSearchField);
 		kw.scrollToElement(menuSearchField);
 		menuSearchField.click();
 		menuSearchField.sendKeys(menuName);
+		kw.waitForElementToBeClickable(menuSearchResult);
+		kw.scrollToElement(menuSearchResult);
 		menuSearchResult.click();
 		LOG.info("Successfully clicked on Menu "+menuName);
 	}
