@@ -63,7 +63,21 @@ public class TestngLeaveTests extends TestBase {
 		myLeave().cancelAllLeaves();
 	}
 	
-	
+	//@Test(dependsOnMethods = {"ApplyLeaveWithValidInputs"})
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to approve leaves as supervisor")
+    @Step("login and navigate to leave page, check applied leave and approve ")
+    @Feature("Leave Module")
+    @Story("Approve leave as supervisor")
+	public void ApproveLeaveAsSupervisor() throws InterruptedException {
+		
+		login().logMeIn();
+		login().clickOnMenu("Leave");
+		leaveApply().clickOnApproveLeaveButton();
+		Assert.assertTrue(leaveApply().leaveAppliedSuccessfullyOrOverlapingLeave());
+		
+	}
 	
 	@Test
 	@Severity(SeverityLevel.NORMAL)
@@ -135,10 +149,10 @@ public class TestngLeaveTests extends TestBase {
     @Story("Add Leave entitlement to single employee")
 	public void addLeaveEntitlement() throws InterruptedException  {
 		login().logMeIn();
-		leaveApply().clickOnLeaveMenu();
+		login().clickOnMenu("Leave");
 		entitlement().clickOnLeaveEntitlementMenu();
 		entitlement().clickEmployeeEntitlement();
-		entitlement().enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
+		entitlement().enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana");
 		entitlement().selectLeaveTypeInEntitlement("Earned");
 		entitlement().clickOnSearchButton();
 		double leaveBalance = entitlement().CheckLeaveBalance();
@@ -146,7 +160,7 @@ public class TestngLeaveTests extends TestBase {
 		entitlement().clickOnLeaveEntitlementMenu();
 		entitlement().clickOnAddEntitlement();
 		entitlement().selectIndividualOrMultipleEmployee("individual");
-		entitlement().enterEmployeeName("Adriana Jones");
+		entitlement().enterEmployeeName("Adriana");
 		entitlement().selectLeaveType("Earned");
 		entitlement().enterEntitlement("1");
 		entitlement().clickOnSaveButton();
@@ -154,10 +168,12 @@ public class TestngLeaveTests extends TestBase {
 		Assert.assertTrue(entitlement().SaveToastMessageText());
 		entitlement().clickOnLeaveEntitlementMenu();
 		entitlement().clickEmployeeEntitlement();
-		entitlement().enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana Jones");
+		entitlement().enterEmployeeNameInSearchBoxEmplpyeeEntitlement("Adriana");
 		entitlement().selectLeaveTypeInEntitlement("Earned");
 		entitlement().clickOnSearchButton();
 		Assert.assertTrue(entitlement().CheckLeaveBalance()>leaveBalance);
+		
+	
 	}
 
 

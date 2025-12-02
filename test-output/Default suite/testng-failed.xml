@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.runner.CucumberTests">
+      <class name="com.testcases.TestngLeaveTests">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="27 28 29 30"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="ApplyLeaveWithValidInputs"/>
+          <include name="cleanAllureResults"/>
+          <include name="ApproveLeaveAsSupervisor"/>
         </methods>
-      </class> <!-- com.runner.CucumberTests -->
+      </class> <!-- com.testcases.TestngLeaveTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

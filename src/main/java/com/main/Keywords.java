@@ -18,7 +18,6 @@ import javax.imageio.ImageIO;
 import org.apache.log4j.Logger;
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -122,7 +121,16 @@ public class Keywords {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
 
 	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--window-size=1920,1080");
+	        //options.addArguments("--force-device-scale-factor=1");
+	        //options.addArguments("--high-dpi-support=1");
 	        options.addArguments("--start-maximized");
+	        //options.addArguments("--disable-gpu");
+	        //options.addArguments("--no-sandbox");
+	        //options.addArguments("--disable-dev-shm-usage"); 
+	        //options.addArguments("--remote-allow-origins=*");
+	        //options.addArguments("--headless=new"); // enable for headless runs
+	        
 	        dr = new ChromeDriver(options);
 			LOG.info("Launched Chrome Browser");
 			
@@ -131,9 +139,15 @@ public class Keywords {
 			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/msedgedriver.exe");
 			
 			EdgeOptions options = new EdgeOptions();
+		    options.addArguments("--window-size=1920,1080");
 		    options.addArguments("--start-maximized");
-			dr = new EdgeDriver(options);
-			dr.manage().window().setSize(new Dimension(1920,1080));
+		    //options.addArguments("--force-device-scale-factor=1");
+		    //options.addArguments("--high-dpi-support=1");
+		    //options.addArguments("--disable-gpu");
+		    //options.addArguments("--no-sandbox");
+		    //options.addArguments("--disable-dev-shm-usage");
+			
+		    dr = new EdgeDriver(options);
 			LOG.info("Launched Edge Browser");
 			
 		} else if(browserName.equalsIgnoreCase("Firefox")) {
@@ -141,10 +155,15 @@ public class Keywords {
 			System.setProperty("webdriver.firefox.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/geckodriver.exe");
 			
 			FirefoxOptions options = new FirefoxOptions();
-		    options.addArguments("--start-maximized");
+		    options.addArguments("--width=1920");
+		    options.addArguments("--height=1080");
+		    //options.addArguments("--devtools");
+		    ///options.addPreference("layout.css.devPixelsPerPx", "1.0"); // prevent zoom scaling
+		    options.addPreference("browser.fullscreen.autohide", false);
+		    //options.addPreference("browser.fullscreen.animateUp", 0);
+		    //options.addArguments("--disable-gpu");
 		    
 			dr = new FirefoxDriver(options);
-			dr.manage().window().setSize(new Dimension(1920,1080));
 			LOG.info("Launched firefox Browser");
 			
 		} else {
@@ -432,6 +451,18 @@ public class Keywords {
 	 */
 	public void waitForElementToBeInvisible(WebElement element) {
 		getFluentWait().until(ExpectedConditions.invisibilityOf(element));
+	}
+	
+	public boolean isDisplayed(WebElement element) {
+	    try {
+	        return element.isDisplayed();
+	    } catch (Exception e) {
+	        return false;
+	    }
+	}
+	
+	public void scrollToTop() {
+	    ((JavascriptExecutor) getDriver()).executeScript("window.scrollTo(0, 0);");
 	}
 	
 }

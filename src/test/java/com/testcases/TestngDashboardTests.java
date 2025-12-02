@@ -44,7 +44,7 @@ public class TestngDashboardTests extends TestBase {
     @Story("Dashboard Punch In Link")
 	public void dashboardPunchInLinkDirectToPunchInPage() throws InterruptedException {
 		login().logMeInAsUser();
-		dashboard().clickOnMenu("Dashboard");
+		login().clickOnMenu("Dashboard");
 		dashboard().clickOnPunchInButton();
 		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/attendance/punchIn"));
 	}
@@ -57,7 +57,7 @@ public class TestngDashboardTests extends TestBase {
     @Story("Dashboard apply leaveLink")
 	public void dashboardApplyLeaveLinkDirectToLeavePage() {
 		login().logMeInAsUser();
-		dashboard().clickOnMenu("Dashboard");
+		login().clickOnMenu("Dashboard");
 		dashboard().clickOnDashboardApplyLeaveShortcutbutton();
 		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/leave/applyLeave"));
 	}
@@ -71,7 +71,7 @@ public class TestngDashboardTests extends TestBase {
 	
 	public void dashboardMyTimesheetLinkDirectToMyTimesheetPage() {
 		login().logMeInAsUser();
-		dashboard().clickOnMenu("Dashboard");
+		login().clickOnMenu("Dashboard");
 		dashboard().clickOnDashboardMyTimesheetShortcutbutton();
 		Assert.assertTrue(dashboard().checkUrlChangeToAttendance("http://localhost/orangehrm/web/index.php/time/viewMyTimesheet"));
 	}

@@ -94,7 +94,7 @@ public class StepDefLeave extends StepBase {
 
     @When("user filters leave by status {string}")
     public void filterLeaveStatus(String status) throws Exception {
-        leaveApply().selectLeaveStatus(status);
+        leaveApply().selectLeaveStatusTaken();
         leaveApply().clickOnSearchLeaveButton();
     }
 

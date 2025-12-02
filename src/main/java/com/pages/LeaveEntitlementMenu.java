@@ -54,7 +54,7 @@ public class LeaveEntitlementMenu {
 		kw.scrollToElement(employeeNameTextBox);
 		employeeNameTextBox.click();
 		employeeNameTextBox.sendKeys(s);
-		kw.normalWait(3000);
+		kw.normalWait(2000);
 		employeeNameTextBox.sendKeys(Keys.ARROW_DOWN);
 		employeeNameTextBox.sendKeys(Keys.ENTER);
 		LOG.info("Successfully entered employee name as "+s);

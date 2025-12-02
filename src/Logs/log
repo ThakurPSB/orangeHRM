@@ -1,7 +1,6 @@
-2025-12-01 19:47:00 [main] INFO  Keywords - Launched Chrome Browser
-2025-12-01 19:47:01 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-12-01 19:47:01 [main] INFO  TestBase - Successfully launched the web Application
-2025-12-01 19:47:02 [main] INFO  LoginPage - Successfully entered login credentials
-2025-12-01 19:47:02 [main] INFO  LoginPage - Successfully clicked on login button
-2025-12-01 19:47:02 [main] INFO  LoginPage - Successfully displayed error for required username field 
-2025-12-01 19:47:02 [main] INFO  TestBase - Successfully quit the browser
+2025-12-02 23:58:00 [main] INFO  LeaveApplyMenu - Leave records found: 1
+2025-12-02 23:58:00 [main] INFO  LeaveApplyMenu - Test check - leave records found 
+2025-12-02 23:58:00 [main] INFO  LeaveApplyMenu - Successfully clicked on More options button
+2025-12-02 23:58:01 [main] INFO  LeaveApplyMenu - Successfully clicked on Cancel leave option
+2025-12-02 23:58:01 [main] INFO  LeaveApplyMenu - Leave record found and cancelled successfully
+2025-12-02 23:58:01 [main] INFO  TestBase - Successfully quit the browser

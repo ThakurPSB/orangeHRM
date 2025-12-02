@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
@@ -213,8 +214,6 @@ public class LeaveApplyMenu {
 	    return date;
 	}
 	
-	
-	
 	public void selectSaturdayFromDate() {
 		kw.waitForElementToBeClickable(fromCalButton);
 	    kw.scrollToElement(fromCalButton);
@@ -311,24 +310,27 @@ public class LeaveApplyMenu {
         LOG.info("Successfully clicked on Reject leave button");
     }
 	
-	@FindBy(css="div[class='oxd-multiselect-wrapper'] div[class='oxd-select-text-input']")
-	WebElement leaveStatusDropdown ;
+	@FindBy(css = "form > div:nth-child(1) > div > div:nth-child(3) div.oxd-select-text-input")
+	private WebElement leaveStatusDropdown;
+
+
+	@FindBy(xpath = "//div[@role='option']//span[text()='Taken']")
+	private WebElement takenOption;
 	
 	@FindBy(css=".oxd-icon.bi-x.--clear")
 	WebElement pendingLeaveFilterRemove;
 	
-	
-	
-	public void selectLeaveStatus(String s) throws InterruptedException {
+	public void selectLeaveStatusTaken() throws InterruptedException {
 		kw.waitForElementToBeClickable(pendingLeaveFilterRemove);
 		kw.scrollToElement(pendingLeaveFilterRemove);
 		pendingLeaveFilterRemove.click();
 		kw.waitForElementToBeClickable(leaveStatusDropdown);
 		kw.scrollToElement(leaveStatusDropdown);
 		leaveStatusDropdown.click();
-		leaveStatusDropdown.sendKeys(s);
-		leaveStatusDropdown.sendKeys(Keys.ENTER);
-		kw.normalWait(1000);
+		kw.normalWait(500);
+		kw.waitForElementToBeClickable(takenOption);
+		kw.scrollToElement(takenOption);
+        takenOption.click();
 		LOG.info("successfully selected leave status filter as taken");
 	}
 	
@@ -342,7 +344,7 @@ public class LeaveApplyMenu {
 		LOG.info("Successfully clicked on Search leave button ");
 	}
 	
-	@FindBy(css="li.oxd-table-dropdown i.oxd-icon.bi-three-dots-vertical")
+	@FindBy(css="div > div.oxd-table-body > div > div > div:nth-child(9) > div > li > button")
 	WebElement moreOptionsButton ;
 	
 	public void clickOnMoreOptionsButton() {
@@ -369,12 +371,16 @@ public class LeaveApplyMenu {
 	@FindBy(css=".oxd-form-loader")
 	WebElement loader;
 	
-	@FindBy(css="div[class='oxd-table-card']")
-	List<WebElement> leaveLines ;
+	//@FindBy(css="div.oxd-table-card")
+	//List<WebElement> leaveLines ;
 	
 	public boolean hasLeaveRecords() {
-	    return leaveLines.size() > 1;
+	    List<WebElement> rows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body div.oxd-table-card"));
+	    LOG.info("Leave records found: " + rows.size());
+	    return rows.size() > 0;
 	}
+
+
 	
 	public void clickOnUserCancelLeaveButton() {
 		kw.waitForElementToBeInvisible(loader);
@@ -388,11 +394,14 @@ public class LeaveApplyMenu {
 	public void cancelLeaveIfAlreadyTaken() throws InterruptedException {
 
 		kw.waitForElementToBeInvisible(loader);
-		selectLeaveStatus("Taken");
+
+		selectLeaveStatusTaken();
 		clickOnSearchLeaveButton();
+		kw.normalWait(1000);
 		// Check if any leave records are present
 		if (hasLeaveRecords()) {
 		    // Only execute cancel flow if records exist
+			LOG.info("Test check - leave records found ");
 		    clickOnMoreOptionsButton();
 		    clickOnCancelLeaveOption();
 		    LOG.info("Leave record found and cancelled successfully");
@@ -417,6 +426,8 @@ public class LeaveApplyMenu {
 		}
 		return isDisplayed;
 	}
+	
+
 	
 	
 	

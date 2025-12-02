@@ -3,6 +3,8 @@ package com.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+
 import org.apache.log4j.Logger;
 import com.main.Keywords;
 
@@ -143,23 +145,28 @@ public class LoginPage {
 		return text;
     }
     
+    //Making universal method to access menu items 
+
+    @FindBy(css="oxd-icon bi-chevron-right")
+    WebElement menuListHidden;
+    
+    @FindBy(css="input.oxd-input[placeholder='Search']")
+    WebElement menuSearchField;
+    
     @FindBy(css=".oxd-main-menu-item")
-	WebElement menuSearchResult ;
-	
-	@FindBy(css="input[placeholder='Search']")
-	WebElement menuSearchField ;
-	
-	@FindBy(css="div.oxd-layout-navigation > aside > nav > div.oxd-sidepanel-body > div > div > button")
-	WebElement menuToggleButton ;
-	
+    WebElement menuSearchResult;
+    
 	public void clickOnMenu(String menuName) {
 		
-		if (!kw.isElementPresent(menuSearchField)){
-			kw.waitForElementToBeClickable(menuToggleButton);
-			kw.scrollToElement(menuToggleButton);
-			menuToggleButton.click();
-			LOG.info("Successfully clicked on Menu Toggle button");
+		if(kw.isDisplayed(menuListHidden)) {
+			kw.waitForElementToBeClickable(menuListHidden);
+			kw.scrollToElement(menuListHidden);
+			menuListHidden.click();
+			LOG.info("Found menu bar closed, clicked to open it");
+		}else {
+			LOG.info("Found Menu bar already open");
 		}
+		
 		kw.waitForElementToBeClickable(menuSearchField);
 		kw.scrollToElement(menuSearchField);
 		menuSearchField.click();
