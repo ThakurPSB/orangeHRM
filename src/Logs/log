@@ -1,4 +1,33 @@
-2025-12-04 00:10:00 [main] INFO  TimeMenu - Successfully clicked on View Timesheet Button
-2025-12-04 00:10:01 [main] INFO  TimeMenu - Successfully clicked on Reject Timesheet Button
-2025-12-04 00:10:02 [main] INFO  TimeMenu - Success Toast Message Displayed
-2025-12-04 00:10:02 [main] INFO  TestBase - Successfully quit the browser
+2025-12-04 01:15:22 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-04 01:15:23 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-04 01:15:23 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-04 01:15:24 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-04 01:15:24 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-04 01:15:27 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-04 01:15:28 [main] INFO  LeaveApplyMenu - successfully selected leave status filter as taken
+2025-12-04 01:15:28 [main] INFO  LeaveApplyMenu - Successfully clicked on Search leave button 
+2025-12-04 01:15:30 [main] INFO  LeaveApplyMenu - Leave records found: 0
+2025-12-04 01:15:30 [main] INFO  LeaveApplyMenu - No leave records found, skipping cancel flow
+2025-12-04 01:15:30 [main] INFO  LoginPage - Successfully clicked on Logout button
+2025-12-04 01:15:31 [main] INFO  LoginPage - Successfully Loogged in as user
+2025-12-04 01:15:32 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-04 01:15:34 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-04 01:15:36 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-12-04 01:15:37 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-12-04 01:15:37 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-12-04 01:15:38 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-12-04 01:15:38 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-12-04 01:15:39 [main] INFO  LeaveApplyMenu - Leave applied successfully toast Displayed
+2025-12-04 01:15:40 [main] INFO  LoginPage - Successfully clicked on Logout button
+2025-12-04 01:15:41 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-04 01:15:42 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-04 01:15:44 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-04 01:15:45 [main] INFO  LeaveApplyMenu - Successfully clicked on Approve leave button
+2025-12-04 01:15:46 [main] INFO  LeaveEntitlementMenu - Successfully added the leave for employee
+2025-12-04 01:15:47 [main] INFO  LoginPage - Successfully clicked on Logout button
+2025-12-04 01:15:48 [main] INFO  LoginPage - Successfully Loogged in as user
+2025-12-04 01:15:49 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-04 01:15:50 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-04 01:15:52 [main] INFO  LeaveMyLeaveMenu - Successfully clicked on My Leave menu
+2025-12-04 01:15:56 [main] INFO  LeaveMyLeaveMenu - Cancelled the Leave application : 1
+2025-12-04 01:15:56 [main] INFO  TestBase - Successfully quit the browser

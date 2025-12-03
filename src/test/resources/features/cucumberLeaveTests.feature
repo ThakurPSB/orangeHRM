@@ -18,11 +18,20 @@ Scenario: User apply leave with valid inputs and supervisor approves it
   And user applies for leave
   Then leave should be applied successfully
   And user logs out
+ 
+  #admin approving leave
   When admin logs in with default credentials
   And user clicks on menu "Leave"
 	And supervisor approves the leave request
 	Then Successful toast message should be Displayed
-  
+	And user logs out
+	
+	#cancelling all applied leaves from user end
+	When normal user logs in with default credentials
+	And user clicks on menu "Leave"
+  And user opens My Leave menu
+  And user cancels all applied leaves
+  Then all leaves should be cancelled if available 
   
 Scenario: Apply leave with overlapping dates
   When user clicks on menu "Leave"
@@ -58,11 +67,7 @@ Scenario: Apply leave with Non Working day dates
   And user selects Sunday to date
   And user applies for leave
   Then Warning for non working days should be displayed
-  When user clicks on menu "Leave"
-  And user opens My Leave menu
-  And user cancels all applied leaves
-  Then all leaves should be cancelled if available 
-
+  
 Scenario: Apply leave with insufficient balance
   When user clicks on menu "Leave"
   And user navigates to apply leave page
