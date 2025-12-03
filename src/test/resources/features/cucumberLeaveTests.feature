@@ -4,7 +4,7 @@ Feature: Leave Module
 Background: 
 
 @noLogin @smoke
-Scenario: Apply leave with valid inputs
+Scenario: User apply leave with valid inputs and supervisor approves it
 	When admin logs in with default credentials
   And user clicks on menu "Leave"
   And user cancels leave if already taken
@@ -17,6 +17,10 @@ Scenario: Apply leave with valid inputs
   And user selects to date
   And user applies for leave
   Then leave should be applied successfully
+  When admin logs in with default credentials
+  When user clicks on menu "Leave"
+	And supervisor approves the leave request
+	Then Successful toast message should be Displayed
   
   
 Scenario: Apply leave with overlapping dates
@@ -66,12 +70,6 @@ Scenario: Apply leave with insufficient balance
   And user selects to date
   And user applies for leave
   Then leave balance error should be shown
-
-@smoke
-Scenario: Supervisor approves the leave when applied by user
-	When user clicks on menu "Leave"
-	And supervisor approves the leave request
-	Then Successful toast message should be Displayed
 
 
 Scenario: Add leave entitlement for an employee
