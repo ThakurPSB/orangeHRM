@@ -174,7 +174,7 @@ public class Keywords {
 		//Assigning driver to Thread local and setting options
 		driver.set(dr);
 		// Apply driver-level settings
-		dr.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		dr.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		dr.manage().window().maximize();
 		
 		//Assigning explicit wait to Thread local
