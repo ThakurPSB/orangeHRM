@@ -17,8 +17,9 @@ Scenario: User apply leave with valid inputs and supervisor approves it
   And user selects to date
   And user applies for leave
   Then leave should be applied successfully
+  And user logs out
   When admin logs in with default credentials
-  When user clicks on menu "Leave"
+  And user clicks on menu "Leave"
 	And supervisor approves the leave request
 	Then Successful toast message should be Displayed
   
