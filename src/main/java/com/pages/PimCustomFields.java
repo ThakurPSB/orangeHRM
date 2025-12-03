@@ -29,20 +29,51 @@ public class PimCustomFields {
 	private static final Logger LOG = Logger.getLogger(PimCustomFields.class);
 	
 	
-	
-	@FindBy(css="nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(2) > a")
+	@FindBy(css="li[class='--active oxd-topbar-body-nav-tab --parent'] li:nth-child(2) a:nth-child(1)")             
 	WebElement customFields ;
 
-	/**
-	 * Clicks on PIM>Configuration>Customfields
-	 */
+	@FindBy(css = "ul.oxd-dropdown-menu a.oxd-topbar-body-nav-tab-link")
+	List<WebElement> configMenuItems;
+	
 	public void clickOnCustomFields() {
+		/* old method
+		kw.waitForAllElementAreVisible(configMenuItems);
 		kw.waitForElementToBeVisible(customFields);
 		kw.scrollToElement(customFields);
 		customFields.click();
-		LOG.info("Successfully clicked on Custom Field Option ");
-	}
-	
+		LOG.info("Successfully clicked on the Custom Fields option under PIM > Configuration menu");
+		*/
+	    By locator = By.cssSelector("ul.oxd-dropdown-menu a.oxd-topbar-body-nav-tab-link");
+
+	    // Use your singleton wait to ensure dropdown is visible
+	    kw.waitForElementToBeVisible(locator);
+
+	    // Now fetch the elements dynamically (avoids proxy timing issues)
+	    List<WebElement> items = kw.getDriver().findElements(locator);
+
+	    if (items.isEmpty()) {
+	        LOG.error("Configuration menu items not loaded properly. Found 0 items.");
+	        throw new RuntimeException("Configuration menu items not loaded properly.");
+	    }
+
+	    LOG.info("Configuration menu items found: " + items.size());
+	    for (WebElement item : items) {
+	        String text = item.getText().trim();
+	        LOG.info("Menu item text: " + text);
+	        if (text.equalsIgnoreCase("Custom Fields")) {
+	            kw.waitForElementToBeClickable(item);  // singleton wait for clickability
+	            kw.scrollToElement(item);
+	            item.click();
+	            LOG.info("Successfully clicked on Custom Field Option");
+	            return;
+	        }
+	    }
+
+	    throw new RuntimeException("Custom Fields option not found in configuration menu!");
+		
+	}	
+		
+		
 	@FindBy(css="div.oxd-layout-context > div > div > div.orangehrm-header-container > button")
 	WebElement addCustomFields ;
 	

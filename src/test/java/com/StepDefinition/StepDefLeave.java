@@ -99,7 +99,7 @@ public class StepDefLeave extends StepBase {
     }
 
 
-    @When("user approves the leave request")
+    @When("supervisor approves the leave request")
     public void approveLeave() {
         leaveApply().clickOnApproveLeaveButton();
     }
@@ -200,6 +200,11 @@ public class StepDefLeave extends StepBase {
     public void entitlementAddedSuccessfully() throws Exception {
         Assert.assertTrue(entitlement().SaveToastMessageText(), "Success toast was not displayed!");
     }
+    
+    @Then("Successful toast message should be Displayed")
+    public void successToastDisplayed() throws Exception {
+        Assert.assertTrue(entitlement().SaveToastMessageText(), "Success toast was not displayed!");
+    }
 
     @When("user navigates to Employee Entitlements")
     public void openEmployeeEntitlementMenu() {
@@ -220,6 +225,14 @@ public class StepDefLeave extends StepBase {
     public void clickEntitlementSearch() {
         entitlement().clickOnSearchButton();
     }
+    
+    @When("user balance before entitlement is noted")
+	public void noteLeaveBalanceBeforeEntitlement() {
+		double balance = entitlement().CheckLeaveBalance();
+		balanceBeforeEntitlement = balance;
+    }	
+    
+    double balanceBeforeEntitlement;
 
     @Then("leave balance should be more than {double}")
     public void validateLeaveBalance(double expected) {
@@ -227,5 +240,10 @@ public class StepDefLeave extends StepBase {
         Assert.assertTrue(balance > expected, "Leave balance does not meet expectation");
     }
     
+    @Then("leave balance should be increased compared to previous")
+	public void validateIncreasedLeaveBalance() {
+		double balanceAfter = entitlement().CheckLeaveBalance();
+		Assert.assertTrue(balanceAfter > balanceBeforeEntitlement, "Leave balance did not increase after entitlement");
+	}
     
 }

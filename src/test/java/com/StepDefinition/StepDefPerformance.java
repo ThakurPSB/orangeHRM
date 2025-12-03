@@ -22,7 +22,7 @@ public class StepDefPerformance extends StepBase{
     }
 
 
-    @When("user clicks add KPI")
+    @When("user clicks add KPI button")
     public void userClicksAddKpi() {
     	performance().clickOnAddKPIButton();
     }
@@ -61,11 +61,11 @@ public class StepDefPerformance extends StepBase{
     	performance().searchResultKPIAndDelete(kpiName);
     }
 
-    @Then("KPI {string} should not exist")
-    public void kpiShouldNotExist(String kpiName) {
-        Assert.assertFalse(
+    @Then("{string} should be added successfully in list")
+    public void KPIaddedSuccessfully(String kpiName) {
+        Assert.assertTrue(
         		performance().searchResultKPI(kpiName),
-                "KPI still exists after delete!"
+                "KPI added successfully found in list!"
         );
     }
 

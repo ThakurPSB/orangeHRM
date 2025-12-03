@@ -21,7 +21,7 @@ public class UserProfile {
 	
 	private static final Logger LOG = Logger.getLogger(UserProfile.class);
 	
-	@FindBy(css="div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.oxd-topbar-body-nav-tab.--visited > a")
+	@FindBy(xpath="//a[normalize-space()='Employee List']")
 	WebElement EmployeeList ;
 	
 	public void clickOnEmployeeList() {

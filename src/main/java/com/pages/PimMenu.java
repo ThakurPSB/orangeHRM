@@ -3,6 +3,7 @@ package com.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -37,7 +38,7 @@ public class PimMenu {
 	}
 	
 	@FindBy(css="span[class='oxd-topbar-body-nav-tab-item']")
-	WebElement configuration ;
+	private WebElement configuration ;
 	
 	/**
 	 * clicks on configuration sub menu in PIM
@@ -47,21 +48,35 @@ public class PimMenu {
 		kw.scrollToElement(configuration);
 		configuration.click();
 		LOG.info("Successfully clicked the configuration menu button.");
+		
+		//wait for the dropdown container to appear
+		By dropdownLocator = By.cssSelector("ul.oxd-dropdown-menu");
+		kw.waitForElementToBeVisible(dropdownLocator);
+		
+		//log the items to confirm they’re present
+		List<WebElement> items = kw.getDriver().findElements(By.cssSelector("ul.oxd-dropdown-menu a.oxd-topbar-body-nav-tab-link"));
+		LOG.info("Dropdown items found: " + items.size());
 	}
+	
+	public void clickConfigMenuItem(String menuName) {
+	    By locator = By.cssSelector("ul.oxd-dropdown-menu a.oxd-topbar-body-nav-tab-link");
+	    List<WebElement> items = kw.getDriver().findElements(locator);
+	    for (WebElement item : items) {
+	        if (item.isDisplayed() && item.getText().trim().equalsIgnoreCase(menuName)) {
+	            kw.waitForElementToBeClickable(item);
+	            item.click();
+	            return;
+	        }
+	    }
+	    throw new RuntimeException(menuName + " not found in configuration menu!");
+	}
+
 
 	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent.--visited > ul")
 	List<WebElement> ConfigOptList ;
 	
 	
-	/**
-	 * Clicks on PIM>Configuration>Customfields
-	 */
-	public void clickOnCustomFields() {
-		kw.waitForElementToBeVisible(ConfigOptList.get(1));
-		kw.scrollToElement(ConfigOptList.get(1));
-		ConfigOptList.get(1).click();
-		LOG.info("Successfully clicked the custome field button.");
-	}
+	
 	
 	@FindBy(css="li[class='--active oxd-topbar-body-nav-tab --parent'] li:nth-child(1) a:nth-child(1)")
 	WebElement optionalFields;

@@ -22,8 +22,6 @@ public class TestngPimMenuTests extends TestBase {
     @Story("Create a page object for PIM menu")
 	public void checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff() throws InterruptedException {
 		
-		
-		
 		login().logMeIn();
 		
 		pim().clickOnPIM();
@@ -96,8 +94,8 @@ public class TestngPimMenuTests extends TestBase {
 	public void AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage() throws InterruptedException {
 		
 		login().logMeIn();
-		//deleting already created custom fields
 		
+		//deleting already created custom fields
 		pim().clickOnPIM();
 		pim().clickOnConfiguration();
 		customField().clickOnCustomFields();

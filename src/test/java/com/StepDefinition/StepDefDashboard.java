@@ -51,85 +51,15 @@ public class StepDefDashboard extends StepBase {
         profile().closeAboutInformatio();
     }
     
-    @When("user clicks on employee list")
-    public void clickOnEmployeeList() {
-        user().clickOnEmployeeList();
-    }
-
-    @When("user clicks on first employee record")
-    public void clickOnFirstUser() {
-        user().clickOnUser1();
-    }
+    
 
     @When("user opens personal details section")
     public void openPersonalDetails() {
         user().clickOnPersonalDetails();
     }
+   
 
-    @When("user opens membership section")
-    public void openMembershipSection() {
-        user().ClickOnMemebership();
-    }
-
-    @Then("SSN field should be hidden")
-    public void verifySsnHidden() {
-        Assert.assertTrue(user().checkSSNvisibility(), "SSN field is not hidden");
-    }
-
-    @Then("SSN field should be visible")
-    public void verifySsnVisible() {
-        Assert.assertTrue(user().checkSSNdisplayed(), "SSN field is not displayed");
-    }
-
-    @Then("SIN field should be hidden")
-    public void verifySinHidden() {
-        Assert.assertTrue(user().checkSINvisibility(), "SIN field is not hidden");
-    }
-
-    @Then("SIN field should be visible")
-    public void verifySinVisible() {
-        Assert.assertTrue(user().checkSINdisplayed(), "SIN field is not displayed");
-    }
-
-    @Then("nickname field should be hidden")
-    public void verifyNicknameHidden() {
-        Assert.assertTrue(user().checknicknameVisibility(), "Nickname field is not hidden");
-    }
-
-    @Then("nickname field should be visible")
-    public void verifyNicknameVisible() {
-        Assert.assertTrue(user().checkNicknameDisplayed(), "Nickname field is not displayed");
-    }
-
-    @Then("tax exemption field should be hidden")
-    public void verifyTaxExemptionHidden() {
-        Assert.assertTrue(user().checkTaxExemptionvisibility(), "Tax exemption field is not hidden");
-    }
-
-    @Then("tax exemption field should be visible")
-    public void verifyTaxExemptionVisible() {
-        Assert.assertTrue(user().checkTaxExemptionDisplayed(), "Tax exemption field is not displayed");
-    }
-
-    @Then("insurance ID field should be hidden")
-    public void verifyInsuranceIdHidden() {
-        Assert.assertTrue(user().checkInsurandIDvisibility(), "Insurance ID field is not hidden");
-    }
-
-    @Then("insurance ID field should be visible")
-    public void verifyInsuranceIdVisible() {
-        Assert.assertTrue(user().checkInsuranceIDDisplayed(), "Insurance ID field is not displayed");
-    }
-
-    @Then("office transport field should be hidden")
-    public void verifyOfficeTransportHidden() {
-        Assert.assertTrue(user().checkOfficeTransportvisibility(), "Office transport field is not hidden");
-    }
-
-    @Then("office transport field should be visible")
-    public void verifyOfficeTransportVisible() {
-        Assert.assertTrue(user().checkOfficeTransportDisplayed(), "Office transport field is not displayed");
-    }
+   
     
     @When("user clicks on search in sidebar for menu and click {string}")
     public void clickOnDashboardMenu(String menuName) {
