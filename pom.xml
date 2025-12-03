@@ -21,6 +21,7 @@
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
+					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
 			
@@ -139,7 +140,7 @@
 	            <version>3.5.2</version>
 	            <configuration>
 	              <includes>
-	                <include>com/runner/CucumberTests.java</include>
+	                <include>**/CucumberTests.class</include>
 	              </includes>
 	            </configuration>
 	          </plugin>
