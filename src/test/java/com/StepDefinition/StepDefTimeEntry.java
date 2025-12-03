@@ -8,7 +8,7 @@ public class StepDefTimeEntry extends StepBase{
 	
 	String previousMondayHours;
 
-    @When("user navigates to time menu {string}")
+    @When("user navigates to menu {string}")
     public void userNavigatesToTimeMenu(String menuName) {
     	timemenu().clickOnMenu(menuName);
     }
@@ -65,8 +65,10 @@ public class StepDefTimeEntry extends StepBase{
 
     @When("user notes current monday hours")
     public void userNotesCurrentMondayHours() {
-        previousMondayHours = timemenu().getMondayHours();
+        previousMondayHours = timemenu().getMondayHoursViewMode();
     }
+    
+    String previosMondayHours;
 
     @When("user updates monday hours")
     public void userUpdatesMondayHours() {
@@ -75,9 +77,10 @@ public class StepDefTimeEntry extends StepBase{
 
     @Then("monday hours should be updated")
     public void mondayHoursShouldBeUpdated() {
-        Assert.assertTrue(timemenu().checkIfMondayHoursUpdated(),
+        Assert.assertNotEquals(timemenu().getMondayHoursViewMode(),previousMondayHours,
                 "Monday hours were not updated!");
     }
+    
 
     @Then("success toast should be displayed")
     public void successToastShouldBeDisplayed() throws Exception {

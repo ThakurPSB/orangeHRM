@@ -75,9 +75,6 @@ public class PimMenu {
 	@FindBy(css="#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent.--visited > ul")
 	List<WebElement> ConfigOptList ;
 	
-	
-	
-	
 	@FindBy(css="li[class='--active oxd-topbar-body-nav-tab --parent'] li:nth-child(1) a:nth-child(1)")
 	WebElement optionalFields;
 	
