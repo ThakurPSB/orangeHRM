@@ -63,7 +63,7 @@ public class TestngLeaveTests extends TestBase {
 		myLeave().cancelAllLeaves();
 	}
 	
-	@Test(groups = {"regression", "smoke", "leave"}, dependsOnMethods = {"ApplyLeaveWithValidInputs"})
+	@Test(groups = {"regression", "smoke", "leave"}, dependsOnMethods = {"shouldApplyLeaveSuccessfullyWithValidInputs"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to approve leaves as supervisor")
     @Step("login and navigate to leave page, check applied leave and approve ")

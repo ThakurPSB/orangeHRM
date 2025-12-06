@@ -34,7 +34,7 @@ public class TestngTimeEntryTests extends TestBase {
 	
 	
 	
-	@Test(groups = {"regression", "time-entry"},dependsOnMethods = "employeeSubmittedTimeSheetWithDetails")
+	@Test(groups = {"regression", "time-entry"},dependsOnMethods = "shouldSubmitTimesheetWithDetailsSuccessfully")
 	@Severity(SeverityLevel.NORMAL)
     @Description("to verify timesheet submission and edit by employee")
     @Step("login as user and navigate to time page, add time sheet")
@@ -54,7 +54,7 @@ public class TestngTimeEntryTests extends TestBase {
 		Assert.assertNotEquals(afterValue, beforeValue);
 	}
 	
-	@Test(groups = {"regression", "time-entry", "smoke"},dependsOnMethods = "employeeEditingTimesheetBeforeSubmission")
+	@Test(groups = {"regression", "time-entry", "smoke"},dependsOnMethods = "shouldAllowEmployeeToEditTimesheetBeforeSubmission")
 	@Severity(SeverityLevel.NORMAL)
     @Description("to verify timesheet approved/rejected by manager")
     @Step("login as user and navigate to time page, add time sheet and submit, login as manager and approve/reject timesheet")
