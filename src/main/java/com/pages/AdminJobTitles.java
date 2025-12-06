@@ -89,26 +89,31 @@ public class AdminJobTitles {
 	@FindBy(css="div.oxd-layout-container > div.oxd-layout-context > div > div > div.orangehrm-header-container > h6")
 	WebElement pageLoadStatus ;
 	
-		
+	
 	public boolean checkElementinTable(String element) throws InterruptedException  {
 		
-		kw.normalWait(1000);
+		List<WebElement> rows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
 		
-	    // Refresh table rows to avoid stale element issue
-	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
-	    if (tableRows != null && !tableRows.isEmpty()) {
-	        kw.waitForAllElementAreVisible(tableRows);
-	        WebElement temp = getTableRow(1);
-	        kw.scrollToElement(temp);
-	        String text = temp.getText();
-	        LOG.info("Successfully Searched employee with status: " + text);
-	        return text.contains(element);
-	    } else {
+	    if (rows.isEmpty()) {
+	        LOG.error("Table is empty, no rows found");
 	        return false;
 	    }
+		
+	    kw.waitForAllElementAreVisible(rows);
+		
+	    for (WebElement row : rows) {
+	        kw.scrollToElement(row);
+	        String rowText = row.getText().trim();
+	        LOG.info("Row text found: " + rowText);
+	        if (rowText.toLowerCase().contains(element.toLowerCase())) {
+	            LOG.info("Matched element in table: " + element);
+	            return true;
+	        }
+	    }
+	    
+	    LOG.error("Element NOT found in any row: " + element);
+	    return false;
+	    
 	}
 	
-	
-	
-
 }
