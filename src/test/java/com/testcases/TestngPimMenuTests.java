@@ -14,13 +14,13 @@ import io.qameta.allure.Story;
 
 public class TestngPimMenuTests extends TestBase {
 	
-	@Test
+	@Test(groups = {"regression", "pim-menu"})
     @Severity(SeverityLevel.NORMAL)
     @Description("To Check if PIM Menu > Configuration > Optional field page is options saving correctly.")
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save")
     @Feature("PIM Menu")
     @Story("Create a page object for PIM menu")
-	public void checkIfPIMmenuConfigurationOptionalFieldCanBeTurnedOnOff() throws InterruptedException {
+	public void shouldEnableAndDisableOptionalFieldsInPimConfiguration() throws InterruptedException {
 		
 		login().logMeIn();
 		
@@ -37,13 +37,13 @@ public class TestngPimMenuTests extends TestBase {
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression", "pim-menu"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("To verify after login into application and selecting PIM menu optional field toggle is available.")
     @Step("Login, navigate to PIM > configuration > optional fields > Turn on all the filds > click on Save > go to user profile > check if fields are visible")
     @Feature("PIM Menu")
     @Story("Create a page object for user profile")
-	public void CheckIfOptionalFieldsVisibilityToggleWorking() throws InterruptedException {
+	public void shouldToggleOptionalFieldsVisibilityCorrectly() throws InterruptedException {
 		
 		login().logMeIn();
 		
@@ -85,13 +85,13 @@ public class TestngPimMenuTests extends TestBase {
 		
 	}
 
-	@Test
+	@Test(groups = {"regression", "pim-menu"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Check if PIM Menu > Configuration > custom field add option working.")
     @Step("Login, navigate to PIM > configuration > custom fields > add the custom fields and check if visible on user profile page")
     @Feature("PIM Menu")
     @Story("CustoField in PIM Menu")
-	public void AddCustomFieldsWithBothTypeOfInputMethodAndCheckIfReflectingOnRespectedPage() throws InterruptedException {
+	public void shouldAddCustomFieldsWithBothInputTypesAndReflectOnProfile() throws InterruptedException {
 		
 		login().logMeIn();
 		

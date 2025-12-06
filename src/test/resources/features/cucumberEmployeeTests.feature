@@ -1,16 +1,17 @@
-@employee
+@regression @employee
 Feature: Employee Module
 
 Background:
 
-Scenario: To verify when employee searched with "Employee ID" shows correct result
+
+Scenario: Search results are displayed correctly when filtered by Employee ID
 	When user clicks on PIM menu
 	And user opens employee list menu
 	And user enters employee id "68166"
 	And user clicks search button
 	Then search result should match employee id "68166"
 	
-Scenario Outline: To verify when employee searched with "Employee first/last name" shows correct result
+Scenario Outline: Search results are displayed correctly when filtered by Employee first or last name
 	When user clicks on PIM menu
 	And user opens employee list menu
 	And user enters employee name "Piyush"
@@ -23,28 +24,28 @@ Scenario Outline: To verify when employee searched with "Employee first/last nam
 	Then search result should match last name "Thakur"
   
 	
-Scenario: To verify when employee searched with "Employment status" shows correct result
+Scenario: Search results are displayed correctly when filtered by Employment Status
 	When user clicks on PIM menu
 	And user opens employee list menu
 	And user selects employment status "Active"
 	And user clicks search button
 	Then search result should match employment status "Active"
 	
-Scenario: To verify when employee searched with "Supervisor Name" shows correct result
+Scenario: Search results are displayed correctly when filtered by Supervisor Name
 	When user clicks on PIM menu
 	And user opens employee list menu
 	And user enters supervisor name "Piyush"
 	And user clicks search button
 	Then search result should match supervisor "Piyush Thakur"
 	
-Scenario: To verify when employee searched with "Job Title" shows correct result
+Scenario: Search results are displayed correctly when filtered by Job Title
 	When user clicks on PIM menu
 	And user opens employee list menu
 	And user selects job title "Executive"
 	And user clicks search button
 	Then search result should match job title "Executive"
 	
-Scenario: To verify when employee searched with "SubUnit" shows correct result
+Scenario: Search results are displayed correctly when filtered by Sub Unit
 	When user clicks on PIM menu
 	And user opens employee list menu
 	And user selects sub unit "Mumbai"
@@ -53,7 +54,7 @@ Scenario: To verify when employee searched with "SubUnit" shows correct result
 	
 
 @smoke
-Scenario: To verify when adding users all options working correctly
+Scenario: All fields function correctly when adding a new user
 	When user clicks on PIM menu
 	And user opens employee list menu
 	And user enters employee name "Wisley"

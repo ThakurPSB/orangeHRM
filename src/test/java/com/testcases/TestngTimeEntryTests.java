@@ -14,13 +14,13 @@ import io.qameta.allure.Story;
 
 public class TestngTimeEntryTests extends TestBase {
 	
-	@Test(groups = {"smoke"})
+	@Test(groups = {"regression", "time-entry", "smoke"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("to verify timesheet editable by employee")
     @Step("login as user and navigate to time page, edit time sheet")
     @Feature("Time Module")
     @Story("Timesheet Submission")
-	public void employeeSubmittedTimeSheetWithDetails() throws InterruptedException {
+	public void shouldSubmitTimesheetWithDetailsSuccessfully() throws InterruptedException {
 		login().logMeInAsUser();
 		timemenu().clickOnMenu("Time");
 		timemenu().clickOnCreateTimesheetButtonOrEditTimesheetButton();
@@ -34,13 +34,13 @@ public class TestngTimeEntryTests extends TestBase {
 	
 	
 	
-	@Test(dependsOnMethods = "employeeSubmittedTimeSheetWithDetails")
+	@Test(groups = {"regression", "time-entry"},dependsOnMethods = "employeeSubmittedTimeSheetWithDetails")
 	@Severity(SeverityLevel.NORMAL)
     @Description("to verify timesheet submission and edit by employee")
     @Step("login as user and navigate to time page, add time sheet")
     @Feature("Time Module")
     @Story("Timesheet editing before submission")
-	public void employeeEditingTimesheetBeforeSubmission() throws InterruptedException {
+	public void shouldAllowEmployeeToEditTimesheetBeforeSubmission() throws InterruptedException {
 		login().logMeInAsUser();
 		timemenu().clickOnMenu("Time");
 		String beforeValue = timemenu().getMondayHoursViewMode();
@@ -54,13 +54,13 @@ public class TestngTimeEntryTests extends TestBase {
 		Assert.assertNotEquals(afterValue, beforeValue);
 	}
 	
-	@Test(dependsOnMethods = "employeeEditingTimesheetBeforeSubmission")
+	@Test(groups = {"regression", "time-entry", "smoke"},dependsOnMethods = "employeeEditingTimesheetBeforeSubmission")
 	@Severity(SeverityLevel.NORMAL)
     @Description("to verify timesheet approved/rejected by manager")
     @Step("login as user and navigate to time page, add time sheet and submit, login as manager and approve/reject timesheet")
     @Feature("Time Module")
     @Story("Timesheet approval/Rejection")
-	public void managerApprovesOrRejectsTimesheet() throws InterruptedException {
+	public void shouldAllowManagerToApproveOrRejectSubmittedTimesheet() throws InterruptedException {
 		login().logMeInAsUser();
 		timemenu().clickOnMenu("Time");
 		timemenu().clickOnSubmitTimesheetButton();

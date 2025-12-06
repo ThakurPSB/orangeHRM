@@ -1,10 +1,10 @@
-@leave
+@regression @leave
 Feature: Leave Module
 
 Background: 
 
 @noLogin @smoke
-Scenario: User apply leave with valid inputs and supervisor approves it
+Scenario: Leave is applied successfully and approved by the supervisor
 	When admin logs in with default credentials
   And user clicks on menu "Leave"
   And user cancels leave if already taken
@@ -33,7 +33,7 @@ Scenario: User apply leave with valid inputs and supervisor approves it
   And user cancels all applied leaves
   Then all leaves should be cancelled if available 
   
-Scenario: Apply leave with overlapping dates
+Scenario: Leave application is rejected for overlapping dates
   When user clicks on menu "Leave"
   And user navigates to apply leave page
   And user selects leave type "e"
@@ -51,7 +51,7 @@ Scenario: Apply leave with overlapping dates
   And user cancels all applied leaves
   Then all leaves should be cancelled if available
   
-Scenario: Apply leave without selecting leave type
+Scenario: Leave application is prevented without selecting a leave type
   When user clicks on menu "Leave"
   And user navigates to apply leave page
   And user selects from date
@@ -59,7 +59,7 @@ Scenario: Apply leave without selecting leave type
   And user applies for leave
   Then warning for leave type should be displayed
 
-Scenario: Apply leave with Non Working day dates
+Scenario: Leave application is prevented for non-working day dates
   When user clicks on menu "Leave"
   And user navigates to apply leave page
   And user selects leave type "e"
@@ -68,7 +68,7 @@ Scenario: Apply leave with Non Working day dates
   And user applies for leave
   Then Warning for non working days should be displayed
   
-Scenario: Apply leave with insufficient balance
+Scenario: Leave application is prevented due to insufficient leave balance
   When user clicks on menu "Leave"
   And user navigates to apply leave page
   And user selects leave type "f"
@@ -77,8 +77,8 @@ Scenario: Apply leave with insufficient balance
   And user applies for leave
   Then leave balance error should be shown
 
-
-Scenario: Add leave entitlement for an employee
+@sanity
+Scenario: Leave entitlement is added successfully for an employee
   When user clicks on menu "Leave"
   And user opens Leave Entitlement menu
   And user navigates to Employee Entitlements

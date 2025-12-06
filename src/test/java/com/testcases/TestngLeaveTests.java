@@ -14,13 +14,13 @@ import io.qameta.allure.Story;
 
 public class TestngLeaveTests extends TestBase {
 	
-	@Test(groups = {"smoke"})
+	@Test(groups = {"regression", "smoke", "leave"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves")
     @Step("login and navigate to leave page, check apply leave menu ")
     @Feature("Leave Module")
     @Story("Apply leave successfully with valid inputs")
-	public void ApplyLeaveWithValidInputs() throws InterruptedException {
+	public void shouldApplyLeaveSuccessfullyWithValidInputs() throws InterruptedException {
 		login().logMeIn();
 		login().clickOnMenu("Leave");
 		leaveApply().cancelLeaveIfAlreadyTaken();
@@ -37,13 +37,13 @@ public class TestngLeaveTests extends TestBase {
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression", "leave"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves with invalid dates")
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
     @Feature("Leave Module")
     @Story("Apply leave with overlapping dates")
-	public void ApplyLeaveWithOverlappingDates() throws InterruptedException {
+	public void shouldRejectLeaveApplicationWithOverlappingDates() throws InterruptedException {
 		
 		login().logMeIn();
 		leaveApply().clickOnLeaveMenu();
@@ -63,14 +63,13 @@ public class TestngLeaveTests extends TestBase {
 		myLeave().cancelAllLeaves();
 	}
 	
-	//@Test(dependsOnMethods = {"ApplyLeaveWithValidInputs"})
-	@Test
+	@Test(groups = {"regression", "smoke", "leave"}, dependsOnMethods = {"ApplyLeaveWithValidInputs"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to approve leaves as supervisor")
     @Step("login and navigate to leave page, check applied leave and approve ")
     @Feature("Leave Module")
     @Story("Approve leave as supervisor")
-	public void ApproveLeaveAsSupervisor() throws InterruptedException {
+	public void shouldApproveLeaveApplicationAsSupervisor() throws InterruptedException {
 		
 		login().logMeIn();
 		login().clickOnMenu("Leave");
@@ -79,13 +78,13 @@ public class TestngLeaveTests extends TestBase {
 		
 	}
 	
-	@Test
+	@Test(groups = {"regression", "leave"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves without selecting leave type")
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
     @Feature("Leave Module")
     @Story("Apply leave without leave type")
-	public void ApplyLeaveWithoutSelectingLeaveType() {
+	public void shouldPreventLeaveApplicationWithoutSelectingLeaveType() {
 		
 		login().logMeIn();
 		leaveApply().clickOnLeaveMenu();
@@ -98,13 +97,13 @@ public class TestngLeaveTests extends TestBase {
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression", "leave"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves with past dates")
     @Step("login and navigate to leave page, check apply leave menu > enter dates > apply ")
     @Feature("Leave Module")
     @Story("Apply leave with past dates")
-	public void ApplyLeaveWithWeekendDates() throws InterruptedException {
+	public void shouldPreventLeaveApplicationOnWeekendDates() throws InterruptedException {
 		
 		login().logMeIn();
 		leaveApply().clickOnLeaveMenu();
@@ -121,13 +120,13 @@ public class TestngLeaveTests extends TestBase {
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression", "leave"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to apply leaves without sufficient balance")
     @Step("login and navigate to leave page, check apply leave with floating leave ")
     @Feature("Leave Module")
     @Story("Apply leave with insufficient balance and check for error")
-	public void ApplyLeaveWithInsufficientBalance() throws InterruptedException {
+	public void shouldRejectLeaveApplicationWhenBalanceIsInsufficient() throws InterruptedException {
 	
 		
 		login().logMeIn();
@@ -141,13 +140,13 @@ public class TestngLeaveTests extends TestBase {
 		
 	}
 	
-	@Test
+	@Test(groups = {"regression","leave"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Add leave entitlement to an employee")
     @Step("login and navigate to leaveentitlement,add leaves ")
     @Feature("Leave Module")
     @Story("Add Leave entitlement to single employee")
-	public void addLeaveEntitlement() throws InterruptedException  {
+	public void shouldAddLeaveEntitlementForEmployee() throws InterruptedException  {
 		login().logMeIn();
 		login().clickOnMenu("Leave");
 		entitlement().clickOnLeaveEntitlementMenu();

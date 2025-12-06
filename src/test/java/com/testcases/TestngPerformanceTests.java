@@ -14,13 +14,13 @@ import io.qameta.allure.Story;
 
 public class TestngPerformanceTests extends TestBase{
 	
-	@Test
+	@Test(groups = {"regression", "performance"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("performace options adding KPI for job title")
     @Step("login and navigate to performance page, add KPI")
     @Feature("Performance Menu")
     @Story("Performance Options")
-	public void addNewKPIForTheJobTitle() throws InterruptedException {
+	public void shouldAddNewKpiForJobTitleSuccessfully() throws InterruptedException {
 		
 		login().logMeIn();
 		performance().clickOnPerformanceMenu();

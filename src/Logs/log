@@ -1,33 +1,35 @@
-2025-12-04 01:15:22 [main] INFO  Keywords - Launched Chrome Browser
-2025-12-04 01:15:23 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-12-04 01:15:23 [main] INFO  TestBase - Successfully launched the web Application
-2025-12-04 01:15:24 [main] INFO  LoginPage - Successfully Loogged in
-2025-12-04 01:15:24 [main] INFO  LoginPage - Found Menu bar already open
-2025-12-04 01:15:27 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-12-04 01:15:28 [main] INFO  LeaveApplyMenu - successfully selected leave status filter as taken
-2025-12-04 01:15:28 [main] INFO  LeaveApplyMenu - Successfully clicked on Search leave button 
-2025-12-04 01:15:30 [main] INFO  LeaveApplyMenu - Leave records found: 0
-2025-12-04 01:15:30 [main] INFO  LeaveApplyMenu - No leave records found, skipping cancel flow
-2025-12-04 01:15:30 [main] INFO  LoginPage - Successfully clicked on Logout button
-2025-12-04 01:15:31 [main] INFO  LoginPage - Successfully Loogged in as user
-2025-12-04 01:15:32 [main] INFO  LoginPage - Found Menu bar already open
-2025-12-04 01:15:34 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-12-04 01:15:36 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
-2025-12-04 01:15:37 [main] INFO  LeaveApplyMenu - successfully selected leave type
-2025-12-04 01:15:37 [main] INFO  LeaveApplyMenu - Successfully from date selected
-2025-12-04 01:15:38 [main] INFO  LeaveApplyMenu - Successfully to date selected
-2025-12-04 01:15:38 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
-2025-12-04 01:15:39 [main] INFO  LeaveApplyMenu - Leave applied successfully toast Displayed
-2025-12-04 01:15:40 [main] INFO  LoginPage - Successfully clicked on Logout button
-2025-12-04 01:15:41 [main] INFO  LoginPage - Successfully Loogged in
-2025-12-04 01:15:42 [main] INFO  LoginPage - Found Menu bar already open
-2025-12-04 01:15:44 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-12-04 01:15:45 [main] INFO  LeaveApplyMenu - Successfully clicked on Approve leave button
-2025-12-04 01:15:46 [main] INFO  LeaveEntitlementMenu - Successfully added the leave for employee
-2025-12-04 01:15:47 [main] INFO  LoginPage - Successfully clicked on Logout button
-2025-12-04 01:15:48 [main] INFO  LoginPage - Successfully Loogged in as user
-2025-12-04 01:15:49 [main] INFO  LoginPage - Found Menu bar already open
-2025-12-04 01:15:50 [main] INFO  LoginPage - Successfully clicked on Menu Leave
-2025-12-04 01:15:52 [main] INFO  LeaveMyLeaveMenu - Successfully clicked on My Leave menu
-2025-12-04 01:15:56 [main] INFO  LeaveMyLeaveMenu - Cancelled the Leave application : 1
-2025-12-04 01:15:56 [main] INFO  TestBase - Successfully quit the browser
+2025-12-06 11:58:01 [main] INFO  TestBase - Successfully quit the browser
+2025-12-06 11:58:02 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-06 11:58:03 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-06 11:58:03 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-06 11:58:05 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-06 11:58:14 [main] INFO  AdminMenu - Cliked on Admin Menu
+2025-12-06 11:58:15 [main] INFO  AdminQualificationMenu - Clicked on Admin > Qualification Menu
+2025-12-06 11:58:17 [main] INFO  AdminQualificationMenu - Clicked on Qualification> Skill menu
+2025-12-06 11:58:21 [main] INFO  AdminQualificationMenu - Successfully deleted the skill: java
+2025-12-06 11:58:23 [main] INFO  AdminQualificationMenu - clicked on Add skills button
+2025-12-06 11:58:24 [main] INFO  AdminQualificationMenu - entered the skill name to add
+2025-12-06 11:58:24 [main] INFO  AdminQualificationMenu - clicked on Save skill button
+2025-12-06 11:58:27 [main] INFO  AdminQualificationMenu - Success Toast Message Displayed
+2025-12-06 11:58:27 [main] INFO  TestBase - Successfully quit the browser
+2025-12-06 11:58:29 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-06 11:58:29 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-06 11:58:29 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-06 11:58:35 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-06 11:58:36 [main] INFO  UserDropdownMenu - Clicked on User Profile
+2025-12-06 11:58:37 [main] INFO  UserDropdownMenu - Clicked on About option
+2025-12-06 11:58:37 [main] INFO  UserDropdownMenu - Displayed the about information page 
+2025-12-06 11:58:38 [main] INFO  UserDropdownMenu - Clicked on Closed About info page
+2025-12-06 11:58:38 [main] INFO  TestBase - Successfully quit the browser
+2025-12-06 11:58:39 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-06 11:58:40 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-06 11:58:40 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-06 11:58:45 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-06 11:58:46 [main] INFO  UserDropdownMenu - Clicked on User Profile
+2025-12-06 11:58:49 [main] INFO  UserDropdownMenu - Clicked on support option 
+2025-12-06 11:58:51 [main] INFO  UserDropdownMenu - Displayed the support information page
+2025-12-06 11:58:51 [main] INFO  TestBase - Successfully quit the browser
+2025-12-06 11:58:52 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-06 11:58:53 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-06 11:58:53 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-06 11:58:55 [main] INFO  LoginPage - Successfully Loogged in

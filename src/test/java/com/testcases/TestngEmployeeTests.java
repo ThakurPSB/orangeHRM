@@ -17,13 +17,13 @@ import io.qameta.allure.Story;
 
 public class TestngEmployeeTests extends TestBase {
 	
-	@Test
+	@Test(groups = {"regression", "employee"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Check if PIM Menu > employee list > employee search.")
     @Step("Login, navigate to PIM > employee list > select search criteri > check if employee matching are displayed")
     @Feature("Employee Module")
     @Story("PIM employee list Menus")
-	public void checkSearchOptionsInPIMMenuEmployeeListPage() throws InterruptedException {
+	public void shouldSearchEmployeeUsingDifferentPimFilters() throws InterruptedException {
 		
 		login().logMeIn();
 		
@@ -75,13 +75,13 @@ public class TestngEmployeeTests extends TestBase {
 		
 	}
 	
-	@Test
+	@Test(groups = {"regression", "smoke", "employee"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Check if PIM Menu >  Add Employee > adding user.")
     @Step("Login, navigate to PIM > Add employee > enter the details and add employee")
     @Feature("Employee Module")
     @Story("Add Employee")
-    public void addUserandCheckIfAllOptionsAreWorkingWhileCreating() throws InterruptedException, AWTException, TimeoutException {
+    public void shouldCreateEmployeeWithAllRequiredDetails() throws InterruptedException, AWTException, TimeoutException {
 		login().logMeIn();
 		
 		pim().clickOnPIM();

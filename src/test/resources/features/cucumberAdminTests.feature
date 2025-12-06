@@ -1,33 +1,36 @@
-@admin
+@regression @admin
 Feature: Admin Module
 
 Background:
 
-Scenario: To verify when searched with userName search result displayed correctly
+@smoke
+Scenario: Search results are displayed correctly when searched by username
 	When user clicks on admin menu
 	And user enters admin Module username "admin"
 	And user clicks on admin Module search button
 	Then username search result should show username "admin"
-	
-Scenario: To verify when seardched with user role search result display for that role only
+
+@smoke
+Scenario: Search results display only users with the selected role
 	When user clicks on admin menu
 	And user selects admin Module user role "ESS"
 	And user clicks on admin Module search button
 	Then admin search result should show role "ESS"
 	
-Scenario: To verify when seardched with employee name search result only show that employee
+Scenario: Search results display only the selected employee
 	When user clicks on admin menu
 	And user enters employee name "Piyush" in search
 	And user clicks on admin Module search button
 	Then admin search result should show employee name "Piyush Thakur"
 	
-Scenario:To verify when seardched with login status search result display for login status
+Scenario: Search results display only users with the selected login status
 	When user clicks on admin menu
 	And user selects admin Module login status "Enabled"
 	And user clicks on admin Module search button
 	Then admin search result should show status "Enabled"
-	
-Scenario:To verify Job submenu contains correct respective detail options
+
+@smoke
+Scenario: Job submenu displays the correct detail options
 	When user clicks on admin menu
 	And user selects job submenu option "Job Titles"
 	Then job table should contain entry "Assistant Manager"
@@ -37,7 +40,7 @@ Scenario:To verify Job submenu contains correct respective detail options
 	Then job table should contain entry "Active"
 	
 	
-Scenario: To veify organization details reflecting correctly after editing
+Scenario: Organization details are updated and displayed correctly
 	When user clicks on admin menu
 	And user clicks on organization main menu
 	And user selects organization sub menu option "General Information"
@@ -51,7 +54,7 @@ Scenario: To veify organization details reflecting correctly after editing
 	Then tax id should update to "PVT1419S8809"
 	Then registration number should update to "123456"
 	
-Scenario: To verify location details updated are reflecting correctly
+Scenario: Updated location details are displayed correctly
 	When user clicks on admin menu
 	And user clicks on organization main menu
 	And user selects organization sub menu option "Locations"
@@ -66,7 +69,7 @@ Scenario: To verify location details updated are reflecting correctly
 	And user clicks on save location button
 	Then location should be saved successfully
 	
-Scenario: To verify skills added reflecting in the field
+Scenario: Newly added skills are displayed correctly
 	When user clicks on admin menu
 	And user clicks on qualification main menu
 	And user opens skills menu

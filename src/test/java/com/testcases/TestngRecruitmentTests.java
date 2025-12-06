@@ -16,13 +16,13 @@ import io.qameta.allure.Story;
 
 public class TestngRecruitmentTests extends TestBase {
 	
-	@Test(groups = {"smoke"})
+	@Test(groups = {"regression", "recruitment"})
     @Severity(SeverityLevel.NORMAL)
     @Description("recruitment page options vacancies")
     @Step("login and navigate to recruitment page, add vacancy for asst mananger")
     @Feature("Recruitment Menu")
     @Story("vacancies options")
-	public void addVacancywithallDetailsAndCheckIfReflectsInCandidateField() throws InterruptedException {
+	public void shouldAddVacancyWithCompleteDetailsAndReflectInCandidateForm() throws InterruptedException {
 		
 		login().logMeIn();
 		recruitment().clickOnRecruitmentMenu();
@@ -41,13 +41,13 @@ public class TestngRecruitmentTests extends TestBase {
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression", "recruitment", "smoke"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("recruitment page options Candidate")
     @Step("login and navigate to recruitment page, add candidate for QA Engineer")
     @Feature("Recruitment Menu")
     @Story("Candidate options")
-	public void AddsNewCandidateForAnExistingVacancy() throws InterruptedException, AWTException {
+	public void shouldAddCandidateToExistingVacancySuccessfully() throws InterruptedException, AWTException {
 		
 		login().logMeIn();
 		recruitment().clickOnRecruitmentMenu();
@@ -64,13 +64,13 @@ public class TestngRecruitmentTests extends TestBase {
 		
 	}
 	
-	@Test
+	@Test(groups = {"regression", "recruitment"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("recruitment page options Candidate")
     @Step("login and navigate to recruitment page, add candidate without emailID")
     @Feature("Recruitment Menu")
     @Story("Candidate options")
-	public void AddsNewCandidateForAnExistingVacancyWithoutEmail() throws InterruptedException, AWTException {
+	public void shouldPreventAddingCandidateWithoutEmail() throws InterruptedException, AWTException {
 		
 		login().logMeIn();
 		recruitment().clickOnRecruitmentMenu();

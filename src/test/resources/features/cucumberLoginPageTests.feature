@@ -1,11 +1,11 @@
-@smoke @login
+@regression @login
 Feature: Login Functionality
   Verify that valid users can log into OrangeHRM successfully.
   
 Background:
 
-@noLogin
-Scenario Outline: To verify when valid creadentials entered user logi successfully
+@noLogin @smoke
+Scenario Outline: User logs in successfully with valid credentials
   When user enters username "<username>" and password "<password>"
   And user clicks on login button
   Then dashboard should be displayed
@@ -14,14 +14,14 @@ Scenario Outline: To verify when valid creadentials entered user logi successful
   | Admin    			| Piyush@2050 |
   | DummyUser   	| Dumadm@12 	|
 
-@noLogin
-Scenario: To verfiy when invalid credentials entered 'Invalid Credentials' error is shown
+@noLogin @smoke
+Scenario: Error message is displayed when invalid credentials are entered
 	When user enters username "admin" and password "admin123"
 	And user clicks on login button
 	Then invalid credential error should be displayed
 	
-@noLogin
-Scenario: To veify when credentials left blank invalid credentials error is shown
+@noLogin @smoke
+Scenario: Error message is displayed when credentials are left blank
 	When user enters username "" and password ""
 	And user clicks on login button
 	Then username required error should be displayed

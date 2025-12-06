@@ -1,10 +1,10 @@
-@time-entry
+@regression @time-entry
 Feature: TimeEntry module
 
 Background:
 
 @noLogin @smoke
-Scenario: Timesheet created and edited then submitted is approved by admin
+Scenario: Admin approves a timesheet after it is created, edited, and submitted
 	# creating time sheet
 	When normal user logs in with default credentials
 	And user navigates to menu "Time"

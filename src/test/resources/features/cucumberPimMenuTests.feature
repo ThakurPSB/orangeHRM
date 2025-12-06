@@ -1,10 +1,10 @@
-@pim-menu
+@regression @pim-menu
 
 Feature: PIM Module
 
 Background:
 
-Scenario: To verify PIM menu configuration optional fields can be turned on 
+Scenario: Optional fields can be enabled in the PIM configuration
 	When user clicks on PIM menu
 	And user clicks on PIM configuration
 	And user clicks on optional fields in configuration
@@ -15,7 +15,7 @@ Scenario: To verify PIM menu configuration optional fields can be turned on
 	And user saves optional field preferences
 	Then optional field preferences should be saved successfully
 	
-Scenario: To verify PIM Menu configuration optional field on/off should reflect in user profile
+Scenario: Changes to optional fields in PIM configuration are reflected in the user profile
 	
 	#Fields off
 	When user clicks on PIM menu
@@ -52,7 +52,7 @@ Scenario: To verify PIM Menu configuration optional field on/off should reflect 
 	Then tax exemption field should be visible
 
 
-Scenario: To verify custom field can be added with both type of input
+Scenario: Custom fields can be added with both input types
 	
 	#Deleting existing to add for testing purpose
 	When user clicks on PIM menu

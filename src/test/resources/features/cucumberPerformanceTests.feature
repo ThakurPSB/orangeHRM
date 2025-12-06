@@ -1,10 +1,10 @@
-@performance
+@regression @performance
 
 Feature: Performance moduel
 
 Background: 
 
-Scenario: Add new KPI for the job title
+Scenario: New KPI is added successfully for a job title
 	When user opens performance menu
 	And user clicks performance configure
 	And user selects KPIs option

@@ -1,8 +1,9 @@
-@recruitment
+@regression @recruitment
 Feature: Recruitment module
 
 Background:
 
+@sanity
 Scenario: Vacancy added with complete details is visible in the candidate form
 	When user opens recruitment menu
 	And user opens vacancies menu
@@ -17,7 +18,7 @@ Scenario: Vacancy added with complete details is visible in the candidate form
 	Then vacancy "Marketing Asst Manager" should be visible in vacancies list
 	And user deletes vacancy "Marketing Asst Manager"
 
-
+@smoke
 Scenario: Candidate is successfully added to an existing vacancy
 	When user opens recruitment menu
 	And user opens candidates menu

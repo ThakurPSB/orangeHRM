@@ -20,13 +20,13 @@ public class TestngLoginPageTests extends TestBase {
 	
 	private static final Logger LOG = Logger.getLogger(TestngLoginPageTests.class);
 	
-	@Test(groups= {"smoke"})
+	@Test(groups = {"regression", "smoke", "login"})
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify valid login with correct username and password")
     @Step("Login with username: {0} and password: {1}")
     @Feature("Login Page")
     @Story("Valid login credentials should grant access")
-	public void CheckIfLoginSuccessfullWithCorrectCredentials() throws InterruptedException {
+	public void shouldLoginSuccessfullyWithValidCredentials() throws InterruptedException {
 					
 				login().enterCredentials("admin", "Piyush@2050");
 				login().ClickOnLoginButton();
@@ -37,13 +37,13 @@ public class TestngLoginPageTests extends TestBase {
 		
 	}
 	
-	@Test
+	@Test(groups = {"regression", "login"})
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify invalid login with incorrect username and password")
     @Step("Login with username: {0} and password: {1}")
     @Feature("Login Page")
     @Story("InValid login credentials should show error message")
-	public void CheckIfLoginSuccessfullWithIncorrectCredentials() throws InterruptedException {
+	public void shouldShowErrorMessageWhenCredentialsAreInvalid() throws InterruptedException {
 		
 		HashMap <String ,String> credentials = new HashMap<>();
 		
@@ -61,13 +61,13 @@ public class TestngLoginPageTests extends TestBase {
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression", "login"})
     @Severity(SeverityLevel.NORMAL)
     @Description("tO Verify when username and password left blank and login button clicked should display required field error message")
     @Step("Login with username: {0} and password: {1}")
     @Feature("Login Page")
     @Story("blank login credentials should show required error message")
-	public void CheckIfLoginSuccessfullWithCredentialsFieldBlank() throws InterruptedException {
+	public void shouldShowErrorMessageWhenCredentialsAreBlank() throws InterruptedException {
 		
 			login().enterCredentials("","");
 			login().ClickOnLoginButton();

@@ -14,13 +14,13 @@ import io.qameta.allure.Story;
 
 public class TestngAdminTests extends TestBase{
 	
-	@Test
+	@Test(groups = {"regression", "smoke", "admin"})
     @Severity(SeverityLevel.NORMAL)
     @Description("Checking admin page options")
     @Step("login and navigate to admin page, search with different options")
     @Feature("Admin Menu")
     @Story("Admin page options")
-	public void SearchSystemUserWithDifferentSearchOptions() throws InterruptedException {
+	public void shouldSearchSystemUsersWithDifferentFilters() throws InterruptedException {
 		
 		login().logMeIn();
 		
@@ -48,13 +48,13 @@ public class TestngAdminTests extends TestBase{
 		
 	}
 	
-	@Test
+	@Test(groups = {"regression", "admin"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking admin page options job submenu")
     @Step("login and navigate to admin page, check job options")
     @Feature("Admin Menu")
     @Story("Admin page options jobs submenu checking")
-	public void checkForJobMenuAreShowingCorrectOptions() throws InterruptedException {
+	public void shouldDisplayCorrectOptionsInJobMenu() throws InterruptedException {
 		
 		login().logMeIn();
 		admin().clickOnAdminMenu();
@@ -71,13 +71,13 @@ public class TestngAdminTests extends TestBase{
 	
 	
 
-	@Test
+	@Test(groups = {"regression", "admin"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking admin page options organization submenu")
     @Step("login and navigate to admin page, check organization options")
     @Feature("Admin Menu")
     @Story("Admin page options oragnization submenu checking")
-	public void checkForOrganizationMenuAreShowingCorrectOptions() throws InterruptedException {
+	public void shouldDisplayCorrectOptionsInOrganizationMenu() throws InterruptedException {
 		
 		login().logMeIn();
 		admin().clickOnAdminMenu();
@@ -95,13 +95,13 @@ public class TestngAdminTests extends TestBase{
 		Assert.assertTrue(orgMenu().regNumberCheck("123456"));
 	}
 	
-	@Test
+	@Test(groups = {"regression", "admin"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to add location with all the details provided")
     @Step("login and navigate to admin page, check organization option location menus")
     @Feature("Admin Menu")
     @Story("Admin page options oragnization submenu checking location field")
-	public void CheckIfAddLocationOptionIsWorkingOrNot() throws InterruptedException {
+	public void shouldAllowAddingLocationSuccessfully() throws InterruptedException {
 		login().logMeIn();
 		admin().clickOnAdminMenu();
 		orgMenu().clickOnOrgMenu();
@@ -118,13 +118,13 @@ public class TestngAdminTests extends TestBase{
 		Assert.assertTrue(orgMenu().SaveToastMessageText());
 	}
 	
-	@Test
+	@Test(groups = {"regression", "admin"})
 	@Severity(SeverityLevel.NORMAL)
     @Description("Checking if able to Add skills")
     @Step("login and navigate to admin page, check organization option skills menus")
     @Feature("Admin Menu")
     @Story("Admin page options oragnization submenu checking skills")
-	public void CheckIfAddSkillOptionIsWorkingOrNot() throws InterruptedException {
+	public void shouldAllowAddingSkillSuccessfully() throws InterruptedException {
 		login().logMeIn();
 		admin().clickOnAdminMenu();
 		qualification().clickOnQualificationMenu();
