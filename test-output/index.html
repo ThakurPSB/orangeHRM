@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse--1376742952\testng-customsuite.xml</span>
+                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse-70974430\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Default_suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;User apply leave with valid inputs and supervisor approves it&quot;, &quot;Leave Module&quot;)">runScenario("User apply leave with valid inputs and supervisor approves it", "Leave Module")</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.testcases.TestngLeaveTests" class="method navigator-link" hash-for-method="shouldRejectLeaveApplicationWithOverlappingDates">shouldRejectLeaveApplicationWithOverlappingDates</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,28 +118,70 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.runner.CucumberTests</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.testcases.TestngLeaveTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User apply leave with valid inputs and supervisor approves it&quot;, &quot;Leave Module&quot;)">
-                  </a> <!-- runScenario("User apply leave with valid inputs and supervisor approves it", "Leave Module") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("User apply leave with valid inputs and supervisor approves it","Leave Module")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
+                  <a name="shouldRejectLeaveApplicationWithOverlappingDates">
+                  </a> <!-- shouldRejectLeaveApplicationWithOverlappingDates -->
+                  <span class="method-name">shouldRejectLeaveApplicationWithOverlappingDates</span>
+                  <div class="stack-trace">java.lang.Error: Unresolved compilation problems: 
+	dr cannot be resolved to a variable
+	dr cannot be resolved to a variable
+	dr cannot be resolved to a variable
+	dr cannot be resolved
+	dr cannot be resolved
+	dr cannot be resolved to a variable
+	dr cannot be resolved to a variable
+
+	at com.main.Keywords.launchBrowser(Keywords.java:139)
+	at com.base.TestBase.setUp(TestBase.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse--1376742952\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse-70974430\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,7 +190,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.runner.CucumberTests&quot;/&gt;
+      &lt;class name=&quot;com.testcases.TestngLeaveTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;shouldRejectLeaveApplicationWithOverlappingDates&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.testcases.TestngLeaveTests --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -173,10 +219,18 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">cucumber</span>
+              <span class="test-group-name">leave</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">runScenario</span>
+                <span class="method-in-group-name">shouldRejectLeaveApplicationWithOverlappingDates</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldRejectLeaveApplicationWithOverlappingDates</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -198,14 +252,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'com.runner.CucumberTests')
-data.setCell(0, 3, 36058);
+data.setCell(0, 1, 'shouldRejectLeaveApplicationWithOverlappingDates')
+data.setCell(0, 2, 'com.testcases.TestngLeaveTests')
+data.setCell(0, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,9 +274,26 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.testcases.TestngLeaveTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">shouldAddLeaveEntitlementForEmployee</span>
+                <br/>
+                <span class="ignored-method-name">shouldRejectLeaveApplicationWhenBalanceIsInsufficient</span>
+                <br/>
+                <span class="ignored-method-name">shouldApplyLeaveSuccessfullyWithValidInputs</span>
+                <br/>
+                <span class="ignored-method-name">shouldPreventLeaveApplicationOnWeekendDates</span>
+                <br/>
+                <span class="ignored-method-name">shouldApproveLeaveApplicationAsSupervisor</span>
+                <br/>
+                <span class="ignored-method-name">shouldPreventLeaveApplicationWithoutSelectingLeaveType</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -231,19 +302,25 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.runner.CucumberTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@4d071e4b)</span>
+              <div class="chronological-class-name">com.testcases.TestngLeaveTests</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">cleanAllureResults</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setUp(null, public void com.testcases.TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates() ...)</span>
+                <span class="method-start">116 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">runScenario("User apply leave with valid inputs and supervisor approves it", "Leave Module")</span>
-                <span class="method-start">1354 ms</span>
+                <span class="method-name">shouldRejectLeaveApplicationWithOverlappingDates</span>
+                <span class="method-start">361 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">37417 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown(public void com.testcases.TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates() throws...)</span>
+                <span class="method-start">376 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

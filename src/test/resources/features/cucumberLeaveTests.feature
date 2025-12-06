@@ -11,12 +11,8 @@ Scenario: Leave is applied successfully and approved by the supervisor
   And user logs out
   And normal user logs in with default credentials
   And user clicks on menu "Leave"
-  And user navigates to apply leave page
-  And user selects leave type "e"
-  And user selects from date
-  And user selects to date
-  And user applies for leave
-  Then leave should be applied successfully
+  And user applies leave with retry if overlapping
+  Then leave should be applied with success toast
   And user logs out
  
   #admin approving leave

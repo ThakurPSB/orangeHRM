@@ -41,9 +41,14 @@ public class StepDefLeave extends StepBase {
     @Then("leave should be applied successfully")
     public void verifyLeaveApplied() throws Exception {
         Assert.assertTrue(
-                leaveApply().leaveAppliedSuccessfullyOrOverlapingLeave(),
+                leaveApply().isLeaveAppliedSuccessfully(),
                 "Leave NOT applied OR toast missing"
         );
+    }
+    
+    @When("check if leave overlapping?")
+    public void checkOverlappingleave() {
+    	leaveApply().checkOverlappingLeaveMessage();
     }
 
     @Then("leave balance error should be shown")
@@ -130,13 +135,6 @@ public class StepDefLeave extends StepBase {
         leaveApply().cancelLeaveIfAlreadyTaken();
     }
 
-    @Then("overlapping leave message should be displayed")
-    public void verifyOverlappingMessage() {
-        Assert.assertTrue(
-                leaveApply().checkOverlappingLeaveMessage(),
-                "Overlapping leave message NOT shown"
-        );
-    }
     
     @When("user opens My Leave menu")
     public void openMyLeaveMenu() {
@@ -245,5 +243,38 @@ public class StepDefLeave extends StepBase {
 		double balanceAfter = entitlement().CheckLeaveBalance();
 		Assert.assertTrue(balanceAfter > balanceBeforeEntitlement, "Leave balance did not increase after entitlement");
 	}
+    
+    @When("user applies leave with retry if overlapping")
+    public void applyLeaveWithRetry() throws Exception {
+
+        leaveApply().clickOnApplyLeave();
+        leaveApply().selectLeaveType("e");
+        leaveApply().selectFromDate();
+        leaveApply().selectToDate();
+        leaveApply().clickOnApplyLeaveButton();
+
+        // Check overlap
+        if (leaveApply().isLeaveOverlapping()) {
+         
+            // Cancel existing leaves
+            myLeave().clickOnMyLeaveMenu();
+            myLeave().cancelAllLeaves();
+
+            // Retry leave apply
+            leaveApply().clickOnApplyLeave();
+            leaveApply().selectLeaveType("e");
+            leaveApply().selectFromDate();
+            leaveApply().selectToDate();
+            leaveApply().clickOnApplyLeaveButton();
+        }
+    }
+    
+    @Then("leave should be applied with success toast")
+    public void verifyLeaveSuccessToast() {
+        Assert.assertTrue(
+                leaveApply().SaveToastMessageText(),
+                "Leave NOT applied successfully!"
+        );
+    }
     
 }

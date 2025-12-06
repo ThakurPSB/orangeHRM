@@ -1,47 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-04T01:15:18 IST" name="Default suite" finished-at="2025-12-04T01:15:56 IST" duration-ms="37548">
+  <suite started-at="2025-12-07T00:26:21 IST" name="Default suite" finished-at="2025-12-07T00:26:21 IST" duration-ms="332">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@4441d567]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
+      <group name="leave">
+        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" name="shouldRejectLeaveApplicationWithOverlappingDates" class="com.testcases.TestngLeaveTests"/>
+      </group> <!-- leave -->
+      <group name="regression">
+        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" name="shouldRejectLeaveApplicationWithOverlappingDates" class="com.testcases.TestngLeaveTests"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2025-12-04T01:15:18 IST" name="Default test" finished-at="2025-12-04T01:15:56 IST" duration-ms="37548">
-      <class name="com.runner.CucumberTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.CucumberTests@4441d567]" started-at="2025-12-04T01:15:18 IST" name="setUpClass" finished-at="2025-12-04T01:15:20 IST" duration-ms="1331" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4d071e4b]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-12-07T00:26:21 IST" name="Default test" finished-at="2025-12-07T00:26:21 IST" duration-ms="332">
+      <class name="com.testcases.TestngLeaveTests">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="cleanAllureResults" finished-at="2025-12-07T00:26:21 IST" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.CucumberTests@4441d567]" started-at="2025-12-04T01:15:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-04T01:15:56 IST" duration-ms="36058" status="PASS">
+        </test-method> <!-- cleanAllureResults -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="setUp" finished-at="2025-12-07T00:26:21 IST" duration-ms="17" status="FAIL">
           <params>
             <param index="0">
-              <value>
-                <![CDATA["User apply leave with valid inputs and supervisor approves it"]]>
-              </value>
+              <value is-null="true"/>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Leave Module"]]>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved
+dr cannot be resolved
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved
+dr cannot be resolved
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+
+at com.main.Keywords.launchBrowser(Keywords.java:139)
+at com.base.TestBase.setUp(TestBase.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="shouldRejectLeaveApplicationWithOverlappingDates" finished-at="2025-12-07T00:26:21 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved
+dr cannot be resolved
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+dr cannot be resolved
+dr cannot be resolved
+dr cannot be resolved to a variable
+dr cannot be resolved to a variable
+
+at com.main.Keywords.launchBrowser(Keywords.java:139)
+at com.base.TestBase.setUp(TestBase.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldRejectLeaveApplicationWithOverlappingDates -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="tearDown" finished-at="2025-12-07T00:26:21 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.CucumberTests@4441d567]" started-at="2025-12-04T01:15:56 IST" name="tearDownClass" finished-at="2025-12-04T01:15:56 IST" duration-ms="66" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.runner.CucumberTests -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.testcases.TestngLeaveTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

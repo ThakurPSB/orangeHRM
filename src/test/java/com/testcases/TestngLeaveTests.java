@@ -1,5 +1,6 @@
 package com.testcases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,8 @@ import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
 public class TestngLeaveTests extends TestBase {
+	
+	private static final Logger LOG = Logger.getLogger(TestngLeaveTests.class);
 	
 	@Test(groups = {"regression", "smoke", "leave"})
 	@Severity(SeverityLevel.NORMAL)
@@ -32,8 +35,20 @@ public class TestngLeaveTests extends TestBase {
 		leaveApply().selectFromDate();
 		leaveApply().selectToDate();
 		leaveApply().clickOnApplyLeaveButton();
-		Assert.assertTrue(leaveApply().leaveAppliedSuccessfullyOrOverlapingLeave());
 		
+		if (leaveApply().isLeaveOverlapping()) {
+		    LOG.warn("Overlapping leave detected. Cancelling and retrying...");
+		    myLeave().clickOnMyLeaveMenu();
+		    myLeave().cancelAllLeaves();
+
+		    // Apply again
+		    leaveApply().clickOnApplyLeave();
+		    leaveApply().selectLeaveType("e");
+		    leaveApply().selectFromDate();
+		    leaveApply().selectToDate();
+		    leaveApply().clickOnApplyLeaveButton();
+		}
+		Assert.assertTrue(leaveApply().SaveToastMessageText());
 	}
 	
 	
@@ -74,7 +89,7 @@ public class TestngLeaveTests extends TestBase {
 		login().logMeIn();
 		login().clickOnMenu("Leave");
 		leaveApply().clickOnApproveLeaveButton();
-		Assert.assertTrue(leaveApply().leaveAppliedSuccessfullyOrOverlapingLeave());
+		Assert.assertTrue(leaveApply().SaveToastMessageText());
 		
 	}
 	

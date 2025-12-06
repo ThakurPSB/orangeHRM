@@ -122,14 +122,7 @@ public class Keywords {
 
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--window-size=1920,1080");
-	        //options.addArguments("--force-device-scale-factor=1");
-	        //options.addArguments("--high-dpi-support=1");
 	        options.addArguments("--start-maximized");
-	        //options.addArguments("--disable-gpu");
-	        //options.addArguments("--no-sandbox");
-	        //options.addArguments("--disable-dev-shm-usage"); 
-	        //options.addArguments("--remote-allow-origins=*");
-	        //options.addArguments("--headless=new"); // enable for headless runs
 	        
 	        dr = new ChromeDriver(options);
 			LOG.info("Launched Chrome Browser");
@@ -141,11 +134,6 @@ public class Keywords {
 			EdgeOptions options = new EdgeOptions();
 		    options.addArguments("--window-size=1920,1080");
 		    options.addArguments("--start-maximized");
-		    //options.addArguments("--force-device-scale-factor=1");
-		    //options.addArguments("--high-dpi-support=1");
-		    //options.addArguments("--disable-gpu");
-		    //options.addArguments("--no-sandbox");
-		    //options.addArguments("--disable-dev-shm-usage");
 			
 		    dr = new EdgeDriver(options);
 			LOG.info("Launched Edge Browser");
@@ -157,11 +145,7 @@ public class Keywords {
 			FirefoxOptions options = new FirefoxOptions();
 		    options.addArguments("--width=1920");
 		    options.addArguments("--height=1080");
-		    //options.addArguments("--devtools");
-		    ///options.addPreference("layout.css.devPixelsPerPx", "1.0"); // prevent zoom scaling
 		    options.addPreference("browser.fullscreen.autohide", false);
-		    //options.addPreference("browser.fullscreen.animateUp", 0);
-		    //options.addArguments("--disable-gpu");
 		    
 			dr = new FirefoxDriver(options);
 			LOG.info("Launched firefox Browser");
