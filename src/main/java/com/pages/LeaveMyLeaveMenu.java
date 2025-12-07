@@ -46,11 +46,12 @@ public class LeaveMyLeaveMenu {
 	
 	
 	
-	@FindBy(css="Button[type='button'].oxd-button.oxd-button--medium")
+	@FindBy(css="button[type='button'].oxd-button.oxd-button--medium")
 	List<WebElement> cancelButtons;
 	
 	public void cancelAllLeaves() throws InterruptedException {
 		kw.normalWait(3000);
+		kw.waitForAllElementAreVisible(cancelButtons);
 		List<WebElement> cancelButtons = kw.getDriver().findElements(By.cssSelector("Button[type='button'].oxd-button.oxd-button--medium"));
 		int count = cancelButtons.size();
 		if (cancelButtons.isEmpty()) {
@@ -59,7 +60,9 @@ public class LeaveMyLeaveMenu {
 			kw.waitForAllElementAreVisible(cancelButtons);
 			for(WebElement button: cancelButtons) {
 				kw.scrollToElement(button);
-				button.click();
+				if (button.isDisplayed() && button.isEnabled()) {
+				    button.click();
+				}
 				kw.normalWait(500);
 			}
 			LOG.info("Cancelled the Leave application : "+count);

@@ -1,23 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-07T00:26:21 IST" name="Default suite" finished-at="2025-12-07T00:26:21 IST" duration-ms="332">
+  <suite started-at="2025-12-07T12:24:40 IST" name="Default suite" finished-at="2025-12-07T12:26:11 IST" duration-ms="90523">
     <groups>
       <group name="leave">
-        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" name="shouldRejectLeaveApplicationWithOverlappingDates" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldApplyLeaveSuccessfullyWithValidInputs" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldApproveLeaveApplicationAsSupervisor()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldApproveLeaveApplicationAsSupervisor" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWhenBalanceIsInsufficient()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldRejectLeaveApplicationWhenBalanceIsInsufficient" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldRejectLeaveApplicationWithOverlappingDates" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldAddLeaveEntitlementForEmployee()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldAddLeaveEntitlementForEmployee" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldPreventLeaveApplicationOnWeekendDates()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldPreventLeaveApplicationOnWeekendDates" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldPreventLeaveApplicationWithoutSelectingLeaveType()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldPreventLeaveApplicationWithoutSelectingLeaveType" class="com.testcases.TestngLeaveTests"/>
       </group> <!-- leave -->
       <group name="regression">
-        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" name="shouldRejectLeaveApplicationWithOverlappingDates" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldApplyLeaveSuccessfullyWithValidInputs" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldApproveLeaveApplicationAsSupervisor()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldApproveLeaveApplicationAsSupervisor" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWhenBalanceIsInsufficient()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldRejectLeaveApplicationWhenBalanceIsInsufficient" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldRejectLeaveApplicationWithOverlappingDates" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldAddLeaveEntitlementForEmployee()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldAddLeaveEntitlementForEmployee" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldPreventLeaveApplicationOnWeekendDates()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldPreventLeaveApplicationOnWeekendDates" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldPreventLeaveApplicationWithoutSelectingLeaveType()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldPreventLeaveApplicationWithoutSelectingLeaveType" class="com.testcases.TestngLeaveTests"/>
       </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldApplyLeaveSuccessfullyWithValidInputs" class="com.testcases.TestngLeaveTests"/>
+        <method signature="TestngLeaveTests.shouldApproveLeaveApplicationAsSupervisor()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" name="shouldApproveLeaveApplicationAsSupervisor" class="com.testcases.TestngLeaveTests"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-12-07T00:26:21 IST" name="Default test" finished-at="2025-12-07T00:26:21 IST" duration-ms="332">
+    <test started-at="2025-12-07T12:24:40 IST" name="Default test" finished-at="2025-12-07T12:26:11 IST" duration-ms="90523">
       <class name="com.testcases.TestngLeaveTests">
-        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="cleanAllureResults" finished-at="2025-12-07T00:26:21 IST" duration-ms="54" status="PASS">
+        <test-method is-config="true" signature="cleanAllureResults()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:24:40 IST" name="cleanAllureResults" finished-at="2025-12-07T12:24:40 IST" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanAllureResults -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="setUp" finished-at="2025-12-07T00:26:21 IST" duration-ms="17" status="FAIL">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:24:40 IST" name="setUp" finished-at="2025-12-07T12:24:43 IST" duration-ms="2368" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldApplyLeaveSuccessfullyWithValidInputs()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:24:43 IST" name="shouldApplyLeaveSuccessfullyWithValidInputs" finished-at="2025-12-07T12:24:55 IST" duration-ms="12196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldApplyLeaveSuccessfullyWithValidInputs -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:24:55 IST" name="tearDown" finished-at="2025-12-07T12:24:55 IST" duration-ms="198" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:24:55 IST" name="setUp" finished-at="2025-12-07T12:24:57 IST" duration-ms="1330" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldApproveLeaveApplicationAsSupervisor() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldApproveLeaveApplicationAsSupervisor()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:24:57 IST" name="shouldApproveLeaveApplicationAsSupervisor" finished-at="2025-12-07T12:25:02 IST" depends-on-methods="com.testcases.TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs" duration-ms="5236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldApproveLeaveApplicationAsSupervisor -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:02 IST" name="tearDown" finished-at="2025-12-07T12:25:02 IST" duration-ms="162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldApproveLeaveApplicationAsSupervisor() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:02 IST" name="setUp" finished-at="2025-12-07T12:25:03 IST" duration-ms="1221" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldRejectLeaveApplicationWhenBalanceIsInsufficient() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldRejectLeaveApplicationWhenBalanceIsInsufficient()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:03 IST" name="shouldRejectLeaveApplicationWhenBalanceIsInsufficient" finished-at="2025-12-07T12:25:10 IST" duration-ms="6834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldRejectLeaveApplicationWhenBalanceIsInsufficient -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:10 IST" name="tearDown" finished-at="2025-12-07T12:25:10 IST" duration-ms="174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldRejectLeaveApplicationWhenBalanceIsInsufficient() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:10 IST" name="setUp" finished-at="2025-12-07T12:25:12 IST" duration-ms="1242" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -28,136 +131,105 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved
-dr cannot be resolved
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved
-dr cannot be resolved
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-
-at com.main.Keywords.launchBrowser(Keywords.java:139)
-at com.base.TestBase.setUp(TestBase.java:106)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="shouldRejectLeaveApplicationWithOverlappingDates" finished-at="2025-12-07T00:26:21 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved
-dr cannot be resolved
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-dr cannot be resolved
-dr cannot be resolved
-dr cannot be resolved to a variable
-dr cannot be resolved to a variable
-
-at com.main.Keywords.launchBrowser(Keywords.java:139)
-at com.base.TestBase.setUp(TestBase.java:106)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+        <test-method signature="shouldRejectLeaveApplicationWithOverlappingDates()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:12 IST" name="shouldRejectLeaveApplicationWithOverlappingDates" finished-at="2025-12-07T12:25:27 IST" duration-ms="15296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldRejectLeaveApplicationWithOverlappingDates -->
-        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@4745e9c]" started-at="2025-12-07T00:26:21 IST" name="tearDown" finished-at="2025-12-07T00:26:21 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:27 IST" name="tearDown" finished-at="2025-12-07T12:25:27 IST" duration-ms="225" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[public void com.testcases.TestngLeaveTests.shouldRejectLeaveApplicationWithOverlappingDates() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:27 IST" name="setUp" finished-at="2025-12-07T12:25:28 IST" duration-ms="1348" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldAddLeaveEntitlementForEmployee() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldAddLeaveEntitlementForEmployee()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:28 IST" name="shouldAddLeaveEntitlementForEmployee" finished-at="2025-12-07T12:25:54 IST" duration-ms="25699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAddLeaveEntitlementForEmployee -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:54 IST" name="tearDown" finished-at="2025-12-07T12:25:54 IST" duration-ms="227" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldAddLeaveEntitlementForEmployee() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:54 IST" name="setUp" finished-at="2025-12-07T12:25:56 IST" duration-ms="1264" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldPreventLeaveApplicationOnWeekendDates() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldPreventLeaveApplicationOnWeekendDates()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:25:56 IST" name="shouldPreventLeaveApplicationOnWeekendDates" finished-at="2025-12-07T12:26:03 IST" duration-ms="7038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldPreventLeaveApplicationOnWeekendDates -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:26:03 IST" name="tearDown" finished-at="2025-12-07T12:26:03 IST" duration-ms="194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldPreventLeaveApplicationOnWeekendDates() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:26:03 IST" name="setUp" finished-at="2025-12-07T12:26:04 IST" duration-ms="1309" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldPreventLeaveApplicationWithoutSelectingLeaveType()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldPreventLeaveApplicationWithoutSelectingLeaveType()[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:26:04 IST" name="shouldPreventLeaveApplicationWithoutSelectingLeaveType" finished-at="2025-12-07T12:26:11 IST" duration-ms="6465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldPreventLeaveApplicationWithoutSelectingLeaveType -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.testcases.TestngLeaveTests@5e519ad3]" started-at="2025-12-07T12:26:11 IST" name="tearDown" finished-at="2025-12-07T12:26:11 IST" duration-ms="178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testcases.TestngLeaveTests.shouldPreventLeaveApplicationWithoutSelectingLeaveType()]]>
               </value>
             </param>
           </params>

@@ -1,1 +1,18 @@
-2025-12-07 00:26:21 [main] INFO  TestBase - Successfully quit the browser
+2025-12-07 12:26:01 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-12-07 12:26:01 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-12-07 12:26:02 [main] INFO  LeaveApplyMenu - Successfully from date selected for past Date
+2025-12-07 12:26:02 [main] INFO  LeaveApplyMenu - Successfully to date selected for past date
+2025-12-07 12:26:03 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-12-07 12:26:03 [main] INFO  LeaveApplyMenu - "Error - Non working day" toast Displayed
+2025-12-07 12:26:03 [main] INFO  TestBase - Successfully quit the browser
+2025-12-07 12:26:04 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-07 12:26:04 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-07 12:26:04 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-07 12:26:05 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-07 12:26:08 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
+2025-12-07 12:26:09 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-12-07 12:26:10 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-12-07 12:26:10 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-12-07 12:26:11 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-12-07 12:26:11 [main] INFO  LeaveApplyMenu - Warning Displayed for not selecting leave Type
+2025-12-07 12:26:11 [main] INFO  TestBase - Successfully quit the browser

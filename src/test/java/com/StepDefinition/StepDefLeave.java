@@ -48,7 +48,7 @@ public class StepDefLeave extends StepBase {
     
     @When("check if leave overlapping?")
     public void checkOverlappingleave() {
-    	leaveApply().checkOverlappingLeaveMessage();
+    	leaveApply().failedToApplyLeaveToastText();
     }
 
     @Then("leave balance error should be shown")

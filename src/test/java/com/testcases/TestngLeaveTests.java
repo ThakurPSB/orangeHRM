@@ -1,11 +1,8 @@
 package com.testcases;
 
-import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.base.TestBase;
-
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
@@ -15,7 +12,6 @@ import io.qameta.allure.Story;
 
 public class TestngLeaveTests extends TestBase {
 	
-	private static final Logger LOG = Logger.getLogger(TestngLeaveTests.class);
 	
 	@Test(groups = {"regression", "smoke", "leave"})
 	@Severity(SeverityLevel.NORMAL)
@@ -24,32 +20,34 @@ public class TestngLeaveTests extends TestBase {
     @Feature("Leave Module")
     @Story("Apply leave successfully with valid inputs")
 	public void shouldApplyLeaveSuccessfullyWithValidInputs() throws InterruptedException {
-		login().logMeIn();
-		login().clickOnMenu("Leave");
-		leaveApply().cancelLeaveIfAlreadyTaken();
-		login().clickOnLogoutButton();
 		login().logMeInAsUser();
 		login().clickOnMenu("Leave");
+		myLeave().clickOnMyLeaveMenu();
+		myLeave().cancelAllLeaves();
 		leaveApply().clickOnApplyLeave();
 		leaveApply().selectLeaveType("e");
 		leaveApply().selectFromDate();
 		leaveApply().selectToDate();
 		leaveApply().clickOnApplyLeaveButton();
-		
-		if (leaveApply().isLeaveOverlapping()) {
-		    LOG.warn("Overlapping leave detected. Cancelling and retrying...");
-		    myLeave().clickOnMyLeaveMenu();
-		    myLeave().cancelAllLeaves();
-
-		    // Apply again
-		    leaveApply().clickOnApplyLeave();
-		    leaveApply().selectLeaveType("e");
-		    leaveApply().selectFromDate();
-		    leaveApply().selectToDate();
-		    leaveApply().clickOnApplyLeaveButton();
-		}
 		Assert.assertTrue(leaveApply().SaveToastMessageText());
+		
 	}
+	
+	@Test(groups = {"regression", "smoke", "leave"}, dependsOnMethods = {"shouldApplyLeaveSuccessfullyWithValidInputs"})
+	@Severity(SeverityLevel.NORMAL)
+    @Description("Checking if able to approve leaves as supervisor")
+    @Step("login and navigate to leave page, check applied leave and approve ")
+    @Feature("Leave Module")
+    @Story("Approve leave as supervisor")
+	public void shouldApproveLeaveApplicationAsSupervisor() throws InterruptedException {
+		
+		login().logMeIn();
+		login().clickOnMenu("Leave");
+		leaveApply().clickOnApproveLeaveButton();
+		Assert.assertTrue(leaveApply().SaveToastMessageText());
+		
+	}
+	
 	
 	
 	@Test(groups = {"regression", "leave"})
@@ -78,20 +76,6 @@ public class TestngLeaveTests extends TestBase {
 		myLeave().cancelAllLeaves();
 	}
 	
-	@Test(groups = {"regression", "smoke", "leave"}, dependsOnMethods = {"shouldApplyLeaveSuccessfullyWithValidInputs"})
-	@Severity(SeverityLevel.NORMAL)
-    @Description("Checking if able to approve leaves as supervisor")
-    @Step("login and navigate to leave page, check applied leave and approve ")
-    @Feature("Leave Module")
-    @Story("Approve leave as supervisor")
-	public void shouldApproveLeaveApplicationAsSupervisor() throws InterruptedException {
-		
-		login().logMeIn();
-		login().clickOnMenu("Leave");
-		leaveApply().clickOnApproveLeaveButton();
-		Assert.assertTrue(leaveApply().SaveToastMessageText());
-		
-	}
 	
 	@Test(groups = {"regression", "leave"})
 	@Severity(SeverityLevel.NORMAL)
@@ -128,9 +112,6 @@ public class TestngLeaveTests extends TestBase {
 		leaveApply().selectSundayToDate();
 		leaveApply().clickOnApplyLeaveButton();
 		Assert.assertTrue(leaveApply().errorNonWorkingDayLeave());
-		myLeave().clickOnLeaveMenu();
-		myLeave().clickOnMyLeaveMenu();
-		myLeave().cancelAllLeaves();
 		
 	}
 	

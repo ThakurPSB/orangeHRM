@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="shouldRejectLeaveApplicationWithOverlappingDates"/>
+          <include name="shouldPreventLeaveApplicationOnWeekendDates"/>
           <include name="cleanAllureResults"/>
         </methods>
       </class> <!-- com.testcases.TestngLeaveTests -->

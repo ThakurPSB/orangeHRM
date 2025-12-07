@@ -5,29 +5,25 @@ Background:
 
 @noLogin @smoke
 Scenario: Leave is applied successfully and approved by the supervisor
-	When admin logs in with default credentials
+	
+  When normal user logs in with default credentials
   And user clicks on menu "Leave"
-  And user cancels leave if already taken
+  And user opens My Leave menu
+  And user cancels all applied leaves
+  And user navigates to apply leave page
+  And user selects leave type "e"
+  And user selects from date
+  And user selects to date
+  And user applies for leave
+  Then leave should be applied successfully
   And user logs out
-  And normal user logs in with default credentials
-  And user clicks on menu "Leave"
-  And user applies leave with retry if overlapping
-  Then leave should be applied with success toast
-  And user logs out
- 
+  
   #admin approving leave
   When admin logs in with default credentials
   And user clicks on menu "Leave"
 	And supervisor approves the leave request
 	Then Successful toast message should be Displayed
 	And user logs out
-	
-	#cancelling all applied leaves from user end
-	When normal user logs in with default credentials
-	And user clicks on menu "Leave"
-  And user opens My Leave menu
-  And user cancels all applied leaves
-  Then all leaves should be cancelled if available 
   
 Scenario: Leave application is rejected for overlapping dates
   When user clicks on menu "Leave"

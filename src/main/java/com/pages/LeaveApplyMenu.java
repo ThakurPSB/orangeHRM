@@ -143,13 +143,7 @@ public class LeaveApplyMenu {
 		return false;
 	}
 	
-	public boolean isLeaveAppliedSuccessfully() {
-	    return SaveToastMessageText();
-	}
-
-	public boolean isLeaveOverlapping() {
-	    return checkOverlappingLeaveMessage();
-	}
+	
 	
 	@FindBy(css="div.oxd-toast--warn")
 	WebElement warningFailedToSubmitToast ;
@@ -399,25 +393,21 @@ public class LeaveApplyMenu {
 
 	}
 	
-	@FindBy(css="div[class='orangehrm-header-container'] h6[class='oxd-text oxd-text--h6 orangehrm-main-title']")
-	WebElement OverlappingLeaveMessage ;
+	@FindBy(css = "span[class='oxd-text oxd-text--span']")
+	private WebElement overlappingLeaveHeaders;
 	
-	public boolean checkOverlappingLeaveMessage() {
-		kw.waitForElementToBeVisible(OverlappingLeaveMessage);
-		kw.scrollToElement(OverlappingLeaveMessage);
-		boolean isDisplayed = false;
-		if (OverlappingLeaveMessage.isDisplayed()) {
-			isDisplayed = true;
-			LOG.info("Overlapping leave message is displayed");
-		} else {
-			LOG.info("Overlapping leave message is not displayed");
+	public boolean isLeaveOverlapping() {
+		try {
+			return overlappingLeaveHeaders.isDisplayed();
+		}catch (NoSuchElementException e) {
+            LOG.info("Error: No more elements to retrieve.");
+            return false;
 		}
-		return isDisplayed;
 	}
 	
-
-	
-	
+	public boolean isLeaveAppliedSuccessfully() {
+	    return SaveToastMessageText();
+	}
 	
 	
 	
