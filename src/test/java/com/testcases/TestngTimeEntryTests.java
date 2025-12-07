@@ -34,7 +34,7 @@ public class TestngTimeEntryTests extends TestBase {
 	
 	
 	
-	@Test(groups = {"regression", "time-entry"},dependsOnMethods = "shouldSubmitTimesheetWithDetailsSuccessfully")
+	@Test(groups = {"regression", "time-entry","smoke"},dependsOnMethods = "shouldSubmitTimesheetWithDetailsSuccessfully")
 	@Severity(SeverityLevel.NORMAL)
     @Description("to verify timesheet submission and edit by employee")
     @Step("login as user and navigate to time page, add time sheet")

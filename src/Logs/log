@@ -1,20 +1,5 @@
-2025-12-07 13:18:27 [main] INFO  Keywords - Launched Chrome Browser
-2025-12-07 13:18:40 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-12-07 13:18:40 [main] INFO  TestBase - Successfully launched the web Application
-2025-12-07 13:18:41 [main] INFO  LoginPage - Successfully Loogged in
-2025-12-07 13:18:52 [main] INFO  AdminMenu - Cliked on Admin Menu
-2025-12-07 13:18:53 [main] INFO  AdminJobTitles - Cliked on Admin Menu
-2025-12-07 13:18:53 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-12-07 13:18:54 [main] INFO  AdminJobTitles - Clicked on : Job Titles
-2025-12-07 13:18:55 [main] INFO  AdminJobTitles - Row text found: Assistant Manager
-2025-12-07 13:18:55 [main] INFO  AdminJobTitles - Matched element in table: Assistant Manager
-2025-12-07 13:18:55 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-12-07 13:18:56 [main] INFO  AdminJobTitles - Clicked on : Pay Grades
-2025-12-07 13:18:57 [main] INFO  AdminJobTitles - Row text found: Grade A
-United States Dollar
-2025-12-07 13:18:57 [main] INFO  AdminJobTitles - Matched element in table: Grade A
-2025-12-07 13:18:57 [main] INFO  AdminJobTitles - Clicked on the Job Menu in Admin
-2025-12-07 13:18:58 [main] INFO  AdminJobTitles - Clicked on : Employment Status
-2025-12-07 13:18:59 [main] INFO  AdminJobTitles - Row text found: Active
-2025-12-07 13:18:59 [main] INFO  AdminJobTitles - Matched element in table: Active
-2025-12-07 13:18:59 [main] INFO  TestBase - Successfully quit the browser
+2025-12-07 17:51:00 [main] INFO  TimeMenu - Successfully clicked on Menu Time
+2025-12-07 17:51:02 [main] INFO  TimeMenu - Successfully clicked on View Timesheet Button
+2025-12-07 17:51:03 [main] INFO  TimeMenu - Successfully clicked on Reject Timesheet Button
+2025-12-07 17:51:04 [main] INFO  TimeMenu - Success Toast Message Displayed
+2025-12-07 17:51:04 [main] INFO  TestBase - Successfully quit the browser

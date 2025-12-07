@@ -51,8 +51,8 @@ public class LeaveMyLeaveMenu {
 	
 	public void cancelAllLeaves() throws InterruptedException {
 		kw.normalWait(3000);
-		kw.waitForAllElementAreVisible(cancelButtons);
-		List<WebElement> cancelButtons = kw.getDriver().findElements(By.cssSelector("Button[type='button'].oxd-button.oxd-button--medium"));
+		
+		List<WebElement> cancelButtons = kw.getDriver().findElements(By.cssSelector("button[type='button'].oxd-button.oxd-button--medium"));
 		int count = cancelButtons.size();
 		if (cancelButtons.isEmpty()) {
 	        LOG.info("No leave application to cancel");

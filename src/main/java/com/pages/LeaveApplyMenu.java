@@ -48,6 +48,8 @@ public class LeaveApplyMenu {
 		LOG.info("Successfully clicked on Apply button");
 	}
 	
+	
+	
 	@FindBy(css="div[tabindex='0']")
 	WebElement leaveType ;
 	
@@ -55,6 +57,7 @@ public class LeaveApplyMenu {
 	WebElement LeaveOptionsTemp ;
 	
 	public void selectLeaveType(String s) {
+		kw.waitForElementToBeInvisible(loader);
 		kw.waitForElementToBeClickable(leaveType);
 		kw.scrollToElement(leaveType);
 		leaveType.click();

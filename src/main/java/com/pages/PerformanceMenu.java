@@ -162,11 +162,13 @@ public class PerformanceMenu {
 	 */
 	public boolean searchResultKPI(String s) {
 		
+		kw.waitForElementToBeInvisible(loader);
 		//as the findElement running too fast hence need to load the css selector and check the visibility first
 		By locatorcss = By.cssSelector("div.oxd-table-body > div");
 		kw.waitForElementToBeVisible(locatorcss);
 		
 	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+	    
 	    if (tableRows != null && !tableRows.isEmpty()) {
 	        kw.waitForAllElementAreVisible(tableRows);
 	        WebElement temp = getTableRow(1); 
