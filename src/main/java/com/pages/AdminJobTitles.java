@@ -92,7 +92,9 @@ public class AdminJobTitles {
 	
 	public boolean checkElementinTable(String element) throws InterruptedException  {
 		
-		List<WebElement> rows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+		kw.waitForElementToBeVisible(By.cssSelector("div.oxd-table-body"));
+		
+		List<WebElement> rows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body div.oxd-table-row"));
 		
 	    if (rows.isEmpty()) {
 	        LOG.error("Table is empty, no rows found");

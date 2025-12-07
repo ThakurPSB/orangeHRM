@@ -45,11 +45,6 @@ public class StepDefLeave extends StepBase {
                 "Leave NOT applied OR toast missing"
         );
     }
-    
-    @When("check if leave overlapping?")
-    public void checkOverlappingleave() {
-    	leaveApply().failedToApplyLeaveToastText();
-    }
 
     @Then("leave balance error should be shown")
     public void verifyLeaveBalanceError() throws Exception {
