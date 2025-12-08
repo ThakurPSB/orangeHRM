@@ -9,7 +9,6 @@ import io.cucumber.testng.CucumberOptions;
     plugin = {"pretty", 
     		"html:target/cucumber-report.html", 
     		"json:target/cucumber.json",
-    		"json:cucumber.json",  // For Jenkins Cucumber plugin
     		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
     		 },
     monochrome = true,
