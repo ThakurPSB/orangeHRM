@@ -110,15 +110,11 @@ public class StepDefLeave extends StepBase {
     }
 
 
-    @When("user opens more options for leave")
+    @When("user cancel leave if present")
     public void openMoreLeaveOptions() {
         leaveApply().clickOnMoreOptionsButton();
     }
 
-    @When("user chooses cancel leave option")
-    public void chooseCancelLeave() {
-        leaveApply().clickOnCancelLeaveOption();
-    }
 
     @When("user confirms leave cancellation")
     public void confirmCancelLeave() {

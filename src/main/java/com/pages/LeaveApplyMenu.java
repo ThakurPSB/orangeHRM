@@ -350,6 +350,7 @@ public class LeaveApplyMenu {
 			kw.scrollToElement(moreOptionsButton);
 			moreOptionsButton.click();
 			LOG.info("Successfully clicked on More options button");
+			clickOnCancelLeaveOption();
 		}catch (Exception e) {
 	        LOG.warn("More Options button not available.");
 	    }

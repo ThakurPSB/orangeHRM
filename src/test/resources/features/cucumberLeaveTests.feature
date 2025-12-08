@@ -11,8 +11,7 @@ Scenario: Leave is applied successfully and approved by the supervisor
   And user clicks on menu "Leave"
   #And user clicks on leave list menu
   And user filters leave by status "Taken"
-  And user opens more options for leave
-  And user chooses cancel leave option
+  And user cancel leave if present
   And user logs out
   
   #user login and apply for leave
