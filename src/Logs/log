@@ -1,19 +1,16 @@
-2025-12-08 15:19:31 [main] INFO  Keywords - Launched Chrome Browser
-2025-12-08 15:19:31 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-12-08 15:19:31 [main] INFO  TestBase - Successfully launched the web Application
-2025-12-08 15:19:33 [main] INFO  LoginPage - Successfully Loogged in
-2025-12-08 15:19:36 [main] INFO  PerformanceMenu - Successfully clicked on Performance tab
-2025-12-08 15:19:37 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
-2025-12-08 15:19:38 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
-2025-12-08 15:19:38 [main] INFO  PerformanceMenu - Table not present. Skipping wait.
-2025-12-08 15:19:39 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
-2025-12-08 15:19:40 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
-2025-12-08 15:19:41 [main] INFO  PerformanceMenu - Successfully clicked on add KPI button
-2025-12-08 15:19:42 [main] INFO  PerformanceMenu - Successfully entered the KPI Bug Detection Rate
-2025-12-08 15:19:42 [main] INFO  PerformanceMenu - Successfully updated the job Title for KPI
-2025-12-08 15:19:42 [main] INFO  PerformanceMenu - Uppdated min rating 1 and max rating 5
-2025-12-08 15:19:42 [main] INFO  PerformanceMenu - Successfully added the KPI for QA Engineer
-2025-12-08 15:19:46 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
-2025-12-08 15:19:46 [main] INFO  PerformanceMenu - Successfully Searched KPI, deleting it Bug Detection Rate
-2025-12-08 15:19:47 [main] INFO  PerformanceMenu - Successfully clicked on delete KPI button
-2025-12-08 15:19:48 [main] INFO  TestBase - Successfully quit the browser
+2025-12-08 16:08:00 [main] INFO  LeaveMyLeaveMenu - Successfully clicked on My Leave menu
+2025-12-08 16:08:03 [main] INFO  LeaveMyLeaveMenu - No leave application to cancel
+2025-12-08 16:08:03 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-12-08 16:08:04 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-12-08 16:08:04 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-12-08 16:08:05 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-12-08 16:08:05 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-12-08 16:08:06 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-12-08 16:08:07 [main] INFO  LoginPage - Successfully clicked on Logout button
+2025-12-08 16:08:08 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-08 16:08:09 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-08 16:08:11 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-08 16:08:12 [main] INFO  LeaveApplyMenu - Successfully clicked on Approve leave button
+2025-12-08 16:08:13 [main] INFO  LeaveEntitlementMenu - Successfully added the leave for employee
+2025-12-08 16:08:14 [main] INFO  LoginPage - Successfully clicked on Logout button
+2025-12-08 16:08:14 [main] INFO  TestBase - Successfully quit the browser

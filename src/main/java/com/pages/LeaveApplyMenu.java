@@ -295,6 +295,17 @@ public class LeaveApplyMenu {
         LOG.info("Successfully clicked on Reject leave button");
     }
 	
+	@FindBy(css="li[class='oxd-topbar-body-nav-tab --visited'] a[class='oxd-topbar-body-nav-tab-item']")
+	WebElement leaveListMenu;
+	
+	public void clickOnLeaveListMenu() {
+        kw.waitForElementToBeClickable(leaveListMenu);
+        kw.scrollToElement(leaveListMenu);
+        leaveListMenu.click();
+        LOG.info("Successfully clicked on Leave List Menu in approver");
+    }
+	
+	
 	@FindBy(css = "form > div:nth-child(1) > div > div:nth-child(3) div.oxd-select-text-input")
 	private WebElement leaveStatusDropdown;
 

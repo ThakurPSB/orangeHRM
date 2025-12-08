@@ -5,7 +5,17 @@ Background:
 
 @noLogin @smoke
 Scenario: Leave is applied successfully and approved by the supervisor
-	
+
+  #admin cancel already approved leave from his account for the day
+  When admin logs in with default credentials
+  And user clicks on menu "Leave"
+  And user clicks on leave list menu
+  And user filters leave by status "Taken"
+  And user opens more options for leave
+  And user chooses cancel leave option
+  And user logs out
+  
+  #user login and apply for leave
   When normal user logs in with default credentials
   And user clicks on menu "Leave"
   And user opens My Leave menu
@@ -15,7 +25,7 @@ Scenario: Leave is applied successfully and approved by the supervisor
   And user selects from date
   And user selects to date
   And user applies for leave
-  Then leave should be applied successfully
+  Then leave should be applied with success toast
   And user logs out
   
   #admin approving leave

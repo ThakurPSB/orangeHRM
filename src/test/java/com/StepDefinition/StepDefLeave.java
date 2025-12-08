@@ -272,4 +272,9 @@ public class StepDefLeave extends StepBase {
         );
     }
     
+    @When("user clicks on leave list menu")
+    public void clicksOnLeaveListMenu() {
+    	leaveApply().clickOnLeaveListMenu();
+    }
+    
 }

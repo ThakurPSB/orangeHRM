@@ -20,6 +20,14 @@ public class TestngLeaveTests extends TestBase {
     @Feature("Leave Module")
     @Story("Apply leave successfully with valid inputs")
 	public void shouldApplyLeaveSuccessfullyWithValidInputs() throws InterruptedException {
+		login().logMeIn();
+		login().clickOnMenu("Leave");
+		leaveApply().clickOnLeaveListMenu();
+		leaveApply().selectLeaveStatusTaken();
+		leaveApply().clickOnSearchLeaveButton();
+		leaveApply().clickOnMoreOptionsButton();
+		leaveApply().clickOnCancelLeaveOption();
+		login().clickOnLogoutButton();
 		login().logMeInAsUser();
 		login().clickOnMenu("Leave");
 		myLeave().clickOnMyLeaveMenu();
