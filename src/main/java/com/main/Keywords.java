@@ -389,6 +389,16 @@ public class Keywords {
     	getFluentWait().until(ExpectedConditions.textToBePresentInElement(element, expectedText));
     }
     
+    /**
+     * 
+     * Wait for presence of all element 
+     * 
+     * 
+     */
+     public void waitForPresenceOfElements(By element) {
+    	 getFluentWait().until(ExpectedConditions.presenceOfAllElementsLocatedBy(element));
+     }
+    
     
     
     /**

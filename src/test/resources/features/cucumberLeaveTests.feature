@@ -21,9 +21,9 @@ Scenario: Leave is applied successfully and approved by the supervisor
   #admin approving leave
   When admin logs in with default credentials
   And user clicks on menu "Leave"
-	And supervisor approves the leave request
-	Then Successful toast message should be Displayed
-	And user logs out
+  And supervisor approves the leave request
+  Then Successful toast message should be Displayed
+  And user logs out
   
 Scenario: Leave application is rejected for overlapping dates
   When user clicks on menu "Leave"

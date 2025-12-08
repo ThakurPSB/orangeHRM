@@ -165,20 +165,25 @@ public class PerformanceMenu {
 		kw.waitForElementToBeInvisible(loader);
 		//as the findElement running too fast hence need to load the css selector and check the visibility first
 		By locatorcss = By.cssSelector("div.oxd-table-body > div");
-		kw.waitForElementToBeVisible(locatorcss);
 		
-	    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
-	    
-	    if (tableRows != null && !tableRows.isEmpty()) {
-	        kw.waitForAllElementAreVisible(tableRows);
-	        WebElement temp = getTableRow(1); 
-	        kw.scrollToElement(temp);
-	        String text = temp.getText();
-	        LOG.info("Successfully Searched KPI: " + text);
-	        return text.equals(s);
-	    } else {
-	        return false;
-	    }
+		List<WebElement> elements = kw.getDriver().findElements(locatorcss);
+		boolean found = false;
+		if (!elements.isEmpty()) {
+		    kw.waitForElementToBeVisible(locatorcss);
+		    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+		    if (tableRows != null && !tableRows.isEmpty()) {
+		        kw.waitForAllElementAreVisible(tableRows);
+		        WebElement temp = getTableRow(1); 
+		        kw.scrollToElement(temp);
+		        String text = temp.getText();
+		        LOG.info("Successfully Searched KPI, deleting it " + text);
+		        found =  text.equals(s);
+		    } else {
+		        found =  false;
+		    }
+		 }
+		
+		return found;
 	}
 	
     @FindBy(css="button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
