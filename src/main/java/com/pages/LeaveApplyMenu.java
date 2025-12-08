@@ -295,7 +295,7 @@ public class LeaveApplyMenu {
         LOG.info("Successfully clicked on Reject leave button");
     }
 	
-	@FindBy(css="li[class='oxd-topbar-body-nav-tab --visited'] a[class='oxd-topbar-body-nav-tab-item']")
+	@FindBy(css="ul.oxd-topbar-body-nav li a.oxd-topbar-body-nav-tab-item")
 	WebElement leaveListMenu;
 	
 	public void clickOnLeaveListMenu() {
