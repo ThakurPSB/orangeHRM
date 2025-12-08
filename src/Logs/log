@@ -1,12 +1,32 @@
-2025-12-08 17:44:00 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
-2025-12-08 17:44:01 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
-2025-12-08 17:44:02 [main] INFO  PerformanceMenu - Successfully clicked on add KPI button
-2025-12-08 17:44:03 [main] INFO  PerformanceMenu - Successfully entered the KPI Bug Detection Rate
-2025-12-08 17:44:03 [main] INFO  PerformanceMenu - Successfully updated the job Title for KPI
-2025-12-08 17:44:03 [main] INFO  PerformanceMenu - Uppdated min rating 1 and max rating 5
-2025-12-08 17:44:03 [main] INFO  PerformanceMenu - Successfully added the KPI for QA Engineer
-2025-12-08 17:44:03 [main] INFO  PerformanceMenu - Successfully clicked on Configure in performance menu
-2025-12-08 17:44:05 [main] INFO  PerformanceMenu - Successfully clicked on KPIs option in configure
-2025-12-08 17:44:06 [main] INFO  PerformanceMenu - Successfully Searched KPI Bug Detection Rate
-2025-12-08 17:44:07 [main] INFO  PerformanceMenu - Successfully clicked on delete KPI button
-2025-12-08 17:44:07 [main] INFO  TestBase - Successfully quit the browser
+2025-12-08 20:21:07 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-08 20:21:08 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-08 20:21:08 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-08 20:21:09 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-08 20:21:10 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-08 20:21:12 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-08 20:21:14 [main] INFO  LeaveApplyMenu - successfully selected leave status filter as taken
+2025-12-08 20:21:14 [main] INFO  LeaveApplyMenu - Successfully clicked on Search leave button 
+2025-12-08 20:21:15 [main] INFO  LeaveApplyMenu - Successfully clicked on More options button
+2025-12-08 20:21:15 [main] INFO  LeaveApplyMenu - Successfully clicked on Cancel leave option
+2025-12-08 20:21:16 [main] INFO  LoginPage - Successfully clicked on Logout button
+2025-12-08 20:21:17 [main] INFO  LoginPage - Successfully Loogged in as user
+2025-12-08 20:21:18 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-08 20:21:20 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-08 20:21:22 [main] INFO  LeaveMyLeaveMenu - Successfully clicked on My Leave menu
+2025-12-08 20:21:25 [main] INFO  LeaveMyLeaveMenu - No leave application to cancel
+2025-12-08 20:21:26 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
+2025-12-08 20:21:27 [main] INFO  LeaveApplyMenu - successfully selected leave type
+2025-12-08 20:21:27 [main] INFO  LeaveApplyMenu - Successfully from date selected
+2025-12-08 20:21:28 [main] INFO  LeaveApplyMenu - Successfully to date selected
+2025-12-08 20:21:28 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
+2025-12-08 20:21:29 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-12-08 20:21:29 [main] INFO  TestBase - Successfully quit the browser
+2025-12-08 20:21:30 [main] INFO  Keywords - Launched Chrome Browser
+2025-12-08 20:21:31 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
+2025-12-08 20:21:31 [main] INFO  TestBase - Successfully launched the web Application
+2025-12-08 20:21:31 [main] INFO  LoginPage - Successfully Loogged in
+2025-12-08 20:21:32 [main] INFO  LoginPage - Found Menu bar already open
+2025-12-08 20:21:35 [main] INFO  LoginPage - Successfully clicked on Menu Leave
+2025-12-08 20:21:36 [main] INFO  LeaveApplyMenu - Successfully clicked on Approve leave button
+2025-12-08 20:21:37 [main] INFO  LeaveApplyMenu - Success Toast Message Displayed
+2025-12-08 20:21:37 [main] INFO  TestBase - Successfully quit the browser

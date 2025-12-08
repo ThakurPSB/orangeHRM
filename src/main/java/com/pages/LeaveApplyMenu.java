@@ -344,11 +344,15 @@ public class LeaveApplyMenu {
 	WebElement moreOptionsButton ;
 	
 	public void clickOnMoreOptionsButton() {
-		kw.waitForElementToBeInvisible(loader);
-		kw.waitForElementToBeVisible(moreOptionsButton);
-		kw.scrollToElement(moreOptionsButton);
-		moreOptionsButton.click();
-		LOG.info("Successfully clicked on More options button");
+		try {
+			kw.waitForElementToBeInvisible(loader);
+			kw.waitForElementToBeVisible(moreOptionsButton);
+			kw.scrollToElement(moreOptionsButton);
+			moreOptionsButton.click();
+			LOG.info("Successfully clicked on More options button");
+		}catch (Exception e) {
+	        LOG.warn("More Options button not available.");
+	    }
 	}
 	
 	@FindBy(css="li:nth-child(4) p:nth-child(1)")

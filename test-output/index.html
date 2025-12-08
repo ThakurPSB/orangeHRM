@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse-1050700261\testng-customsuite.xml</span>
+                    <span>C:\Users\piyus\AppData\Local\Temp\testng-eclipse--452939324\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Default_suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.runner.CucumberTests" class="method navigator-link" hash-for-method="runScenario(&quot;New KPI is added successfully for a job title&quot;, &quot;Performance moduel&quot;)">runScenario("New KPI is added successfully for a job title", "Performance moduel")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.testcases.TestngLeaveTests" class="method navigator-link" hash-for-method="shouldApplyLeaveSuccessfullyWithValidInputs">shouldApplyLeaveSuccessfullyWithValidInputs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.testcases.TestngLeaveTests" class="method navigator-link" hash-for-method="shouldApproveLeaveApplicationAsSupervisor">shouldApproveLeaveApplicationAsSupervisor</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,17 +126,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.runner.CucumberTests</span>
+              <span class="class-name">com.testcases.TestngLeaveTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;New KPI is added successfully for a job title&quot;, &quot;Performance moduel&quot;)">
-                  </a> <!-- runScenario("New KPI is added successfully for a job title", "Performance moduel") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("New KPI is added successfully for a job title","Performance moduel")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
+                  <a name="shouldApplyLeaveSuccessfullyWithValidInputs">
+                  </a> <!-- shouldApplyLeaveSuccessfullyWithValidInputs -->
+                  <span class="method-name">shouldApplyLeaveSuccessfullyWithValidInputs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldApproveLeaveApplicationAsSupervisor">
+                  </a> <!-- shouldApproveLeaveApplicationAsSupervisor -->
+                  <span class="method-name">shouldApproveLeaveApplicationAsSupervisor</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -139,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse-1050700261\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\piyus\AppData\Local\Temp\testng-eclipse--452939324\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,7 +157,12 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.runner.CucumberTests&quot;/&gt;
+      &lt;class name=&quot;com.testcases.TestngLeaveTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;shouldApproveLeaveApplicationAsSupervisor&quot;/&gt;
+          &lt;include name=&quot;shouldApplyLeaveSuccessfullyWithValidInputs&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.testcases.TestngLeaveTests --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -173,10 +187,38 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">cucumber</span>
+              <span class="test-group-name">leave</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">runScenario</span>
+                <span class="method-in-group-name">shouldApplyLeaveSuccessfullyWithValidInputs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldApproveLeaveApplicationAsSupervisor</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldApplyLeaveSuccessfullyWithValidInputs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldApproveLeaveApplicationAsSupervisor</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldApplyLeaveSuccessfullyWithValidInputs</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldApproveLeaveApplicationAsSupervisor</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -196,16 +238,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'com.runner.CucumberTests')
-data.setCell(0, 3, 17937);
+data.setCell(0, 1, 'shouldApplyLeaveSuccessfullyWithValidInputs')
+data.setCell(0, 2, 'com.testcases.TestngLeaveTests')
+data.setCell(0, 3, 20876);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'shouldApproveLeaveApplicationAsSupervisor')
+data.setCell(1, 2, 'com.testcases.TestngLeaveTests')
+data.setCell(1, 3, 6501);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,9 +266,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.testcases.TestngLeaveTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">shouldRejectLeaveApplicationWithOverlappingDates</span>
+                <br/>
+                <span class="ignored-method-name">shouldRejectLeaveApplicationWhenBalanceIsInsufficient</span>
+                <br/>
+                <span class="ignored-method-name">shouldAddLeaveEntitlementForEmployee</span>
+                <br/>
+                <span class="ignored-method-name">shouldPreventLeaveApplicationWithoutSelectingLeaveType</span>
+                <br/>
+                <span class="ignored-method-name">shouldPreventLeaveApplicationOnWeekendDates</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -231,19 +292,35 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.runner.CucumberTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@2d758472)</span>
+              <div class="chronological-class-name">com.testcases.TestngLeaveTests</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">cleanAllureResults</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(null, public void com.testcases.TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs() throw...)</span>
+                <span class="method-start">158 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">runScenario("New KPI is added successfully for a job title", "Performance moduel")</span>
-                <span class="method-start">1291 ms</span>
+                <span class="method-name">shouldApplyLeaveSuccessfullyWithValidInputs</span>
+                <span class="method-start">2963 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">19234 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown(public void com.testcases.TestngLeaveTests.shouldApplyLeaveSuccessfullyWithValidInputs() throws java...)</span>
+                <span class="method-start">23857 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(null, public void com.testcases.TestngLeaveTests.shouldApproveLeaveApplicationAsSupervisor() throws ...)</span>
+                <span class="method-start">24112 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">shouldApproveLeaveApplicationAsSupervisor</span>
+                <span class="method-start">25584 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown(public void com.testcases.TestngLeaveTests.shouldApproveLeaveApplicationAsSupervisor() throws java.l...)</span>
+                <span class="method-start">32088 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
