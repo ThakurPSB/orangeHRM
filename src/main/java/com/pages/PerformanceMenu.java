@@ -176,8 +176,8 @@ public class PerformanceMenu {
 		        WebElement temp = getTableRow(1); 
 		        kw.scrollToElement(temp);
 		        String text = temp.getText();
-		        LOG.info("Successfully Searched KPI, deleting it " + text);
-		        found =  text.equals(s);
+		        LOG.info("Successfully Searched KPI " + text);
+		        found =  text.contains(s);
 		    } else {
 		        found =  false;
 		    }
@@ -203,7 +203,7 @@ public class PerformanceMenu {
 		        kw.scrollToElement(temp);
 		        String text = temp.getText();
 		        LOG.info("Successfully Searched KPI, deleting it " + text);
-		        if( text.equals(s)) {
+		        if( text.contains(s)) {
 		        	WebElement delete = getTableRow(6);
 		        	kw.waitForElementToBeVisible(delete);
 		        	kw.scrollToElement(delete);
