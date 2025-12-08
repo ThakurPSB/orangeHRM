@@ -57,7 +57,7 @@ public class StepDefPerformance extends StepBase{
 
 
     @When("user deletes KPI {string}")
-    public void userDeletesKpi(String kpiName) {
+    public void userDeletesKpi(String kpiName) throws InterruptedException {
     	performance().searchResultKPIAndDelete(kpiName);
     }
 

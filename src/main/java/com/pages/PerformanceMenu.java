@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.main.Keywords;
 
@@ -163,47 +164,53 @@ public class PerformanceMenu {
 	public boolean searchResultKPI(String s) {
 		
 		kw.waitForElementToBeInvisible(loader);
-		//as the findElement running too fast hence need to load the css selector and check the visibility first
 		By locatorcss = By.cssSelector("div.oxd-table-body > div");
-		
-		List<WebElement> elements = kw.getDriver().findElements(locatorcss);
 		boolean found = false;
-		if (!elements.isEmpty()) {
-		    kw.waitForElementToBeVisible(locatorcss);
+		
+		try {
+		    kw.getWait().until(ExpectedConditions.numberOfElementsToBeMoreThan(locatorcss, 0));
+		    
 		    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+		    
 		    if (tableRows != null && !tableRows.isEmpty()) {
 		        kw.waitForAllElementAreVisible(tableRows);
 		        WebElement temp = getTableRow(1); 
 		        kw.scrollToElement(temp);
 		        String text = temp.getText();
 		        LOG.info("Successfully Searched KPI " + text);
-		        found =  text.contains(s);
-		    } else {
+		        
+			        if( text.equals(s)) {
+			        	found = true;
+			        }
+		        
+		    	}
+		    }catch (Exception e) {
+		    	LOG.info("Table not present. Skipping wait.");
 		        found =  false;
 		    }
-		 }
-		
 		return found;
 	}
 	
     @FindBy(css="button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
 	WebElement  confirmDelete;
 	
-	public void searchResultKPIAndDelete(String s) {
+	public void searchResultKPIAndDelete(String s) throws InterruptedException {
 		
 		//as the findElement running too fast hence need to load the css selector and check the visibility first
 		By locatorcss = By.cssSelector("div.oxd-table-body > div");
-		List<WebElement> elements = kw.getDriver().findElements(locatorcss);
-		if (!elements.isEmpty()) {
-		    kw.waitForElementToBeVisible(locatorcss);
+		// Wait for at least one row to load
+		try {
+		    kw.getWait().until(ExpectedConditions.numberOfElementsToBeMoreThan(locatorcss, 0));
+		    
 		    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
+		    
 		    if (tableRows != null && !tableRows.isEmpty()) {
 		        kw.waitForAllElementAreVisible(tableRows);
 		        WebElement temp = getTableRow(1); 
 		        kw.scrollToElement(temp);
 		        String text = temp.getText();
 		        LOG.info("Successfully Searched KPI, deleting it " + text);
-		        if( text.contains(s)) {
+		        if( text.equals(s)) {
 		        	WebElement delete = getTableRow(6);
 		        	kw.waitForElementToBeVisible(delete);
 		        	kw.scrollToElement(delete);
@@ -214,7 +221,7 @@ public class PerformanceMenu {
 		        	confirmDelete.click();
 		        }
 		    }
-		} else {
+		} catch (Exception e) {
 		    LOG.info("Table not present. Skipping wait.");
 		}
 	    
