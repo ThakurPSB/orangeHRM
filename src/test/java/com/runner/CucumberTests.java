@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
     		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
     		 },
     monochrome = true,
-    tags = "@performance",
+    tags = "",
     dryRun = false
         
 )
