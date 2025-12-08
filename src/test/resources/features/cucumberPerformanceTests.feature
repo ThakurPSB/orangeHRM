@@ -18,7 +18,7 @@ Scenario: New KPI is added successfully for a job title
 	And user saves the KPI
 	And user clicks performance configure
 	And user selects KPIs option
-	Then "Bug Detection Rate" should be added successfully in list
+	Then KPI "Bug Detection Rate" should appear in the KPI list
 	And user clicks KPI delete icon
 	
 	
