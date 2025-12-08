@@ -22,7 +22,6 @@ public class TestngLeaveTests extends TestBase {
 	public void shouldApplyLeaveSuccessfullyWithValidInputs() throws InterruptedException {
 		login().logMeIn();
 		login().clickOnMenu("Leave");
-		leaveApply().clickOnLeaveListMenu();
 		leaveApply().selectLeaveStatusTaken();
 		leaveApply().clickOnSearchLeaveButton();
 		leaveApply().clickOnMoreOptionsButton();

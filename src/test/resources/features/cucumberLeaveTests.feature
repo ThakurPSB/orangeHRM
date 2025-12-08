@@ -9,7 +9,7 @@ Scenario: Leave is applied successfully and approved by the supervisor
   #admin cancel already approved leave from his account for the day
   When admin logs in with default credentials
   And user clicks on menu "Leave"
-  And user clicks on leave list menu
+  #And user clicks on leave list menu
   And user filters leave by status "Taken"
   And user opens more options for leave
   And user chooses cancel leave option
