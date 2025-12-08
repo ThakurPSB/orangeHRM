@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
     		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
     		 },
     monochrome = true,
-    tags = "@regression @leave @smoke",
+    tags = "@regression, @leave, @smoke",
     dryRun = false
         
 )
