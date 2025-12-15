@@ -25,7 +25,6 @@ public class TestngLeaveTests extends TestBase {
 		leaveApply().selectLeaveStatusTaken();
 		leaveApply().clickOnSearchLeaveButton();
 		leaveApply().clickOnMoreOptionsButton();
-		leaveApply().clickOnCancelLeaveOption();
 		login().clickOnLogoutButton();
 		login().logMeInAsUser();
 		login().clickOnMenu("Leave");
@@ -54,7 +53,6 @@ public class TestngLeaveTests extends TestBase {
 		Assert.assertTrue(leaveApply().SaveToastMessageText());
 		
 	}
-	
 	
 	
 	@Test(groups = {"regression", "leave"})
