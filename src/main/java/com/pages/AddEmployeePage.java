@@ -32,7 +32,9 @@ public class AddEmployeePage {
 	@FindBy(css="header > div.oxd-topbar-body > nav > ul > li:nth-child(3) > a")
 	WebElement addNewEmployeeButton ;
 	
-	/**click on tha add button on employee list page
+	
+	/**
+	 * click on the add button on employee list page
 	 * 
 	 */
 	public void clickOnAddNewEmployeeButton() {
@@ -40,6 +42,7 @@ public class AddEmployeePage {
 		kw.scrollToElement(addNewEmployeeButton);
 		addNewEmployeeButton.click();
 		LOG.info("Successfully clicked on add new employee button");
+				
 	}
 	
 	@FindBy(css="button.oxd-icon-button.employee-image-action" )

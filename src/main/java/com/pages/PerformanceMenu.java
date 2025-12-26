@@ -163,32 +163,25 @@ public class PerformanceMenu {
 	 */
 	public boolean searchResultKPI(String s) {
 		
-		kw.waitForElementToBeInvisible(loader);
-		By locatorcss = By.cssSelector("div.oxd-table-body > div");
-		boolean found = false;
+		By rows = By.cssSelector("div.oxd-table-body > div.oxd-table-card");
 		
-		try {
-		    kw.getWait().until(ExpectedConditions.numberOfElementsToBeMoreThan(locatorcss, 0));
-		    
-		    List<WebElement> tableRows = kw.getDriver().findElements(By.cssSelector("div.oxd-table-body > div"));
-		    
-		    if (tableRows != null && !tableRows.isEmpty()) {
-		        kw.waitForAllElementAreVisible(tableRows);
-		        WebElement temp = getTableRow(1); 
-		        kw.scrollToElement(temp);
-		        String text = temp.getText();
-		        LOG.info("Successfully Searched KPI " + text);
-		        
-			        if( text.equals(s)) {
-			        	found = true;
-			        }
-		        
-		    	}
-		    }catch (Exception e) {
-		    	LOG.info("Table not present. Skipping wait.");
-		        found =  false;
-		    }
-		return found;
+		kw.waitForElementToBeInvisible(loader);
+		kw.waitForElementToBeVisible(By.cssSelector("\"div.oxd-table-body\""));
+		
+		
+		List<WebElement> tableRows =
+	            kw.getDriver().findElements(rows);
+
+	    for (WebElement row : tableRows) {
+	        String rowText = row.getText();
+	        LOG.info("Row text: " + rowText);
+
+	        if (rowText.contains(s)) {
+	            kw.scrollToElement(row);
+	            return true;
+	        }
+	    }
+	    return false;
 	}
 	
     @FindBy(css="button.oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin")
