@@ -66,7 +66,7 @@ public class TestngLeaveTests extends TestBase {
 		login().logMeIn();
 		leaveApply().clickOnLeaveMenu();
 		leaveApply().clickOnApplyLeave();
-		leaveApply().selectLeaveType("e");
+		leaveApply().selectLeaveType("Earned leave");
 		leaveApply().selectFromDate();
 		leaveApply().selectToDate();
 		leaveApply().clickOnApplyLeaveButton();
