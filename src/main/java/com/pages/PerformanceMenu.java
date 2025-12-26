@@ -166,7 +166,7 @@ public class PerformanceMenu {
 		By rows = By.cssSelector("div.oxd-table-body > div.oxd-table-card");
 		
 		kw.waitForElementToBeInvisible(loader);
-		kw.waitForElementToBeVisible(By.cssSelector("\"div.oxd-table-body\""));
+		kw.waitForElementToBeVisible(By.cssSelector("div.oxd-table-body"));
 		
 		
 		List<WebElement> tableRows =

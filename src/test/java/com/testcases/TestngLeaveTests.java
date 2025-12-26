@@ -31,7 +31,7 @@ public class TestngLeaveTests extends TestBase {
 		myLeave().clickOnMyLeaveMenu();
 		myLeave().cancelAllLeaves();
 		leaveApply().clickOnApplyLeave();
-		leaveApply().selectLeaveType("e");
+		leaveApply().selectLeaveType("earned leave");
 		leaveApply().selectFromDate();
 		leaveApply().selectToDate();
 		leaveApply().clickOnApplyLeaveButton();
@@ -71,7 +71,7 @@ public class TestngLeaveTests extends TestBase {
 		leaveApply().selectToDate();
 		leaveApply().clickOnApplyLeaveButton();
 		leaveApply().clickOnApplyLeave();
-		leaveApply().selectLeaveType("e");
+		leaveApply().selectLeaveType("Earned leave");
 		leaveApply().selectFromDate();
 		leaveApply().selectToDate();
 		leaveApply().clickOnApplyLeaveButton();
@@ -112,7 +112,7 @@ public class TestngLeaveTests extends TestBase {
 		login().logMeIn();
 		leaveApply().clickOnLeaveMenu();
 		leaveApply().clickOnApplyLeave();
-		leaveApply().selectLeaveType("e");
+		leaveApply().selectLeaveType("earned leave");
 		leaveApply().selectSaturdayFromDate();
 		leaveApply().selectSundayToDate();
 		leaveApply().clickOnApplyLeaveButton();
@@ -133,7 +133,7 @@ public class TestngLeaveTests extends TestBase {
 		login().logMeIn();
 		leaveApply().clickOnLeaveMenu();
 		leaveApply().clickOnApplyLeave();
-		leaveApply().selectLeaveType("f"); // f for floating leave
+		leaveApply().selectLeaveType("floating leave"); // f for floating leave
 		leaveApply().selectFromDate();
 		leaveApply().selectToDate();
 		leaveApply().clickOnApplyLeaveButton();

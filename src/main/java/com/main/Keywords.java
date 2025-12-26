@@ -209,6 +209,10 @@ public class Keywords {
 		return getFluentWait().until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
+	public WebElement waitForElementToBeClickable(By by) {
+		return getFluentWait().until(ExpectedConditions.elementToBeClickable(by));
+	}
+	
 	
 	/**
 	 * @param element
@@ -445,6 +449,10 @@ public class Keywords {
 	 */
 	public void waitForElementToBeInvisible(WebElement element) {
 		getFluentWait().until(ExpectedConditions.invisibilityOf(element));
+	}
+	
+	public void waitForElementToBeInvisible(By by) {
+		getFluentWait().until(ExpectedConditions.invisibilityOfElementLocated(by));
 	}
 	
 	public boolean isDisplayed(WebElement element) {

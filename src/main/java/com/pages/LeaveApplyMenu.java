@@ -50,25 +50,31 @@ public class LeaveApplyMenu {
 	
 	
 	
-	@FindBy(css="div[tabindex='0']")
+	@FindBy(css="div[tabindex='0'].oxd-select-text-input")
 	WebElement leaveType ;
 	
 	@FindBy(css="div[role='option']")
 	WebElement LeaveOptionsTemp ;
 	
 	public void selectLeaveType(String s) {
+		
 		kw.waitForElementToBeInvisible(loader);
-		kw.waitForElementToBeClickable(leaveType);
-		kw.scrollToElement(leaveType);
-		leaveType.click();
-		leaveType.sendKeys(s);
-		kw.waitForElementToBeVisible(LeaveOptionsTemp);
-		kw.scrollToElement(LeaveOptionsTemp);
-		leaveType.sendKeys(Keys.ENTER);
-		LOG.info("successfully selected leave type");
+		kw.waitForElementToBeClickable(By.cssSelector("div[tabindex='0'].oxd-select-text-input")).click();;
+		kw.waitForElementToBeVisible(By.cssSelector("div[role='listbox']"));
+		
+		List <WebElement> options = kw.getDriver().findElements(By.cssSelector("div.oxd-select-option[role='option']"));
+		
+		for(WebElement opt : options) {
+			if(opt.getText().equalsIgnoreCase(s)) {
+				opt.click();
+				break;
+			}
+		}
+		LOG.info("successfully selected leave type "+s);
+		
 	}
 	
-	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > div > div > input")
+	@FindBy(css=".oxd-grid-item:first-child input[placeholder='yyyy-mm-dd']")
 	WebElement fromCalButton ;
 	
 	LocalDate today = LocalDate.now();
@@ -91,7 +97,7 @@ public class LeaveApplyMenu {
 		LOG.info("Successfully from date selected");
 	}
 	
-	@FindBy(css="form > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > input")
+	@FindBy(css=".oxd-grid-item:last-child input[placeholder='yyyy-mm-dd']")
 	WebElement toCalButton ;
 	
 	public void selectToDate() {

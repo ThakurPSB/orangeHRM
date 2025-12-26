@@ -20,7 +20,7 @@ Scenario: Leave is applied successfully and approved by the supervisor
   And user opens My Leave menu
   And user cancels all applied leaves
   And user navigates to apply leave page
-  And user selects leave type "e"
+  And user selects leave type "Earned Leave"
   And user selects from date
   And user selects to date
   And user applies for leave
@@ -37,12 +37,12 @@ Scenario: Leave is applied successfully and approved by the supervisor
 Scenario: Leave application is rejected for overlapping dates
   When user clicks on menu "Leave"
   And user navigates to apply leave page
-  And user selects leave type "e"
+  And user selects leave type "Earned Leave"
   And user selects from date
   And user selects to date
   And user applies for leave
   And user navigates to apply leave page
-  And user selects leave type "e"
+  And user selects leave type "Earned Leave"
   And user selects from date
   And user selects to date
   And user applies for leave
@@ -63,7 +63,7 @@ Scenario: Leave application is prevented without selecting a leave type
 Scenario: Leave application is prevented for non-working day dates
   When user clicks on menu "Leave"
   And user navigates to apply leave page
-  And user selects leave type "e"
+  And user selects leave type "Earned Leave"
   And user selects Saturday from date
   And user selects Sunday to date
   And user applies for leave
@@ -72,7 +72,7 @@ Scenario: Leave application is prevented for non-working day dates
 Scenario: Leave application is prevented due to insufficient leave balance
   When user clicks on menu "Leave"
   And user navigates to apply leave page
-  And user selects leave type "f"
+  And user selects leave type "floating leave"
   And user selects from date
   And user selects to date
   And user applies for leave
