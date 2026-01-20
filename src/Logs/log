@@ -1,12 +1,8 @@
-2025-12-26 23:34:21 [main] INFO  Keywords - Launched Chrome Browser
-2025-12-26 23:34:22 [main] INFO  Keywords - Navigated to URL: http://localhost/orangehrm/web/index.php/auth/login
-2025-12-26 23:34:22 [main] INFO  TestBase - Successfully launched the web Application
-2025-12-26 23:34:23 [main] INFO  LoginPage - Successfully Loogged in
-2025-12-26 23:34:26 [main] INFO  LeaveApplyMenu - Successfully clicked on Leave Menu
-2025-12-26 23:34:28 [main] INFO  LeaveApplyMenu - Successfully clicked on Apply button
-2025-12-26 23:34:29 [main] INFO  LeaveApplyMenu - successfully selected leave type floating leave
-2025-12-26 23:34:29 [main] INFO  LeaveApplyMenu - Successfully from date selected
-2025-12-26 23:34:29 [main] INFO  LeaveApplyMenu - Successfully to date selected
-2025-12-26 23:34:29 [main] INFO  LeaveApplyMenu - Successfully clicked on apply leave button 
-2025-12-26 23:34:30 [main] INFO  LeaveApplyMenu - "Error - Leave balance" toast Displayed
-2025-12-26 23:34:30 [main] INFO  TestBase - Successfully quit the browser
+2026-01-20 21:48:01 [main] INFO  TimeMenu - Successfully clicked on Submit Timesheet Button
+2026-01-20 21:48:02 [main] INFO  LoginPage - Successfully clicked on Logout button
+2026-01-20 21:48:03 [main] INFO  LoginPage - Successfully Loogged in
+2026-01-20 21:48:06 [main] INFO  TimeMenu - Successfully clicked on Menu Time
+2026-01-20 21:48:08 [main] INFO  TimeMenu - Successfully clicked on View Timesheet Button
+2026-01-20 21:48:09 [main] INFO  TimeMenu - Successfully clicked on Reject Timesheet Button
+2026-01-20 21:48:10 [main] INFO  TimeMenu - Success Toast Message Displayed
+2026-01-20 21:48:10 [main] INFO  TestBase - Successfully quit the browser

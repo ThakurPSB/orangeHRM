@@ -14,6 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.apache.log4j.Logger;
 import org.jspecify.annotations.Nullable;
@@ -118,9 +119,11 @@ public class Keywords {
 		RemoteWebDriver dr = null;
 		
 		if(browserName.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
+			
+			WebDriverManager.chromedriver().setup();
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
 
-	        ChromeOptions options = new ChromeOptions();
+			ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--window-size=1920,1080");
 	        options.addArguments("--start-maximized");
 	        
@@ -129,7 +132,8 @@ public class Keywords {
 			
 		} else if(browserName.equalsIgnoreCase("Edge")) {
 			
-			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/msedgedriver.exe");
+			//System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/msedgedriver.exe");
+			WebDriverManager.edgedriver().setup();
 			
 			EdgeOptions options = new EdgeOptions();
 		    options.addArguments("--window-size=1920,1080");
@@ -140,7 +144,8 @@ public class Keywords {
 			
 		} else if(browserName.equalsIgnoreCase("Firefox")) {
 			
-			System.setProperty("webdriver.firefox.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/geckodriver.exe");
+			//System.setProperty("webdriver.firefox.driver",System.getProperty("user.dir") + "/src/main/resources/drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			
 			FirefoxOptions options = new FirefoxOptions();
 		    options.addArguments("--width=1920");
