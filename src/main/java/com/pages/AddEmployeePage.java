@@ -22,7 +22,7 @@ public class AddEmployeePage {
 	
 	//Constructor to instanciate POM and receive kw from testbase
 	public AddEmployeePage(Keywords key) {
-		this.kw = key;;
+		this.kw = key;
 	    PageFactory.initElements(kw.getDriver(), this);
 	}
 	
@@ -121,6 +121,7 @@ public class AddEmployeePage {
 		
 		LOG.info("Successfully entered the user with details "+ fname + " " + mname +" "+ lname);
 	}
+	
 	
 	@FindBy(css="div:nth-child(1) > div.oxd-grid-2.orangehrm-full-width-grid > div > div > span")
 	WebElement empIdAlreadyExist ;

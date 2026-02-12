@@ -101,7 +101,7 @@ public class Keywords {
 	
 	
 	/**
-	 * launch the given URK
+	 * launch the given URL
 	 * @param url link
 	 */
 	public void launchURL(String url) {
